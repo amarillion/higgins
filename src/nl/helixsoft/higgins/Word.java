@@ -15,16 +15,15 @@
 //    along with Dr. Higgins.  If not, see <http://www.gnu.org/licenses/>.
 package nl.helixsoft.higgins;
 
-import java.io.Reader;
-import java.io.Writer;
+import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Map;
 
 /**
  * Represents a question-answer pair.
  */
-public class Word {
-
+public class Word implements Serializable
+{
 	static final int MAXBINS = 10;
 
 	Word (String q, String a, int dir, int pair)
@@ -55,16 +54,6 @@ public class Word {
 	public int getHowSoon () { return howSoon; }
 	public int getQuizCount () { return quizCount; }
 	Map<String, Integer> getWrongAnswers () { return wrongAnswers; }
-	
-	public void serialize (Writer writer) 
-	{
-		// TODO
-	}
-	
-	public void deserialize (Reader reader) 
-	{ 
-		// TODO 
-	}
 	
 	public boolean compareAnswer(String anAnswer, int counter, int[] binCount)
 	{

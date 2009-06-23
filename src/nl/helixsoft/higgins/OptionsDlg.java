@@ -68,6 +68,7 @@ public class OptionsDlg extends JDialog implements ActionListener
 	public int getBins()
 	{
 		return Integer.parseInt (txtBins.getText());
+		//TODO: validate - integer between 2 and 10
 	}
 	
 	public boolean isCancelled()

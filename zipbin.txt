@@ -1,0 +1,9 @@
+COPYING.txt
+doc/**/*
+higgins.jar
+higgins.bat
+higgins.sh
+lessons/*.txt
+lessons/**/*.txt
+lib/*.jar
+README.txt

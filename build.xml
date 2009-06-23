@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<project name="Higgins" default="jar" basedir=".">
+	
+	<property name="src.dir" value="src"/>
+	<property name="higgins.version" value="0.99WIP"/>
+	
+	<property name="build.dir" value="build"/>
+	<property name="lib.dir" value="lib"/>
+	
+	<property name="jar.class.path" value="lib/forms-1.2.0.jar lib/BrowserLauncher.jar"/>
+
+	<path id="project.class.path">
+      <pathelement location="${build.dir}"/>
+	  <fileset dir="lib">
+		<include name="forms-1.2.0.jar"/>
+		<include name="BrowserLauncher.jar"/>
+	  </fileset>
+	</path>
+
+	<target name="prepare">
+		<mkdir dir="${build.dir}"/>
+	</target>
+	
+	<target name="clean" description="Remove all intermediate files.">
+		<delete dir="${build.dir}"/>
+	</target>
+
+	<target name="dist-clean" depends="clean" description="Cleaner than clean: remove all generated files">
+		<delete file="higgins.jar"/>
+	</target>
+	
+	<target name="compile" depends="prepare" description="Compile core sources">
+		<javac srcdir="src"
+			   includes="**"
+			   destdir="${build.dir}"
+			   debug="true"
+			   source="1.5">
+		  <classpath refid="project.class.path"/>
+		</javac>
+	</target>
+
+	<target name="jar" depends="compile" description="Generates executable jar file">
+		<jar jarfile="higgins.jar">
+			<manifest>
+				<attribute name="Main-Class" value="nl.helixsoft.higgins.Main"/>
+				<attribute name="Class-Path" value="${jar.class.path}"/>
+			</manifest>
+			<fileset dir="${build.dir}" includes="**/*.class"/>			
+		</jar>
+    </target>
+
+</project>

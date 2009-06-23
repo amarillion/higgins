@@ -20,10 +20,10 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.LineNumberReader;
-import java.io.Reader;
-import java.io.Writer;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -34,7 +34,7 @@ import java.util.Set;
 /**
  * represents a single lesson, a series of q, a pairs read from a text file.
  */
-public class Quiz 
+public class Quiz implements Serializable 
 {
 	/**
 	 * A helper class to load a quiz from a text file.
@@ -273,7 +273,7 @@ public class Quiz
 		int pos = q.indexOf("\"\"");
 		if (pos >= 0)
 		{
-			return q.replaceFirst("\"\"", w);
+			return q.substring (0, pos + 1) + w + q.substring (pos + 1);
 		}
 		else
 		{
@@ -290,8 +290,19 @@ public class Quiz
 	
 	public List<Word> getMostDifficult(int amount)
 	{
-		//TODO
-		return null;
+		List<Word> result = new ArrayList<Word>();
+		result.addAll(words);
+		Collections.sort (result, new Comparator<Word>()
+				{
+					public int compare(Word o1, Word o2) 
+					{
+						return o2.getQuizCount() - o1.getQuizCount();
+					}
+				});
+		if (result.size() <= amount)
+			return result;
+		else
+			return result.subList(0, amount);
 	}
 	
 	public int getCounter() { return counter; }
@@ -313,16 +324,6 @@ public class Quiz
 	public Quiz(File f) throws IOException
 	{
 		loadLesson (f);
-	}
-	
-	public void deserialize (Reader reader)
-	{
-		//TODO
-	}
-	
-	public void serialize (Writer writer)
-	{
-		//TODO
 	}
 	
 	/**

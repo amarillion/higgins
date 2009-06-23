@@ -1,0 +1,11 @@
+build.xml
+COPYING.txt
+doc/**/*
+higgins.bat
+higgins.sh
+lessons/**/*.txt
+lib/*.jar
+README.txt
+src/**/**/**/*.java
+test/*
+TODO.txt

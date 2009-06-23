@@ -15,14 +15,49 @@
 //    along with Dr. Higgins.  If not, see <http://www.gnu.org/licenses/>.
 package nl.helixsoft.higgins;
 
-import javax.swing.JOptionPane;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.util.List;
+import java.util.Map;
 
-public class ResultDlg 
+import javax.swing.JButton;
+import javax.swing.JDialog;
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.JTextArea;
+
+import com.jgoodies.forms.layout.CellConstraints;
+import com.jgoodies.forms.layout.FormLayout;
+
+public class ResultDlg extends JDialog implements ActionListener
 {
-	public void createAndShow()
+	private JButton btnOk;
+	private JTextArea txtResults;
+	
+	ResultDlg (JFrame frame)
 	{
-		JOptionPane.showMessageDialog(null, "Finished!");
-		//TODO
+		super (frame, true);
+		setTitle ("Quiz result");
+		
+		JPanel panel = new JPanel();
+		setContentPane(panel);
+		panel.setLayout (new FormLayout(
+				"3dlu, pref, 3dlu", 
+				"3dlu, pref, 3dlu, pref, 3dlu"));
+		CellConstraints cc = new CellConstraints();
+		
+		txtResults = new JTextArea (20, 40);
+		txtResults.setEditable(false);
+		panel.add (new JScrollPane(txtResults), cc.xy (2, 2));
+		
+		btnOk = new JButton("OK");
+		panel.add (btnOk, cc.xy (2, 4));
+		btnOk.addActionListener(this);
+		
+		pack();
+		setLocationRelativeTo(frame);
 	}
 	
 	Quiz quiz = null;
@@ -30,5 +65,28 @@ public class ResultDlg
 	public void setQuiz(Quiz aQuiz)
 	{
 		quiz = aQuiz;
+		
+		List<Word> mostDifficult = quiz.getMostDifficult(20);
+		for (Word w : mostDifficult)
+		{
+			Map<String, Integer> wrongAnswers = w.getWrongAnswers();
+			txtResults.append(w.getQuestion() + ", " + w.getAnswer() + "\n");					
+			txtResults.append("  mistakes:\n");
+			if (wrongAnswers.size() > 0)
+			{
+				for (String key : wrongAnswers.keySet())
+				{
+					txtResults.append("  \"" + key + "\" " + wrongAnswers.get(key) + " times\n");
+				}
+			}
+		}
+	}
+
+	public void actionPerformed(ActionEvent ae) 
+	{
+		if (ae.getSource() == btnOk)
+		{
+			setVisible(false);
+		}
 	}
 }
