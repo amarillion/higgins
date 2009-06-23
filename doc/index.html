@@ -1,0 +1,227 @@
+<html>
+<head>
+<style type="text/css">
+	body {
+		margin-left: 100px;
+		margin-right: 100px;
+	}
+	h2 {
+		color : white;
+		background-color : blue;
+		font-family : verdana, helvetica, sans-serif }
+	p { color : blue;
+	}
+	span.comment { 
+		font-style: italic;
+		color : green; }
+</style>
+<title>
+Dr. Higgins v 0.99 Manual
+</title>
+</head>
+<body>
+	<h1>Dr. Higgins Manual</h1>
+	<h2>Contents</h2>
+	<p>
+	<ol>
+		<li><a href="#intro">Introduction</a></li>
+		<li><a href="#running">Running a quiz</a></li>
+		<li><a href="#ending">When the quiz ends</a></li>
+		<li><a href="#log">The log</a></li>
+		<li><a href="#options">The options menu</a></li>
+		<li><a href="#adding">Adding</a></li>
+		<li><a href="#copyright">Copyright information</a></li>
+	</ol>
+	</p>
+	<a name="intro"><h2>Introduction</h2>
+	<p>
+		In the famous musical "my fair lady" Professor Higgins
+		was the professor who tried to teach proper english
+		to Eliza Doolittle. Like in the movie, Dr. Higgins
+		will teach you and help you teach yourself any language
+		you like.
+	</p>
+	<p>
+		The program is extremely useful for improving your vocabulary
+		of a foreing language. It works like a quiz, the program asks you
+		what the translation of a certain word is and you have to type it in.
+		The program will tell you if you are right or wrong and will keep score 
+		for you. 
+	</p>
+	<p>		
+		There is more. As any good teacher knows, <em>the key to learning
+		is repetition</em>. When you don't remember the answer, Dr. Higgins will
+		keep repeating the question every few turns until you get it right two
+		times in a row. Moreover, by default each question is asked at least
+		four times before the quiz ends. This may sound boring, but trust me,
+		it works very well. Usually four repetitions is enough to learn
+		any unfamiliar piece of vocabulary completely by heart in a matter
+		of a few hours.
+	</p>
+	<p>
+		This program is meant as help with self-study. It might also prove
+		useful for high-school students and the like who have a vocabulary
+		test coming up.
+	</p>
+	<a name="running"><h2>Running a quiz</h2>
+	<p>
+		
+	</p>
+	<a name="ending"><h2>When the quiz ends</h2>
+	<p>
+	</p>
+	<a name="log"><h2>The log</h2>
+	<p>
+		Dr. Higgins keeps a log of which lessons you study and how long
+		it takes. This way you can keep track of what you've done, and
+		you may set targets for yourself, e.g. to study two hours per week.
+		In the log you can see if you manage to keep your resolutions.
+	</p>
+	<a name="options"><h2>The options menu</h2>
+	<p>
+		In the menu File->Options you can override the number of bins
+		for the current quiz. For example, if you already studied the
+		current quiz before and you're merely refreshing your memory,
+		repeating every word four times may be overkill. In those cases
+		you can reduce the number of bins to 3 or 2.
+		(At this time ths is the only option available in the options menu, 
+		this may change in the future)
+	</p>
+	<a name="adding"><h2>Adding your own word list</h2>
+	<p>
+		Would you like to study a certain language but Dr. Higgins doesn't 
+		have suitable word lists? No problem! You can easily make your own.
+	</p><p>
+		Do you have to study all the words on page 23 of your text book
+		for a test? Simply add them to Dr. Higgins and you'll have them
+		memorized before dinner.
+	</p><p>
+		So how do you add word lists? It's very simple. Open up notepad or
+		a similar text editing program, and type in the word - translation pairs
+		separated by a comma, only one pair per line. When you're done, simply
+		save them in the "lessons" subdirectory of Dr. Higgins, and you can
+		open the new lesson from withing Dr. Higgins. You have to use
+		the filename extension "txt" (which is the default extension in notepad).
+	</p>
+	<img src="images/image1.png" alt="notepad example">
+	<p>
+		Note that if you use e.g. Microsoft Word or a similar word processor, 
+		you need to make sure that you save as text only (*.txt) format.
+	</p>
+	<p>
+		Dr. Higgins is fairly forgiving in mistakes you may make, but do pay attention 
+		to this: Never use more than one comma in a line. The program looks for a comma to
+		find out where the word ends and the translation begins. If you use
+		more than one comma, or if you use no comma at all, the program may get
+		confused.
+	</p>
+	<p>
+		When you load a lesson that you've made yourself, Dr. Higgins will scan the file and
+		look for certain kinds of inconsistencies. It will ignore those lines
+		containing inconsistencies and run the quiz anyway, but you may want to
+		note them down and look back at them in order to fix the problem.
+	</p>
+	<p>
+		One of the inconsistencies that will give you a warning is forgetting a comma
+		in a line. Another one is using the same word more than once. For example:
+	</p>
+	<p><pre>
+		ser, to be
+		tener, to have
+		comer, to eat
+		estar, to be
+	</pre></p>
+	<p>
+		In this list there are two entries for "to be". This would be very annoying
+		because if the program asks you "to be" there is no way to know if the right answer
+		is "ser" or "estar". You may answer ser and be right only 50% of the times.
+	</p>
+	<p>
+		Whenever this situation occurs, I recommend you put both options on the same line, like so:
+	</p>
+	<p><pre>
+		ser / estar, to be
+		tener, to have
+		comer, to eat
+	</pre></p>
+	<p>
+		This way has the disadvantage that now you always have to give both answers together
+		when the program asks you the translation for "to be". However, synonyms do occur a
+		lot and this is just a fact of life, so you might as well find a way to deal with it.
+	</p>
+	<p>
+		It's no problem to have a few empty lines in the file. Also, you can add comments 
+		by using the "#" character. If a line starts with #, it will be ignored by the 
+		program, for example:
+	</p>
+	<p><pre>
+		<span class="comment"># Spanish words from the textbook page 23.</span>
+		<span class="comment"># by Peter</span>
+		
+		<span class="comment"># here are some verbs</span>
+		ser / estar, to be
+		tener, to have
+		comer, to eat
+		
+		<span class="comment"># some nouns</span>
+		el restaurante, the restaurant
+		el coche, the car
+	</pre></p>
+	<p>
+		There are a few more tricks you can do with lesson files. You may
+		add some extra properties like so:
+	</p>
+	<p><pre>
+		<span class="comment">#question1=What is "" in Dutch?</span>
+		<span class="comment">#question2=What is "" in English?</span>
+		<span class="comment">#askbothways=1</span>
+		<span class="comment">#bins=3</span>		
+		kind, child
+		vader, father
+		vriendelijk, kind
+		gierig, greedy
+	</pre></p>
+	<p>
+		Dr. Higgins normally asks you something like "What is xxx", where
+		xxx is one of the words in the lesson. By using the properties "question1" 
+		and "question2", you may override this question by something you make up, in
+		this case the question would be eiter "What is xxx in Dutch" or 
+		"What is xxx in English". This can be useful, especially in this case, otherwise
+		there would be no way to see if Dr. Higgins is asking for the Dutch translation
+		of the English word kind (vriendelijk) or 
+		the English translation of the Dutch word kind (child).
+	</p>
+	<p>
+		The property askbothways may be set to 0 to force the program
+		to use the part before the comma as question only (never as answer) and
+		the part after the comma as answer only. This may be useful in cases where you
+		want to e.g. test yourself with conjugations or plurals. Alternatively, you
+		could use this feature to enter e.g. country, capital pairs and 
+		quiz yourself for the capitals.
+	</p>
+	<p>
+		Finally, you may use the property bins to set the default number of bins for this quiz.
+		If you leave it out, the default is 4. This may be useful for really long and easy quizes,
+		where you can do with less repetition.
+	</p>
+	<p>
+		Of course, all these properties are optional. All you really need is a list of word pairs
+		and you're ready to go! It's easy as that.
+	</p>
+	<a name="copyright"><h2>Copyright info</h2>
+	<p>
+Copyright 2004-2009 Martijn van Iersel. This software is published under the 
+General Public License (GPL). See COPYING.txt for details.
+	</p>
+	<p>
+		In short, that means that Dr. Higgins is free software. You are allowed
+		to use it and redistribute it.
+	</p>
+	<p>
+		The same license applies to the accompanying lessons. If you like this program
+		and if you have created word lists for a new language or if you have
+		improved current word lists, please consider sending them back to me so
+		I can add them to the package, and others can make use of them as well.
+	</p>
+</body>
+</html>
