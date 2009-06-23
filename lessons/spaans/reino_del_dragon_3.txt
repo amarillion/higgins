@@ -1,0 +1,88 @@
+# This word list corresponds to
+# El Reino del Dragón de Oro
+# by Isabel Allende
+# page numbers refer to 4th edition (2004), Montena, Barcelona
+#
+# word list (c) 2009 by Martijn van Iersel
+# redistribute under Creative commons CC-BY-SA
+#
+# part 3
+# áéóíúñ
+
+#p25
+retorcido, gedraaid
+ralo, dunbezaaid
+escamoso, geschubd
+el barro, de modder
+la mugre, de viezigheid
+la garra, de klauw
+la uña, de nagel
+gotear, druipen
+el moquillo, de snotbel
+lagañoso, met slaperige ogen
+el mechon, de haarlok
+erizado, gekruld
+salpicar, bespatten
+
+#p26
+de reojo, vanuit de ooghoeken
+el agudo, de hoge toon
+aplacar, kalmeren
+la maraña, het struikgewas
+la osamenta, het skelet
+balbucear, stamelen
+asustar, doen schrikken
+
+#p27
+el agujero, het gat
+ardiente, brandend
+el pedazo, het stuk
+arrancar, losrukken
+el corral, de ren
+el peñasco, de hoge rots
+el cuerno, de hoorn
+el carnero, de ram
+
+#p28
+el débil, de zwakkeling
+criar, voeden / fokken
+despedazar, verscheuren
+lanzar, gooien
+
+#p29
+la cabra, de geit
+frotar, wrijven
+
+#p30
+arrastrar, voortslepen
+la hembra, het wijfje
+lacio, slap
+la cría, het jong
+
+#p31
+sonar, laten klinken
+espeluznante, afgrijselijk
+la gota, de druppel
+
+#p32
+sacar de quicio, gek maken
+la escudilla, de kom
+empapar, nat maken
+el trapo, de vaatdoek
+ordeñar, melken
+
+#p33
+ufano, verwaand
+el vientre, de buik
+tragar, doorslikken
+brotar, ontkiemen
+envenenar, vergiftigen
+
+#p34
+el puñado, de handvol
+
+#p35
+la aldea, het gehucht
+la hechicera / la bruja, de heks
+lamer, likken
+el asco, de walging

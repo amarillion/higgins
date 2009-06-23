@@ -1,0 +1,109 @@
+# This word list corresponds to
+# El Reino del Dragón de Oro
+# by Isabel Allende
+# page numbers refer to 4th edition (2004), Montena, Barcelona
+#
+# word list (c) 2009 by Martijn van Iersel
+# redistribute under Creative commons CC-BY-SA
+#
+# part 2
+# áéóíúñ
+
+#p17
+ahorrar, besparen
+el esclavo, de slaaf
+abrigado, warm aangekleed
+raído, versleten
+el cacharro, de pot
+la cuncha de baloncesto, het basketbalveld
+hallar, ontdekken
+la olla, de pan
+la vasija, de kan
+
+#p18
+el paladar, het verhemelte
+el agradecimiento, de dankbaarheid
+el rugido, het gebrul
+cumplir, volbrengen
+lograr, slagen
+la fiera, het roofdier
+el marfil, het ivoor
+
+#p19
+fétido, stinkend
+las fauces, het keelgat
+estremecer, doen schudden
+el pinchazo, de prik
+husmear, snuffelen
+tantear, aftasten
+agredir, aanvallen
+el pecho, de borst
+la fogata, het kampvuur
+refulgente, schitterend
+la pared, de muur
+
+#p20
+el pozo, de put
+el hondo, de diepte
+el coro, het koor
+el gemido, het gehuil
+acaso, toevallig
+el alarido, de kreet
+erizada, recht overeind
+el espanto, de ontzetting
+podrido, bedorven
+la fetidez, de stank
+asaltar, overvallen
+demorar, vertragen
+el azufre, het zwavel
+
+#p21
+el soplo de aire, de windvlaag
+asomar, te voorschijn komen
+la meseta, de hoogvlakte
+áspero, ruw
+el hongo, de paddestoel
+el arroyo, de beek
+el charco, de plas
+la bruma, de mist
+borrar, doorstrepen
+la lejanía, de verte
+tibio, lauw
+
+#p22
+moler, vermalen
+la mancha, de vlek
+quebrado, gebroken
+
+#p23
+la coraza, het schild
+desviar, afleiden
+dañar, beschadigen
+la flecha, de pijl
+el tropezón, de struikeling
+la pedrada, de steenworp
+la fumarola, de rookzuil
+grueso, dik
+hirviendo, kokend
+carnoso, vlezig
+entrecerrado, half open
+el disparo, het schot
+aterrador, angstaanjagend
+el gruñido, de grom
+erguir, oprichten
+
+#p24
+
+escaso, beperkt
+afilado, scherp
+golpear, slaan
+enmarañado, warrig
+inmundo, vies
+chato, stomp
+peludo, harig
+rojizo, roodachtig
+enroscar, oprollen
+manchado, gevlekt
+el garrote, de knuppel
+amanecer, bedreigen
+blandir, dreigend zwaaien

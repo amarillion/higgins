@@ -1,0 +1,51 @@
+# Copyright 2009 Martijn van Iersel
+# Redistribution allowed under Creative Commons CC-BY-SA License
+
+# prepositions
+tussen, between
+tegen, against
+naast, next to
+voor, in front of
+achter, behind
+boven, above
+onder, below
+omhoog, up
+omlaag, down
+links, left
+rechts, right
+maar, but
+en, and
+of, or
+met, with
+want / omdat, because
+integendeel, on the contrary
+
+# expressions of time
+telkens, over and over
+eens, once
+altijd, always
+nooit, never
+soms, sometimes
+even, for a while
+morgen, tomorrow
+vandaag, today
+overmorgen, the day after tomorrow
+gisteren, yesterday
+straks, later
+nu, now
+toen, then
+als, if / when
+onmiddelijk, immediately
+'s avonds, in the evening
+'s morgens, in the morning
+ochtend, morning
+avond, evening
+middag, afternoon
+nacht, night
+goedemorgen, good morning
+goedemiddag, good afternoon
+vaak, often
+af en toe, now and then
+tegelijk, at the same time
+samen, together
+

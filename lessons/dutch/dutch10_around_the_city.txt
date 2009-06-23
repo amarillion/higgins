@@ -1,0 +1,30 @@
+# Copyright 2009 Martijn van Iersel
+# Redistribution allowed under Creative Commons CC-BY-SA License
+
+#gebouwen
+het kantoor, the office
+het postkantoor, the post office
+het station, the station
+de kerk, the church
+het huis, the house
+de school, the school
+
+de stomerij, the drycleaner
+de bakker, the bakery
+de slager, the butcher
+
+met de bus, by bus
+met de auto, by car
+met de trein, by train
+te voet, on foot
+met de fiets, by bike
+met het vliegtuig, by plane
+
+de wagon, the train car
+het spoor, the track
+vertrek, departure
+aankomst, arrival
+het vliegveld, the airport
+
+de rivier, the river
+de gracht, the canal

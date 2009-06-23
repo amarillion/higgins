@@ -1,0 +1,46 @@
+#question1=Wat is "" in het Spaans?
+#question2=Wat is "" in het Nederlands?
+
+# ser
+es, hij is
+son, zij zijn
+
+# estar
+estamos, we zijn
+está, hij bevindt zich
+están, zij bevinden zich
+
+# tener
+tenido, gehad
+
+# haber
+había, ik had
+habiás, jij had
+
+# poder
+puedo, ik kan
+podemos, wij kunnen
+
+# hacer
+lo ha hecho, hij heeft het gedaan
+hecho, gedaan / gemaakt
+hacemos, wij maken
+hicimos, wij hebben gemaakt
+
+# saber
+no sé, ik weet niet
+sepas, jij weet
+sabía, hij wist
+
+# decir
+
+diciendo, zeggende
+dice, hij zegt
+decimos, wij zeggen
+dirá, hij zal zeggen
+
+# venir, gaan
+
+vas, je gaat
+vamos, we gaan
+vayamos, dat we gaan

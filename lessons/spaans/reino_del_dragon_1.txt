@@ -1,0 +1,105 @@
+# This word list corresponds to
+# El Reino del Dragón de Oro
+# by Isabel Allende
+# page numbers refer to 4th edition (2004), Montena, Barcelona
+#
+# word list (c) 2009 by Martijn van Iersel
+# redistribute under Creative commons CC-BY-SA
+#
+# part 2
+# áéóíúñ
+
+# p9
+la cumbre / la cima, de top
+el largo, de lengte
+el alumno, de student
+la travesía, de overtocht
+el pergamino, het perkament
+imperar, regeren
+azotar, slaan
+fatídico, onheilspellend
+despejado, onbewolkt
+la lana, de wol
+el cuero, het leer
+
+# p10
+el resbalón, het uitglijden
+el hachazo, de bijlslag
+destacar, uitsteken
+la bocanada, de slok
+gélido, zeer koud
+la voluntad, de wilskracht
+el entrenamiento, de training
+el aprendizaje, het leerproces
+
+# p11
+el bulto, de bult / de bagage
+la manta, de deken
+la manteca, de reuzel
+la cuerda, het touw
+el bastón, de wandelstok
+la pértiga, de polsstok
+emplear, in dienst hebben
+apoyar, ondersteunen
+pisar, stappen
+el hueco, het gat
+la grieta, de scheur
+el desvío, de omweg
+atreverse, wagen
+brincar, springen
+ancho, breed
+el palo, de stok
+alcanzar, bereiken
+el coraje, de moed / de woede
+vacilar, twijfelen
+el despeñadero, de afgrond
+la plegaria, de smeekbede
+
+#p12
+el hueso, het bot
+la barranca, de kloof
+la cadena, de keten
+la ceniza, de as
+la soltura, de vlotheid
+atar, vastknopen
+el cuello, de nek
+el ancho, de breedte
+el muslo, de dij
+
+#p13
+el hoyo, de kuil
+la orilla, de rand
+brillar, glanzen
+echar a, beginnen te
+
+#p14
+fastidiar, ergeren
+amistoso, vriendelijk
+huir, wegrennen
+perderse, verdwalen
+las huellas, de sporen
+
+#p15
+la ladera, de berghelling
+deslizar, glijden
+delgado, dun
+el sendero, het pad
+colgante, hangend
+soplar, blazen
+el granizo, de hagel
+la cebada, de hop
+la costra, de korst
+bastar, genoeg zijn
+a la intemperie, in de open lucht
+resguardar, beschutten
+apenas, net genoeg
+salmodiar, gebeden zingen
+desprender, loslaten
+
+#p16
+la lucha, het gevecht
+el ladrillo, de baksteen
+el acantilado, de klif
+escogido, uitgekozen
+el terremoto, de aardbeving
+el transcurso, het verloop

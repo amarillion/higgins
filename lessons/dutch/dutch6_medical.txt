@@ -1,0 +1,48 @@
+# Copyright 2009 Martijn van Iersel
+# Redistribution allowed under Creative Commons CC-BY-SA License
+
+het hoofd, the head
+de schouder, the sholder
+het lichaam, the body
+het been, the leg
+de voet, the foot
+de arm, the arm
+de hand, the head
+de vinger, the finger
+de teen, the toe
+de elleboog, the elbow
+de pols, the wrist
+de enkel, the ancle
+de knie, the knee
+de nek, the neck
+de dij, the thigh
+de kuit, the calve
+de duim, the thumb
+de oor, the ear
+het oog, the eye
+de wenkbrauw, the eyebrow
+de wimper, the eyelash
+de mond, the mouth
+de tong, the tongue
+de keel, the throat
+het haar, the hair
+de wang, the cheek
+de lip, the lip
+de kin, the chin
+de baard, the beard
+de snor, the moustache
+het bot, the bone
+het bloed, the blood
+de neus, the nose
+
+de hoofdpijn, the headache
+keelpijn, a sore throat
+de griep, the influenza
+een verkoudheid, a cold
+ik ben verkouden, I have a cold
+de koorts, the fever
+de wond, the wound
+de pijn, the pain
+
+de dokter, the doctor
+het ziekenhuis, the hospital

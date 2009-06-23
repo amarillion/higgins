@@ -1,0 +1,104 @@
+# Copyright 2009 Martijn van Iersel
+# Redistribution allowed under Creative Commons CC-BY-SA License
+
+vol, full
+empty, leeg
+
+nieuw, new
+oud, old
+jong, young
+
+lelijk, ugly
+mooi, pretty
+
+goed, good
+beter, better
+best, best
+slecht, bad
+
+groot, big
+klein, small
+
+lang, long
+kort, short
+
+ver, far
+dichtbij, near
+
+snel, quick
+langzaam, slow
+
+nat, wet
+droog, dry
+
+warm, warm
+heet, hot
+koud, cold
+koel, cool
+lauw, lukewarm
+
+waar, true
+fout, wrong
+juist, correct
+toeval, coincedence
+geluk, luck
+pech, bad luck
+
+eerlijk, honest
+vrolijk, happy
+
+aardig, friendly
+boos, angry
+droevig, sad
+gelukkig, happy
+sjacharijnig, grumpy
+gezellig, cosy
+bang, afraid
+angstaanjagend, scary
+
+kaal, bold
+harig, hairy
+
+rood, red
+groen, green
+geel, yellow
+bruin, brown
+paars, purple
+oranje, orange
+zwart, black
+wit, white
+grijs, grey
+
+makkelijk, easy
+moeilijk, hard
+onmogelijk, impossible
+
+pluizig, fluffy
+zacht, soft
+
+glanzend, shiny
+schitterend, brilliant
+dof, dull
+
+stomp, blunt
+scherp, sharp
+
+diep, deep
+ondiep, shallow
+
+pittig, spicy
+zoet, sweet
+zout, salty
+zuur, sour
+hartig, savoury
+
+zwaar, heavy
+licht, light
+helder, clear
+donker, dark
+
+onzichtbaar, invisible
+doorzichtig, transparent
+
+gebroken / kapot, broken
+bedorven, spoilt

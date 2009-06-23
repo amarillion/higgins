@@ -1,0 +1,23 @@
+# Copyright 2009 Martijn van Iersel
+# Redistribution allowed under Creative Commons CC-BY-SA License
+
+kijken, to look
+gaan, to go
+zijn, to be
+hebben, to have
+lopen, to walk
+rennen, to run
+roepen, to call
+schreeuwen, to scream
+huilen, to cry
+doen, to do
+komen, to come
+liggen, to lay
+mogen, to be allowed to
+kunnen, to be able to
+willen, to want
+worden, to become
+zien, to see
+zeggen, to say
+zetten, to put
+nemen, to take
