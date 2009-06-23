@@ -1,0 +1,25 @@
+TODO Dr. Higgins
+
+M1: Feature parity with wx version
+
+[x] Fix special chars / encoding problems in test1.txt
+[ ] Drawing bins in side panel
+[ ] Fix GUI layout
+[ ] test handling of /015 and /012
+[ ] enable handling of other charsets
+[ ] File->Restart
+[ ] Saving & loading state, resume a quiz where it left off
+[ ] Logging & viewing progress
+[ ] Remember last opened directory preference
+[ ] Windows installer
+
+M2: improvements
+
+[ ] Make input method optional
+[ ] Help->Help
+[ ] Icon / logo
+[ ] Refactoring: make Word a immutable class
+[ ] French lesson & input method
+[ ] Russian, Chinese, Japanese
+[ ] Localize dutch
+[ ] Localize spanish
