@@ -145,6 +145,7 @@ public class MainFrame
 					JOptionPane.showMessageDialog(frame, "File read error",
 							"Problem while opening lesson\n" + ex.getMessage(), 
 							JOptionPane.ERROR_MESSAGE);
+					ex.printStackTrace();
 				}
 			}
 		}
@@ -178,9 +179,45 @@ public class MainFrame
 		//TODO
 	}
 	
+	String inputMethod (String src)
+	{
+		String s = src;
+		s = s.replaceAll("\\^e", "ê"); //TODO: define with \ uNNNN constants
+		s = s.replaceAll("~n", "ñ");
+		
+		s = s.replaceAll("\"a", "ä");
+		s = s.replaceAll("\"e", "ë");
+		s = s.replaceAll("\"i", "ï");
+		s = s.replaceAll("\"o", "ö");
+		s = s.replaceAll("\"u", "ü");
+		
+		s = s.replaceAll("\"A", "Ä");
+		s = s.replaceAll("\"E", "Ë");
+		s = s.replaceAll("\"I", "Ï");
+		s = s.replaceAll("\"O", "Ö");
+		s = s.replaceAll("\"U", "Ü");
+		
+		s = s.replaceAll("`a", "à");
+		s = s.replaceAll("`e", "è");
+		s = s.replaceAll("`i", "ì");
+		s = s.replaceAll("`o", "ò");
+		s = s.replaceAll("`u", "ù");
+		
+		s = s.replaceAll("'a", "á");
+		s = s.replaceAll("'e", "é");
+		s = s.replaceAll("'i", "í");
+		s = s.replaceAll("'o", "ó");
+		s = s.replaceAll("'u", "ú");
+		
+		s = s.replaceAll("^\\?", "¿");
+		s = s.replaceAll("^!", "¡");	    
+	    
+		return s;
+	}
+	
 	private void checkAnswer()
 	{
-		String myAnswer = txtInput.getText();
+		String myAnswer = inputMethod (txtInput.getText());
 		txtOutput.setText ("");
 		if (quiz.compareAnswer(myAnswer))
 		{

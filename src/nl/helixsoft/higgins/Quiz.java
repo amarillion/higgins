@@ -17,10 +17,13 @@ package nl.helixsoft.higgins;
 
 import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.io.LineNumberReader;
+import java.io.OutputStream;
 import java.io.Reader;
 import java.io.Writer;
 import java.util.ArrayList;
@@ -55,7 +58,9 @@ public class Quiz
 		
 		private void processFile(File f) throws IOException
 		{
-			LineNumberReader reader = new LineNumberReader(new FileReader (f));
+			FileInputStream fs = new FileInputStream(f);
+			InputStreamReader isr = new InputStreamReader(fs, "ISO8859-1");
+			LineNumberReader reader = new LineNumberReader(isr);
 			
 			String line;
 			//TODO check that /012 and /015 are handled correctly.
