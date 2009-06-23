@@ -3,18 +3,25 @@ TODO Dr. Higgins
 M1: Feature parity with wx version
 
 [x] Fix special chars / encoding problems in test1.txt
-[ ] Drawing bins in side panel
-[ ] Fix GUI layout
+[x] Fix GUI layout bug
+[x] Drawing bins in side panel
+[x] bug: array out of bounds exception when quiz is finished
 [ ] test handling of /015 and /012
 [ ] enable handling of other charsets
-[ ] File->Restart
+[x] Options dialog
+[ ] Result dialog
+[x] File->Restart
 [ ] Saving & loading state, resume a quiz where it left off
 [ ] Logging & viewing progress
 [ ] Remember last opened directory preference
 [ ] Windows installer
+[ ] Resolve GPL2/GPL3
+[ ] Upload to website
 
 M2: improvements
 
+[ ] Remember no. of bins-option
+[ ] Freshmeat announcement
 [ ] Make input method optional
 [ ] Help->Help
 [ ] Icon / logo
@@ -23,3 +30,4 @@ M2: improvements
 [ ] Russian, Chinese, Japanese
 [ ] Localize dutch
 [ ] Localize spanish
+[ ] debian package

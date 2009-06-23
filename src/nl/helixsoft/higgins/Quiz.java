@@ -15,15 +15,11 @@
 //    along with Dr. Higgins.  If not, see <http://www.gnu.org/licenses/>.
 package nl.helixsoft.higgins;
 
-import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.LineNumberReader;
-import java.io.OutputStream;
 import java.io.Reader;
 import java.io.Writer;
 import java.util.ArrayList;
@@ -73,7 +69,11 @@ public class Quiz
 		private void processLine(String line, int lineNo)
 		{
 			String first, last;
-			if (line.charAt(0) == '#')
+			if (line.matches("\\s*"))
+			{
+				// empty or whitespace, ignore
+			}
+			else if (line.charAt(0) == '#')
 			{
 				int pos = line.indexOf('=');
 				if (pos >= 0)
@@ -119,11 +119,8 @@ public class Quiz
 				}
 				else
 				{
-					if (!line.matches("\\s*"))
-					{
-						System.err.println ("Warning: syntax error in line "
-								+ lineNo + ", comma expected. ignored.");						
-					}
+					System.err.println ("Warning: syntax error in line "
+							+ lineNo + ", comma expected. ignored.");
 				}
 			}
 		}
@@ -163,8 +160,13 @@ public class Quiz
 	
 	public boolean isFinished()
 	{
-		//TODO
-		return false;
+	    // check if all bins before last are empty
+	    boolean result = true;
+	    for (int i = 0; i < getBins() - 1; ++i)
+		{
+			if (getBinCount(i) != 0) result = false;
+		}
+	    return result;
 	}
 	
 	/**
@@ -345,7 +347,8 @@ public class Quiz
 	private int counter;
 	private String hint = null;
 	
-	private int currentWord; // TODO ??? iterator
+	// TODO Word?
+	private int currentWord; 
 	
 	private int binCount[] = new int[Word.MAXBINS];
 }

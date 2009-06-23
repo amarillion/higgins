@@ -15,20 +15,53 @@
 //    along with Dr. Higgins.  If not, see <http://www.gnu.org/licenses/>.
 package nl.helixsoft.higgins;
 
-import javax.swing.JOptionPane;
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.Graphics;
 
-public class ResultDlg 
+import javax.swing.BorderFactory;
+import javax.swing.JPanel;
+
+/**
+ * Custom panel for viewing progress of quiz
+ */
+public class QuizProgressPanel extends JPanel
 {
-	public void createAndShow()
+	public QuizProgressPanel()
 	{
-		JOptionPane.showMessageDialog(null, "Finished!");
-		//TODO
+		setBorder (BorderFactory.createLineBorder(Color.BLACK));
+		setBackground(Color.BLUE);
+		setForeground(Color.YELLOW);
 	}
-	
+
 	Quiz quiz = null;
 	
-	public void setQuiz(Quiz aQuiz)
+	/**
+	 * Set the quiz.
+	 * @param aQuiz may be null
+	 */
+	public void setQuiz (Quiz aQuiz)
 	{
 		quiz = aQuiz;
+		invalidate();
+	}
+	
+	public Dimension getPreferredSize()
+	{
+		return new Dimension (250, 200);
+	}
+	
+	public void paintComponent(Graphics g)
+	{
+		super.paintComponent (g);
+		
+		if (quiz != null)
+		{
+			for (int i = 0; i < quiz.getBins(); ++i)
+			{
+				g.drawString ("Bin " + (i + 1) + ": " + quiz.getBinCount(i), 
+						10, 20 * (i + 1));
+			}
+		}
 	}
 }

@@ -2,8 +2,6 @@ package nl.helixsoft.higgins;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
-import java.awt.TextArea;
-import java.awt.TextField;
 import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -19,6 +17,8 @@ import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import javax.swing.JTextArea;
+import javax.swing.JTextField;
 import javax.swing.KeyStroke;
 
 /**
@@ -27,33 +27,32 @@ import javax.swing.KeyStroke;
 public class MainFrame 
 {
 	private JFrame frame;
-	private TextField txtInput;
-	private TextArea txtOutput;
-	private JPanel binPanel;
+	private JTextField txtInput;
+	private JTextArea txtOutput;
+	private QuizProgressPanel binPanel;
 	private JLabel lblResult1;
 	private JLabel lblResult2;
+
+	private int defaultBins = 4;
 	
 	public void createAndShowGui()
 	{
 		frame = new JFrame("Dr. Higgins");
-		frame.setLayout(new BorderLayout());
-		
 		JMenuBar bar = new JMenuBar();
 		createMenu(bar);
 		frame.setJMenuBar(bar);
-		
+				
 		JPanel resultPanel = new JPanel();
 		lblResult1 = new JLabel ("Correct");
 		lblResult2 = new JLabel ("explanation...");
 		resultPanel.add (lblResult1);
 		resultPanel.add (lblResult2);
 		
-		txtInput = new TextField (60);
-		txtOutput = new TextArea (10, 60);
+		txtInput = new JTextField (60);
+		txtOutput = new JTextArea (10, 60);
 		txtOutput.setEditable(false);
-		txtOutput.append ("No current Lesson.\n");
-		txtOutput.append ("Go to file->new to start a new lesson.\n");
-		binPanel = new JPanel();
+		clearFrame();
+		binPanel = new QuizProgressPanel();
 		
 		frame.add (resultPanel, BorderLayout.NORTH);
 		frame.add (txtOutput, BorderLayout.CENTER);
@@ -128,29 +127,37 @@ public class MainFrame
 			if (chooser.showOpenDialog(frame) == JFileChooser.APPROVE_OPTION)
 			{
 				File f = chooser.getSelectedFile();
-				try
-				{
-					// stop logging current quiz, if it exists
-					if (quiz != null) 
-					{
-						writeLog();
-						quiz = null;
-					}
-					quiz = new Quiz(f);
-					beginLog();
-					nextWord();
-				}
-				catch (IOException ex)
-				{
-					JOptionPane.showMessageDialog(frame, "File read error",
-							"Problem while opening lesson\n" + ex.getMessage(), 
-							JOptionPane.ERROR_MESSAGE);
-					ex.printStackTrace();
-				}
+				startQuiz (f);
 			}
 		}
 	};
 
+	private void startQuiz(File f)
+	{
+		try
+		{
+			// stop logging current quiz, if it exists
+			if (quiz != null) 
+			{
+				writeLog();
+				quiz = null;
+			}
+			quiz = new Quiz(f);
+			//TODO: this overrides bin option in lesson itself
+			quiz.setBins(defaultBins);
+			binPanel.setQuiz (quiz);
+			beginLog();
+			nextWord();
+		}
+		catch (IOException ex)
+		{
+			JOptionPane.showMessageDialog(frame, "File read error",
+					"Problem while opening lesson\n" + ex.getMessage(), 
+					JOptionPane.ERROR_MESSAGE);
+			ex.printStackTrace();
+		}
+	}
+	
 	private void writeLog()
 	{
 		//TODO
@@ -171,12 +178,14 @@ public class MainFrame
 
 	private void drawBins()
 	{
-		//TODO
+		binPanel.repaint();
 	}
 
 	private void clearFrame()
 	{
-		//TODO
+		txtOutput.setText ("");
+		txtOutput.append ("No current Lesson.\n");
+		txtOutput.append ("Go to file->new to start a new lesson.\n");
 	}
 	
 	String inputMethod (String src)
@@ -217,6 +226,7 @@ public class MainFrame
 	
 	private void checkAnswer()
 	{
+		//TODO: make use of input methods provided by java
 		String myAnswer = inputMethod (txtInput.getText());
 		txtOutput.setText ("");
 		if (quiz.compareAnswer(myAnswer))
@@ -240,10 +250,12 @@ public class MainFrame
 	
 	private void showResults()
 	{
-		//TODO
+		ResultDlg dlg = new ResultDlg();
+		dlg.setQuiz (quiz);
+		dlg.createAndShow();
 	}
 	
-	private static class RestartAction extends AbstractAction
+	private class RestartAction extends AbstractAction
 	{
 		RestartAction()
 		{
@@ -253,11 +265,15 @@ public class MainFrame
 		
 		public void actionPerformed(ActionEvent ae) 
 		{
-			// TODO Auto-generated method stub
+			if (quiz != null)
+			{
+				// start quiz again with same file
+				startQuiz (quiz.getFile());
+			}
 		}
 	};
 
-	private static class OptionsAction extends AbstractAction
+	private class OptionsAction extends AbstractAction
 	{
 		OptionsAction()
 		{
@@ -267,7 +283,14 @@ public class MainFrame
 		
 		public void actionPerformed(ActionEvent ae) 
 		{
-			// TODO Auto-generated method stub
+			OptionsDlg dlg = new OptionsDlg(frame);
+			dlg.setBins(defaultBins);
+			dlg.setVisible(true);
+			if (!dlg.isCancelled())
+			{
+				defaultBins = dlg.getBins(); 
+				if (quiz != null) quiz.setBins(defaultBins);
+			}
 		}
 	};
 

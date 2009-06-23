@@ -15,8 +15,15 @@
 //    along with Dr. Higgins.  If not, see <http://www.gnu.org/licenses/>.
 package nl.helixsoft.higgins;
 
-public class StatsDlg {
+import javax.swing.JOptionPane;
 
+public class StatsDlg 
+{
+	public void createAndShowGUI()
+	{
+		JOptionPane.showMessageDialog(null, "Unimplemented");
+		//TODO
+	}
 	
 	
 }
