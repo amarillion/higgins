@@ -1,0 +1,48 @@
+#áéóíúñ
+# uit:
+# gente 9: gente de ciudad
+#question2=Wat is "" in het Spaans?
+#question1=Wat is "" in het Nederlands?
+
+#1
+la vida nocturna, het nachtleven
+la temperatura, de temperatuur
+tanto .. como .., zowel .. als ..
+la capital, de hoofdstad
+el origen, de afkomst
+los metros, de meters
+sobre el nivel del mar, boven de zeespiegel
+el gobierno, de regering
+muchísmo, heel veel
+
+#2
+la calidad de vida, de leefbaarheid
+residir, wonen
+la encuesta, de enquête
+la opinión, de mening
+el ciudadano, de burger
+el tamaño, de grootte
+el transporte, het vervoer
+funcionar, functioneren
+el transporte público, het openbaar vervoer
+la educación, het onderwijs
+la sanidad, de gezondheid
+el colegio, de hogeschool
+la guardería, de crèche
+la instalación deportiva, de sportaccomodatie
+los jardines, de tuinen
+el cine, de bioscoop
+la ecología, het nachtleven
+los parques, de parken
+llueve, het regent
+el comercio, de handel
+participativo, betrokken
+solidario, solidair
+existir, bestaan
+las drogas, de drugs
+la delincuencia, de criminaliteit
+la violencia, het geweld
+lo peor, het ergste
+la decisión, de beslissing
+porqué, waarom
+

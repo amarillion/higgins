@@ -1,0 +1,95 @@
+#Suomi - Lesson 5
+#random dictionary words
+#question1=What is "" in Finnish?
+#question2=What is "" in English?
+aamutakki, dressing gown
+aate, idea
+aateli, nobility
+aateliton, commoner
+haamu / aave, ghost
+ahne, greedy
+ahtaa, crowd / stuff / pack
+aihe, cause / topic
+aikainen, early
+aikakausi, period / time
+aikamuoto, tense
+aisti, sense
+aivot, brain
+alainen, subordinate
+alennus, discount
+aleta, to lower
+aloitus, start
+elinkeino, occupation
+eliö, organism
+elonkurjuu, to harvest
+eläköön, hurrah
+epäily, doubt
+epäröidä, to hesitate
+epätarkka, inaccurate
+epätoiva, despair
+epäusko, disbelief
+epäämätön, undeniable
+erakko, hermit
+eriste, insulation
+erittäin, extremely
+erotella, to discriminate
+erottaa, to separate
+erotuomari, referee
+etikka, vinegar
+ilkeä / paha, evil
+ilmasto, climate
+ilmaus, expression
+ilmentää, to express
+ilmiö, phenomenon
+ilmoittaa, to inform
+ilmoitus, advertisement
+imeä, to suck
+inhota, to detest
+into, enthousiasm
+irrallinen, disconnected
+päästä irti!, let go!
+irtolainen, vagabond
+iskeä, to strike
+isku, blow / punch
+itsekäs, selfish
+jakaa, to split / to distribute
+jakaja, dealer / divisor
+jakelu, delivery
+harva, sparse
+harvinainen, rare
+harvoin, seldom 
+haudata, to bury
+haukkaus, bite
+heilua, to swing
+heiluri, pendulum
+heiluttaa, to wave
+heittää, to throw
+hengissä / elossa, alive
+hermo, nerve
+herkkä, sensitive
+herne, pea
+hevonen, horse
+hiki, sweat
+houkutella, to lure
+houkutus, temptation
+huijari, impostor
+hummeri, lobster
+humalassa, drunk
+huokaus, sigh
+huokea, cheap
+kaakeli, tile
+kaapeli, cable
+kahdesti, twice
+kaiho, nostalgia
+kaivos, mine / pit
+kaksoset, twins
+kalusteet, furniture
+kaniini, rabbit
+kannattaja, supporter
+kansalainen, citizen
+kantavuus, capacity
+kantaja, bearer
+karhuntalja, bearskin
+kari, rock
+karttapallo, globe
+karvas, bitter

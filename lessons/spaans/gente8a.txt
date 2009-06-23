@@ -1,0 +1,68 @@
+#áéóíúñ
+# uit:
+# gente 8: gente que viaja
+#question2=Wat is "" in het Spaans?
+#question1=Wat is "" in het Nederlands?
+
+lunes, maandag
+martes, dinsdag
+miércoles, woensdag
+jueves, donderdag
+viernes, vrijdag
+sábado, zaterdag
+domingo, zondag
+abril, april
+la reunión, de vergadering
+la fábrica, de fabriek
+el despacho, het kantoor
+reservar, reserveren
+las entradas, de kaartjes
+la taquilla, de kassa
+la campaña, de campagne
+la inauguración, de inhuldiging
+la exposición, de expositie
+fijar, vastleggen
+recoger, afhalen
+la tintorería, de stomerij
+
+#1
+la agenda, de agenda
+el ejecutivo, de leidinggevende
+fabricar, fabriceren
+cuándo, wanneer
+las páginas, de pagina's
+habitualmente, gewoonlijk
+especial, speciaal
+la plancha, het strijkijzer
+la leyenda, de legende
+el apóstol, de apostel
+enterrar, begraven
+la Edad Media, de Middeleeuwen
+miles, duizenden
+los peregrinos, de pelgrims
+cruzar, oversteken
+hacia, naar
+la tumba, het graf
+el santo, de heilige
+ir a pie, te voet gaan
+ir a caballo, te paard gaan
+ir en bicicleta, te fiets gaan
+religioso, godsdienstig
+la iglesia, de kerk
+pintoresco, pittoresk
+variado, veelzijdig
+el kilómetro, de kilometer
+la posada, de herberg
+gratis, gratis
+las camas, de bedden
+las duchas, de douches
+el Consejo de Europa, de Raad van Europa
+
+#2
+sabrás, je zult weten
+por cierto, overigens
+sabías, je wist
+acabar de, net gedaan hebben
+la frontera, de grens
+estar a punto de, op het punt staan om
+

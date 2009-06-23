@@ -1,0 +1,74 @@
+#áéóíúñ
+# uit:
+# gente 8: gente que viaja
+#question2=Wat is "" in het Spaans?
+#question1=Wat is "" in het Nederlands?
+
+# To do:
+# check if plural: útil, nuttig
+#
+
+#8
+convertirse, worden
+los vuelos, de vluchten
+las manías, de manies
+la central, het hoofdkantoor
+la llegada, de aankomst
+los vuelos directos, de non-stop vluchten
+los códigos, de codes
+las líneas aéreas, de luchtvaartmaatschappijen
+próximo, volgend
+céntrico, centraal gelegen
+simular, simuleren
+el empleado, de werknemer
+la agencia de viajes, het reisbureau
+
+#9
+la cinta, de casette
+el paso, de stap
+el aire acondicionado, de airconditioning
+bien comunicado, gunstig gelegen
+la caja fuerte, de kluis
+la antena parabólica, de schotelantenne
+estratégico, strategisch
+con relación a, met betrekking tot
+la estación, het station
+el aparcamiento, de parkeerplaats
+
+#10
+útil, nuttig
+raro, raar
+actuar, zich gedragen
+comunicarse, communiceren
+la multinacional, de multinational
+a veces, soms
+de vez en cuando, nu en dan
+lo mismo, hetzelfde
+curioso, merkwaardig
+picar, knabbelen
+ruidoso, luidruchtig
+la contaminación, de verontreiniging
+el mediodía, de middag
+los malentendidos, de misverstanden
+reunirse, vergaderen
+decidir, besluiten
+los papeles, de papieren
+deprisa, gehaast
+responsable, verantwoordelijk
+serio, serieus
+soso, saai
+afectivo, hartelijk
+simpático, aardig
+informal, informeel
+tener razón, gelijk hebben
+social, sociaal
+personal, persoonlijk
+distinto, verschillend
+peor, slechter
+mejor, beter
+el extranjero, de buitenlander
+significar, betekenen
+relacionarse, contact leggen met
+
+#11
+la comunicación, de communicatie

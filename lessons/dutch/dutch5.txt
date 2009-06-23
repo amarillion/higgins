@@ -1,0 +1,85 @@
+vol, full
+empty, leeg
+nieuw, new
+oud, old
+lelijk, ugly
+mooi, pretty
+goed, good
+slecht, bad
+groot, big
+klein, small
+jong, young
+tussen, between
+tegen, against
+naast, next to
+voor, in front of
+achter, behind
+boven, above
+onder, below
+omhoog, up
+omlaag, down
+links, left
+rechts, right
+waar, true
+fout, wrong
+juist, correct
+maar, but
+en, and
+of, or
+met, with
+want / omdat, because
+integendeel, on the contrary
+toeval, coincedence
+geluk, luck
+pech, bad luck
+lang, long
+kort, short
+ver, far
+snel, quick
+langzaam, slow
+beter, better
+best, best
+warm, warm
+heet, hot
+koud, cold
+koel, cool
+kip, chicken
+varken, pig
+koe, cow
+muis, mouse
+leeuw, lion
+beer, bear
+vlieg, fly
+bij, bee
+vlinder, butterfly
+schaap, sheep
+telkens, over and over
+eens, once
+altijd, always
+nooit, never
+soms, sometimes
+even, for a while
+morgen, tomorrow
+vandaag, today
+overmorgen, the day after tomorrow
+gisteren, yesterday
+straks, later
+nu, now
+toen, then
+als, if / when
+onmiddelijk, immediately
+eerlijk, honest
+vrolijk, happy
+tegelijk, at the same time
+samen, together
+vaak, often
+af en toe, now and then
+'s avonds, in the evening
+'s morgens, in the morning
+ochtend, morning
+avond, evening
+middag, afternoon
+nacht, night
+goedemorgen, good morning
+goedemiddag, good afternoon
+

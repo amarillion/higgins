@@ -1,0 +1,68 @@
+# uit:
+# gente 7
+#question2=Wat is "" in het Spaans?
+#question1=Wat is "" in het Nederlands?
+#áéóíúñ
+
+#5
+el cocinero, de kok
+la carne de ternera, het kalfsvlees
+la harina, het meel
+los calamares, de inktvis
+los mejillones, de mosselen
+la naranja, de sinasappel
+
+#6
+aprender, leren
+de nuevo, opnieuw
+la carne de cerdo, het varkensvlees
+
+#8
+ir de acampada, kamperen
+el monte, de berg
+olvidar, vergeten
+allí, daar
+corregir, corrigeren
+añadir, toevoegen
+quitar, verwijderen
+la mantequilla, de boter
+el aceite, de olie
+el espagueti, de spaghetti
+la lata, het blik
+el tomate, de tomaat
+
+#9
+caliente, warm
+frío, koud
+el entrante, het voorgerecht
+a media tarde, in de loop van de middag
+completo, volledig
+la fécula, het zetmeel
+la grasa vegetal, het plantaardig vet
+en resumen, kort samengevat
+la dificultad, de moeilijkheid
+pelado, geschild
+cortado, gesneden
+las rodajas, de schijfjes
+la taza, het kopje
+calentar, verhitten
+la sartén, de koekepan
+salar, zout toevoegen
+a fuego lento, op laag vuur
+blandito, zacht
+remover, omroeren
+a menudo, dikwijls
+pegarse, vastplakken
+escurrir, afgieten
+batir, loskloppen
+mezclar, mengen
+dejar, laten
+la mezcla, het mengsel
+el fuego, het vuur
+por cada lado, aan iedere kant
+dar la vuelta, omdraaien
+con la ayuda de, met behulp van
+los trucos, de trucs
+freír, bakken
+sacar, weghalen
+

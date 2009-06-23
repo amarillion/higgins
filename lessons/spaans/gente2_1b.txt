@@ -1,0 +1,54 @@
+# uit:
+# gente 2 hoofdstuk 1
+#question2=Wat is "" in het Spaans?
+#question1=Wat is "" in het Nederlands?
+#áéóíúñ
+
+#paragraaf 5
+
+# ...
+
+#paragraaf 10
+ejercer, uitoefenen
+arollar, oprollen
+ambos, beide
+el charco, de plas
+destacar, zich onderscheiden
+la garra, de klauw
+el gitano, de zigeuner
+el octogenario, de tachtiger
+el treintañero, de dertiger
+fundir, gieten / versmelten
+rendir homenaje, hulde brengen
+encargar, opdragen
+la grabación, de opname
+la entrevista, het interview
+asegurar, verzekeren
+el apuntador, de souffleur
+rabioso, woedend
+salvaje, wild
+templar, matigen
+alterar, veranderen
+suelto, los
+el humo, de rook
+esférico, bolvormig
+el sabor, de smaak
+el olor, de geur
+el oído, het gehoor
+el periodismo, de journalistiek
+el periodista, de journalist
+apadrinar, peetouder zijn
+la crudeza cotidiana, de hardheid van het dagelijkse leven
+aplastar, pletten
+el milagro, het wonder
+amenazar, bedreigen
+cobrar, innen / verkrijgen
+el brillo, de glans
+disfrutar, genieten van
+el conocimiento, de kennis
+la vacuna, het vaccin
+desarollar, ontwikkelen
+optar, kiezen
+llevar a cabo, verwerkelijken
+rechazar, verwerpen
+entero, geheel

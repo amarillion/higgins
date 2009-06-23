@@ -1,0 +1,67 @@
+#áéóíúñ
+# uit:
+# gente 9: gente de ciudad
+#question2=Wat is "" in het Spaans?
+#question1=Wat is "" in het Nederlands?
+
+#10
+la plaza, het plein
+la avenida, de boulevard
+el callejon, de steeg
+las luces, de lichten
+el semáforo, het stoplicht
+la sirena, de sirene
+los supermercados, de supermarkten
+las motos, de motoren
+los camiones, de vrachtwagens
+las bicicletas, de fietsen
+los cláxones, de claxons
+las voces, de stemmen
+el perro, de hond
+el gato, de kat
+el canario, de kanarie
+los policías, de politieagenten
+el maestro, de onderwijzer
+el enfermo, de verpleegkundige
+el funcionario, de ambtenaar
+el empresario, de ondernemer
+el mecánico, de monteur
+el cura, de priester
+el obrero, de arbeider
+el teléfono, de telefoon
+la antena, de antenne
+el mensajero, de koerier
+el periódico, de krant
+los carteles, de aanplakbiljetten
+la taberna, de kroeg
+los cabarets, de nachtclubs
+la ventana, het raam
+la puerta, de deur
+el portal, de portiek
+la entrada, de ingang
+la salida, de uitgang
+el ruido, het lawaai
+el humo, de rook
+el olor, de geur
+las noticias, het nieuws
+el mendigo, de bedelaar
+el bombero, de brandweerman
+la alegría, de vreugde
+la sorpresa, de verrassing
+la ilusión, de illusie
+la esperanza, de hoop
+el ático, de zolder
+el sótano, de kelder
+el desamor, de onverschilligheid
+la raza, het ras
+
+#11
+la versión, de versie
+
+#12
+miserioso, mysterieus
+la sala de teatro, de theaterzaal
+la sala de cine, de bioscoopzaal
+
+#13
+el lugar de origen, de geboorteplaats

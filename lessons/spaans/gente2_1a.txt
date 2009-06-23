@@ -1,0 +1,88 @@
+# uit:
+# gente 2 hoofdstuk 1
+#question2=Wat is "" in het Spaans?
+#question1=Wat is "" in het Nederlands?
+#áéóíúñ
+
+#paragraaf 1
+interesante, interessant
+amable, vriendelijk
+simpático, sympathiek
+con buen gusto, met goede smaak
+antipático, onsympathiek
+con sentido del humor, met gevoel voor humor
+divertido, vermakelijk
+guapo, knap
+autoritario, autoritair
+inteligente, intelligent
+agradable, aangenaam
+
+#paragraaf 2
+el lugar para vivir, de woonplaats
+la manía, de manie
+la estación del año, het seizoen
+la prenda de vestir, het kledingstuk
+el actor, de acteur
+la actriz, de actrice
+el pintor, de schilder
+el tipo de música, het soort muziek
+
+#paragraaf 3
+matricular, inschrijven
+paradójicamente, paradoxaal
+tan lejos, zo ver weg
+de vuelta, terug
+la bailaora, de danseres
+especializar, specializeren
+la terapia, de therapie
+a través, door
+el baile, de dans
+la enseñanza, het onderwijs
+además, bovendien
+el copropietaro, de mede-eigenaar
+el miembro, het lid
+suizo, zwitsers
+la clave, de sleutel
+el rasgo de la personalidad, de karaktertrek
+el físico, het uiterlijk
+el vicio, de ondeugd
+regado para, onbekwaam voor
+planchar, strijken
+la avaricia, de gierigheid
+el enimigo, de vijand
+la asignatura, het vak
+la vergüenza, de schaamte
+la pareja, het paar
+ordenar, schikken
+el miedo, de angst
+el ordenador, de computer
+el bolígrafo, de pen
+indignar, boos maken
+emocionar, ontroeren
+la infidelidad, de trouweloosheid
+la mentira, de leugen
+la superficialidad, de oppervlakkigheid
+soportar, verdragen
+el respuesta, het antwoord
+el cuestionario, de vragenlijst
+el optimista, de optimist
+el pesimista, de pessimist
+complicar, compliceren
+tranquilo, rustig
+seguro, zeker
+inseguro, onzeker
+conservador, conservatief
+progresista, progressief
+valiente, dapper / sterk
+miedosa, vreesachtig
+
+#paragraaf 4
+roncar, snurken
+cobarde, laf
+el riesgo, het risico
+aburrir, vervelen
+coleccionar, verzamelen
+maquillar, opmaken
+la araña, de spin
+el calcetin, de sok
+

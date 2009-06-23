@@ -1,0 +1,181 @@
+#Spaans
+#Uit "prisma - spaans leer je zo"
+#hoofdstuk 6, paragraaf 98, 108
+#question1=Wat is "" in het Spaans?
+#question2=Wat is "" in het Nederlands?
+
+#paragraaf 98
+la calle, de straat
+la conversaci'on, het gesprek
+?ad'onde?, waarheen?
+va usted, gaat u
+ir a, gaan naar
+tan, zo
+de prisa, gehaast
+ver, zien
+la sorpresa, de verrassing
+desde, sedert
+cu'ando, wanneer
+pues, welnu
+desde hace tres dias, sedert drie dagen
+nada m'as, niet meer
+cu'anto, hoeveel
+me alegro de, ik verheug mij over
+alegrarse de, zich verheugen over
+encontrar, ontmoeten / vinden
+el encuentro, de ontmoeting
+sano y bueno, gezond en wel
+sano, gezond
+?qu'e tal?, hoe gaat het?
+la se~nora, de mevrouw
+el hijo, de zoon
+la hija, de dochter
+los hijos, de kinderen
+?y los suyos?, en de uwen?
+sin novedad, zonder nieuws
+la novedad, het nieuws
+la temporada, het seizoen
+los suegros, de schoonouders
+yo he aprovechado, ik heb benut
+aprovechar, benutten
+la ocasi'on, de gelegenheid
+para hacer, om te maken
+un viaje de negocios, een zakenreis
+los negocios, de zaken
+el viaje, de reis
+de viaje, op reis
+alojarse, logeren
+he alquilado, ik heb gehuurd
+alquilar, huren
+aqu'i cerca, hier dichtbij
+el piso, het appartement
+amueblado, gemeubileerd
+pues, want
+pienso, ik denk
+pensar, denken
+quedar, blijven
+la semana, de week
+encantador, betoveren.
+quiere usted, wilt u
+querer, willen
+dar un pase'ito, een wandeling maken
+naturalmente, natuurlijk
+con mucho gusto, met veel genoegen
+el gusto, het genoegen
+la compa~nia. het gezelschap
+no le es molesta, u niet hindert
+molesto, lastig
+molestar, lastig vallen
+puedo, ik kan
+podemos, wij kunnen
+poder, kunnen
+grato, aangenaam
+m'as grato, aangenamer
+dar una vuelta, een ommetje maken
+tomar, nemen
+juntos, samen
+en cualquier parte, ergens
+un vasito de cerveza, een glaasje bier
+el vasito, het glaasje
+la cerveza, het bier
+con much'isimo gusto, met veel genoegen
+estoy a su disposici'on, ik ben tot je beschikking
+?a qu'e hora?, hoe laat?
+almorzar, lunchen
+el almuerzo, de lunch
+variar, verschillen
+generalmente, gewoonlijk
+entre, tussen
+entre la una y las dos, tussen een en twee uur
+suele usted, bent u gewoon
+soler, gewoon zijn
+seg'un, dat hangt ervan af
+tener que, moeten
+alli, daar
+se come, men eet
+comer, eten
+me permite usted, staat u mij toe
+permitir, toestaan
+convidar a, uitnodigen tot
+hoy, vandaag
+es usted muy amable, u bent zeer vriendelijk
+siento en el alma, ik betreur het zeer
+siento, ik betreur
+el alma, de ziel
+aceptar, aanvaarden
+tener una cita, een afspraak hebben
+la cita, de afspraak
+pues otro d'ia ser'a, een andere keer dan maar
+ser'a, hij zal zijn
+conocer, leren kennen
+el sitio, de plaats
+donde se come bien, waar men goed eet
+ir'e, ik zal gaan
+a menudo, dikwijls
+adem'as, bovendien
+tengo trabajo, ik heb werk
+el trabajo, het werk
+tant'isimo, zo veel
+la casa, het huis
+en casa, thuis
+agradable, aangenaam
+necesitar, nodig hebben
+perder, verliezen
+perder tiempo, tijd verliezen
+el tiempo, de tijd / het weer
+
+#paragraaf 108
+nuestro / nuestros, ons / onze
+guapo, knap
+la f'abrica, de fabriek
+bailar, dansen
+bailado, gedanst
+bailando, dansende
+el jardin, de tuin
+pintar, schilderen
+pintado, geschilderd
+pintando, schilderende
+la mesa, de tafel
+el cielo, de hemel
+nublado, bewolkt
+el garage, de garage
+enviar, verzenden
+enviado, verzonden
+estudiar, studeren
+estudiado, gestudeerd
+estudiando, studerende
+el pa'is, het land
+hermoso, prachtig
+oscuro, donker
+malo, slecht
+el hombre, de man
+la mujer, de vrouw
+ciego, blind
+alegre, vrolijk
+joven, jong
+el padre, de vader
+rubio, blond
+hablado, gesproken
+hablando, sprekende
+la familia, de familie
+esta tarde, vanmiddag
+el m'edico, de arts
+ahora, nu
+el hospital, het ziekenhuis
+la plaza, het plein
+siempre, altijd
+generalmente, in het algemeen
+!cuidado!, pas op!
+la catedral, de kathedraal
+el acueducto, het aquaduct
+el cap'itulo, het hoofdstuk
+repetir, herhalen
+repetido, herhaald
+estoy repiti'endolos, ik ben ze aan het herhalen
+repitiendo, herhalende
+!qu'e lastima!, wat jammer!
+el gu'ia, de gids
+saber, weten
+sabe, hij weet
+la excursi'on, de excursie
+el palacio, het paleis

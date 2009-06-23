@@ -1,0 +1,5 @@
+age, ikä
+departure, lähtö
+España, Spanje
+¿está usted libre?, bent u vrij?
+el rápido, de sneltrein
