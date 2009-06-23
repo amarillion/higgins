@@ -1,6 +1,50 @@
 TODO Dr. Higgins
 
-M1: 0.99 release, Near feature parity with wx version
+M2: 0.99b minor feature & bugfix release
+
+[x] Bump version no to 0.99b
+[x] Help->Help
+[x] .desktop file
+[x] BUG: fix start menu link to manual
+[x] allow making desktop shortcut in windows installer
+[x] Use platform L&F on windows
+[x] Bug: wrong line endings of README.txt on windows
+[x] enable handling of other charsets
+[x] Japanese
+[ ] Russian, Greek
+[ ] CC-BY-SA for lessons
+[ ] Test handling of /015 and /012
+[ ] Check timestamp van les tijdens loading state
+[ ] Spell-check spanish localization
+[ ] upload to website
+
+M2: 1.00 Release
+
+[ ] Bump version no to 1.00
+[ ] Icon / logo
+[ ] Allow saving most difficult
+[ ] Mogelijkheid meerdere lessen te combineren
+[ ] Make input method optional
+[ ] Refactoring: make Word a immutable class
+[ ] French lesson & input method
+[ ] Debian package
+[ ] Upload to website
+[ ] Freshmeat announcement
+
+M3: future
+
+[ ] Set up donation page & shortcut
+[ ] translate manual to spanish & dutch
+[ ] get italian lessons / localization
+[ ] get french lessons / localization
+[ ] get german lessons / localization
+[ ] Sync lessons onto wiki
+[ ] colored diff for wrong answer
+
+Past releases
+=============
+
+January 1 2009 : 0.99 release, Near feature parity with wx version
 
 [x] Fix special chars / encoding problems in test1.txt
 [x] Fix GUI layout bug
@@ -23,26 +67,4 @@ M1: 0.99 release, Near feature parity with wx version
 [x] Windows installer
 [x] Localize dutch
 [x] Localize spanish
-[ ] Upload to website
-
-M2: 1.00 Release
-
-[ ] CC-BY-SA for lessons
-[ ] test handling of /015 and /012
-[ ] Check timestamp van les tijdens loading state
-[ ] Allow saving most difficult
-[ ] Mogelijkheid meerdere lessen te combineren
-[ ] enable handling of other charsets
-[ ] Russian, Chinese, Japanese
-[ ] Freshmeat announcement
-[ ] Make input method optional
-[ ] Help->Help
-[ ] Icon / logo
-[ ] Refactoring: make Word a immutable class
-[ ] French lesson & input method
-[ ] debian package
-
-M3: future
-
-[ ] Sync lessons onto wiki
-[ ] colored diff for wrong answer
+[x] Upload to website

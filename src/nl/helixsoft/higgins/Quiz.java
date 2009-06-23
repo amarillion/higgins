@@ -48,14 +48,35 @@ public class Quiz implements Serializable
 		String question1 = MainFrame.res.getString("WHAT_IS");
 		String question2 = MainFrame.res.getString("WHAT_IS");
 		String description = "";
-		String charset = "iso-latin-1";
+		// default encoding: ISO8859-1 or iso-latin-1
+		String encoding = "ISO8859-1";
 		int bins = 4;
 		int askBothWays = 1;
 		
-		private void processFile(File f) throws IOException
+		private void determineEncoding(File f) throws IOException
 		{
 			FileInputStream fs = new FileInputStream(f);
-			InputStreamReader isr = new InputStreamReader(fs, "ISO8859-1");
+			InputStreamReader isr = new InputStreamReader(fs);
+			LineNumberReader reader = new LineNumberReader(isr);
+			
+			String line;
+			while ((line = reader.readLine()) != null)
+			{
+				if (line.startsWith ("#encoding="))
+				{
+					encoding = line.substring(10).trim();
+					break;
+				}
+			}			
+			System.out.println ("Using encoding " + encoding);
+		}
+		
+		private void processFile(File f) throws IOException
+		{
+			determineEncoding (f);
+			
+			FileInputStream fs = new FileInputStream(f);
+			InputStreamReader isr = new InputStreamReader(fs, encoding);
 			LineNumberReader reader = new LineNumberReader(isr);
 			
 			String line;
@@ -78,13 +99,12 @@ public class Quiz implements Serializable
 				int pos = line.indexOf('=');
 				if (pos >= 0)
 				{
-					first = line.substring(1, pos-1).trim();
+					first = line.substring(1, pos).trim();
 					last = line.substring(pos + 1, line.length()).trim();
 					
 					if (first.equalsIgnoreCase("question1")) { question1 = last; }
 					else if (first.equalsIgnoreCase("question2")) { question2 = last; }
 					else if (first.equalsIgnoreCase("description")) { description = last; }
-					else if (first.equalsIgnoreCase("charset")) { charset = last; }
 					else if (first.equalsIgnoreCase("bins")) { bins = Integer.parseInt(last); }
 					else if (first.equalsIgnoreCase("askbothways")) { askBothWays = Integer.parseInt(last); }
 				}
@@ -140,7 +160,7 @@ public class Quiz implements Serializable
 		question1 = ql.question1;
 		question2 = ql.question2;
 		description = ql.description;
-		charset = ql.charset;
+		encoding = ql.encoding;
 		bins = ql.bins;
 		askBothWays = ql.askBothWays;
 		
@@ -337,7 +357,7 @@ public class Quiz implements Serializable
 	private String question1;
 	private String question2;
 	private String description;
-	private String charset;
+	private String encoding;
 	
 	private int bins;
 	private int askBothWays;

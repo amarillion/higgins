@@ -3,6 +3,11 @@ package nl.helixsoft.higgins;
 import com.jgoodies.forms.layout.CellConstraints;
 import com.jgoodies.forms.layout.FormLayout;
 
+import edu.stanford.ejalbert.BrowserLauncher;
+import edu.stanford.ejalbert.exception.BrowserLaunchingExecutionException;
+import edu.stanford.ejalbert.exception.BrowserLaunchingInitializingException;
+import edu.stanford.ejalbert.exception.UnsupportedOperatingSystemException;
+
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.Point;
@@ -22,7 +27,6 @@ import java.io.ObjectOutputStream;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.Locale;
 import java.util.ResourceBundle;
 
 import javax.swing.AbstractAction;
@@ -47,6 +51,7 @@ public class MainFrame
 	
 	public static final File APPDATADIR;
 	public static final File DEFAULT_LESSONS_DIR;
+	public static final File INSTALLDIR;
 	static
 	{
 		if (System.getProperty("os.name").startsWith("Win"))
@@ -58,15 +63,15 @@ public class MainFrame
 			APPDATADIR = new File (System.getProperty("user.home"), ".higgins");
 		}
 		
-		File curDir = new File (System.getProperty("user.dir"));
-		File test = new File (curDir, "lessons");
+		INSTALLDIR = new File (System.getProperty("user.dir"));
+		File test = new File (INSTALLDIR, "lessons");
 		if (test.exists())
 		{
 			DEFAULT_LESSONS_DIR = test;
 		}
 		else
 		{
-			DEFAULT_LESSONS_DIR = curDir;
+			DEFAULT_LESSONS_DIR = INSTALLDIR;
 		}
 	}
 	
@@ -197,6 +202,7 @@ public class MainFrame
 		view.add(new StatsAction());
 		JMenu help = new JMenu (res.getString("HELP"));
 		help.add(new AboutAction());
+		help.add(new HelpAction());
 		bar.add (file);
 		bar.add (view);
 		bar.add (help);
@@ -541,6 +547,37 @@ public class MainFrame
 		{
 			AboutDlg dlg = new AboutDlg();
 			dlg.createAndShowGUI(frame);
+		}
+	};
+
+	private class HelpAction extends AbstractAction
+	{
+		HelpAction()
+		{
+			super();
+			putValue (NAME, res.getString("HELP"));
+		}
+		
+		public void actionPerformed(ActionEvent ae) 
+		{
+			BrowserLauncher bl;
+			File helpFile = new File(INSTALLDIR, "doc/index.html");
+			String error = null;
+			try {
+				bl = new BrowserLauncher(null);
+				bl.openURLinBrowser(helpFile.toURI().toString());
+			} catch (BrowserLaunchingInitializingException e) {
+				error = res.getString("COULD_NOT_LAUNCH_BROWSER");
+				e.printStackTrace();
+			} catch (UnsupportedOperatingSystemException e) {
+				error = res.getString("COULD_NOT_LAUNCH_BROWSER");
+				e.printStackTrace();
+			} catch (BrowserLaunchingExecutionException e) {
+				error = res.getString("COULD_NOT_LAUNCH_BROWSER");
+				e.printStackTrace();
+			}
+			if (error != null)
+				JOptionPane.showMessageDialog(frame, error);
 		}
 	};
 

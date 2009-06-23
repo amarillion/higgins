@@ -2,7 +2,7 @@
 <project name="Higgins" default="jar" basedir=".">
 	
 	<property name="src.dir" value="src"/>
-	<property name="higgins.version" value="0.99WIP"/>
+	<property name="higgins.version" value="0.99b~WIP"/>
 	
 	<property name="build.dir" value="build"/>
 	<property name="lib.dir" value="lib"/>

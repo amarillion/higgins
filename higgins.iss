@@ -1,12 +1,12 @@
 [Setup]
 AppPublisher=HelixSoft
 AppName=Dr. Higgins
-AppVerName=Dr. Higgins v0.99WIP
+AppVerName=Dr. Higgins v0.99b~WIP
 DefaultDirName={pf}\DrHiggins
 DefaultGroupName=Dr. Higgins
 Compression=lzma
 SolidCompression=yes
-OutputBaseFilename=DrHiggins_v0_99WIP_Setup
+OutputBaseFilename=DrHiggins_v0_99b~WIP_Setup
 OutputDir=.
 
 [Files]
@@ -23,6 +23,14 @@ Source: "README.txt"; DestDir: "{app}"; Flags: isreadme
 Source: "COPYING.txt"; DestDir: "{app}";
 
 [Icons]
-Name: "{group}\Dr. Higgins"; Filename: "{app}\higgins.bat"; WorkingDir: "{app}";
-Name: "{group}\manual"; Filename: "{app}\doc\higgins_manual.html";
+Name: "{group}\Dr. Higgins"; Filename: "{app}\higgins.bat"; WorkingDir: "{app}"; Flags: runminimized
+Name: "{group}\manual"; Filename: "{app}\doc\index.html";
 Name: "{group}\readme"; Filename: "{app}\README.txt";
+Name: "{group}\Lesson folder"; Filename: "{app}\lessons";
+Name: "{commondesktop}\Dr. Higgins"; Filename: "{app}\higgins.bat"; WorkingDir: "{app}"; Flags: runminimized
+
+[Languages]
+Name: "en"; MessagesFile: "compiler:Default.isl"
+Name: "nl"; MessagesFile: "compiler:Languages\Dutch.isl"
+Name: "es"; MessagesFile: "compiler:Languages\Spanish.isl"
+
