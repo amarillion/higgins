@@ -30,7 +30,8 @@ Dr. Higgins v 0.99b~WIP Manual
 		<li><a href="#log">The log</a></li>
 		<li><a href="#options">The options menu</a></li>
 		<li><a href="#adding">Adding</a></li>
-		<li><a href="#copyright">Copyright information</a></li>
+		<li><a href="#study">Language study tips</a></li>
+		<li><a href="#copyright">Contact &amp; Copyright information</a></li>
 	</ol>
 	</p>
 	<a name="intro"><h2>Introduction</h2>
@@ -60,15 +61,56 @@ Dr. Higgins v 0.99b~WIP Manual
 	</p>
 	<p>
 		This program is meant as help with self-study. It might also prove
-		useful for high-school students and the like who have a vocabulary
-		test coming up.
+		useful for high-school students who are studying for a vocabulary test
+		or exam.
 	</p>
 	<a name="running"><h2>Running a quiz</h2>
 	<p>
-		
+		When you launch the program, no quiz has been loaded yet. You can start
+		a quiz simply by selecting File->New from the menu. 
+	</p>
+	<img src="images/ss-new.png" alt="Starting a new quiz">
+	<p>	
+		The program comes 
+		with a number of quizzes for self-study in different languages. Select one of 
+		these quizzes to start. If you need to study a specific list of words, or if you're
+		studying a language that is not available, you need to create your own quiz
+		first. See below for information on how to do that.
+	</p>
+	<p>
+		The first question is picked randomly from the quiz and is asked to you,
+		you need to type in the answer completely, without spelling errors.
+	</p>
+	<p>		
+		On the right side you see four bins (the number of bins can be changed),
+		each bin contains a number of questions. At the start of the quiz, all questions
+		are in bin #1. Each time you answer a question correctly, it is moved to the next bin.
+		Once all questions are in the last bin, the quiz ends.
+	</p>
+	<img src="images/ss-correct.png" alt="Answering a question">
+	<p>		
+		If you make a mistake however, the question is repeated and 
+		doesn't move into the next bin until you answer it correctly 2 times in a row. With this
+		extra repetition you learn quickly from your mistakes.
+	</p>
+	<p>		
+		It can sometimes happen that you get confused with two very similar questions. For example, 
+		in a spanish quiz you can easily confuse nuevo (new) with nueve (nine). When you answer "neuve" to the
+		question "What is "new" in spanish?", the program will not only tell you that the answer is wrong, but
+		also warn you that you mix up two words. This feature will help you to distinguish 
+		confusing words more quickly.
+	</p>
+	<img src="images/ss-confused.png" alt="When you confuse two words">
+	<p>
+		Because of all the repetition a quiz can take a while to complete. The program
+		remembers where you were when you close the program, so it is safe to stop at any time and
+		resume at a later moment where you left off. Simply select File->Exit from the menu to stop.
+		If you stopped at question #75, the next time you start you will be greeted with question #76.
 	</p>
 	<a name="ending"><h2>When the quiz ends</h2>
 	<p>
+		When the quiz ends, you get a window with a list of questions that you found most difficult,
+		in which you made the most mistakes. You can note down this list for extra rehearsal.
 	</p>
 	<a name="log"><h2>The log</h2>
 	<p>
@@ -103,7 +145,7 @@ Dr. Higgins v 0.99b~WIP Manual
 		open the new lesson from withing Dr. Higgins. You have to use
 		the filename extension "txt" (which is the default extension in notepad).
 	</p>
-	<img src="images/image1.png" alt="notepad example">
+	<img src="images/Image1.png" alt="notepad example">
 	<p>
 		Note that if you use e.g. Microsoft Word or a similar word processor, 
 		you need to make sure that you save as text only (*.txt) format.
@@ -193,12 +235,20 @@ Dr. Higgins v 0.99b~WIP Manual
 		the English translation of the Dutch word kind (child).
 	</p>
 	<p>
-		The property askbothways may be set to 0 to force the program
+		The property "askbothways" may be set to 0 to force the program
 		to use the part before the comma as question only (never as answer) and
 		the part after the comma as answer only. This may be useful in cases where you
 		want to e.g. test yourself with conjugations or plurals. Alternatively, you
 		could use this feature to enter e.g. country, capital pairs and 
 		quiz yourself for the capitals.
+	</p>
+	<p>
+		The property "encoding" can be used to specify the character encoding of the lesson.
+		The default encoding (ISO8859-1) is suitable for all west-european languages including 
+		spanish, french, german, dutch and english. 
+		
+		You only need to worry about this property when dealing with special character sets
+		such as japanese or russian. A suitable encoding that works for nearly any lanugage is UTF-8.
 	</p>
 	<p>
 		Finally, you may use the property bins to set the default number of bins for this quiz.
@@ -209,7 +259,26 @@ Dr. Higgins v 0.99b~WIP Manual
 		Of course, all these properties are optional. All you really need is a list of word pairs
 		and you're ready to go! It's easy as that.
 	</p>
-	<a name="copyright"><h2>Copyright info</h2>
+	<a name="study"><h2>Language study tips</h2>
+	<p>
+		Dr. Higgins is a tool that helps you to learn a language. But this program by itself
+		can never be a replacement for a complete language course. It can help you improve
+		vocabulary rapidly, and can help with learning conjugations of irregular verbs. 
+		But it will never be able to teach you grammar and pronunciation. 
+	</p>
+	<p>
+		Even if you rely only on self-study, there are many other things you can 
+		(and should) do at home. Here are a few tips:
+	</p>
+	<ul>
+		<li>Buy music with clear lyrics of the target language and listen to it all the time</li>
+		<li>Buy DVD's of movies in the target language. It's easiest to start with childrens movies with stories you already know</li>
+		<li>Set the language of your computer, games, your cell phone or other devices to your target language
+		(But not before you've learned the words "Settings" and "Change language" :)</li>
+		<li>Participate in online mailing lists and online chat channels</li>
+		<li>Go to the local library and read books in your foreign language</li>
+	</ul>
+	<a name="copyright"><h2>Contact &amp; Copyright info</h2>
 	<p>
 Copyright 2004-2009 Martijn van Iersel. This software is published under the 
 General Public License (GPL) version 3 or higher. See COPYING.txt for details.
@@ -223,6 +292,11 @@ General Public License (GPL) version 3 or higher. See COPYING.txt for details.
 		and if you have created word lists for a new language or if you have
 		improved current word lists, please consider sending them back to me so
 		I can add them to the package, and others can make use of them as well.
+	</p>
+	<p>
+		You can contact me at <a href="mailto:amarillion@yahoo.com">amarillion@yahoo.com</a>. 
+		The official Dr. Higgins website is at <a href="http://www.helixsoft.nl/project_page.php?file_name=higgins.proj">
+		http://www.helixsoft.nl/project_page.php?file_name=higgins.proj</a>
 	</p>
 </body>
 </html>

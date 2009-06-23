@@ -27,6 +27,7 @@ import java.io.ObjectOutputStream;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Locale;
 import java.util.ResourceBundle;
 
 import javax.swing.AbstractAction;
@@ -115,7 +116,6 @@ public class MainFrame
 		txtInput.setFont(medFont);
 		txtOutput.setFont(medFont);
 		
-		clearFrame();
 		binPanel = new QuizProgressPanel();
 		
 		frame.add (lblResult, cc.xy(2,2));
@@ -162,6 +162,7 @@ public class MainFrame
 			}			
 		});
 		
+		clearFrame();
 		initPreferences();
 		loadState();
 		frame.setLocation(
@@ -261,8 +262,15 @@ public class MainFrame
 		}
 	}
 	
+	/**
+	 * start quiz, but without re-initializing.
+	 * So this can also be used to continue a stored quiz.
+	 * 
+	 * If any previously started quiz was not yet closed cleanly, it will be.
+	 */
 	private void startQuiz(Quiz newQuiz)
 	{
+		txtOutput.setText("");
 		// stop logging current quiz, if it exists
 		if (quiz != null) 
 		{
@@ -330,6 +338,7 @@ public class MainFrame
 
 	private void clearFrame()
 	{
+		lblResult.setText (" ");
 		txtOutput.setText ("");
 		txtOutput.append (res.getString("NO_CURRENT_LESSON") + "\n");
 		txtOutput.append (res.getString("GO_TO_FILE") + "\n");
@@ -463,6 +472,21 @@ public class MainFrame
 				ObjectInputStream ois = new ObjectInputStream(
 						new FileInputStream (STATE));
 				Quiz newQuiz = (Quiz)ois.readObject();
+				
+				long otherTimeStamp = newQuiz.getFile().lastModified();
+				if (otherTimeStamp > newQuiz.getFileTimeStamp())
+				{
+					// frame doesn't exist yet at this moment!
+					JOptionPane pane = new JOptionPane();
+					int result = JOptionPane.showConfirmDialog(null, res.getString("QUIZ_CHANGED"), 
+							res.getString("QUIZ_CHANGED_TITLE"), JOptionPane.YES_NO_OPTION,
+							JOptionPane.QUESTION_MESSAGE);
+					if (result == JOptionPane.YES_OPTION)
+					{
+						// reload & re-initialize quiz
+						newQuiz = new Quiz (newQuiz.getFile());
+					}
+				}
 				startQuiz (newQuiz);
 				STATE.delete();
 			}

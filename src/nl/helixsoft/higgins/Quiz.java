@@ -157,6 +157,7 @@ public class Quiz implements Serializable
 		reset();
 		
 		fileName = newFileName;
+		fileTimeStamp = fileName.lastModified();
 		question1 = ql.question1;
 		question2 = ql.question2;
 		description = ql.description;
@@ -334,6 +335,7 @@ public class Quiz implements Serializable
 	
 	public int getBinCount(int b) { return binCount[b]; }
 	
+	public long getFileTimeStamp() { return fileTimeStamp; }
 	public void setBins(int newCount)
 	{
 		bins = newCount;
@@ -364,7 +366,7 @@ public class Quiz implements Serializable
 	private List<Word> words = new ArrayList<Word>();
 	private Map<String, String> wordMap = new HashMap<String, String>();
 	private File fileName;
-	private int fileTimeStamp;
+	private long fileTimeStamp;
 	
 	private int totalDuration;
 	private int sessions;
