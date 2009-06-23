@@ -1,20 +1,40 @@
 Dr. Higgins v0.99
 Intelligent Vocabulary Quiz
 Copyright 2003-2009 Martijn van Iersel
-Contact me at amarillion@yahoo.com
-
-Published under the General Public License (GPL)
-see COPYING.txt for details.
 
 See doc/index.html for instructions on how to use Dr. Higgins
 
-This realease comes with vocabularies for the following languages:
+This release comes with vocabularies for the following languages:
 
 Spanish-English: 7 lessons
 Spaans-Nederlands: 30 lessons
 Dutch-English: 8 lessons
 English-Finnish: 6 lessons
 
-You can find these in the lessons subfolder of the Dr Higgins folder. By default, this is C:\Program Files\DrHiggins\lessons
+You can find these in the lessons subfolder of the Dr Higgins folder. 
+By default, this is C:\Program Files\DrHiggins\lessons
 
-I'm always interested in good vocabulary files for any language. If you create some, please let me know and I'll be happy to add them.
+I'm always interested in good vocabulary files for any language. 
+If you create some, please let me know and I'll be happy to add them.
+
+Contact
+=======
+
+Website: http://www.helixsoft.nl
+E-mail: amarillion@yahoo.com
+
+Availability
+============
+
+Dr. Higgins is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+Dr. Higgins is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with Dr. Higgins.  If not, see <http://www.gnu.org/licenses/>.

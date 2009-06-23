@@ -46,6 +46,7 @@
 				<attribute name="Class-Path" value="${jar.class.path}"/>
 			</manifest>
 			<fileset dir="${build.dir}" includes="**/*.class"/>			
+			<fileset dir="${src.dir}" includes="**/*.properties"/>			
 		</jar>
     </target>
 

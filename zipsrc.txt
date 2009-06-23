@@ -7,5 +7,6 @@ lessons/**/*.txt
 lib/*.jar
 README.txt
 src/**/**/**/*.java
+src/**/**/**/*.properties
 test/*
 TODO.txt

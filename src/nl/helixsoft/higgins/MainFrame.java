@@ -22,6 +22,8 @@ import java.io.ObjectOutputStream;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Locale;
+import java.util.ResourceBundle;
 
 import javax.swing.AbstractAction;
 import javax.swing.JFileChooser;
@@ -41,11 +43,36 @@ import nl.helixsoft.util.TypedProperties;
  */
 public class MainFrame 
 {
-	//TODO: not hard-coded
-	public static final File DEFAULT_LESSONS_DIR = new File ("/home/martijn/prg/jHiggins/lessons");
-	public static final File LOGFILE = new File ("/home/martijn/higginslog.txt");
-	public static final File PREFERENCES = new File ("/home/martijn/.higgins.props");
-	public static final File STATE = new File ("/home/martijn/.higgins.sto");
+	public static ResourceBundle res = ResourceBundle.getBundle("nl.helixsoft.higgins.Strings");
+	
+	public static final File APPDATADIR;
+	public static final File DEFAULT_LESSONS_DIR;
+	static
+	{
+		if (System.getProperty("os.name").startsWith("Win"))
+		{
+			APPDATADIR = new File (new File (System.getenv("appdata"), "HelixSoft"), "DrHiggins");
+		}
+		else
+		{
+			APPDATADIR = new File (System.getProperty("user.home"), ".higgins");
+		}
+		
+		File curDir = new File (System.getProperty("user.dir"));
+		File test = new File (curDir, "lessons");
+		if (test.exists())
+		{
+			DEFAULT_LESSONS_DIR = test;
+		}
+		else
+		{
+			DEFAULT_LESSONS_DIR = curDir;
+		}
+	}
+	
+	public static final File LOGFILE = new File (APPDATADIR, "higgins.log");
+	public static final File PREFERENCES = new File (APPDATADIR, "higgins.props");
+	public static final File STATE = new File (APPDATADIR, "higgins.sto");
 
 	private JFrame frame;
 	private JTextField txtInput;
@@ -159,16 +186,16 @@ public class MainFrame
 	
 	public void createMenu(JMenuBar bar)
 	{
-		JMenu file = new JMenu ("file");
+		JMenu file = new JMenu (res.getString("FILE"));
 		file.add(new NewAction());
 		file.add(new RestartAction());
 		file.addSeparator();
 		file.add(new OptionsAction());
 		file.addSeparator();
 		file.add(new ExitAction());
-		JMenu view = new JMenu ("view");
+		JMenu view = new JMenu (res.getString("VIEW"));
 		view.add(new StatsAction());
-		JMenu help = new JMenu ("help");
+		JMenu help = new JMenu (res.getString("HELP"));
 		help.add(new AboutAction());
 		bar.add (file);
 		bar.add (view);
@@ -182,7 +209,7 @@ public class MainFrame
 		NewAction()
 		{
 			super();
-			putValue (NAME, "New");
+			putValue (NAME, res.getString("NEW"));
 			putValue(ACCELERATOR_KEY, KeyStroke.getKeyStroke(KeyEvent.VK_N, 
 					Toolkit.getDefaultToolkit().getMenuShortcutKeyMask()));		
 		}
@@ -264,6 +291,7 @@ public class MainFrame
 		{
 			try
 			{
+				LOGFILE.getParentFile().mkdirs();
 				FileWriter writer = new FileWriter(LOGFILE, true);
 				writer.write (line);
 				writer.close();
@@ -285,7 +313,7 @@ public class MainFrame
 	{
 		quiz.nextQuestion();
 		drawBins();
-		txtOutput.append ("\nQuestion #" + quiz.getCounter() 
+		txtOutput.append ("\n" + res.getString("QUESTION") + " #" + quiz.getCounter() 
 				+ ": " + quiz.getQuestion() + "\n"); 
 	}
 
@@ -297,42 +325,42 @@ public class MainFrame
 	private void clearFrame()
 	{
 		txtOutput.setText ("");
-		txtOutput.append ("No current Lesson.\n");
-		txtOutput.append ("Go to file->new to start a new lesson.\n");
+		txtOutput.append (res.getString("NO_CURRENT_LESSON") + "\n");
+		txtOutput.append (res.getString("GO_TO_FILE") + "\n");
 	}
 	
 	String inputMethod (String src)
 	{
 		String s = src;
-		s = s.replaceAll("\\^e", "ê"); //TODO: define with \ uNNNN constants
-		s = s.replaceAll("~n", "ñ");
+		s = s.replaceAll("\\^e", "\u00ea");
+		s = s.replaceAll("~n", "\u00f1");
 		
-		s = s.replaceAll("\"a", "ä");
-		s = s.replaceAll("\"e", "ë");
-		s = s.replaceAll("\"i", "ï");
-		s = s.replaceAll("\"o", "ö");
-		s = s.replaceAll("\"u", "ü");
+		s = s.replaceAll("\"a", "\u00e4");
+		s = s.replaceAll("\"e", "\u00eb");
+		s = s.replaceAll("\"i", "\u00ef");
+		s = s.replaceAll("\"o", "\u00f6");
+		s = s.replaceAll("\"u", "\u00fc");
 		
-		s = s.replaceAll("\"A", "Ä");
-		s = s.replaceAll("\"E", "Ë");
-		s = s.replaceAll("\"I", "Ï");
-		s = s.replaceAll("\"O", "Ö");
-		s = s.replaceAll("\"U", "Ü");
+		s = s.replaceAll("\"A", "\u00c4");
+		s = s.replaceAll("\"E", "\u00cb");
+		s = s.replaceAll("\"I", "\u00cf");
+		s = s.replaceAll("\"O", "\u00d6");
+		s = s.replaceAll("\"U", "\u00dc");
 		
-		s = s.replaceAll("`a", "à");
-		s = s.replaceAll("`e", "è");
-		s = s.replaceAll("`i", "ì");
-		s = s.replaceAll("`o", "ò");
-		s = s.replaceAll("`u", "ù");
+		s = s.replaceAll("`a", "\u00e0");
+		s = s.replaceAll("`e", "\u00e8");
+		s = s.replaceAll("`i", "\u00ec");
+		s = s.replaceAll("`o", "\u00f2");
+		s = s.replaceAll("`u", "\u00f9");
 		
-		s = s.replaceAll("'a", "á");
-		s = s.replaceAll("'e", "é");
-		s = s.replaceAll("'i", "í");
-		s = s.replaceAll("'o", "ó");
-		s = s.replaceAll("'u", "ú");
+		s = s.replaceAll("'a", "\u00e1");
+		s = s.replaceAll("'e", "\u00e9");
+		s = s.replaceAll("'i", "\u00ed");
+		s = s.replaceAll("'o", "\u00f3");
+		s = s.replaceAll("'u", "\u00fa");
 		
-		s = s.replaceAll("^\\?", "¿");
-		s = s.replaceAll("^!", "¡");	    
+		s = s.replaceAll("^\\?", "\u00bf");
+		s = s.replaceAll("^!", "\u00a1");	    
 	    
 		return s;
 	}
@@ -344,20 +372,19 @@ public class MainFrame
 		txtOutput.setText ("");
 		if (quiz.compareAnswer(myAnswer))
 		{
-			lblResult.setText("Correct");
+			lblResult.setText(res.getString("CORRECT"));
 			lblResult.setForeground(Color.GREEN);
-			txtOutput.append("The answer was :\"" + quiz.getCorrectAnswer() + "\"");
 		}
 		else
 		{
-			lblResult.setText("Wrong");
+			lblResult.setText(res.getString("WRONG"));
 			lblResult.setForeground(Color.RED);
-			txtOutput.append("You answered :\"" + myAnswer + "\"\n");
-			txtOutput.append("The answer was :\"" + quiz.getCorrectAnswer() + "\"");
+			txtOutput.append(res.getString("YOU_ANSWERED") + " \"" + myAnswer + "\"\n");
 		}
+		txtOutput.append(res.getString("THE_ANSWER_WAS") + " \"" + quiz.getCorrectAnswer() + "\"\n");
 		if (quiz.hasHint())
 		{
-			txtOutput.append ("Hint: " + quiz.getHint());
+			txtOutput.append (quiz.getHint() + "\n");
 		}
 	}
 	
@@ -373,7 +400,7 @@ public class MainFrame
 		RestartAction()
 		{
 			super();
-			putValue (NAME, "Restart");
+			putValue (NAME, res.getString("RESTART"));
 		}
 		
 		public void actionPerformed(ActionEvent ae) 
@@ -391,7 +418,7 @@ public class MainFrame
 		OptionsAction()
 		{
 			super();
-			putValue (NAME, "Options");
+			putValue (NAME, res.getString("OPTIONS"));
 		}
 		
 		public void actionPerformed(ActionEvent ae) 
@@ -412,7 +439,7 @@ public class MainFrame
 		ExitAction()
 		{
 			super();
-			putValue (NAME, "Exit");
+			putValue (NAME, res.getString("EXIT"));
 		}
 		
 		public void actionPerformed(ActionEvent ae) 
@@ -450,6 +477,7 @@ public class MainFrame
 		{
 			try
 			{
+				STATE.getParentFile().mkdirs();
 				ObjectOutputStream oos = new
 					ObjectOutputStream(
 							new FileOutputStream(
@@ -472,6 +500,7 @@ public class MainFrame
 
 		try
 		{
+			PREFERENCES.getParentFile().mkdirs();
 			FileOutputStream fs = new FileOutputStream(PREFERENCES);
 			prefs.store(fs, "Dr. Higgins preferences");
 			fs.close();
@@ -489,7 +518,7 @@ public class MainFrame
 		StatsAction()
 		{
 			super();
-			putValue (NAME, "Statistics");
+			putValue (NAME, res.getString("STATISTICS"));
 		}
 		
 		public void actionPerformed(ActionEvent ae) 
@@ -505,7 +534,7 @@ public class MainFrame
 		AboutAction()
 		{
 			super();
-			putValue (NAME, "About Dr. Higgins");
+			putValue (NAME, res.getString("ABOUT_DR_HIGGINS"));
 		}
 		
 		public void actionPerformed(ActionEvent ae) 

@@ -45,8 +45,8 @@ public class Quiz implements Serializable
 		Set<String> questions = new HashSet<String>();
 		Set<String> answers = new HashSet<String>();
 		List <String[]> words = new ArrayList<String[]>(); // String[2], Pairs of q, a 
-		String question1 = "What is \"\"?";
-		String question2 = "What is \"\"?";
+		String question1 = MainFrame.res.getString("WHAT_IS");
+		String question2 = MainFrame.res.getString("WHAT_IS");
 		String description = "";
 		String charset = "iso-latin-1";
 		int bins = 4;
@@ -107,18 +107,21 @@ public class Quiz implements Serializable
 						}
 						else
 						{
+							//TODO: translate
 							System.err.println ("Warning: duplicate answer '" + last +
 									"' in line " + lineNo + ", ignored.");
 						}
 					}
 					else
 					{
+						//TODO: translate
 						System.err.println ("Warning: duplicate question '" + first +
 								"' in line " + lineNo + ", ignored.");
 					}
 				}
 				else
 				{
+					//TODO: translate
 					System.err.println ("Warning: syntax error in line "
 							+ lineNo + ", comma expected. ignored.");
 				}
@@ -247,8 +250,8 @@ public class Quiz implements Serializable
 		{
 			if (wordMap.containsKey(anAnswer))
 			{
-				hint =  "You may be confused with \"" + 
-					anAnswer + "\" -> \"" + wordMap.get (anAnswer) + "\"";
+				hint =  MainFrame.res.getString("YOU_MAY_BE_CONFUSED_WITH") + 
+					" \"" +	anAnswer + "\" -> \"" + wordMap.get (anAnswer) + "\"";
 			}
 		}
 		counter++;

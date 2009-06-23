@@ -18,7 +18,6 @@ package nl.helixsoft.higgins;
 import com.jgoodies.forms.layout.CellConstraints;
 import com.jgoodies.forms.layout.FormLayout;
 
-import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.BufferedReader;
@@ -28,11 +27,9 @@ import java.io.IOException;
 import javax.swing.JButton;
 import javax.swing.JDialog;
 import javax.swing.JFrame;
-import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
-import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.DefaultTableModel;
 
 public class StatsDlg extends JDialog implements ActionListener
@@ -43,7 +40,7 @@ public class StatsDlg extends JDialog implements ActionListener
 	public StatsDlg(JFrame frame)
 	{
 		super (frame, true);
-		setTitle("Statistics");
+		setTitle(MainFrame.res.getString("STATISTICS"));
 		JPanel panel = new JPanel();
 		setContentPane(panel);
 		panel.setLayout (new FormLayout(
@@ -55,7 +52,7 @@ public class StatsDlg extends JDialog implements ActionListener
 		table = new JTable();
 		panel.add (new JScrollPane(table), cc.xy(2,2));
 		
-		btnOk = new JButton("OK");
+		btnOk = new JButton(MainFrame.res.getString("OK"));
 		btnOk.addActionListener(this);
 		panel.add (btnOk, cc.xy(2,4));
 		
@@ -74,7 +71,12 @@ public class StatsDlg extends JDialog implements ActionListener
 		};
 		
 		tm.setColumnCount(4);
-		tm.setColumnIdentifiers(new String[] {"Date", "Questions", "Duration", "Lesson"} );
+		String[] columns = new String[] {
+				MainFrame.res.getString("DATE"),
+				MainFrame.res.getString("QUESTIONS"),
+				MainFrame.res.getString("DURATION"),
+				MainFrame.res.getString("LESSON") };
+		tm.setColumnIdentifiers(columns);
 		try 
 		{
 			BufferedReader reader = new BufferedReader (new FileReader (MainFrame.LOGFILE));
@@ -96,10 +98,11 @@ public class StatsDlg extends JDialog implements ActionListener
 		}
 		table.setModel(tm);
 		table.setAutoResizeMode(JTable.AUTO_RESIZE_OFF);
-		table.getColumn("Date").setPreferredWidth(100);
-		table.getColumn("Questions").setPreferredWidth(30);
-		table.getColumn("Duration").setPreferredWidth(40);
-		table.getColumn("Lesson").setPreferredWidth(150);
+		//TODO: calculate optimal sizes
+		table.getColumn(columns[0]).setPreferredWidth(200);
+		table.getColumn(columns[1]).setPreferredWidth(40);
+		table.getColumn(columns[2]).setPreferredWidth(80);
+		table.getColumn(columns[3]).setPreferredWidth(400);
 		table.doLayout();
 		pack();
 	}

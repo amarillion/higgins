@@ -39,7 +39,7 @@ public class ResultDlg extends JDialog implements ActionListener
 	ResultDlg (JFrame frame)
 	{
 		super (frame, true);
-		setTitle ("Quiz result");
+		setTitle (MainFrame.res.getString("QUIZ_RESULT"));
 		
 		JPanel panel = new JPanel();
 		setContentPane(panel);
@@ -52,7 +52,7 @@ public class ResultDlg extends JDialog implements ActionListener
 		txtResults.setEditable(false);
 		panel.add (new JScrollPane(txtResults), cc.xy (2, 2));
 		
-		btnOk = new JButton("OK");
+		btnOk = new JButton(MainFrame.res.getString("OK"));
 		panel.add (btnOk, cc.xy (2, 4));
 		btnOk.addActionListener(this);
 		
@@ -71,12 +71,12 @@ public class ResultDlg extends JDialog implements ActionListener
 		{
 			Map<String, Integer> wrongAnswers = w.getWrongAnswers();
 			txtResults.append(w.getQuestion() + ", " + w.getAnswer() + "\n");					
-			txtResults.append("  mistakes:\n");
+			txtResults.append("  " + MainFrame.res.getString("MISTAKES") + "\n");
 			if (wrongAnswers.size() > 0)
 			{
 				for (String key : wrongAnswers.keySet())
 				{
-					txtResults.append("  \"" + key + "\" " + wrongAnswers.get(key) + " times\n");
+					txtResults.append("  \"" + key + "\" x " + wrongAnswers.get(key) + "\n");
 				}
 			}
 		}

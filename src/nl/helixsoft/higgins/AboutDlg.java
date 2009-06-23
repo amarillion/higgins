@@ -46,6 +46,7 @@ public class AboutDlg
 		JLabel versionLabel = new JLabel ("Dr. Higgins " + Main.VERSION_STRING);
 		JTextArea label = new JTextArea();
 		label.setEditable(false);
+		//TODO: Translate
 		label.setText("(c) copyright 2003-2009\nM.P. van Iersel <amarillion@yahoo.com>\nThis program is licensend under GPL 3 or higher,\nsee COPYING.txt for details");
 		
 		CellConstraints cc = new CellConstraints();
@@ -55,7 +56,7 @@ public class AboutDlg
 		dialogBox .add (label, cc.xy(4,2));
 		
 		JButton btnOk = new JButton();
-		btnOk.setText("OK");
+		btnOk.setText(MainFrame.res.getString("OK"));
 		btnOk.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e)
 			{
@@ -68,7 +69,7 @@ public class AboutDlg
 		dialogBox.add (btnOk, cc.xyw (2, 6, 3, "center, top"));			
 		
 		aboutDlg.setResizable(false);
-		aboutDlg.setTitle("About Dr. Higgins " + Main.VERSION_STRING);
+		aboutDlg.setTitle(MainFrame.res.getString("ABOUT_DR_HIGGINS"));
 		aboutDlg.add (dialogBox);
 		aboutDlg.pack();
 		aboutDlg.setLocationRelativeTo(parent);
