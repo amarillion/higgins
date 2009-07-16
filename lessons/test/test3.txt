@@ -1,0 +1,9 @@
+#bins=2
+España, Spanje
+l'ordinateur, de computer
+une téléphone, a phone
+une leçon, a lesson
+derrière, behind
+arrêt, stop
+table, pöytä
+

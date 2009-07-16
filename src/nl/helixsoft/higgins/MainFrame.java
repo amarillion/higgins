@@ -27,10 +27,10 @@ import java.io.ObjectOutputStream;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.Locale;
 import java.util.ResourceBundle;
 
 import javax.swing.AbstractAction;
+import javax.swing.JCheckBox;
 import javax.swing.JFileChooser;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -89,13 +89,16 @@ public class MainFrame
 	
 	private int startCounter;
 	private Date startTime;
+	private InputMethod im;
 	
 	public void createAndShowGui()
 	{
+		initPreferences();
+
 		frame = new JFrame("Dr. Higgins");
 		frame.setLayout(new FormLayout(
 				"3dlu, pref, 3dlu, pref, 3dlu",
-				"3dlu, pref, 3dlu, pref, 3dlu, pref, 3dlu"));
+				"3dlu, pref, 3dlu, pref, 3dlu, pref, 3dlu, pref, 3dlu"));
 		CellConstraints cc = new CellConstraints();
 		
 		JMenuBar bar = new JMenuBar();
@@ -116,12 +119,32 @@ public class MainFrame
 		txtInput.setFont(medFont);
 		txtOutput.setFont(medFont);
 		
+		boolean isInternationalInput = prefs.getBoolean(HiggPrefs.INTERNATIONAL_INPUT); 
+		im = new InputMethod(txtInput);
+		im.setCurrentSection(isInternationalInput ? "west-european" : null);
+		final JCheckBox ckInputMethod;
+		ckInputMethod = new JCheckBox("Enable international input", 
+				prefs.getBoolean(HiggPrefs.INTERNATIONAL_INPUT));
+		ckInputMethod.setFocusable(false);
+		ckInputMethod.addActionListener(new ActionListener()
+		{
+			public void actionPerformed(ActionEvent ae) 
+			{
+				im.setCurrentSection(
+						ckInputMethod.isSelected() ?
+								"west-european" : null);
+				prefs.set(HiggPrefs.INTERNATIONAL_INPUT, 
+						ckInputMethod.isSelected());
+			}
+		});
+		
 		binPanel = new QuizProgressPanel();
 		
 		frame.add (lblResult, cc.xy(2,2));
 		frame.add (txtOutput, cc.xy(2,4));
-		frame.add (txtInput, cc.xyw(2,6,3));
-		frame.add (binPanel, cc.xywh(4,2,1,3));
+		frame.add (ckInputMethod, cc.xy(2,6)); 
+		frame.add (txtInput, cc.xyw(2,8,3));
+		frame.add (binPanel, cc.xywh(4,2,1,5));
 		
 		txtInput.addActionListener(new ActionListener()
 		{
@@ -163,7 +186,6 @@ public class MainFrame
 		});
 		
 		clearFrame();
-		initPreferences();
 		loadState();
 		frame.setLocation(
 				prefs.getInt(HiggPrefs.WIN_X),
@@ -228,7 +250,7 @@ public class MainFrame
 					prefs.getFile(HiggPrefs.LAST_USED_LESSONS_DIR));
 			if (chooser.showOpenDialog(frame) == JFileChooser.APPROVE_OPTION)
 			{
-				prefs.setFile(HiggPrefs.LAST_USED_LESSONS_DIR, 
+				prefs.set(HiggPrefs.LAST_USED_LESSONS_DIR, 
 						chooser.getCurrentDirectory());
 				File f = chooser.getSelectedFile();
 				startQuiz (loadQuiz(f));
@@ -327,7 +349,7 @@ public class MainFrame
 	{
 		quiz.nextQuestion();
 		drawBins();
-		txtOutput.append ("\n" + res.getString("QUESTION") + " #" + quiz.getCounter() 
+		txtOutput.append (res.getString("QUESTION") + " #" + quiz.getCounter() 
 				+ ": " + quiz.getQuestion() + "\n"); 
 	}
 
@@ -344,47 +366,12 @@ public class MainFrame
 		txtOutput.append (res.getString("GO_TO_FILE") + "\n");
 	}
 	
-	String inputMethod (String src)
-	{
-		String s = src;
-		s = s.replaceAll("\\^e", "\u00ea");
-		s = s.replaceAll("~n", "\u00f1");
-		
-		s = s.replaceAll("\"a", "\u00e4");
-		s = s.replaceAll("\"e", "\u00eb");
-		s = s.replaceAll("\"i", "\u00ef");
-		s = s.replaceAll("\"o", "\u00f6");
-		s = s.replaceAll("\"u", "\u00fc");
-		
-		s = s.replaceAll("\"A", "\u00c4");
-		s = s.replaceAll("\"E", "\u00cb");
-		s = s.replaceAll("\"I", "\u00cf");
-		s = s.replaceAll("\"O", "\u00d6");
-		s = s.replaceAll("\"U", "\u00dc");
-		
-		s = s.replaceAll("`a", "\u00e0");
-		s = s.replaceAll("`e", "\u00e8");
-		s = s.replaceAll("`i", "\u00ec");
-		s = s.replaceAll("`o", "\u00f2");
-		s = s.replaceAll("`u", "\u00f9");
-		
-		s = s.replaceAll("'a", "\u00e1");
-		s = s.replaceAll("'e", "\u00e9");
-		s = s.replaceAll("'i", "\u00ed");
-		s = s.replaceAll("'o", "\u00f3");
-		s = s.replaceAll("'u", "\u00fa");
-		
-		s = s.replaceAll("^\\?", "\u00bf");
-		s = s.replaceAll("^!", "\u00a1");	    
-	    
-		return s;
-	}
-	
 	private void checkAnswer()
 	{
-		//TODO: make use of input methods provided by java
-		String myAnswer = inputMethod (txtInput.getText());
+		String myAnswer = txtInput.getText();
 		txtOutput.setText ("");
+		txtOutput.append(res.getString("QUESTION") + " #" + quiz.getCounter() 
+				+ ": " + quiz.getQuestion() + "\n");
 		if (quiz.compareAnswer(myAnswer))
 		{
 			lblResult.setText(res.getString("CORRECT"));
@@ -401,6 +388,7 @@ public class MainFrame
 		{
 			txtOutput.append (quiz.getHint() + "\n");
 		}
+		txtOutput.append ("\n");
 	}
 	
 	private void showResults()
@@ -443,7 +431,7 @@ public class MainFrame
 			dlg.setVisible(true);
 			if (!dlg.isCancelled())
 			{
-				prefs.setInt(HiggPrefs.DEFAULT_BINS, dlg.getBins()); 
+				prefs.set(HiggPrefs.DEFAULT_BINS, dlg.getBins()); 
 				if (quiz != null) quiz.setBins(dlg.getBins());
 			}
 		}
@@ -477,7 +465,6 @@ public class MainFrame
 				if (otherTimeStamp > newQuiz.getFileTimeStamp())
 				{
 					// frame doesn't exist yet at this moment!
-					JOptionPane pane = new JOptionPane();
 					int result = JOptionPane.showConfirmDialog(null, res.getString("QUIZ_CHANGED"), 
 							res.getString("QUIZ_CHANGED_TITLE"), JOptionPane.YES_NO_OPTION,
 							JOptionPane.QUESTION_MESSAGE);
@@ -525,8 +512,8 @@ public class MainFrame
 		//TODO: for some reason always returns 0,0
 		Point p = frame.getLocationOnScreen();
 
-		prefs.setInt(HiggPrefs.WIN_X, p.x);
-		prefs.setInt(HiggPrefs.WIN_Y, p.y);
+		prefs.set(HiggPrefs.WIN_X, p.x);
+		prefs.set(HiggPrefs.WIN_Y, p.y);
 
 		try
 		{
@@ -603,6 +590,7 @@ public class MainFrame
 			if (error != null)
 				JOptionPane.showMessageDialog(frame, error);
 		}
-	};
+	}
+	
 
 }

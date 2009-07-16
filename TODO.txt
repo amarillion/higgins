@@ -1,21 +1,17 @@
 TODO Dr. Higgins
 
-M2: 0.99b minor feature & bugfix release
+M3: 0.99c minor release
 
-[x] Bump version no to 0.99b
-[x] Help->Help
-[x] .desktop file
-[x] BUG: fix start menu link to manual
-[x] allow making desktop shortcut in windows installer
-[x] Use platform L&F on windows
-[x] Bug: wrong line endings of README.txt on windows
-[x] enable handling of other charsets
-[x] Japanese
-[x] Russian
-[x] Test handling of /015 and /012
-[x] Check timestamp van les tijdens loading state
-[x] Spell-check spanish localization
-[ ] upload to website
+[x] move from git to subversion
+[ ] include polish localization
+[x] French lesson & input method
+[x] Make input method optional
+[ ] update manual on input method stuff
+[ ] bump version no to 0.99c
+[ ] Add contributors to about box
+[ ] Start mailing list
+[ ] Upload to website
+[ ] Freshmeat announcement
 
 M2: 1.00 Release
 
@@ -25,10 +21,9 @@ M2: 1.00 Release
 [ ] Allow saving most difficult
 [ ] Mogelijkheid meerdere lessen te combineren
 [ ] Mogelijkheid een lesprogramma te maken
-[ ] Make input method optional
 [ ] Refactoring: make Word a immutable class
 [ ] Refactoring: QuizLoader -> Quiz, Quiz->QuizSession
-[ ] French lesson & input method
+[ ] Better rendering of box panel
 [ ] Debian package
 [ ] Upload to website
 [ ] Freshmeat announcement
@@ -36,10 +31,15 @@ M2: 1.00 Release
 M3: future
 
 [ ] Set up donation page & shortcut
-[ ] translate manual to spanish & dutch
+[ ] graph progress with JFreeChart
+[ ] translate manual to spanish
+[ ] translate manual to dutch
 [ ] get italian lessons / localization
-[ ] get french lessons / localization
+[ ] get french lessons
 [ ] get german lessons / localization
+[ ] get polish lessons
+[ ] greek input method
+[ ] russian input method
 [ ] Sync lessons onto wiki
 [ ] colored diff for wrong answer
 
@@ -70,3 +70,20 @@ January 1 2009 : 0.99 release, Near feature parity with wx version
 [x] Localize dutch
 [x] Localize spanish
 [x] Upload to website
+
+M2: 0.99b minor feature & bugfix release
+
+[x] Bump version no to 0.99b
+[x] Help->Help
+[x] .desktop file
+[x] BUG: fix start menu link to manual
+[x] allow making desktop shortcut in windows installer
+[x] Use platform L&F on windows
+[x] Bug: wrong line endings of README.txt on windows
+[x] enable handling of other charsets
+[x] Japanese
+[x] Russian
+[x] Test handling of /015 and /012
+[x] Check timestamp van les tijdens loading state
+[x] Spell-check spanish localization
+[x] upload to website

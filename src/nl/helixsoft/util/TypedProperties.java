@@ -48,7 +48,7 @@ public class TypedProperties<T extends KeyType>
 		properties.load(is);
 	}
 
-	public void setInt (T p, int value)
+	public <U> void set (T p, U value)
 	{
 		properties.setProperty ("" + p, "" + value);
 	}
@@ -58,23 +58,18 @@ public class TypedProperties<T extends KeyType>
 		return Integer.parseInt (properties.getProperty ("" + p));
 	}
 
+	public boolean getBoolean (T p)
+	{
+		return Boolean.parseBoolean(properties.getProperty ("" + p));
+	}
+
 	public String getString (T p)
 	{
 		return properties.getProperty ("" + p);
 	}
 	
-	public void setString (T p, String value)
-	{
-		properties.setProperty ("" + p, value);
-	}
-	
 	public File getFile (T p)
 	{
 		return new File (properties.getProperty ("" + p));
-	}
-	
-	public void setFile (T p, File value)
-	{
-		properties.setProperty("" + p, "" + value);
-	}
+	}	
 }

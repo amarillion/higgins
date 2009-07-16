@@ -8,6 +8,7 @@ public enum HiggPrefs implements KeyType
 	WIN_X (0),
 	WIN_Y (0),
 	DEFAULT_BINS (4),
+	INTERNATIONAL_INPUT (true),
 	;
 	
 	private String def;
