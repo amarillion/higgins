@@ -170,11 +170,11 @@ public class Quiz implements Serializable
 		for (String[] pair : ql.words)
 		{
 			words.add(new Word (pair[0], pair[1], 0, l));
-			wordMap.put(pair[0], pair[1]);
+			wordMap.put(pair[1], pair[0]);
 			if (askBothWays != 0)
 			{				
 				words.add(new Word (pair[1], pair[0], 1, l));
-				wordMap.put(pair[1], pair[0]);
+				wordMap.put(pair[0], pair[1]);
 			}
 		}
 		binCount[0] = words.size();
@@ -364,6 +364,7 @@ public class Quiz implements Serializable
 	private int bins;
 	private int askBothWays;
 	private List<Word> words = new ArrayList<Word>();
+	// map of answers, so that we can check for confusion
 	private Map<String, String> wordMap = new HashMap<String, String>();
 	private File fileName;
 	private long fileTimeStamp;

@@ -23,8 +23,6 @@ import javax.swing.UIManager;
  */
 public class Main 
 {
-	public static final String VERSION_STRING = "0.99b~WIP";
-	
 	/**
 	 * create and show the GUI
 	 */

@@ -20,18 +20,30 @@ import com.jgoodies.forms.layout.FormLayout;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.IOException;
+import java.util.Properties;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
-import javax.swing.JTextArea;
 
 /**
  * Dialog in help->about
  */
 public class AboutDlg 
 {
+	public static final String getVersion()
+	{
+		Properties props = new Properties();
+		try
+		{
+			props.load(AboutDlg.class.getResourceAsStream("version.properties"));
+		}
+		catch (IOException ex) { return "ERROR: Unable to read version number"; }
+		return props.getProperty("version");
+	}
+
 	/**
 	 * call this to open the dialog
 	 */
@@ -40,20 +52,32 @@ public class AboutDlg
 		final JFrame aboutDlg = new JFrame();
 		
 		FormLayout layout = new FormLayout(
-				"4dlu, pref, 4dlu, pref, 4dlu",
+				"4dlu, pref, 4dlu",
 				"4dlu, pref, 4dlu, pref, 4dlu, pref, 4dlu");
 		
-		JLabel versionLabel = new JLabel ("Dr. Higgins " + Main.VERSION_STRING);
-		JTextArea label = new JTextArea();
-		label.setEditable(false);
+		JLabel versionLabel = new JLabel ("Dr. Higgins version " + getVersion());
+		JLabel label = new JLabel();
 		//TODO: Translate
-		label.setText("(c) copyright 2003-2009\nM.P. van Iersel <amarillion@yahoo.com>\nThis program is licensend under GPL 3 or higher,\nsee COPYING.txt for details");
+		label.setText(
+			"<html><h2>Dr. Higgins</h2>" +
+			"(c) copyright 2003-2009<br>\n" +
+			"M.P. van Iersel <amarillion@yahoo.com>\n" +
+			"<h2>Contributors and Translators</h2>\n" +
+			"Olivia Guerra Santin (Spanish)<br>\n" +
+			"Adem Bilican (French)<br>\n" +
+			"Magdalena S\u0142upska (Polish)<br>\n" +
+			"<br>\n" +
+			"This program is free and open source<br>\n" +
+			"Licensed as GPL 3 or higher,<br>\n" +
+			"see COPYING.txt for details<br>\n" +
+			"<p>\n" +
+			"Visit the website at http://www.helixsoft.nl</html>");
 		
 		CellConstraints cc = new CellConstraints();
 		
 		JPanel dialogBox = new JPanel();
 		dialogBox.setLayout (layout);
-		dialogBox .add (label, cc.xy(4,2));
+		dialogBox .add (label, cc.xy(2,2));
 		
 		JButton btnOk = new JButton();
 		btnOk.setText(MainFrame.res.getString("OK"));
@@ -66,7 +90,7 @@ public class AboutDlg
 		});
 		
 		dialogBox.add (versionLabel, cc.xy(2, 4));
-		dialogBox.add (btnOk, cc.xyw (2, 6, 3, "center, top"));			
+		dialogBox.add (btnOk, cc.xy (2, 6));	
 		
 		aboutDlg.setResizable(false);
 		aboutDlg.setTitle(MainFrame.res.getString("ABOUT_DR_HIGGINS"));

@@ -1,4 +1,4 @@
-Dr. Higgins v0.99b~WIP
+Dr. Higgins v0.99c~WIP
 Intelligent Vocabulary Quiz
 Copyright 2003-2009 Martijn van Iersel
 

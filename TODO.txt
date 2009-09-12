@@ -3,12 +3,15 @@ TODO Dr. Higgins
 M3: 0.99c minor release
 
 [x] move from git to subversion
-[ ] include polish localization
+[x] include polish localization
+[ ] Finnish localization
 [x] French lesson & input method
 [x] Make input method optional
 [ ] update manual on input method stuff
-[ ] bump version no to 0.99c
-[ ] Add contributors to about box
+[x] bump version no to 0.99c
+[x] BUG: you may be confused with ... not working for unidirectional lesson
+[x] trim whitespace on answer
+[x] Add contributors to about box
 [ ] Start mailing list
 [ ] Upload to website
 [ ] Freshmeat announcement
@@ -24,12 +27,13 @@ M2: 1.00 Release
 [ ] Refactoring: make Word a immutable class
 [ ] Refactoring: QuizLoader -> Quiz, Quiz->QuizSession
 [ ] Better rendering of box panel
-[ ] Debian package
+[ ] webstart version
 [ ] Upload to website
 [ ] Freshmeat announcement
 
 M3: future
 
+[ ] Debian package
 [ ] Set up donation page & shortcut
 [ ] graph progress with JFreeChart
 [ ] translate manual to spanish

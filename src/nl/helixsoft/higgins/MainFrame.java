@@ -368,7 +368,7 @@ public class MainFrame
 	
 	private void checkAnswer()
 	{
-		String myAnswer = txtInput.getText();
+		String myAnswer = txtInput.getText().trim();
 		txtOutput.setText ("");
 		txtOutput.append(res.getString("QUESTION") + " #" + quiz.getCounter() 
 				+ ": " + quiz.getQuestion() + "\n");
