@@ -301,7 +301,7 @@ public class Quiz implements Serializable
 		}
 		else
 		{
-			return q + w;
+			return q + " " + w;
 		}
 	}
 	

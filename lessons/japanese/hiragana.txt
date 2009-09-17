@@ -1,5 +1,6 @@
 #hiragana
 #askbothways=0
+#question1=What is
 #encoding=UTF-8
 あ, a
 い, i

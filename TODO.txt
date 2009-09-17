@@ -4,7 +4,7 @@ M3: 0.99c minor release
 
 [x] move from git to subversion
 [x] include polish localization
-[ ] Finnish localization
+[x] Finnish localization
 [x] French lesson & input method
 [x] Make input method optional
 [ ] update manual on input method stuff
@@ -12,6 +12,7 @@ M3: 0.99c minor release
 [x] BUG: you may be confused with ... not working for unidirectional lesson
 [x] trim whitespace on answer
 [x] Add contributors to about box
+[ ] BUG: keyboard focus lost after File->New
 [ ] Start mailing list
 [ ] Upload to website
 [ ] Freshmeat announcement

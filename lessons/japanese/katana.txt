@@ -1,5 +1,6 @@
 #katakana
 #askbothways=0
+#question1=What is
 #encoding=UTF-8
 ア, a
 イ, i
