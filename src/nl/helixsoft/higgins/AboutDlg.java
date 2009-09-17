@@ -66,6 +66,7 @@ public class AboutDlg
 			"Olivia Guerra Santin (Spanish)<br>\n" +
 			"Adem Bilican (French)<br>\n" +
 			"Magdalena S\u0142upska (Polish)<br>\n" +
+			"Otto Mykk\u00e4nen (Finnish)<br>\n" +
 			"<br>\n" +
 			"This program is free and open source<br>\n" +
 			"Licensed as GPL 3 or higher,<br>\n" +
