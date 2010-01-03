@@ -1,0 +1,115 @@
+# This list is from "My First Japanese Kanji Book", by Anna & Eriko Sato.
+# It contains mostly grade 1 characters, but there are a few from higher grades.
+#askbothways=0
+#question1=What is
+#encoding=UTF-8
+⼀, one
+⼆, two
+三, three
+⼈, man
+⼦, child
+⼭, mountain
+川, river
+⽇, sun
+⺝, moon
+明, bright
+⽬, eye
+⼝, mouth
+見, see
+⽊, tree
+林, wood
+森, forest
+⽕, fire
+光, light
+⽔, water
+車, car
+自, self
+⽥, field
+土, soil
+米, rice
+金, gold
+銀, silver
+⼤, big
+⼩, small
+⽝, dog
+右, right
+左, left
+中, middle
+上, up
+下, down
+兄, elder brother
+男, man
+⼥, woman
+好, love
+字, letter
+文, sentence
+本, origin / book
+書, write
+学, study
+校, school
+私, private
+先, ahead
+生, live
+四, four
+年, year
+正, correct
+五, five
+六, six
+角, angle
+形, shape
+七, seven
+⼋, eight
+九, nine
+十, ten
+百, hundred
+千, thousand
+円, circle / yen
+玉, jewel / ball
+手, hand
+足, foot / leg / suffice
+耳, ear
+長, long / chief
+体, body
+力, power
+使, use
+入, enter / put in
+出, emerge / put out
+電, electricity
+立, stand
+休, rest
+強, strong
+白, white
+赤, red
+青, blue
+貝, shellfish
+名, name
+前, before
+何, what
+早, early
+朝, morning
+夕, evening
+空, sky
+帰, return
+草, grass
+花, flower
+春, spring
+竹, bamboo
+馬, horse
+歩, walk
+虫, bug
+音, sound
+夜, night
+村, village
+町, town
+家, house
+店, shop
+王, king
+⽯, stone
+宝, treasure
+糸, thread
+毛, hair
+作, make
+雨, rain
+天, heaven
+気, spirit / mind / air / mood
+
