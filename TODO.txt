@@ -7,18 +7,18 @@ M3: 0.99c minor release
 [x] Finnish localization
 [x] French lesson & input method
 [x] Make input method optional
-[ ] update manual on input method stuff
 [x] bump version no to 0.99c
 [x] BUG: you may be confused with ... not working for unidirectional lesson
 [x] trim whitespace on answer
 [x] Add contributors to about box
-[ ] BUG: keyboard focus lost after File->New
-[ ] Start mailing list
+[x] Start mailing list
 [ ] Upload to website
 [ ] Freshmeat announcement
 
 M2: 1.00 Release
 
+[ ] update manual on input method stuff
+[?] BUG: keyboard focus lost after File->New
 [ ] CC-BY-SA for lessons
 [ ] Bump version no to 1.00
 [ ] Icon / logo
