@@ -1,25 +1,14 @@
 TODO Dr. Higgins
 
-M3: 0.99c minor release
-
-[x] move from git to subversion
-[x] include polish localization
-[x] Finnish localization
-[x] French lesson & input method
-[x] Make input method optional
-[x] bump version no to 0.99c
-[x] BUG: you may be confused with ... not working for unidirectional lesson
-[x] trim whitespace on answer
-[x] Add contributors to about box
-[x] Start mailing list
-[ ] Upload to website
-[ ] Freshmeat announcement
-
-M2: 1.00 Release
+== 0.99d minor release ==
 
 [ ] update manual on input method stuff
-[?] BUG: keyboard focus lost after File->New
 [ ] CC-BY-SA for lessons
+[ ] Better rendering of box panel
+[ ] BUG: revision "null" in AboutDlg.
+
+== 1.00 Release ==
+
 [ ] Bump version no to 1.00
 [ ] Icon / logo
 [ ] Allow saving most difficult
@@ -27,12 +16,9 @@ M2: 1.00 Release
 [ ] Mogelijkheid een lesprogramma te maken
 [ ] Refactoring: make Word a immutable class
 [ ] Refactoring: QuizLoader -> Quiz, Quiz->QuizSession
-[ ] Better rendering of box panel
 [ ] webstart version
-[ ] Upload to website
-[ ] Freshmeat announcement
 
-M3: future
+== future ==
 
 [ ] Debian package
 [ ] Set up donation page & shortcut
@@ -76,7 +62,7 @@ January 1 2009 : 0.99 release, Near feature parity with wx version
 [x] Localize spanish
 [x] Upload to website
 
-M2: 0.99b minor feature & bugfix release
+== 0.99b minor feature & bugfix release ==
 
 [x] Bump version no to 0.99b
 [x] Help->Help
@@ -92,3 +78,18 @@ M2: 0.99b minor feature & bugfix release
 [x] Check timestamp van les tijdens loading state
 [x] Spell-check spanish localization
 [x] upload to website
+
+== January 2010: 0.99c minor release ==
+
+[x] move from git to subversion
+[x] include polish localization
+[x] Finnish localization
+[x] French lesson & input method
+[x] Make input method optional
+[x] bump version no to 0.99c
+[x] BUG: you may be confused with ... not working for unidirectional lesson
+[x] trim whitespace on answer
+[x] Add contributors to about box
+[x] Start mailing list
+[x] Upload to website
+[x] Freshmeat announcement

@@ -1,4 +1,4 @@
-Dr. Higgins v0.99c~WIP
+Dr. Higgins v0.99c
 Intelligent Vocabulary Quiz
 Copyright 2003-2009 Martijn van Iersel
 
@@ -10,18 +10,24 @@ Spanish-English: 7 lessons
 Spaans-Nederlands: 30 lessons
 Dutch-English: 8 lessons
 English-Finnish: 6 lessons
+English-French: 3 lessons
+English-Japanese: 2 lessons
 
 You can find these in the lessons subfolder of the Dr Higgins folder. 
 By default, this is C:\Program Files\DrHiggins\lessons
 
 I'm always interested in good vocabulary files for any language. 
-If you create some, please let me know and I'll be happy to add them.
+If you create some, please send them to drhiggins@googlegroups.com and I'll be happy to add them.
 
 Contact
 =======
 
 Website: http://www.helixsoft.nl
-E-mail: amarillion@yahoo.com
+
+Contact: drhiggins@googlegroups.com
+
+If you wish to receive announcements about future releases of Dr. Higgins, please
+sign up to the google group at http://groups.google.com/group/drhiggins
 
 Availability
 ============

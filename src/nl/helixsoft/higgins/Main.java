@@ -1,5 +1,5 @@
 //    This file is part of Dr. Higgins.
-//    Copyright 2003-2009 Martijn van Iersel <amarillion@yahoo.com>
+//    Copyright 2003-2010 Martijn van Iersel <amarillion@yahoo.com>
 //
 //    Dr. Higgins is free software: you can redistribute it and/or modify
 //    it under the terms of the GNU General Public License as published by
