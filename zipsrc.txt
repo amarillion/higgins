@@ -1,6 +1,7 @@
 build.xml
 COPYING.txt
 doc/**/*
+doc/index.html
 higgins.bat
 higgins.sh
 lessons/**/*.txt

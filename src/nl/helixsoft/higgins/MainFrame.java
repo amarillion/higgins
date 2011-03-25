@@ -22,6 +22,7 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.text.DateFormat;
@@ -48,6 +49,24 @@ import nl.helixsoft.util.TypedProperties;
  */
 public class MainFrame 
 {
+	private Font loadFont()
+	{
+		String fName = "ttf-japanese-gothic.ttf";
+		Font font;
+		try 
+		{
+			InputStream is = Main.class.getResourceAsStream(fName);
+			font = Font.createFont(Font.TRUETYPE_FONT, is);
+		} 
+		catch (Exception ex) 
+		{
+			ex.printStackTrace();
+			System.err.println(fName + " not loaded.  Using serif font.");
+			font = new Font("serif", Font.PLAIN, 24);
+		}
+		return font;	
+	}
+
 	public static ResourceBundle res = ResourceBundle.getBundle("nl.helixsoft.higgins.Strings");
 	
 	public static final File APPDATADIR;
@@ -95,6 +114,8 @@ public class MainFrame
 	{
 		initPreferences();
 
+		Font font = loadFont();
+		
 		frame = new JFrame("Dr. Higgins");
 		frame.setLayout(new FormLayout(
 				"3dlu, pref, 3dlu, pref, 3dlu",
@@ -115,7 +136,7 @@ public class MainFrame
 		txtOutput.setEditable(false);
 		txtOutput.setFocusable(false);
 		
-		Font medFont = txtInput.getFont().deriveFont(16.0f);
+		Font medFont = font.deriveFont(20.0f);
 		txtInput.setFont(medFont);
 		txtOutput.setFont(medFont);
 		

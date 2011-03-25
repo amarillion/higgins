@@ -22,7 +22,7 @@ import javax.swing.UIManager;
  * provides main method
  */
 public class Main 
-{
+{	
 	/**
 	 * create and show the GUI
 	 */
