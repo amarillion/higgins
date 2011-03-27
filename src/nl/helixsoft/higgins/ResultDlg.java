@@ -59,9 +59,9 @@ public class ResultDlg extends JDialog implements ActionListener
 		setLocationRelativeTo(frame);
 	}
 	
-	Quiz quiz = null;
+	QuizSession quiz = null;
 	
-	public void setQuiz(Quiz aQuiz)
+	public void setQuiz(QuizSession aQuiz)
 	{
 		quiz = aQuiz;
 		

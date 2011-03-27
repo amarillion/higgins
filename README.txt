@@ -1,6 +1,6 @@
 Dr. Higgins v0.99c
 Intelligent Vocabulary Quiz
-Copyright 2003-2009 Martijn van Iersel
+Copyright 2003-2011 Martijn van Iersel
 
 See doc/index.html for instructions on how to use Dr. Higgins
 

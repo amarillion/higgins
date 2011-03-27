@@ -34,13 +34,13 @@ public class QuizProgressPanel extends JPanel
 		setForeground(Color.YELLOW);
 	}
 
-	Quiz quiz = null;
+	QuizSession quiz = null;
 	
 	/**
 	 * Set the quiz.
 	 * @param aQuiz may be null
 	 */
-	public void setQuiz (Quiz aQuiz)
+	public void setQuiz (QuizSession aQuiz)
 	{
 		quiz = aQuiz;
 		invalidate();

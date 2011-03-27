@@ -258,7 +258,7 @@ public class MainFrame
 		bar.add (help);
 	}
 	
-	private Quiz quiz = null;
+	private QuizSession quiz = null;
 	private CourseModel model = null;
 	
 	private class NewAction extends AbstractAction
@@ -351,11 +351,11 @@ public class MainFrame
 		}
 	};
 
-	private Quiz loadQuiz (File f)
+	private QuizSession loadQuiz (File f)
 	{
 		try
 		{
-			return new Quiz(f);
+			return new QuizSession(f);
 		}
 		catch (IOException ex)
 		{
@@ -383,7 +383,7 @@ public class MainFrame
 	 * 
 	 * If any previously started quiz was not yet closed cleanly, it will be.
 	 */
-	private void startQuiz(Quiz newQuiz)
+	private void startQuiz(QuizSession newQuiz)
 	{
 		txtOutput.setText("");
 		// stop logging current quiz, if it exists
@@ -552,7 +552,7 @@ public class MainFrame
 			{
 				ObjectInputStream ois = new ObjectInputStream(
 						new FileInputStream (STATE));
-				Quiz newQuiz = (Quiz)ois.readObject();
+				QuizSession newQuiz = (QuizSession)ois.readObject();
 				
 				long otherTimeStamp = newQuiz.getFile().lastModified();
 				if (otherTimeStamp > newQuiz.getFileTimeStamp())
@@ -564,7 +564,7 @@ public class MainFrame
 					if (result == JOptionPane.YES_OPTION)
 					{
 						// reload & re-initialize quiz
-						newQuiz = new Quiz (newQuiz.getFile());
+						newQuiz = new QuizSession (newQuiz.getFile());
 					}
 				}
 				startQuiz (newQuiz);

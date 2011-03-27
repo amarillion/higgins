@@ -29,7 +29,7 @@ import java.util.Random;
 /**
  * represents a single lesson, a series of q, a pairs read from a text file.
  */
-public class Quiz implements Serializable 
+public class QuizSession implements Serializable 
 {
 	private void loadLesson (File newFileName) throws IOException
 	{
@@ -228,7 +228,7 @@ public class Quiz implements Serializable
 	 */
 	public int getWordCount() { return words.size(); }
 	
-	public Quiz(File f) throws IOException
+	public QuizSession(File f) throws IOException
 	{
 		loadLesson (f);
 	}

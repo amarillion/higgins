@@ -2,7 +2,8 @@ TODO Dr. Higgins
 
 == 1.00 Beta Release ==
 
-[X] bundled font to ensure japanese character availability
+[x] bundled font to ensure japanese character availability
+[x] Refactoring: QuizLoader -> Quiz, Quiz->QuizSession
 [ ] Licensing info for bundled font
 [ ] BUG: kan omgekeerd vraagteken niet meer invoeren
 [ ] Mogelijkheid een lesprogramma te maken
@@ -28,7 +29,6 @@ TODO Dr. Higgins
 
 [ ] Allow saving most difficult
 [ ] Refactoring: make Word a immutable class
-[ ] Refactoring: QuizLoader -> Quiz, Quiz->QuizSession
 [ ] webstart version
 [ ] Debian package
 [ ] Set up donation page & shortcut
