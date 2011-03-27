@@ -1,25 +1,35 @@
 TODO Dr. Higgins
 
-== 0.99d minor release ==
+== 1.00 Beta Release ==
 
+[X] bundled font to ensure japanese character availability
+[ ] Licensing info for bundled font
+[ ] BUG: kan omgekeerd vraagteken niet meer invoeren
+[ ] Mogelijkheid een lesprogramma te maken
 [ ] update manual on input method stuff
 [ ] CC-BY-SA for lessons
 [ ] Better rendering of box panel
 [ ] BUG: revision "null" in AboutDlg.
+[ ] Bump version no to 1.00 Beta
+[ ] Icon / logo
 
 == 1.00 Release ==
 
+[ ] Update fr translation
+[ ] Update fi translation
+[ ] Update nl translation
+[ ] Update sp translation
+[ ] Upload to website
+[ ] Freshmeat announcement
+[ ] Mailinglist announcement
 [ ] Bump version no to 1.00
-[ ] Icon / logo
-[ ] Allow saving most difficult
-[ ] Mogelijkheid meerdere lessen te combineren
-[ ] Mogelijkheid een lesprogramma te maken
-[ ] Refactoring: make Word a immutable class
-[ ] Refactoring: QuizLoader -> Quiz, Quiz->QuizSession
-[ ] webstart version
 
 == future ==
 
+[ ] Allow saving most difficult
+[ ] Refactoring: make Word a immutable class
+[ ] Refactoring: QuizLoader -> Quiz, Quiz->QuizSession
+[ ] webstart version
 [ ] Debian package
 [ ] Set up donation page & shortcut
 [ ] graph progress with JFreeChart

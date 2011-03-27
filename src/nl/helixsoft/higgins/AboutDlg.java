@@ -1,5 +1,5 @@
 //    This file is part of Dr. Higgins.
-//    Copyright 2003-2010 Martijn van Iersel <amarillion@yahoo.com>
+//    Copyright 2003-2011 Martijn van Iersel <amarillion@yahoo.com>
 //
 //    Dr. Higgins is free software: you can redistribute it and/or modify
 //    it under the terms of the GNU General Public License as published by
@@ -60,7 +60,7 @@ public class AboutDlg
 		//TODO: Translate
 		label.setText(
 			"<html><h2>Dr. Higgins</h2>" +
-			"(c) copyright 2003-2010<br>\n" +
+			"(c) copyright 2003-2011<br>\n" +
 			"M.P. van Iersel <amarillion@yahoo.com>\n" +
 			"<h2>Contributors and Translators</h2>\n" +
 			"Olivia Guerra Santin (Spanish)<br>\n" +

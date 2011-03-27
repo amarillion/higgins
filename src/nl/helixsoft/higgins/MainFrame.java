@@ -105,6 +105,7 @@ public class MainFrame
 	private QuizProgressPanel binPanel;
 	private JLabel lblResult;
 	private TypedProperties<HiggPrefs> prefs;
+	private ViewCourseAction viewCourseAction;
 	
 	private int startCounter;
 	private Date startTime;
@@ -239,6 +240,11 @@ public class MainFrame
 		file.add(new NewAction());
 		file.add(new RestartAction());
 		file.addSeparator();
+		file.add(new NewCourseAction());
+		file.add(new OpenCourseAction());
+		viewCourseAction = new ViewCourseAction();
+		file.add(viewCourseAction);
+		file.addSeparator();
 		file.add(new OptionsAction());
 		file.addSeparator();
 		file.add(new ExitAction());
@@ -253,6 +259,7 @@ public class MainFrame
 	}
 	
 	private Quiz quiz = null;
+	private CourseModel model = null;
 	
 	private class NewAction extends AbstractAction
 	{
@@ -276,6 +283,71 @@ public class MainFrame
 				File f = chooser.getSelectedFile();
 				startQuiz (loadQuiz(f));
 			}
+		}
+	};
+
+	private class NewCourseAction extends AbstractAction
+	{
+		NewCourseAction()
+		{
+			super();
+			putValue (NAME, res.getString("NEW_COURSE"));
+			putValue(ACCELERATOR_KEY, KeyStroke.getKeyStroke(KeyEvent.VK_C, 
+					Toolkit.getDefaultToolkit().getMenuShortcutKeyMask()));
+		}
+		
+		public void actionPerformed(ActionEvent ae) 
+		{
+			model = new CourseModel();
+			viewCourseAction.setEnabled(true);
+			CourseDlg dlg = new CourseDlg(frame, model);
+			dlg.setVisible(true);			
+		}
+	};
+
+	private class OpenCourseAction extends AbstractAction
+	{
+		OpenCourseAction()
+		{
+			super();
+			putValue (NAME, res.getString("OPEN_COURSE"));
+			putValue(ACCELERATOR_KEY, KeyStroke.getKeyStroke(KeyEvent.VK_U, 
+					Toolkit.getDefaultToolkit().getMenuShortcutKeyMask()));		
+		}
+		
+		public void actionPerformed(ActionEvent ae) 
+		{
+			JFileChooser chooser = new JFileChooser();
+			chooser.setCurrentDirectory(
+					prefs.getFile(HiggPrefs.LAST_USED_COURSE_DIR));
+			if (chooser.showOpenDialog(frame) == JFileChooser.APPROVE_OPTION)
+			{
+				prefs.set(HiggPrefs.LAST_USED_COURSE_DIR, 
+						chooser.getCurrentDirectory());
+				File f = chooser.getSelectedFile();
+				//TODO
+				
+				viewCourseAction.setEnabled(true);
+			}
+		}
+	};
+
+	private class ViewCourseAction extends AbstractAction
+	{
+		ViewCourseAction()
+		{
+			super();
+			putValue (NAME, res.getString("VIEW_COURSE"));
+			putValue(ACCELERATOR_KEY, KeyStroke.getKeyStroke(KeyEvent.VK_V, 
+					Toolkit.getDefaultToolkit().getMenuShortcutKeyMask()));		
+			setEnabled(model != null);
+		}
+		
+		public void actionPerformed(ActionEvent ae) 
+		{
+			if (model == null) return; // should not be able to get here. 
+			CourseDlg dlg = new CourseDlg(frame, model);
+			dlg.setVisible(true);
 		}
 	};
 
@@ -612,6 +684,4 @@ public class MainFrame
 				JOptionPane.showMessageDialog(frame, error);
 		}
 	}
-	
-
 }
