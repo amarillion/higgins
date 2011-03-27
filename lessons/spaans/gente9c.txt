@@ -18,7 +18,7 @@ la prensa local, de plaatselijke pers
 el colegio, de school / het college
 las líneas de autobús, de buslijnen
 el índice, de index
-el paro, de werkeloosheid
+el paro, de werkloosheid
 la población activa, de beroepsbevolking
 el barrio, de wijk
 el casco antiguo, de oude stadskern
@@ -62,7 +62,7 @@ la prensa, de pers
 disponer de, beschikken over
 el presupuesto, het budget
 invertir, investeren
-la unfraestructura, de infrastructuur
+la infraestructura, de infrastructuur
 el portavoz, de woordvoerder
 defender, verdedigen
 la sesión, de sessie

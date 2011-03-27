@@ -22,7 +22,8 @@ el gato, de kat
 el canario, de kanarie
 los policías, de politieagenten
 el maestro, de onderwijzer
-el enfermo, de verpleegkundige
+el enfermo, de zieke
+el enfermero, de verpleegkundige
 el funcionario, de ambtenaar
 el empresario, de ondernemer
 el mecánico, de monteur
@@ -59,7 +60,7 @@ la raza, het ras
 la versión, de versie
 
 #12
-miserioso, mysterieus
+misterioso, mysterieus
 la sala de teatro, de theaterzaal
 la sala de cine, de bioscoopzaal
 
