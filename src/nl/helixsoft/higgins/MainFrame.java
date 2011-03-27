@@ -173,12 +173,12 @@ public class MainFrame
 
 			public void actionPerformed(ActionEvent arg0) 
 			{
-				if (quiz != null && !quiz.isFinished())
+				if (session != null && !session.isFinished())
 				{
 					checkAnswer();
 					txtInput.setText("");
 					
-					if (quiz.isFinished())
+					if (session.isFinished())
 					{
 						writeLog();
 						showResults();
@@ -258,7 +258,7 @@ public class MainFrame
 		bar.add (help);
 	}
 	
-	private QuizSession quiz = null;
+	private QuizSession session = null;
 	private CourseModel model = null;
 	
 	private class NewAction extends AbstractAction
@@ -369,10 +369,10 @@ public class MainFrame
 	
 	private void closeQuiz()
 	{
-		if (quiz != null) 
+		if (session != null) 
 		{
 			writeLog();
-			quiz = null;
+			session = null;
 			binPanel.setQuiz(null);
 		}
 	}
@@ -387,16 +387,16 @@ public class MainFrame
 	{
 		txtOutput.setText("");
 		// stop logging current quiz, if it exists
-		if (quiz != null) 
+		if (session != null) 
 		{
 			writeLog();
-			quiz = null;
+			session = null;
 		}
 
-		quiz = newQuiz;
+		session = newQuiz;
 		//TODO: this overrides bin option in lesson itself
-		quiz.setBins(prefs.getInt(HiggPrefs.DEFAULT_BINS));
-		binPanel.setQuiz (quiz);
+		session.setBins(prefs.getInt(HiggPrefs.DEFAULT_BINS));
+		binPanel.setQuiz (session);
 		beginLog();
 		nextWord();
 	}
@@ -412,11 +412,11 @@ public class MainFrame
 		
 		DateFormat format = new SimpleDateFormat("EEE MMM dd HH:mm:ss yyyy");
 		String line = format.format(startTime);
-		line += String.format (" #q: %4d ", quiz.getCounter() - startCounter);
+		line += String.format (" #q: %4d ", session.getCounter() - startCounter);
 		line += String.format(" dur.: %02d:%02d:%02d", spanHours, spanMinutes, spanSeconds);
-		line += " " + quiz.getFile() + "\n";
+		line += " " + session.getQuiz().getFile() + "\n";
 		// ignore runs of less than 10.
-		if (quiz.getCounter() - startCounter >= 10)
+		if (session.getCounter() - startCounter >= 10)
 		{
 			try
 			{
@@ -434,16 +434,16 @@ public class MainFrame
 
 	private void beginLog()
 	{
-		startCounter = quiz.getCounter();
+		startCounter = session.getCounter();
 		startTime = new Date();
 	}
 	
 	private void nextWord()
 	{
-		quiz.nextQuestion();
+		session.nextQuestion();
 		drawBins();
-		txtOutput.append (res.getString("QUESTION") + " #" + quiz.getCounter() 
-				+ ": " + quiz.getQuestion() + "\n"); 
+		txtOutput.append (res.getString("QUESTION") + " #" + session.getCounter() 
+				+ ": " + session.getQuestion() + "\n"); 
 	}
 
 	private void drawBins()
@@ -463,9 +463,9 @@ public class MainFrame
 	{
 		String myAnswer = txtInput.getText().trim();
 		txtOutput.setText ("");
-		txtOutput.append(res.getString("QUESTION") + " #" + quiz.getCounter() 
-				+ ": " + quiz.getQuestion() + "\n");
-		if (quiz.compareAnswer(myAnswer))
+		txtOutput.append(res.getString("QUESTION") + " #" + session.getCounter() 
+				+ ": " + session.getQuestion() + "\n");
+		if (session.compareAnswer(myAnswer))
 		{
 			lblResult.setText(res.getString("CORRECT"));
 			lblResult.setForeground(Color.GREEN);
@@ -476,10 +476,10 @@ public class MainFrame
 			lblResult.setForeground(Color.RED);
 			txtOutput.append(res.getString("YOU_ANSWERED") + " \"" + myAnswer + "\"\n");
 		}
-		txtOutput.append(res.getString("THE_ANSWER_WAS") + " \"" + quiz.getCorrectAnswer() + "\"\n");
-		if (quiz.hasHint())
+		txtOutput.append(res.getString("THE_ANSWER_WAS") + " \"" + session.getCorrectAnswer() + "\"\n");
+		if (session.hasHint())
 		{
-			txtOutput.append (quiz.getHint() + "\n");
+			txtOutput.append (session.getHint() + "\n");
 		}
 		txtOutput.append ("\n");
 	}
@@ -487,7 +487,7 @@ public class MainFrame
 	private void showResults()
 	{
 		ResultDlg dlg = new ResultDlg(frame);
-		dlg.setQuiz (quiz);
+		dlg.setQuiz (session);
 		dlg.setVisible(true);
 	}
 	
@@ -501,10 +501,10 @@ public class MainFrame
 		
 		public void actionPerformed(ActionEvent ae) 
 		{
-			if (quiz != null)
+			if (session != null)
 			{
 				// start quiz again with same file
-				startQuiz (loadQuiz(quiz.getFile()));
+				startQuiz (loadQuiz(session.getQuiz().getFile()));
 			}
 		}
 	};
@@ -525,7 +525,7 @@ public class MainFrame
 			if (!dlg.isCancelled())
 			{
 				prefs.set(HiggPrefs.DEFAULT_BINS, dlg.getBins()); 
-				if (quiz != null) quiz.setBins(dlg.getBins());
+				if (session != null) session.setBins(dlg.getBins());
 			}
 		}
 	};
@@ -552,10 +552,9 @@ public class MainFrame
 			{
 				ObjectInputStream ois = new ObjectInputStream(
 						new FileInputStream (STATE));
-				QuizSession newQuiz = (QuizSession)ois.readObject();
+				QuizSession newSession = (QuizSession)ois.readObject();
 				
-				long otherTimeStamp = newQuiz.getFile().lastModified();
-				if (otherTimeStamp > newQuiz.getFileTimeStamp())
+				if (newSession.getQuiz().modifiedOnDisk())
 				{
 					// frame doesn't exist yet at this moment!
 					int result = JOptionPane.showConfirmDialog(null, res.getString("QUIZ_CHANGED"), 
@@ -564,10 +563,10 @@ public class MainFrame
 					if (result == JOptionPane.YES_OPTION)
 					{
 						// reload & re-initialize quiz
-						newQuiz = new QuizSession (newQuiz.getFile());
+						newSession = new QuizSession (newSession.getQuiz().getFile());
 					}
 				}
-				startQuiz (newQuiz);
+				startQuiz (newSession);
 				STATE.delete();
 			}
 			catch (IOException ex)
@@ -583,7 +582,7 @@ public class MainFrame
 	
 	private void close()
 	{
-		if (quiz != null)
+		if (session != null)
 		{
 			try
 			{
@@ -592,7 +591,7 @@ public class MainFrame
 					ObjectOutputStream(
 							new FileOutputStream(
 									STATE));
-				oos.writeObject(quiz);
+				oos.writeObject(session);
 				oos.close();
 			}
 			catch (IOException ex)

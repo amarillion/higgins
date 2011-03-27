@@ -1,3 +1,2 @@
-#bins=2
 España, Spanje
 el rápido, de sneltrein
