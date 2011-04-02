@@ -41,6 +41,17 @@ public class Quiz implements Serializable
 		question2 = MainFrame.res.getString("WHAT_IS");
 		askBothWays = 1;
 	}
+
+	public Quiz(List<Word> words)
+	{
+		this.words.addAll (words);
+		fileName = null;
+		originalTimeStamp = 0;
+		for (Word w : words)
+		{
+			wordMap.put (w.getAnswer(), w.getQuestion());
+		}
+	}
 	
 	private List<Word> words = new ArrayList<Word>();
 	// map of answers, so that we can check for confusion

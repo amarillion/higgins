@@ -16,22 +16,26 @@
 package nl.helixsoft.higgins;
 
 import java.io.File;
+import java.io.IOException;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.Date;
-import java.util.HashSet;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Set;
 
 import javax.swing.table.AbstractTableModel;
 
-public class CourseModel extends AbstractTableModel 
+public class CourseModel extends AbstractTableModel implements Serializable
 {
-	List<File> files; // ordered list of lessons
-	Map<File, List<WordData>> wordData; // word data organized per lesson
-	List<WordData> allWordData; // all word data
+	List<File> files = new ArrayList<File>(); // ordered list of lessons
+	Map<File, List<WordData>> wordData = new HashMap<File, List<WordData>>(); // word data organized per lesson
+	
+	//TODO: maybe better done as iterator "view" over wordData map
+	List<WordData> allWordData = new ArrayList<WordData>(); // all word data
+	
 	File courseFile;
 
 	int lessonSize; // number of words per time
@@ -41,6 +45,14 @@ public class CourseModel extends AbstractTableModel
 	
 	private static class WordData
 	{
+		public WordData(Word w)
+		{
+			this.w = w;
+			askedTimes = 0;
+			lastAsked = null;
+			errorRate = 0;
+		}
+		
 		Word w;
 		int askedTimes; // number of times asked
 		Date lastAsked; // last asked date
@@ -58,9 +70,22 @@ public class CourseModel extends AbstractTableModel
 	 * Add a file to the course. Read words from the file
 	 * @param f file to add
 	 */
-	public void addFile(File f)
+	public void addFile(File f) throws IOException
 	{
+		if (wordData.containsKey(f)) return; // ignore, already added.
+		Quiz q = Quiz.loadFromFile(f);
 		
+		files.add(f);
+		List<WordData> list = new ArrayList<WordData>();
+		wordData.put (f, list);
+		for (Word w : q.getWords())
+		{
+			WordData wd = new WordData(w);
+			list.add(wd);
+			allWordData.add(wd);
+		}
+		
+		fireTableDataChanged();
 	}
 	
 	/**
@@ -68,7 +93,19 @@ public class CourseModel extends AbstractTableModel
 	 * @param f file to remove
 	 */
 	public void removeFile(File f)
-	{}
+	{
+		if (!wordData.containsKey(f)) return; // ignore, wasn't in there
+		
+		files.remove(f);
+		for (WordData wd : wordData.get(f))
+		{
+			//TODO: linear lookup suboptimal
+			allWordData.remove(wd);
+		}
+		wordData.remove(f);
+		
+		fireTableDataChanged();
+	}
 	
 	/**
 	 * Re-read quiz data from file.
@@ -76,7 +113,9 @@ public class CourseModel extends AbstractTableModel
 	 * @param f file to refresh
 	 */
 	public void refreshFile(File f)
-	{}
+	{
+		throw new UnsupportedOperationException("Not yet implemented");
+	}
 	
 	/**
 	 * Serialize course data to disk, using same file that 
@@ -148,9 +187,9 @@ public class CourseModel extends AbstractTableModel
 	 * <li> (pctRepeat)%: pick words that have been asked. Start from words with lastAsked long ago.
 	 * </ul>	
 	 */
-	public List<Word> createNewLesson()
+	public Quiz createNewLesson()
 	{
-		Set<Word> result = new HashSet<Word>();
+		List<Word> result = new ArrayList<Word>();
 		
 		int cErrors = (int)(lessonSize * pctErrors);
 		
@@ -162,21 +201,35 @@ public class CourseModel extends AbstractTableModel
 		if (repeatList.size() < cRepeats) cRepeats = repeatList.size();
 		
 		int cRemain = lessonSize - cErrors - cRepeats;
+		List<Word> newList = getNewList();
+		if (newList.size() < cRemain) { /* TODO */ }
 		
-		//TODO
-		return null;
+		result.addAll(errorList.subList(0, cErrors));
+		result.addAll(repeatList.subList(0, cRepeats));
+		result.addAll(newList.subList(0, cRemain));
+		
+		Quiz quiz = new Quiz(result);
+		return quiz;
+	}
+
+	private List<Word> getNewList() 
+	{
+		List<Word> result = new ArrayList<Word>();
+		for (WordData wd : allWordData)
+		{
+			if (wd.askedTimes == 0) result.add (wd.w);
+		}
+		return result;
 	}
 
 	@Override
 	public int getColumnCount() {
-		// TODO Auto-generated method stub
-		return 0;
+		return 4;
 	}
 
 	@Override
 	public int getRowCount() {
-		// TODO Auto-generated method stub
-		return 0;
+		return files.size();
 	}
 
 	private int getLessonSize(File f)
@@ -218,13 +271,13 @@ public class CourseModel extends AbstractTableModel
 		switch (col)
 		{
 		case 0: // lesson name
-			return files.get(col).getName();
+			return files.get(row).getName();
 		case 1: // lesson size
-			return getLessonSize(files.get(col));
+			return getLessonSize(files.get(row));
 		case 2: // average times asked
-			return getAvgAsked(files.get(col));
+			return getAvgAsked(files.get(row));
 		case 3: // average error rate
-			return getErrorRate(files.get(col));
+			return getErrorRate(files.get(row));
 		default:
 			throw new IndexOutOfBoundsException("Column " + col + " is out of range");
 		}

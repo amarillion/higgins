@@ -18,6 +18,7 @@ package nl.helixsoft.higgins;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -28,6 +29,7 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import javax.swing.JScrollPane;
 import javax.swing.JSlider;
 import javax.swing.JTable;
 import javax.swing.JTextField;
@@ -54,11 +56,14 @@ public class CourseDlg extends JDialog implements ActionListener, ChangeListener
 	private JSlider slRepeats;
 	private JSlider slNew;
 
-	private CourseModel model;
+	private final CourseModel model;
+	private final MainFrame parent;
 	
-	CourseDlg (JFrame frame, CourseModel model)
+	CourseDlg (MainFrame parent, JFrame frame, CourseModel model)
 	{
 		super (frame, true);
+		this.model = model;
+		this.parent = parent;
 		setTitle (MainFrame.res.getString("COURSE"));
 		
 		setLayout(new FormLayout(
@@ -68,8 +73,8 @@ public class CourseDlg extends JDialog implements ActionListener, ChangeListener
 		CellConstraints cc = new CellConstraints();
 		CellConstraints cc2 = new CellConstraints();
 
-		tblLessons = new JTable();
-		add (tblLessons, cc.xy(2,2));
+		tblLessons = new JTable(model);
+		add (new JScrollPane(tblLessons), cc.xy(2,2));
 
 		btnAdd= new JButton(MainFrame.res.getString("ADD"));
 		btnAdd.addActionListener(this);
@@ -133,12 +138,25 @@ public class CourseDlg extends JDialog implements ActionListener, ChangeListener
 		else if (e.getSource() == btnAdd)
 		{
 			JFileChooser jfc = new JFileChooser();
+			jfc.setCurrentDirectory(
+					parent.prefs.getFile(HiggPrefs.LAST_USED_LESSONS_DIR));
 			jfc.setMultiSelectionEnabled(true);
-			if (jfc.showOpenDialog(this) == JOptionPane.OK_OPTION)
+			if (jfc.showOpenDialog(this) == JFileChooser.APPROVE_OPTION)
 			{
+				parent.prefs.set(HiggPrefs.LAST_USED_LESSONS_DIR, 
+						jfc.getCurrentDirectory());
 				for (File f : jfc.getSelectedFiles())
 				{
-					model.addFile(f);
+					try
+					{
+						model.addFile(f);
+					}
+					catch (IOException ex)
+					{
+						//TODO: internationalize error message
+						JOptionPane.showMessageDialog(this, "Error while adding file:\n" + ex.getMessage(), 
+								"Error", JOptionPane.ERROR_MESSAGE);
+					}
 				}
 			}
 		}

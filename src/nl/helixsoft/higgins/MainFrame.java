@@ -99,12 +99,16 @@ public class MainFrame
 	public static final File PREFERENCES = new File (APPDATADIR, "higgins.props");
 	public static final File STATE = new File (APPDATADIR, "higgins.sto");
 
+	//TODO: move to engine class
 	private JFrame frame;
+	//TODO: move to engine class, and make private
+	TypedProperties<HiggPrefs> prefs;
+	
 	private JTextField txtInput;
 	private JTextArea txtOutput;
 	private QuizProgressPanel binPanel;
 	private JLabel lblResult;
-	private TypedProperties<HiggPrefs> prefs;
+		
 	private ViewCourseAction viewCourseAction;
 	
 	private int startCounter;
@@ -300,7 +304,7 @@ public class MainFrame
 		{
 			model = new CourseModel();
 			viewCourseAction.setEnabled(true);
-			CourseDlg dlg = new CourseDlg(frame, model);
+			CourseDlg dlg = new CourseDlg(MainFrame.this, frame, model);
 			dlg.setVisible(true);			
 		}
 	};
@@ -346,7 +350,7 @@ public class MainFrame
 		public void actionPerformed(ActionEvent ae) 
 		{
 			if (model == null) return; // should not be able to get here. 
-			CourseDlg dlg = new CourseDlg(frame, model);
+			CourseDlg dlg = new CourseDlg(MainFrame.this, frame, model);
 			dlg.setVisible(true);
 		}
 	};
