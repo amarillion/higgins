@@ -16,7 +16,11 @@
 package nl.helixsoft.higgins;
 
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -30,22 +34,27 @@ import javax.swing.table.AbstractTableModel;
 
 public class CourseModel extends AbstractTableModel implements Serializable
 {
+	private static final long serialVersionUID = 1L;
+	
 	List<File> files = new ArrayList<File>(); // ordered list of lessons
-	Map<File, List<WordData>> wordData = new HashMap<File, List<WordData>>(); // word data organized per lesson
+	Map<File, List<WordHistory>> wordData = new HashMap<File, List<WordHistory>>(); // word data organized per lesson
 	
 	//TODO: maybe better done as iterator "view" over wordData map
-	List<WordData> allWordData = new ArrayList<WordData>(); // all word data
+	List<WordHistory> allWordData = new ArrayList<WordHistory>(); // all word data
 	
-	File courseFile;
+	//TODO: make private
+	File courseFile = null;
 
-	int lessonSize; // number of words per time
-	float pctErrors; // percentage of lesson that should consist of repeating previous errors
-	float pctRepetition; // percentage of lesson that should consist of repeating old words 
+	int lessonSize = 100; // number of words per time
+	float pctErrors = 0.2f; // percentage of lesson that should consist of repeating previous errors
+	float pctRepetition = 0.2f; // percentage of lesson that should consist of repeating old words 
 	// pctErrors + pctRepetition < 1.0
 	
-	private static class WordData
+	private static class WordHistory implements Serializable
 	{
-		public WordData(Word w)
+		private static final long serialVersionUID = 3L;
+		
+		public WordHistory(Word w)
 		{
 			this.w = w;
 			askedTimes = 0;
@@ -63,7 +72,7 @@ public class CourseModel extends AbstractTableModel implements Serializable
 		 * Each wrong answer: errorRate = 0.9 * errorRate;
 		 * This means effect of older answers diminishes over time.
 		 */
-		float errorRate;
+		double errorRate;
 	}
 	
 	/**
@@ -76,11 +85,11 @@ public class CourseModel extends AbstractTableModel implements Serializable
 		Quiz q = Quiz.loadFromFile(f);
 		
 		files.add(f);
-		List<WordData> list = new ArrayList<WordData>();
+		List<WordHistory> list = new ArrayList<WordHistory>();
 		wordData.put (f, list);
 		for (Word w : q.getWords())
 		{
-			WordData wd = new WordData(w);
+			WordHistory wd = new WordHistory(w);
 			list.add(wd);
 			allWordData.add(wd);
 		}
@@ -97,7 +106,7 @@ public class CourseModel extends AbstractTableModel implements Serializable
 		if (!wordData.containsKey(f)) return; // ignore, wasn't in there
 		
 		files.remove(f);
-		for (WordData wd : wordData.get(f))
+		for (WordHistory wd : wordData.get(f))
 		{
 			//TODO: linear lookup suboptimal
 			allWordData.remove(wd);
@@ -120,57 +129,77 @@ public class CourseModel extends AbstractTableModel implements Serializable
 	/**
 	 * Serialize course data to disk, using same file that 
 	 * it was loaded from or saved to before.
+	 * @throws IOException 
 	 */
-	public void saveCourse()
+	public void saveCourse() throws IOException
 	{
-	}
-	
-	/**
-	 * Serialize course data to disk, to a new file.
-	 * @param f file to save to.
-	 */
-	public void saveCourseAs(File f)
-	{
+		if (courseFile == null) throw new IllegalStateException("Must set file first");
+		ObjectOutputStream oos = new
+		ObjectOutputStream(
+				new FileOutputStream(
+						courseFile));
+		oos.writeObject(this);
+		oos.close();
 	}
 	
 	/**
 	 * load course from file
 	 * @param f file to load from
+	 * @throws IOException 
+	 * @throws ClassNotFoundException 
 	 */
-	public void loadCourse(File f)
+	public static CourseModel loadCourse(File f) throws IOException, ClassNotFoundException
 	{
+		ObjectInputStream ois = new ObjectInputStream(
+				new FileInputStream (f));
+		CourseModel newModel = (CourseModel)ois.readObject();
+		return newModel;
 	}
 	
 	private List<Word> getErrorList()
 	{
+		List<WordHistory> sortedList = new ArrayList<WordHistory>();
+		sortedList.addAll(allWordData);
+		Collections.sort(sortedList, new Comparator<WordHistory> () 
+				{
+					@Override
+					public int compare(WordHistory o1, WordHistory o2) 
+					{
+						return Double.compare(o2.errorRate, o1.errorRate);
+					}
+				});
+		
 		List<Word> result = new ArrayList<Word>();
-		for (WordData i : allWordData)
+		for (WordHistory i : sortedList)
 		{
-			if (i.errorRate > 0.3) result.add(i.w);
+			if (i.errorRate < 0.1) break; 
+			result.add(i.w);
 		}
+		
+
 		return result;
 	}
 	
 	/** returns list of words that have been asked before, oldest first */
 	private List<Word> getRepeatList()
 	{
-		List<WordData> sortedList = new ArrayList<WordData>();
-		for (WordData d : allWordData)
+		List<WordHistory> sortedList = new ArrayList<WordHistory>();
+		for (WordHistory d : allWordData)
 		{
 			if (d.lastAsked != null)
 				sortedList.add(d);
 		}
-		Collections.sort (sortedList, new Comparator<WordData> ()
+		Collections.sort (sortedList, new Comparator<WordHistory> ()
 				{
 					@Override
-					public int compare(WordData arg0, WordData arg1) 
+					public int compare(WordHistory arg0, WordHistory arg1) 
 					{
 						if (arg0.lastAsked == null || arg1.lastAsked == null) throw new NullPointerException();
 						return arg0.lastAsked.compareTo(arg1.lastAsked);
 					}
 				});
 		List<Word> result = new ArrayList<Word>();
-		for (WordData i : sortedList)
+		for (WordHistory i : sortedList)
 		{
 			result.add (i.w);
 		}
@@ -191,7 +220,7 @@ public class CourseModel extends AbstractTableModel implements Serializable
 	{
 		List<Word> result = new ArrayList<Word>();
 		
-		int cErrors = (int)(lessonSize * pctErrors);
+		int cErrors = (int)((float)lessonSize * (float)pctErrors);
 		
 		List<Word> errorList = getErrorList();
 		if (errorList.size() < cErrors) cErrors = errorList.size();
@@ -215,7 +244,7 @@ public class CourseModel extends AbstractTableModel implements Serializable
 	private List<Word> getNewList() 
 	{
 		List<Word> result = new ArrayList<Word>();
-		for (WordData wd : allWordData)
+		for (WordHistory wd : allWordData)
 		{
 			if (wd.askedTimes == 0) result.add (wd.w);
 		}
@@ -242,7 +271,7 @@ public class CourseModel extends AbstractTableModel implements Serializable
 		float sum = 0;
 		int n = 0;
 		
-		for (WordData i : wordData.get(f))
+		for (WordHistory i : wordData.get(f))
 		{
 			sum += i.errorRate;
 			n++;
@@ -256,13 +285,13 @@ public class CourseModel extends AbstractTableModel implements Serializable
 		int sum = 0;
 		int n = 0;
 
-		for (WordData i : wordData.get(f))
+		for (WordHistory i : wordData.get(f))
 		{
 			sum += i.askedTimes;
 			n++;
 		}
 		
-		return (n == 0 ? 0 : (float)(sum / n));
+		return (n == 0 ? 0 : ((float)sum / (float)n));
 	}
 	
 	@Override
@@ -287,5 +316,29 @@ public class CourseModel extends AbstractTableModel implements Serializable
 	{
 		return files.get(row);
 	}
-	
+
+	public void record(String question, boolean correct) 
+	{
+		//TODO: linear search not optimal
+		WordHistory found = null;
+		for (WordHistory wd : allWordData)
+		{
+			if (wd.w.getQuestion().equals (question))
+			{
+				found = wd;
+				break;
+			}
+		}
+		if (found != null)
+		{
+			found.lastAsked = new Date();
+			found.errorRate = (found.errorRate * 0.9) + (correct ? 0.0 : 0.1);
+			found.askedTimes++;
+		}
+		else
+		{
+			//TODO translate
+			System.err.println ("Unknown question '" + question + "'");
+		}
+	}
 }

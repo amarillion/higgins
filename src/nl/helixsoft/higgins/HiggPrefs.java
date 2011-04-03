@@ -4,7 +4,7 @@ import nl.helixsoft.util.KeyType;
 
 public enum HiggPrefs implements KeyType 
 {
-	LAST_USED_LESSONS_DIR (MainFrame.DEFAULT_LESSONS_DIR),
+	LAST_USED_LESSONS_DIR (Engine.DEFAULT_LESSONS_DIR),
 	LAST_USED_COURSE_DIR (System.getProperty("user.dir")),
 	WIN_X (0),
 	WIN_Y (0),

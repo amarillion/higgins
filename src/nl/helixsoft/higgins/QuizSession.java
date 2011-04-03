@@ -15,8 +15,6 @@
 //    along with Dr. Higgins.  If not, see <http://www.gnu.org/licenses/>.
 package nl.helixsoft.higgins;
 
-import java.io.File;
-import java.io.IOException;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -29,19 +27,12 @@ import java.util.Random;
  */
 public class QuizSession implements Serializable 
 {
-	private Quiz quiz;
-	int bins = 4;
+	private static final long serialVersionUID = 1L;
+
+	private final Quiz quiz;
+	private final List<WordState> words = new ArrayList<WordState>();
 	
-	private void loadLesson (File newFileName) throws IOException
-	{
-		quiz = Quiz.loadFromFile(newFileName);
-		
-		reset();
-		
-		binCount[0] = quiz.getWordCount();
-		Collections.shuffle(quiz.getWords());
-		currentWord = 0;
-	}
+	private int bins = 4;
 	
 	public boolean isFinished()
 	{
@@ -63,15 +54,15 @@ public class QuizSession implements Serializable
 	 */
 	public void nextQuestion()
 	{
-		Collections.shuffle (quiz.getWords());
+		Collections.shuffle (words);
 
 		int i, j;
 		currentWord = -1;
 		int maxDue = -1;
-		for (i = 0; i < quiz.getWords().size(); ++i)
+		for (i = 0; i < words.size(); ++i)
 		{
-			int due = counter - quiz.getWords().get(i).getHowSoon(); 
-			if (quiz.getWords().get(i).getHowSoon() != -1 && 
+			int due = counter - words.get(i).getHowSoon(); 
+			if (words.get(i).getHowSoon() != -1 && 
 					due > maxDue)
 			{
 				maxDue = due;
@@ -89,31 +80,22 @@ public class QuizSession implements Serializable
 		{
 			i = 0;
 			while (i < quiz.getWords().size() && 
-					(quiz.getWords().get(i).getBin() >= bins -1 ||
-					quiz.getWords().get(i).getHowSoon() != -1)) { i++; }
+					(words.get(i).getBin() >= bins -1 ||
+					words.get(i).getHowSoon() != -1)) { i++; }
 			j = i;
 			if (i < quiz.getWords().size())
 			{
 				while (j < quiz.getWords().size() && 
-						(quiz.getWords().get(j).getBin() >= bins -1 ||
-						quiz.getWords().get(j).getHowSoon() != -1)) { j++; }
+						(words.get(j).getBin() >= bins -1 ||
+						words.get(j).getHowSoon() != -1)) { j++; }
 			}
 			if (i < quiz.getWords().size() && j < quiz.getWords().size())
 			{
-				currentWord = quiz.getWords().get(i).getBin() > quiz.getWords().get(j).getBin() ? j : i;
+				currentWord = words.get(i).getBin() > words.get(j).getBin() ? j : i;
 			}
 		}
 	}
-	
-	public void reset()
-	{
-		totalDuration = 0;
-		sessions = 0;
-		counter = 1;
-		for (int i = 0; i < Word.MAXBINS; ++i) binCount[i] = 0;
-		currentWord = -1;
-	}
-	
+		
 	/**
 	 * compare given answer to the correct answer.
 	 * Returns true if they match.
@@ -122,7 +104,7 @@ public class QuizSession implements Serializable
 	 */
 	public boolean compareAnswer (String anAnswer)
 	{
-		boolean result = quiz.getWord(currentWord).compareAnswer(anAnswer, counter, binCount);
+		boolean result = words.get(currentWord).compareAnswer(anAnswer, counter, binCount);
 		hint = null;
 		if (!result)
 		{
@@ -139,7 +121,7 @@ public class QuizSession implements Serializable
 	
 	public String getCorrectAnswer()
 	{
-		return quiz.getWord(currentWord).getAnswer();
+		return words.get(currentWord).getWord().getAnswer();
 	}
 	
 	/**
@@ -150,8 +132,8 @@ public class QuizSession implements Serializable
 	public String getQuestion()
 	{
 		assert (currentWord >= 0 && currentWord < quiz.getWords().size());
-		String w = quiz.getWord(currentWord).getQuestion();
-		String q = quiz.getWord(currentWord).getDir() == 0 ? quiz.getQuestion2() : quiz.getQuestion1();
+		String w = words.get(currentWord).getWord().getQuestion();
+		String q = words.get(currentWord).getWord().getDir() == 0 ? quiz.getQuestion2() : quiz.getQuestion1();
 		int pos = q.indexOf("\"\"");
 		if (pos >= 0)
 		{
@@ -163,20 +145,15 @@ public class QuizSession implements Serializable
 		}
 	}
 	
-	public boolean hasHint()
-	{
-		return hint != null;
-	}
-	
 	public String getHint() { return hint; }
 	
-	public List<Word> getMostDifficult(int amount)
+	public List<WordState> getMostDifficult(int amount)
 	{
-		List<Word> result = new ArrayList<Word>();
-		result.addAll(quiz.getWords());
-		Collections.sort (result, new Comparator<Word>()
+		List<WordState> result = new ArrayList<WordState>();
+		result.addAll(words);
+		Collections.sort (result, new Comparator<WordState>()
 				{
-					public int compare(Word o1, Word o2) 
+					public int compare(WordState o1, WordState o2) 
 					{
 						return o2.getQuizCount() - o1.getQuizCount();
 					}
@@ -198,21 +175,32 @@ public class QuizSession implements Serializable
 		bins = newCount;
 	}
 		
-	public QuizSession(File f) throws IOException
+	public QuizSession(Quiz q)
 	{
-		loadLesson (f);
+		this.quiz = q;		
+		for (Word w : q.getWords())
+		{
+			words.add(new WordState(w));
+		}
+		counter = 1;
+		for (int i = 0; i < WordState.MAXBINS; ++i) binCount[i] = 0;
+		binCount[0] = words.size();
+		Collections.shuffle(words);
+		currentWord = 0;
 	}
 	
 	public Quiz getQuiz() { return quiz; }
 	
-	
-	private int totalDuration;
-	private int sessions;
 	private int counter;
 	private String hint = null;
 	
 	// TODO Word?
 	private int currentWord; 
 	
-	private int binCount[] = new int[Word.MAXBINS];
+	private int binCount[] = new int[WordState.MAXBINS];
+
+	public String getCurrentWord() 
+	{
+		return words.get(currentWord).getWord().getQuestion();
+	}
 }

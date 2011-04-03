@@ -33,6 +33,8 @@ import java.util.Set;
  */
 public class Quiz implements Serializable
 {
+	private static final long serialVersionUID = 1L;
+
 	/** private, do not allow external instantiation */
 	private Quiz()
 	{
@@ -44,6 +46,7 @@ public class Quiz implements Serializable
 
 	public Quiz(List<Word> words)
 	{
+		this();
 		this.words.addAll (words);
 		fileName = null;
 		originalTimeStamp = 0;
@@ -97,16 +100,6 @@ public class Quiz implements Serializable
 	{
 		return words;
 	}
-	
-	public Word getWord(int i)
-	{
-		return words.get(i);
-	}
-
-	/**
-	 * Number of words in this quiz
-	 */
-	public int getWordCount() { return words.size(); }
 
 	/**
 	 * Find the question for the given answer. Useful for the "you may be confused with" feature. 
@@ -123,7 +116,7 @@ public class Quiz implements Serializable
 	 */
 	public boolean modifiedOnDisk()
 	{
-		return fileName.lastModified() > originalTimeStamp;
+		return fileName != null && fileName.lastModified() > originalTimeStamp;
 	}
 
 	/**

@@ -65,11 +65,11 @@ public class ResultDlg extends JDialog implements ActionListener
 	{
 		quiz = aQuiz;
 		
-		List<Word> mostDifficult = quiz.getMostDifficult(20);
-		for (Word w : mostDifficult)
+		List<WordState> mostDifficult = quiz.getMostDifficult(20);
+		for (WordState w : mostDifficult)
 		{
 			Map<String, Integer> wrongAnswers = w.getWrongAnswers();
-			txtResults.append(w.getQuestion() + ", " + w.getAnswer() + "\n");					
+			txtResults.append(w.getWord().getQuestion() + ", " + w.getWord().getAnswer() + "\n");					
 			txtResults.append("  " + MainFrame.res.getString("MISTAKES") + "\n");
 			if (wrongAnswers.size() > 0)
 			{

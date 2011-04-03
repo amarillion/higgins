@@ -4,9 +4,12 @@ TODO Dr. Higgins
 
 [x] bundled font to ensure japanese character availability
 [x] Refactoring: QuizLoader -> Quiz, Quiz->QuizSession
+[x] Refactoring: make Word a immutable class
+[x] Mogelijkheid een lesprogramma te maken
+[ ] geef huidige les / lesprogramma weer in titelbalk
+[ ] resultaten-venster aan het einde van een deel van het lesprogramma
 [ ] Licensing info for bundled font
 [ ] BUG: kan omgekeerd vraagteken niet meer invoeren
-[ ] Mogelijkheid een lesprogramma te maken
 [ ] update manual on input method stuff
 [ ] CC-BY-SA for lessons
 [ ] Better rendering of box panel
@@ -28,7 +31,6 @@ TODO Dr. Higgins
 == future ==
 
 [ ] Allow saving most difficult
-[ ] Refactoring: make Word a immutable class
 [ ] webstart version
 [ ] Debian package
 [ ] Set up donation page & shortcut

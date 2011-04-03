@@ -15,42 +15,15 @@
 //    along with Dr. Higgins.  If not, see <http://www.gnu.org/licenses/>.
 package nl.helixsoft.higgins;
 
-import javax.swing.SwingUtilities;
-import javax.swing.UIManager;
+import java.io.File;
+import java.io.Serializable;
 
-/**
- * provides main method
- */
-public class Main 
-{	
-	/**
-	 * create and show the GUI
-	 */
-	public static void main(String args[])
-	{
-		SwingUtilities.invokeLater(new Runnable()
-		{
-			public void run()
-			{
-				try {
-					//System look and feel is ugly for linux
-				    if (System.getProperty("os.name").startsWith("Linux"))
-				    {
-						UIManager.setLookAndFeel(
-					        UIManager.getCrossPlatformLookAndFeelClassName());
-				    }
-				    else
-				    {
-						UIManager.setLookAndFeel(
-						        UIManager.getSystemLookAndFeelClassName());
-				    }
-				} catch (Exception ex) {
-					ex.printStackTrace();
-				}
-				
-				Engine engine = new Engine();
-				engine.run();
-			}
-		});
-	}
+public class State implements Serializable 
+{
+	private static final long serialVersionUID = 1L;
+
+	public QuizSession session = null;
+	public File courseFile = null;
+
+	
 }

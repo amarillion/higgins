@@ -79,7 +79,7 @@ public class StatsDlg extends JDialog implements ActionListener
 		tm.setColumnIdentifiers(columns);
 		try 
 		{
-			BufferedReader reader = new BufferedReader (new FileReader (MainFrame.LOGFILE));
+			BufferedReader reader = new BufferedReader (new FileReader (Engine.LOGFILE));
 			String line;
 			while ((line = reader.readLine()) != null)
 			{

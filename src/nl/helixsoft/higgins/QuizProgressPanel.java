@@ -27,25 +27,16 @@ import javax.swing.JPanel;
  */
 public class QuizProgressPanel extends JPanel
 {
-	public QuizProgressPanel()
+	private final Engine engine;
+	
+	public QuizProgressPanel(Engine engine)
 	{
+		this.engine = engine;
 		setBorder (BorderFactory.createLineBorder(Color.BLACK));
 		setBackground(Color.BLUE);
 		setForeground(Color.YELLOW);
 	}
 
-	QuizSession quiz = null;
-	
-	/**
-	 * Set the quiz.
-	 * @param aQuiz may be null
-	 */
-	public void setQuiz (QuizSession aQuiz)
-	{
-		quiz = aQuiz;
-		invalidate();
-	}
-	
 	public Dimension getPreferredSize()
 	{
 		return new Dimension (250, 200);
@@ -55,12 +46,13 @@ public class QuizProgressPanel extends JPanel
 	{
 		super.paintComponent (g);
 		
-		if (quiz != null)
+		QuizSession session = engine.getSession();
+		if (session != null)
 		{
-			for (int i = 0; i < quiz.getBins(); ++i)
+			for (int i = 0; i < session.getBins(); ++i)
 			{
 				g.drawString (MainFrame.res.getString("BIN") + 
-						" " + (i + 1) + ": " + quiz.getBinCount(i), 
+						" " + (i + 1) + ": " + session.getBinCount(i), 
 						10, 20 * (i + 1));
 			}
 		}

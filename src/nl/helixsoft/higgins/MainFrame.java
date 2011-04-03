@@ -10,7 +10,6 @@ import edu.stanford.ejalbert.exception.UnsupportedOperatingSystemException;
 
 import java.awt.Color;
 import java.awt.Font;
-import java.awt.Point;
 import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -18,16 +17,8 @@ import java.awt.event.KeyEvent;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.ResourceBundle;
 
 import javax.swing.AbstractAction;
@@ -42,13 +33,18 @@ import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import javax.swing.KeyStroke;
 
-import nl.helixsoft.util.TypedProperties;
-
 /**
  * The main window where the Quiz takes place
  */
 public class MainFrame 
 {
+	private final Engine parent;
+	
+	public MainFrame(Engine engine)
+	{
+		parent = engine;
+	}
+	
 	private Font loadFont()
 	{
 		String fName = "ttf-japanese-gothic.ttf";
@@ -69,67 +65,32 @@ public class MainFrame
 
 	public static ResourceBundle res = ResourceBundle.getBundle("nl.helixsoft.higgins.Strings");
 	
-	public static final File APPDATADIR;
-	public static final File DEFAULT_LESSONS_DIR;
-	public static final File INSTALLDIR;
-	static
-	{
-		if (System.getProperty("os.name").startsWith("Win"))
-		{
-			APPDATADIR = new File (new File (System.getenv("appdata"), "HelixSoft"), "DrHiggins");
-		}
-		else
-		{
-			APPDATADIR = new File (System.getProperty("user.home"), ".higgins");
-		}
-		
-		INSTALLDIR = new File (System.getProperty("user.dir"));
-		File test = new File (INSTALLDIR, "lessons");
-		if (test.exists())
-		{
-			DEFAULT_LESSONS_DIR = test;
-		}
-		else
-		{
-			DEFAULT_LESSONS_DIR = INSTALLDIR;
-		}
-	}
-	
-	public static final File LOGFILE = new File (APPDATADIR, "higgins.log");
-	public static final File PREFERENCES = new File (APPDATADIR, "higgins.props");
-	public static final File STATE = new File (APPDATADIR, "higgins.sto");
-
-	//TODO: move to engine class
 	private JFrame frame;
-	//TODO: move to engine class, and make private
-	TypedProperties<HiggPrefs> prefs;
-	
+
 	private JTextField txtInput;
 	private JTextArea txtOutput;
 	private QuizProgressPanel binPanel;
-	private JLabel lblResult;
-		
-	private ViewCourseAction viewCourseAction;
 	
-	private int startCounter;
-	private Date startTime;
+	private JLabel lblResult;
+	
+	//TODO: make private
+	ViewCourseAction viewCourseAction;
+	
 	private InputMethod im;
 	
 	public void createAndShowGui()
 	{
-		initPreferences();
-
 		Font font = loadFont();
 		
 		frame = new JFrame("Dr. Higgins");
-		frame.setLayout(new FormLayout(
+		getFrame().setLayout(new FormLayout(
 				"3dlu, pref, 3dlu, pref, 3dlu",
 				"3dlu, pref, 3dlu, pref, 3dlu, pref, 3dlu, pref, 3dlu"));
 		CellConstraints cc = new CellConstraints();
 		
 		JMenuBar bar = new JMenuBar();
 		createMenu(bar);
-		frame.setJMenuBar(bar);
+		getFrame().setJMenuBar(bar);
 				
 		lblResult = new JLabel (" ");
 		lblResult.setHorizontalAlignment(JLabel.CENTER);
@@ -145,12 +106,12 @@ public class MainFrame
 		txtInput.setFont(medFont);
 		txtOutput.setFont(medFont);
 		
-		boolean isInternationalInput = prefs.getBoolean(HiggPrefs.INTERNATIONAL_INPUT); 
+		boolean isInternationalInput = parent.getPrefs().getBoolean(HiggPrefs.INTERNATIONAL_INPUT); 
 		im = new InputMethod(txtInput);
 		im.setCurrentSection(isInternationalInput ? "west-european" : null);
 		final JCheckBox ckInputMethod;
 		ckInputMethod = new JCheckBox("Enable international input", 
-				prefs.getBoolean(HiggPrefs.INTERNATIONAL_INPUT));
+				parent.getPrefs().getBoolean(HiggPrefs.INTERNATIONAL_INPUT));
 		ckInputMethod.setFocusable(false);
 		ckInputMethod.addActionListener(new ActionListener()
 		{
@@ -159,85 +120,54 @@ public class MainFrame
 				im.setCurrentSection(
 						ckInputMethod.isSelected() ?
 								"west-european" : null);
-				prefs.set(HiggPrefs.INTERNATIONAL_INPUT, 
+				parent.getPrefs().set(HiggPrefs.INTERNATIONAL_INPUT, 
 						ckInputMethod.isSelected());
 			}
 		});
 		
-		binPanel = new QuizProgressPanel();
+		binPanel = new QuizProgressPanel(parent);
 		
-		frame.add (lblResult, cc.xy(2,2));
-		frame.add (txtOutput, cc.xy(2,4));
-		frame.add (ckInputMethod, cc.xy(2,6)); 
-		frame.add (txtInput, cc.xyw(2,8,3));
-		frame.add (binPanel, cc.xywh(4,2,1,5));
+		getFrame().add (lblResult, cc.xy(2,2));
+		getFrame().add (txtOutput, cc.xy(2,4));
+		getFrame().add (ckInputMethod, cc.xy(2,6)); 
+		getFrame().add (txtInput, cc.xyw(2,8,3));
+		getFrame().add (binPanel, cc.xywh(4,2,1,5));
 		
 		txtInput.addActionListener(new ActionListener()
 		{
-
 			public void actionPerformed(ActionEvent arg0) 
 			{
-				if (session != null && !session.isFinished())
-				{
-					checkAnswer();
-					txtInput.setText("");
-					
-					if (session.isFinished())
-					{
-						writeLog();
-						showResults();
-						clearFrame();
-						closeQuiz();
-					}
-					else
-					{
-						nextWord();
-					}
-				}
+				String myAnswer = txtInput.getText().trim();
+				parent.checkAnswer(myAnswer);
 			}
 		});
 		
-		frame.pack();
+		getFrame().pack();
 		txtInput.requestFocusInWindow();
-		frame.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
-		frame.addWindowListener(new WindowAdapter() 
+		getFrame().setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
+		getFrame().addWindowListener(new WindowAdapter() 
 		{
 			@Override
 			public void windowClosing(WindowEvent we)
 			{
 				// make sure close get's called when clicking "x"
 				// or ALT+F4
-				close();
+				parent.close();
 			}			
 		});
 		
-		clearFrame();
-		loadState();
+		startupMessage();
+		
+		//TODO: find a way to move loadState to Engine.run();
+		parent.loadState();
+
 		frame.setLocation(
-				prefs.getInt(HiggPrefs.WIN_X),
-				prefs.getInt(HiggPrefs.WIN_Y)
+				parent.getPrefs().getInt(HiggPrefs.WIN_X),
+				parent.getPrefs().getInt(HiggPrefs.WIN_Y)
 				);
 		frame.setVisible(true);
 	}
 
-	private void initPreferences()
-	{		
-		prefs = new TypedProperties<HiggPrefs>(HiggPrefs.values());
-		if (PREFERENCES.exists())
-		{
-			try
-			{
-				FileInputStream fs = new FileInputStream(PREFERENCES);
-				prefs.load(fs);
-				fs.close();
-			} 
-			catch (IOException ex)
-			{
-				ex.printStackTrace();
-			}
-		}
-	}
-	
 	public void createMenu(JMenuBar bar)
 	{
 		JMenu file = new JMenu (res.getString("FILE"));
@@ -262,8 +192,18 @@ public class MainFrame
 		bar.add (help);
 	}
 	
-	private QuizSession session = null;
-	private CourseModel model = null;
+	void startupMessage()
+	{
+		lblResult.setText (" ");
+		txtOutput.setText ("");
+		txtOutput.append (res.getString("NO_CURRENT_LESSON") + "\n");
+		txtOutput.append (res.getString("GO_TO_FILE") + "\n");
+	}
+
+	public void clearOutput()
+	{
+		txtOutput.setText ("");		
+	}
 	
 	private class NewAction extends AbstractAction
 	{
@@ -279,13 +219,13 @@ public class MainFrame
 		{
 			JFileChooser chooser = new JFileChooser();
 			chooser.setCurrentDirectory(
-					prefs.getFile(HiggPrefs.LAST_USED_LESSONS_DIR));
-			if (chooser.showOpenDialog(frame) == JFileChooser.APPROVE_OPTION)
+					parent.getPrefs().getFile(HiggPrefs.LAST_USED_LESSONS_DIR));
+			if (chooser.showOpenDialog(getFrame()) == JFileChooser.APPROVE_OPTION)
 			{
-				prefs.set(HiggPrefs.LAST_USED_LESSONS_DIR, 
+				parent.getPrefs().set(HiggPrefs.LAST_USED_LESSONS_DIR, 
 						chooser.getCurrentDirectory());
 				File f = chooser.getSelectedFile();
-				startQuiz (loadQuiz(f));
+				parent.startQuiz (parent.loadQuiz(f));
 			}
 		}
 	};
@@ -302,9 +242,8 @@ public class MainFrame
 		
 		public void actionPerformed(ActionEvent ae) 
 		{
-			model = new CourseModel();
-			viewCourseAction.setEnabled(true);
-			CourseDlg dlg = new CourseDlg(MainFrame.this, frame, model);
+			parent.newCourse();
+			CourseDlg dlg = new CourseDlg(parent);
 			dlg.setVisible(true);			
 		}
 	};
@@ -323,20 +262,27 @@ public class MainFrame
 		{
 			JFileChooser chooser = new JFileChooser();
 			chooser.setCurrentDirectory(
-					prefs.getFile(HiggPrefs.LAST_USED_COURSE_DIR));
-			if (chooser.showOpenDialog(frame) == JFileChooser.APPROVE_OPTION)
+					parent.getPrefs().getFile(HiggPrefs.LAST_USED_COURSE_DIR));
+			if (chooser.showOpenDialog(getFrame()) == JFileChooser.APPROVE_OPTION)
 			{
-				prefs.set(HiggPrefs.LAST_USED_COURSE_DIR, 
+				parent.getPrefs().set(HiggPrefs.LAST_USED_COURSE_DIR, 
 						chooser.getCurrentDirectory());
 				File f = chooser.getSelectedFile();
-				//TODO
-				
-				viewCourseAction.setEnabled(true);
+				try {
+					parent.loadCourse(f);
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				} catch (ClassNotFoundException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 			}
 		}
 	};
 
-	private class ViewCourseAction extends AbstractAction
+	//TODO: make private
+	public class ViewCourseAction extends AbstractAction
 	{
 		ViewCourseAction()
 		{
@@ -344,157 +290,17 @@ public class MainFrame
 			putValue (NAME, res.getString("VIEW_COURSE"));
 			putValue(ACCELERATOR_KEY, KeyStroke.getKeyStroke(KeyEvent.VK_V, 
 					Toolkit.getDefaultToolkit().getMenuShortcutKeyMask()));		
-			setEnabled(model != null);
+			setEnabled(parent.getModel() != null);
 		}
 		
 		public void actionPerformed(ActionEvent ae) 
 		{
-			if (model == null) return; // should not be able to get here. 
-			CourseDlg dlg = new CourseDlg(MainFrame.this, frame, model);
+			if (parent.getModel() == null) return; // should not be able to get here. 
+			CourseDlg dlg = new CourseDlg(parent);
 			dlg.setVisible(true);
 		}
 	};
 
-	private QuizSession loadQuiz (File f)
-	{
-		try
-		{
-			return new QuizSession(f);
-		}
-		catch (IOException ex)
-		{
-			JOptionPane.showMessageDialog(frame, "File read error",
-					"Problem while opening lesson\n" + ex.getMessage(), 
-					JOptionPane.ERROR_MESSAGE);
-			ex.printStackTrace();
-			return null;
-		}
-	}
-	
-	private void closeQuiz()
-	{
-		if (session != null) 
-		{
-			writeLog();
-			session = null;
-			binPanel.setQuiz(null);
-		}
-	}
-	
-	/**
-	 * start quiz, but without re-initializing.
-	 * So this can also be used to continue a stored quiz.
-	 * 
-	 * If any previously started quiz was not yet closed cleanly, it will be.
-	 */
-	private void startQuiz(QuizSession newQuiz)
-	{
-		txtOutput.setText("");
-		// stop logging current quiz, if it exists
-		if (session != null) 
-		{
-			writeLog();
-			session = null;
-		}
-
-		session = newQuiz;
-		//TODO: this overrides bin option in lesson itself
-		session.setBins(prefs.getInt(HiggPrefs.DEFAULT_BINS));
-		binPanel.setQuiz (session);
-		beginLog();
-		nextWord();
-	}
-	
-	private void writeLog()
-	{
-		Date end = new Date();
-		
-		long span = (end.getTime() - startTime.getTime()) / 1000L;
-		long spanHours = span / 3600L;
-		long spanMinutes = (span % 3600L) / 60L;
-		long spanSeconds = (span % 60L);
-		
-		DateFormat format = new SimpleDateFormat("EEE MMM dd HH:mm:ss yyyy");
-		String line = format.format(startTime);
-		line += String.format (" #q: %4d ", session.getCounter() - startCounter);
-		line += String.format(" dur.: %02d:%02d:%02d", spanHours, spanMinutes, spanSeconds);
-		line += " " + session.getQuiz().getFile() + "\n";
-		// ignore runs of less than 10.
-		if (session.getCounter() - startCounter >= 10)
-		{
-			try
-			{
-				LOGFILE.getParentFile().mkdirs();
-				FileWriter writer = new FileWriter(LOGFILE, true);
-				writer.write (line);
-				writer.close();
-			}
-			catch (IOException ex)
-			{
-				ex.printStackTrace();
-			}
-		}
-	}
-
-	private void beginLog()
-	{
-		startCounter = session.getCounter();
-		startTime = new Date();
-	}
-	
-	private void nextWord()
-	{
-		session.nextQuestion();
-		drawBins();
-		txtOutput.append (res.getString("QUESTION") + " #" + session.getCounter() 
-				+ ": " + session.getQuestion() + "\n"); 
-	}
-
-	private void drawBins()
-	{
-		binPanel.repaint();
-	}
-
-	private void clearFrame()
-	{
-		lblResult.setText (" ");
-		txtOutput.setText ("");
-		txtOutput.append (res.getString("NO_CURRENT_LESSON") + "\n");
-		txtOutput.append (res.getString("GO_TO_FILE") + "\n");
-	}
-	
-	private void checkAnswer()
-	{
-		String myAnswer = txtInput.getText().trim();
-		txtOutput.setText ("");
-		txtOutput.append(res.getString("QUESTION") + " #" + session.getCounter() 
-				+ ": " + session.getQuestion() + "\n");
-		if (session.compareAnswer(myAnswer))
-		{
-			lblResult.setText(res.getString("CORRECT"));
-			lblResult.setForeground(Color.GREEN);
-		}
-		else
-		{
-			lblResult.setText(res.getString("WRONG"));
-			lblResult.setForeground(Color.RED);
-			txtOutput.append(res.getString("YOU_ANSWERED") + " \"" + myAnswer + "\"\n");
-		}
-		txtOutput.append(res.getString("THE_ANSWER_WAS") + " \"" + session.getCorrectAnswer() + "\"\n");
-		if (session.hasHint())
-		{
-			txtOutput.append (session.getHint() + "\n");
-		}
-		txtOutput.append ("\n");
-	}
-	
-	private void showResults()
-	{
-		ResultDlg dlg = new ResultDlg(frame);
-		dlg.setQuiz (session);
-		dlg.setVisible(true);
-	}
-	
 	private class RestartAction extends AbstractAction
 	{
 		RestartAction()
@@ -505,11 +311,7 @@ public class MainFrame
 		
 		public void actionPerformed(ActionEvent ae) 
 		{
-			if (session != null)
-			{
-				// start quiz again with same file
-				startQuiz (loadQuiz(session.getQuiz().getFile()));
-			}
+			parent.restartQuiz ();
 		}
 	};
 
@@ -523,13 +325,13 @@ public class MainFrame
 		
 		public void actionPerformed(ActionEvent ae) 
 		{
-			OptionsDlg dlg = new OptionsDlg(frame);
-			dlg.setBins(prefs.getInt(HiggPrefs.DEFAULT_BINS));
+			OptionsDlg dlg = new OptionsDlg(getFrame());
+			dlg.setBins(parent.getPrefs().getInt(HiggPrefs.DEFAULT_BINS));
 			dlg.setVisible(true);
 			if (!dlg.isCancelled())
 			{
-				prefs.set(HiggPrefs.DEFAULT_BINS, dlg.getBins()); 
-				if (session != null) session.setBins(dlg.getBins());
+				parent.getPrefs().set(HiggPrefs.DEFAULT_BINS, dlg.getBins()); 
+				if (parent.getSession() != null) parent.getSession().setBins(dlg.getBins());
 			}
 		}
 	};
@@ -544,88 +346,11 @@ public class MainFrame
 		
 		public void actionPerformed(ActionEvent ae) 
 		{
-			close();
+			parent.close();
 		}
 	};
 
-	private void loadState()
-	{
-		if (STATE.exists())
-		{
-			try
-			{
-				ObjectInputStream ois = new ObjectInputStream(
-						new FileInputStream (STATE));
-				QuizSession newSession = (QuizSession)ois.readObject();
-				
-				if (newSession.getQuiz().modifiedOnDisk())
-				{
-					// frame doesn't exist yet at this moment!
-					int result = JOptionPane.showConfirmDialog(null, res.getString("QUIZ_CHANGED"), 
-							res.getString("QUIZ_CHANGED_TITLE"), JOptionPane.YES_NO_OPTION,
-							JOptionPane.QUESTION_MESSAGE);
-					if (result == JOptionPane.YES_OPTION)
-					{
-						// reload & re-initialize quiz
-						newSession = new QuizSession (newSession.getQuiz().getFile());
-					}
-				}
-				startQuiz (newSession);
-				STATE.delete();
-			}
-			catch (IOException ex)
-			{
-				ex.printStackTrace();
-			}
-			catch (ClassNotFoundException ex)
-			{
-				ex.printStackTrace();
-			}
-		}
-	}
-	
-	private void close()
-	{
-		if (session != null)
-		{
-			try
-			{
-				STATE.getParentFile().mkdirs();
-				ObjectOutputStream oos = new
-					ObjectOutputStream(
-							new FileOutputStream(
-									STATE));
-				oos.writeObject(session);
-				oos.close();
-			}
-			catch (IOException ex)
-			{
-				ex.printStackTrace();
-			}
-			writeLog();
-		}
-
-		//TODO: for some reason always returns 0,0
-		Point p = frame.getLocationOnScreen();
-
-		prefs.set(HiggPrefs.WIN_X, p.x);
-		prefs.set(HiggPrefs.WIN_Y, p.y);
-
-		try
-		{
-			PREFERENCES.getParentFile().mkdirs();
-			FileOutputStream fs = new FileOutputStream(PREFERENCES);
-			prefs.store(fs, "Dr. Higgins preferences");
-			fs.close();
-		}
-		catch (IOException ex)
-		{
-			ex.printStackTrace();
-		}
 		
-		frame.dispose();		
-	}
-	
 	private class StatsAction extends AbstractAction
 	{
 		StatsAction()
@@ -636,7 +361,7 @@ public class MainFrame
 		
 		public void actionPerformed(ActionEvent ae) 
 		{
-			StatsDlg dlg = new StatsDlg(frame);
+			StatsDlg dlg = new StatsDlg(getFrame());
 			dlg.loadLogFile();
 			dlg.setVisible(true);
 		}
@@ -653,7 +378,7 @@ public class MainFrame
 		public void actionPerformed(ActionEvent ae) 
 		{
 			AboutDlg dlg = new AboutDlg();
-			dlg.createAndShowGUI(frame);
+			dlg.createAndShowGUI(getFrame());
 		}
 	};
 
@@ -668,7 +393,7 @@ public class MainFrame
 		public void actionPerformed(ActionEvent ae) 
 		{
 			BrowserLauncher bl;
-			File helpFile = new File(INSTALLDIR, "doc/index.html");
+			File helpFile = new File(Engine.INSTALLDIR, "doc/index.html");
 			String error = null;
 			try {
 				bl = new BrowserLauncher(null);
@@ -684,7 +409,53 @@ public class MainFrame
 				e.printStackTrace();
 			}
 			if (error != null)
-				JOptionPane.showMessageDialog(frame, error);
+				JOptionPane.showMessageDialog(getFrame(), error);
 		}
 	}
+
+	public JFrame getFrame() {
+		return frame;
+	}
+
+	public void showAnswer(int counter, String question, boolean correct, String myAnswer, String correctAnswer, String hint) 
+	{
+		txtOutput.setText ("");
+		txtOutput.append(res.getString("QUESTION") + " #" + counter 
+				+ ": " + question + "\n");
+		
+		if (correct)
+		{
+			lblResult.setText(res.getString("CORRECT"));
+			lblResult.setForeground(Color.GREEN);
+		}
+		else
+		{
+			lblResult.setText(res.getString("WRONG"));
+			lblResult.setForeground(Color.RED);
+			txtOutput.append(res.getString("YOU_ANSWERED") + " \"" + myAnswer + "\"\n");
+		}
+		
+		txtOutput.append(res.getString("THE_ANSWER_WAS") + " \"" + correctAnswer + "\"\n");
+		
+		if (hint != null)
+		{
+			txtOutput.append (hint + "\n");
+		}
+
+		txtOutput.append ("\n");
+		txtInput.setText("");
+	}
+
+	public void showQuestion(int counter, String question) 
+	{
+		txtOutput.append (res.getString("QUESTION") + " #" + counter 
+				+ ": " + question + "\n"); 
+	}
+
+	public void refreshBins()
+	{
+		binPanel.repaint();
+	}
+	
+
 }

@@ -25,7 +25,6 @@ import java.util.List;
 import javax.swing.JButton;
 import javax.swing.JDialog;
 import javax.swing.JFileChooser;
-import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
@@ -57,13 +56,13 @@ public class CourseDlg extends JDialog implements ActionListener, ChangeListener
 	private JSlider slNew;
 
 	private final CourseModel model;
-	private final MainFrame parent;
+	private final Engine parent;
 	
-	CourseDlg (MainFrame parent, JFrame frame, CourseModel model)
+	public CourseDlg (Engine engine)
 	{
-		super (frame, true);
-		this.model = model;
-		this.parent = parent;
+		super (engine.getFrame(), true);
+		this.parent = engine;
+		this.model = engine.getModel();
 		setTitle (MainFrame.res.getString("COURSE"));
 		
 		setLayout(new FormLayout(
@@ -90,24 +89,25 @@ public class CourseDlg extends JDialog implements ActionListener, ChangeListener
 				));
 		
 		txtLessonSize = new JTextField(5);
+		txtLessonSize.setText("" + model.lessonSize);
 		txtLessonSize.addActionListener(this);
 		builder.add (
 				new JLabel(MainFrame.res.getString("LESSONSIZE")), cc.xy(2,2), 
 				txtLessonSize, cc2.xy(4,2)
 			);
-		slErrors = new JSlider(0, 100, 20);
+		slErrors = new JSlider(0, 100, (int)(100.0 * model.pctErrors));
 		slErrors.addChangeListener(this);
 		builder.add (
 				new JLabel(MainFrame.res.getString("PCTERRORS")), cc.xy(2,4), 
 				slErrors, cc2.xy(4,4)
 			);
-		slRepeats = new JSlider(0, 100, 20);
+		slRepeats = new JSlider(0, 100, (int)(100.0 * model.pctRepetition));
 		slRepeats.addChangeListener(this);
 		builder.add (
 				new JLabel(MainFrame.res.getString("PCTREPEAT")), cc.xy(2,6),
 				slRepeats, cc2.xy(4,6)
 			);
-		slNew = new JSlider(0, 100, 60);
+		slNew = new JSlider(0, 100, (int)(100.0 * (1.0 - model.pctErrors - model.pctRepetition)));
 		slNew.addChangeListener(this);
 		builder.add (
 				new JLabel(MainFrame.res.getString("PCTNEW")), cc.xy(2,8), 
@@ -123,7 +123,7 @@ public class CourseDlg extends JDialog implements ActionListener, ChangeListener
 		add (btnPanel, cc.xy(2, 6));
 		
 		pack();
-		setLocationRelativeTo (frame);
+		setLocationRelativeTo (engine.getFrame());
 	}
 
 	@Override
@@ -131,19 +131,58 @@ public class CourseDlg extends JDialog implements ActionListener, ChangeListener
 	{
 		if (e.getSource() == btnSave)
 		{
+			try
+			{
+				model.lessonSize = Integer.parseInt (txtLessonSize.getText());
+			}
+			catch (NumberFormatException ex)
+			{
+				//ignore
+			}
+			
+			if (model.courseFile == null)
+			{
+				JFileChooser jfc = new JFileChooser();
+				jfc.setCurrentDirectory(
+					parent.getPrefs().getFile(HiggPrefs.LAST_USED_COURSE_DIR));
+				if (jfc.showSaveDialog(this) == JFileChooser.CANCEL_OPTION)
+				{
+					return;
+				}
+				else
+				{
+					model.courseFile = jfc.getSelectedFile();
+					parent.getPrefs().set(HiggPrefs.LAST_USED_COURSE_DIR, 
+							jfc.getCurrentDirectory());
+				}
+			}
+			try 
+			{					
+				model.saveCourse();
+				setVisible(false);
+				parent.nextCourseSession();
+			} 
+			catch (IOException e1) 
+			{
+				//TODO: internationalize
+				JOptionPane.showMessageDialog(this, "Couldn't save " + e1.getMessage());
+				e1.printStackTrace();
+			}
 		}
 		else if (e.getSource() == btnCancel)
 		{
+			// close dialog
+			setVisible(false);
 		}
 		else if (e.getSource() == btnAdd)
 		{
 			JFileChooser jfc = new JFileChooser();
 			jfc.setCurrentDirectory(
-					parent.prefs.getFile(HiggPrefs.LAST_USED_LESSONS_DIR));
+					parent.getPrefs().getFile(HiggPrefs.LAST_USED_LESSONS_DIR));
 			jfc.setMultiSelectionEnabled(true);
 			if (jfc.showOpenDialog(this) == JFileChooser.APPROVE_OPTION)
 			{
-				parent.prefs.set(HiggPrefs.LAST_USED_LESSONS_DIR, 
+				parent.getPrefs().set(HiggPrefs.LAST_USED_LESSONS_DIR, 
 						jfc.getCurrentDirectory());
 				for (File f : jfc.getSelectedFiles())
 				{
@@ -198,5 +237,8 @@ public class CourseDlg extends JDialog implements ActionListener, ChangeListener
 		if (o1n + adj.getValue() > 100) o1n = 100 - adj.getValue();
 		o1.setValue(o1n);
 		o2.setValue(100 - adj.getValue() - o1.getValue());
+		
+		model.pctErrors = (float)slErrors.getValue() / 100.0f;
+		model.pctRepetition = (float)slRepeats.getValue() / 100.0f;
 	}
 }
