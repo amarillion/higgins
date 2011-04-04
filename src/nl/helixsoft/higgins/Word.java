@@ -18,7 +18,7 @@ package nl.helixsoft.higgins;
 import java.io.Serializable;
 
 /**
- * Represents a question-answer pair.
+ * Represents a question-answer pair. This class is immutable.
  */
 public class Word implements Serializable
 {
@@ -26,8 +26,8 @@ public class Word implements Serializable
 		
 	private final String question;
 	private final String answer;
-	private final int dir; /* direction of this question 1->0 or 0->1 */
-	private final int pair; /* position in lesson file */
+	private final int dir; 
+	private final int pair;
 
 	Word (String q, String a, int dir, int pair)
 	{
@@ -48,6 +48,8 @@ public class Word implements Serializable
 	 * then 0 means the translation for the english word is asked.
 	 */
 	public int getDir () { return dir; }
-	
+
+	/** Position of this question in the lesson file. 
+	 * The reverse of this question has the same index. */
 	public int getPair () { return pair; }
 }

@@ -72,7 +72,7 @@ public class InputMethod implements KeyListener
 	}
 	
 	/**
-	 * Instert all saved-up characters and reset to the starting state.
+	 * Inster all saved-up characters and reset to the starting state.
 	 */
 	public void flush()
 	{

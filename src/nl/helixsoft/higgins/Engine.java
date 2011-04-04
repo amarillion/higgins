@@ -33,6 +33,8 @@ import javax.swing.JOptionPane;
 
 import nl.helixsoft.util.TypedProperties;
 
+/** Main engine, handles startup and shutdown, 
+ * saving and loading lessons, preferences, courses, asking questions and recording answers */  
 public class Engine 
 {
 	private final MainFrame mainFrame = new MainFrame(this);
@@ -275,7 +277,7 @@ public class Engine
 	/**
 	 * start quiz, but without re-initializing.
 	 * So this can also be used to continue a stored quiz.
-	 * 
+	 * <p>
 	 * If any previously started quiz was not yet closed cleanly, it will be.
 	 */
 	public void startQuiz(QuizSession newQuiz)

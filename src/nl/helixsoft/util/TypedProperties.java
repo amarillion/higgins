@@ -8,14 +8,14 @@ import java.util.Properties;
 
 
 /**
- * Wrapper for java.util.Properties with the following features
- * 
- * instead of String keys, keys need to implement interface KeyType. 
+ * Typed wrapper for java.util.Properties.
+ * <p>
+ * Instead of String keys, keys need to implement interface KeyType. 
  * This enables you to use an enum instead of a string for the key.
- * 
+ * <p>
  * The KeyType interface has the method getDefault() -> this
  * allows you to set the default right at the declaration of the preference 
- * 
+ * <p>
  * you can use the set/getInt, set/getString and set/getFile to
  * automatically convert to the right type
  */

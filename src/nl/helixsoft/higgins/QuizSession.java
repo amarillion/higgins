@@ -23,7 +23,8 @@ import java.util.List;
 import java.util.Random;
 
 /**
- * represents a single lesson, a series of q, a pairs read from a text file.
+ * Keeps track of a quiz in progress. Handles repeating errors, and moves questions 
+ * to the next box when they are answered correctly.
  */
 public class QuizSession implements Serializable 
 {
@@ -48,7 +49,7 @@ public class QuizSession implements Serializable
 	/**
 	 * Find a suitable question to be asked next, according to the following algorithm:
 	 * <p>
-	 * go through list    
+	 * go through list
 	 * 1. look for word that has highest due. If due > 3, pick it. If due > 2, pick it with 30% chance
 	 * 2. if none found yet, pick two words that are not in last bin. Return the one in lowest bin.
 	 */
@@ -101,6 +102,8 @@ public class QuizSession implements Serializable
 	 * Returns true if they match.
 	 * As a side effect, increases counter and may set hint
 	 * so call this only once per q/a.
+	 * @param anAnswer answer given by user
+	 * @return true if the given answer is the correct answer.
 	 */
 	public boolean compareAnswer (String anAnswer)
 	{

@@ -2,15 +2,11 @@
 <project name="Higgins" default="jar" basedir=".">
 	<!-- read the higgins.version property -->
 	<property file="src/nl/helixsoft/higgins/version.properties"/>
-	<property name="src.dir" value="src"/>
-	
-	<property name="build.dir" value="build"/>
-	<property name="lib.dir" value="lib"/>
 	
 	<property name="jar.class.path" value="lib/forms-1.2.0.jar lib/BrowserLauncher.jar"/>
 
 	<path id="project.class.path">
-      <pathelement location="${build.dir}"/>
+      <pathelement location="build"/>
 	  <fileset dir="lib">
 		<include name="forms-1.2.0.jar"/>
 		<include name="BrowserLauncher.jar"/>
@@ -18,21 +14,36 @@
 	</path>
 
 	<target name="prepare">
-		<mkdir dir="${build.dir}"/>
+		<mkdir dir="build"/>
+		<mkdir dir="apidoc"/>
 	</target>
 	
 	<target name="clean" description="Remove all intermediate files.">
-		<delete dir="${build.dir}"/>
+		<delete dir="build"/>
 	</target>
 
 	<target name="dist-clean" depends="clean" description="Cleaner than clean: remove all generated files">
 		<delete file="higgins.jar"/>
+		<delete dir="apidoc"/>
+	</target>
+	
+	<target name="doc" depends="prepare">
+		<tstamp /> <!-- set ${TODAY} -->
+		<javadoc destdir="apidoc"
+			doctitle="Dr. Higgins"
+			footer="Generated ${TODAY}">
+			<classpath refid="project.class.path"/>
+			<packageset dir="src"/>
+			<sourcepath>
+				<pathelement location="src"/>
+			</sourcepath>
+		</javadoc>
 	</target>
 	
 	<target name="compile" depends="prepare" description="Compile core sources">
 		<javac srcdir="src"
 			   includes="**"
-			   destdir="${build.dir}"
+			   destdir="build"
 			   debug="true"
 			   source="1.5">
 		  <classpath refid="project.class.path"/>
@@ -45,7 +56,7 @@
 				<attribute name="Main-Class" value="nl.helixsoft.higgins.Main"/>
 				<attribute name="Class-Path" value="${jar.class.path}"/>
 			</manifest>
-			<fileset dir="${build.dir}" includes="**/*.class"/>			
+			<fileset dir="build" includes="**/*.class"/>			
 			<fileset dir="${src.dir}" includes="**/*.properties"/>			
 			<fileset dir="resources" includes="**/*.*"/>			
 		</jar>

@@ -29,7 +29,8 @@ import java.util.Map;
 import java.util.Set;
 
 /**
- * Represents a set of questions, read from a text file.
+ * Represents a set of questions, either read from a text file or provided directly. 
+ * Questions are indexed for reverse lookup.
  */
 public class Quiz implements Serializable
 {
@@ -44,6 +45,8 @@ public class Quiz implements Serializable
 		askBothWays = 1;
 	}
 
+	/** Instantiate a quiz directly from a list of questions. 
+	 * There is no file corresponding to this quiz */ 
 	public Quiz(List<Word> words)
 	{
 		this();
@@ -68,13 +71,13 @@ public class Quiz implements Serializable
 	private long originalTimeStamp;
 
 	/**
-	 * The lesson file from which this quiz was loaded
+	 * @return The lesson file from which this quiz was loaded, or null if there is no corresponding file.
 	 */
 	public File getFile() { return fileName; }
 
 	/** 
 	 * Instantiate a new quiz object, and fill it with data read from file 
-	 * @returns new Quiz instance
+	 * @return new Quiz instance
 	 */
 	public static Quiz loadFromFile(File newFileName) throws IOException
 	{

@@ -6,14 +6,18 @@ TODO Dr. Higgins
 [x] Refactoring: QuizLoader -> Quiz, Quiz->QuizSession
 [x] Refactoring: make Word a immutable class
 [x] Mogelijkheid een lesprogramma te maken
+[x] BUG: revision "null" in AboutDlg.
+[x] review / update javadoc
+[ ] fallback function for internationalization
+[ ] refresh lessons in course program when changed on disk
+[ ] always save course program when starting new lesson / course program
 [ ] geef huidige les / lesprogramma weer in titelbalk
 [ ] resultaten-venster aan het einde van een deel van het lesprogramma
 [ ] Licensing info for bundled font
 [ ] BUG: kan omgekeerd vraagteken niet meer invoeren
-[ ] update manual on input method stuff
+[ ] update manual on input method and course program stuff
 [ ] CC-BY-SA for lessons
 [ ] Better rendering of box panel
-[ ] BUG: revision "null" in AboutDlg.
 [ ] Bump version no to 1.00 Beta
 [ ] Icon / logo
 

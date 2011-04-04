@@ -4,6 +4,10 @@ import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Map;
 
+/** State of a Word during a quiz. That means: the box the word is in, 
+ * if it has to be repeated because of a wrong answer, 
+ * and a list of wrong answers given. 
+ */  
 public class WordState implements Serializable
 {
 	private static final long serialVersionUID = 2L;
@@ -71,7 +75,7 @@ public class WordState implements Serializable
 	private int howSoon = -1;
 	private int quizCount = 0;
 	private int correctCount = 0;
-	Map<String, Integer> wrongAnswers = new HashMap<String, Integer>();
+	private Map<String, Integer> wrongAnswers = new HashMap<String, Integer>();
 
 	public Word getWord() 
 	{

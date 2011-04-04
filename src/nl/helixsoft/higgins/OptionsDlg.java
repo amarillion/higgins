@@ -28,6 +28,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
+/** Dialog for setting preferences. */
 public class OptionsDlg extends JDialog implements ActionListener
 {
 	private JTextField txtBins;

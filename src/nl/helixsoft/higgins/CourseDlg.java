@@ -41,6 +41,9 @@ import com.jgoodies.forms.factories.ButtonBarFactory;
 import com.jgoodies.forms.layout.CellConstraints;
 import com.jgoodies.forms.layout.FormLayout;
 
+/**
+ * Dialog for creating and viewing course programs.
+ */
 public class CourseDlg extends JDialog implements ActionListener, ChangeListener
 {
 	private JTable tblLessons; 
@@ -58,6 +61,10 @@ public class CourseDlg extends JDialog implements ActionListener, ChangeListener
 	private final CourseModel model;
 	private final Engine parent;
 	
+	/**
+	 * Constructor creates the entire dialog. 
+	 * After calling the constructor, call setVisible(true) to activate the dialog.
+	 */
 	public CourseDlg (Engine engine)
 	{
 		super (engine.getFrame(), true);
@@ -127,6 +134,7 @@ public class CourseDlg extends JDialog implements ActionListener, ChangeListener
 	}
 
 	@Override
+	/** handles click on various buttons */
 	public void actionPerformed(ActionEvent e) 
 	{
 		if (e.getSource() == btnSave)
@@ -218,6 +226,7 @@ public class CourseDlg extends JDialog implements ActionListener, ChangeListener
 	}
 
 	@Override
+	/** handles changes in slider positions */
 	public void stateChanged(ChangeEvent e) 
 	{
 		JSlider adj;

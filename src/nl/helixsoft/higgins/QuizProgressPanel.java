@@ -23,7 +23,7 @@ import javax.swing.BorderFactory;
 import javax.swing.JPanel;
 
 /**
- * Custom panel for viewing progress of quiz
+ * Custom panel for viewing progress of quiz, as words move from bin to bin.
  */
 public class QuizProgressPanel extends JPanel
 {

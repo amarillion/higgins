@@ -18,12 +18,13 @@ package nl.helixsoft.higgins;
 import java.io.File;
 import java.io.Serializable;
 
+/** simple class for the purpose of serializing session state. Used temporarily when saving a 
+ * session or loading, 
+ * but not during the running of the program. */ 
 public class State implements Serializable 
 {
 	private static final long serialVersionUID = 1L;
 
 	public QuizSession session = null;
 	public File courseFile = null;
-
-	
 }

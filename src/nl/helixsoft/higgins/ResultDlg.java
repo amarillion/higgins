@@ -30,6 +30,7 @@ import javax.swing.JTextArea;
 import com.jgoodies.forms.layout.CellConstraints;
 import com.jgoodies.forms.layout.FormLayout;
 
+/** Dialog that shows overview of the results after a quiz is completed */
 public class ResultDlg extends JDialog implements ActionListener
 {
 	private JButton btnOk;

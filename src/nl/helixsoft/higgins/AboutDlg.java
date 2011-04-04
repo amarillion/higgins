@@ -27,12 +27,24 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JTextPane;
+import javax.swing.event.HyperlinkEvent;
+import javax.swing.event.HyperlinkListener;
+import javax.swing.event.HyperlinkEvent.EventType;
+
+import nl.helixsoft.util.Browser;
 
 /**
- * Dialog in help->about
+ * Dialog in Help->About menu
  */
-public class AboutDlg 
+public class AboutDlg implements HyperlinkListener 
 {
+	public static String URL = "http://www.helixsoft.nl";
+	
+	/**
+	 * Attempt to read Dr. Higgins version number from properties file.
+	 * @return version as String
+	 */
 	public static final String getVersion()
 	{
 		Properties props = new Properties();
@@ -41,26 +53,31 @@ public class AboutDlg
 			props.load(AboutDlg.class.getResourceAsStream("version.properties"));
 		}
 		catch (IOException ex) { return "ERROR: Unable to read version number"; }
-		return props.getProperty("version");
+		return props.getProperty("higgins.version");
 	}
 
+	private JFrame aboutDlg;
+	
 	/**
-	 * call this to open the dialog
+	 * Call this to open the dialog. Function returns when dialog is closed.
+	 * @param parent parent window
 	 */
 	public void createAndShowGUI(JFrame parent)
 	{
-		final JFrame aboutDlg = new JFrame();
+		aboutDlg = new JFrame();
 		
 		FormLayout layout = new FormLayout(
 				"4dlu, pref, 4dlu",
 				"4dlu, pref, 4dlu, pref, 4dlu, pref, 4dlu");
 		
-		JLabel versionLabel = new JLabel ("Dr. Higgins version " + getVersion());
-		JLabel label = new JLabel();
+		JLabel versionLabel = new JLabel (Engine.res.getString ("VERSION_NAME").replace ("%1", getVersion()));
+		JTextPane label = new JTextPane();
+		label.setContentType("text/html");
+		label.setEditable(false);
 		label.setText(
 			"<html><h2>Dr. Higgins</h2>" +
 			"(c) copyright 2003-2011<br>\n" +
-			"M.P. van Iersel <amarillion@yahoo.com>\n" +
+			"M.P. van Iersel &lt;amarillion@yahoo.com&gt;\n" +
 			"<h2>" + Engine.res.getString("CONTRIBUTORS_AND_TRANSLATORS") + "</h2>\n" +
 			"Olivia Guerra Santin (Spanish)<br>\n" +
 			"Adem Bilican (French)<br>\n" +
@@ -69,8 +86,9 @@ public class AboutDlg
 			"<br>\n" +
 			Engine.res.getString("COPYRIGHT") + 
 			"<p>" + Engine.res.getString("WEBSITE") +
-			" <a href=\"http://www.helixsoft.nl\">http://www.helixsoft.nl</a></html>");
-		
+			" <a href=\"" + URL + "\">" + URL + "</a></html>");
+		label.addHyperlinkListener(this);
+
 		CellConstraints cc = new CellConstraints();
 		
 		JPanel dialogBox = new JPanel();
@@ -96,6 +114,16 @@ public class AboutDlg
 		aboutDlg.pack();
 		aboutDlg.setLocationRelativeTo(parent);
 		aboutDlg.setVisible(true);
+	}
+
+	@Override
+	/** Event handler to handle click on hyperlink */
+	public void hyperlinkUpdate(HyperlinkEvent e) 
+	{
+		if (e.getEventType() == EventType.ACTIVATED)
+		{
+			Browser.launch(aboutDlg, e.getURL().toString());
+		}
 	}
 
 }

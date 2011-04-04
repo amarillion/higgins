@@ -32,6 +32,13 @@ import java.util.Map;
 
 import javax.swing.table.AbstractTableModel;
 
+/** 
+ * Data model for a course program. This class maintains a list of Files that are the individual lessons, 
+ * and tracks for each question in each quiz when it was last asked, how often it was asked and how 
+ * often it was answered wrong.
+ * <p>
+ * This class can be used directly as tableModel.
+ */
 public class CourseModel extends AbstractTableModel implements Serializable
 {
 	private static final long serialVersionUID = 1L;
@@ -50,6 +57,7 @@ public class CourseModel extends AbstractTableModel implements Serializable
 	float pctRepetition = 0.2f; // percentage of lesson that should consist of repeating old words 
 	// pctErrors + pctRepetition < 1.0
 	
+	/** Extra data about a question in one of the quizzes of this course */
 	private static class WordHistory implements Serializable
 	{
 		private static final long serialVersionUID = 3L;
@@ -62,12 +70,16 @@ public class CourseModel extends AbstractTableModel implements Serializable
 			errorRate = 0;
 		}
 		
-		Word w;
-		int askedTimes; // number of times asked
-		Date lastAsked; // last asked date
+		final Word w;
+		
+		/** number of times asked */
+		int askedTimes;
+		
+		/** moment that this was last asked*/
+		Date lastAsked;
 
 		/** 
-		 * weighted running average of errorRate. 
+		 * Weighted running average of errorRate. 
 		 * Each correct answer: errorRate = 0.9 * errorRate + 0.1; 
 		 * Each wrong answer: errorRate = 0.9 * errorRate;
 		 * This means effect of older answers diminishes over time.
@@ -123,6 +135,7 @@ public class CourseModel extends AbstractTableModel implements Serializable
 	 */
 	public void refreshFile(File f)
 	{
+		//TODO
 		throw new UnsupportedOperationException("Not yet implemented");
 	}
 	
@@ -156,6 +169,10 @@ public class CourseModel extends AbstractTableModel implements Serializable
 		return newModel;
 	}
 	
+	/** 
+	 * @return list of questions that have been answered wrong, ordered 
+	 * by their errrorRate (high errorRate first)
+	 */
 	private List<Word> getErrorList()
 	{
 		List<WordHistory> sortedList = new ArrayList<WordHistory>();
@@ -241,6 +258,9 @@ public class CourseModel extends AbstractTableModel implements Serializable
 		return quiz;
 	}
 
+	/**
+	 * Get list of questions that have not been asked before, in the order that they occur in the file list.
+	 */
 	private List<Word> getNewList() 
 	{
 		List<Word> result = new ArrayList<Word>();
@@ -252,20 +272,24 @@ public class CourseModel extends AbstractTableModel implements Serializable
 	}
 
 	@Override
+	/** This table has 4 columns */
 	public int getColumnCount() {
 		return 4;
 	}
 
 	@Override
+	/** Number of rows is equal to the number of lesson files */
 	public int getRowCount() {
 		return files.size();
 	}
 
+	/** get number of questions in a lesson */
 	private int getLessonSize(File f)
 	{
 		return wordData.get(f).size();
 	}
 
+	/** get average error rate for a given lesson */
 	private float getErrorRate(File f)
 	{
 		float sum = 0;
@@ -280,6 +304,7 @@ public class CourseModel extends AbstractTableModel implements Serializable
 		return (n == 0 ? 0 : sum / n);
 	}
 	
+	/** get average number of times each question in a lesson was asked already */
 	private float getAvgAsked(File f)
 	{
 		int sum = 0;
@@ -295,6 +320,10 @@ public class CourseModel extends AbstractTableModel implements Serializable
 	}
 	
 	@Override
+	/** Table cell value. Each row is one of the lesson files. 
+	 * There are 4 columns, one for the lesson name, the lesson size, average times asked 
+	 * and average error rate.  
+	 */
 	public Object getValueAt(int row, int col) 
 	{
 		switch (col)
@@ -313,6 +342,7 @@ public class CourseModel extends AbstractTableModel implements Serializable
 	}
 
 	@Override
+	/** returns column headers */
 	public String getColumnName(int col)
 	{
 		switch (col)
@@ -325,11 +355,13 @@ public class CourseModel extends AbstractTableModel implements Serializable
 		}
 	}
 	
+	/** look up a lesson file by its index in the list */
 	public File getLessonByIndex(int row) 
 	{
 		return files.get(row);
 	}
 
+	/** Call this after a question has been answered. Record the question results. */
 	public void record(String question, boolean correct) 
 	{
 		//TODO: linear search not optimal

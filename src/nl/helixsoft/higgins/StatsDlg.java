@@ -32,6 +32,9 @@ import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 
+/** Dialog for viewing usage statistics. 
+ * It shows when the program was used, and for how long. 
+ */
 public class StatsDlg extends JDialog implements ActionListener
 {
 	private JTable table;

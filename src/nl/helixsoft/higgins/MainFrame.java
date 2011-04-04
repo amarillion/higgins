@@ -1,12 +1,22 @@
+//    This file is part of Dr. Higgins.
+//    Copyright 2003-2011 Martijn van Iersel <amarillion@yahoo.com>
+//
+//    Dr. Higgins is free software: you can redistribute it and/or modify
+//    it under the terms of the GNU General Public License as published by
+//    the Free Software Foundation, either version 3 of the License, or
+//    (at your option) any later version.
+//
+//    Dr. Higgins is distributed in the hope that it will be useful,
+//    but WITHOUT ANY WARRANTY; without even the implied warranty of
+//    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+//    GNU General Public License for more details.
+//
+//    You should have received a copy of the GNU General Public License
+//    along with Dr. Higgins.  If not, see <http://www.gnu.org/licenses/>.
 package nl.helixsoft.higgins;
 
 import com.jgoodies.forms.layout.CellConstraints;
 import com.jgoodies.forms.layout.FormLayout;
-
-import edu.stanford.ejalbert.BrowserLauncher;
-import edu.stanford.ejalbert.exception.BrowserLaunchingExecutionException;
-import edu.stanford.ejalbert.exception.BrowserLaunchingInitializingException;
-import edu.stanford.ejalbert.exception.UnsupportedOperatingSystemException;
 
 import java.awt.Color;
 import java.awt.Font;
@@ -19,7 +29,6 @@ import java.awt.event.WindowEvent;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.ResourceBundle;
 
 import javax.swing.AbstractAction;
 import javax.swing.JCheckBox;
@@ -28,13 +37,14 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
-import javax.swing.JOptionPane;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import javax.swing.KeyStroke;
 
+import nl.helixsoft.util.Browser;
+
 /**
- * The main window where the Quiz takes place
+ * The main window, where the Quiz takes place
  */
 public class MainFrame 
 {
@@ -45,6 +55,7 @@ public class MainFrame
 		parent = engine;
 	}
 	
+	/** Utility function to load font as resource from the classpath. */ 
 	private Font loadFont()
 	{
 		String fName = "ttf-japanese-gothic.ttf";
@@ -390,24 +401,8 @@ public class MainFrame
 		
 		public void actionPerformed(ActionEvent ae) 
 		{
-			BrowserLauncher bl;
 			File helpFile = new File(Engine.INSTALLDIR, "doc/index.html");
-			String error = null;
-			try {
-				bl = new BrowserLauncher(null);
-				bl.openURLinBrowser(helpFile.toURI().toString());
-			} catch (BrowserLaunchingInitializingException e) {
-				error = Engine.res.getString("COULD_NOT_LAUNCH_BROWSER");
-				e.printStackTrace();
-			} catch (UnsupportedOperatingSystemException e) {
-				error = Engine.res.getString("COULD_NOT_LAUNCH_BROWSER");
-				e.printStackTrace();
-			} catch (BrowserLaunchingExecutionException e) {
-				error = Engine.res.getString("COULD_NOT_LAUNCH_BROWSER");
-				e.printStackTrace();
-			}
-			if (error != null)
-				JOptionPane.showMessageDialog(getFrame(), error);
+			Browser.launch(getFrame(), helpFile.toURI().toString());
 		}
 	}
 

@@ -2,6 +2,9 @@ package nl.helixsoft.higgins;
 
 import nl.helixsoft.util.KeyType;
 
+/**
+ * Keys for preferences map, with suitable defaults
+ */
 public enum HiggPrefs implements KeyType 
 {
 	LAST_USED_LESSONS_DIR (Engine.DEFAULT_LESSONS_DIR),
