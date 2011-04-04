@@ -63,8 +63,6 @@ public class MainFrame
 		return font;	
 	}
 
-	public static ResourceBundle res = ResourceBundle.getBundle("nl.helixsoft.higgins.Strings");
-	
 	private JFrame frame;
 
 	private JTextField txtInput;
@@ -170,7 +168,7 @@ public class MainFrame
 
 	public void createMenu(JMenuBar bar)
 	{
-		JMenu file = new JMenu (res.getString("FILE"));
+		JMenu file = new JMenu (Engine.res.getString("FILE"));
 		file.add(new NewAction());
 		file.add(new RestartAction());
 		file.addSeparator();
@@ -182,9 +180,9 @@ public class MainFrame
 		file.add(new OptionsAction());
 		file.addSeparator();
 		file.add(new ExitAction());
-		JMenu view = new JMenu (res.getString("VIEW"));
+		JMenu view = new JMenu (Engine.res.getString("VIEW"));
 		view.add(new StatsAction());
-		JMenu help = new JMenu (res.getString("HELP"));
+		JMenu help = new JMenu (Engine.res.getString("HELP"));
 		help.add(new AboutAction());
 		help.add(new HelpAction());
 		bar.add (file);
@@ -196,8 +194,8 @@ public class MainFrame
 	{
 		lblResult.setText (" ");
 		txtOutput.setText ("");
-		txtOutput.append (res.getString("NO_CURRENT_LESSON") + "\n");
-		txtOutput.append (res.getString("GO_TO_FILE") + "\n");
+		txtOutput.append (Engine.res.getString("NO_CURRENT_LESSON") + "\n");
+		txtOutput.append (Engine.res.getString("GO_TO_FILE") + "\n");
 	}
 
 	public void clearOutput()
@@ -210,7 +208,7 @@ public class MainFrame
 		NewAction()
 		{
 			super();
-			putValue (NAME, res.getString("NEW"));
+			putValue (NAME, Engine.res.getString("NEW"));
 			putValue(ACCELERATOR_KEY, KeyStroke.getKeyStroke(KeyEvent.VK_N, 
 					Toolkit.getDefaultToolkit().getMenuShortcutKeyMask()));		
 		}
@@ -235,7 +233,7 @@ public class MainFrame
 		NewCourseAction()
 		{
 			super();
-			putValue (NAME, res.getString("NEW_COURSE"));
+			putValue (NAME, Engine.res.getString("NEW_COURSE"));
 			putValue(ACCELERATOR_KEY, KeyStroke.getKeyStroke(KeyEvent.VK_C, 
 					Toolkit.getDefaultToolkit().getMenuShortcutKeyMask()));
 		}
@@ -253,7 +251,7 @@ public class MainFrame
 		OpenCourseAction()
 		{
 			super();
-			putValue (NAME, res.getString("OPEN_COURSE"));
+			putValue (NAME, Engine.res.getString("OPEN_COURSE"));
 			putValue(ACCELERATOR_KEY, KeyStroke.getKeyStroke(KeyEvent.VK_U, 
 					Toolkit.getDefaultToolkit().getMenuShortcutKeyMask()));		
 		}
@@ -287,7 +285,7 @@ public class MainFrame
 		ViewCourseAction()
 		{
 			super();
-			putValue (NAME, res.getString("VIEW_COURSE"));
+			putValue (NAME, Engine.res.getString("VIEW_COURSE"));
 			putValue(ACCELERATOR_KEY, KeyStroke.getKeyStroke(KeyEvent.VK_V, 
 					Toolkit.getDefaultToolkit().getMenuShortcutKeyMask()));		
 			setEnabled(parent.getModel() != null);
@@ -306,7 +304,7 @@ public class MainFrame
 		RestartAction()
 		{
 			super();
-			putValue (NAME, res.getString("RESTART"));
+			putValue (NAME, Engine.res.getString("RESTART"));
 		}
 		
 		public void actionPerformed(ActionEvent ae) 
@@ -320,7 +318,7 @@ public class MainFrame
 		OptionsAction()
 		{
 			super();
-			putValue (NAME, res.getString("OPTIONS"));
+			putValue (NAME, Engine.res.getString("OPTIONS"));
 		}
 		
 		public void actionPerformed(ActionEvent ae) 
@@ -341,7 +339,7 @@ public class MainFrame
 		ExitAction()
 		{
 			super();
-			putValue (NAME, res.getString("EXIT"));
+			putValue (NAME, Engine.res.getString("EXIT"));
 		}
 		
 		public void actionPerformed(ActionEvent ae) 
@@ -356,7 +354,7 @@ public class MainFrame
 		StatsAction()
 		{
 			super();
-			putValue (NAME, res.getString("STATISTICS"));
+			putValue (NAME, Engine.res.getString("STATISTICS"));
 		}
 		
 		public void actionPerformed(ActionEvent ae) 
@@ -372,7 +370,7 @@ public class MainFrame
 		AboutAction()
 		{
 			super();
-			putValue (NAME, res.getString("ABOUT_DR_HIGGINS"));
+			putValue (NAME, Engine.res.getString("ABOUT_DR_HIGGINS"));
 		}
 		
 		public void actionPerformed(ActionEvent ae) 
@@ -387,7 +385,7 @@ public class MainFrame
 		HelpAction()
 		{
 			super();
-			putValue (NAME, res.getString("HELP"));
+			putValue (NAME, Engine.res.getString("HELP"));
 		}
 		
 		public void actionPerformed(ActionEvent ae) 
@@ -399,13 +397,13 @@ public class MainFrame
 				bl = new BrowserLauncher(null);
 				bl.openURLinBrowser(helpFile.toURI().toString());
 			} catch (BrowserLaunchingInitializingException e) {
-				error = res.getString("COULD_NOT_LAUNCH_BROWSER");
+				error = Engine.res.getString("COULD_NOT_LAUNCH_BROWSER");
 				e.printStackTrace();
 			} catch (UnsupportedOperatingSystemException e) {
-				error = res.getString("COULD_NOT_LAUNCH_BROWSER");
+				error = Engine.res.getString("COULD_NOT_LAUNCH_BROWSER");
 				e.printStackTrace();
 			} catch (BrowserLaunchingExecutionException e) {
-				error = res.getString("COULD_NOT_LAUNCH_BROWSER");
+				error = Engine.res.getString("COULD_NOT_LAUNCH_BROWSER");
 				e.printStackTrace();
 			}
 			if (error != null)
@@ -420,22 +418,22 @@ public class MainFrame
 	public void showAnswer(int counter, String question, boolean correct, String myAnswer, String correctAnswer, String hint) 
 	{
 		txtOutput.setText ("");
-		txtOutput.append(res.getString("QUESTION") + " #" + counter 
+		txtOutput.append(Engine.res.getString("QUESTION") + " #" + counter 
 				+ ": " + question + "\n");
 		
 		if (correct)
 		{
-			lblResult.setText(res.getString("CORRECT"));
+			lblResult.setText(Engine.res.getString("CORRECT"));
 			lblResult.setForeground(Color.GREEN);
 		}
 		else
 		{
-			lblResult.setText(res.getString("WRONG"));
+			lblResult.setText(Engine.res.getString("WRONG"));
 			lblResult.setForeground(Color.RED);
-			txtOutput.append(res.getString("YOU_ANSWERED") + " \"" + myAnswer + "\"\n");
+			txtOutput.append(Engine.res.getString("YOU_ANSWERED") + " \"" + myAnswer + "\"\n");
 		}
 		
-		txtOutput.append(res.getString("THE_ANSWER_WAS") + " \"" + correctAnswer + "\"\n");
+		txtOutput.append(Engine.res.getString("THE_ANSWER_WAS") + " \"" + correctAnswer + "\"\n");
 		
 		if (hint != null)
 		{
@@ -448,7 +446,7 @@ public class MainFrame
 
 	public void showQuestion(int counter, String question) 
 	{
-		txtOutput.append (res.getString("QUESTION") + " #" + counter 
+		txtOutput.append (Engine.res.getString("QUESTION") + " #" + counter 
 				+ ": " + question + "\n"); 
 	}
 

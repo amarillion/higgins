@@ -37,7 +37,7 @@ public class OptionsDlg extends JDialog implements ActionListener
 	public OptionsDlg(JFrame frame)
 	{
 		super (frame, true);
-		setTitle (MainFrame.res.getString("OPTIONS"));
+		setTitle (Engine.res.getString("OPTIONS"));
 		
 		JPanel panel = new JPanel();
 		setContentPane(panel);
@@ -46,10 +46,10 @@ public class OptionsDlg extends JDialog implements ActionListener
 				"3dlu, pref, 3dlu, pref, 3dlu"));
 		CellConstraints cc = new CellConstraints();
 		txtBins = new JTextField (10);
-		panel.add (new JLabel (MainFrame.res.getString("NUMBER_OF_BINS")), cc.xy (2,2));
+		panel.add (new JLabel (Engine.res.getString("NUMBER_OF_BINS")), cc.xy (2,2));
 		panel.add (txtBins, cc.xy (4,2));
-		btnOk = new JButton (MainFrame.res.getString("OK"));
-		btnCancel = new JButton (MainFrame.res.getString("CANCEL"));
+		btnOk = new JButton (Engine.res.getString("OK"));
+		btnCancel = new JButton (Engine.res.getString("CANCEL"));
 		panel.add (btnOk, cc.xy (2,4));
 		panel.add (btnCancel, cc.xy (4,4));
 		btnOk.addActionListener(this);

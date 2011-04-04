@@ -111,7 +111,7 @@ public class QuizSession implements Serializable
 			String otherWord = quiz.getByAnswer(anAnswer);
 			if (otherWord != null)
 			{
-				hint =  MainFrame.res.getString("YOU_MAY_BE_CONFUSED_WITH") + 
+				hint =  Engine.res.getString("YOU_MAY_BE_CONFUSED_WITH") + 
 					" \"" +	anAnswer + "\" -> \"" + otherWord + "\"";
 			}
 		}

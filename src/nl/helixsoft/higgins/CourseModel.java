@@ -312,6 +312,19 @@ public class CourseModel extends AbstractTableModel implements Serializable
 		}
 	}
 
+	@Override
+	public String getColumnName(int col)
+	{
+		switch (col)
+		{
+		case 0: return Engine.res.getString("LESSON");
+		case 1: return Engine.res.getString("QUESTIONS");
+		case 2: return Engine.res.getString("TIMES_ASKED");
+		case 3: return Engine.res.getString("ERROR_RATE");
+		default: throw new IndexOutOfBoundsException("Column " + col + " is out of range");
+		}
+	}
+	
 	public File getLessonByIndex(int row) 
 	{
 		return files.get(row);

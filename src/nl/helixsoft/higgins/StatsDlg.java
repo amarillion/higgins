@@ -40,7 +40,7 @@ public class StatsDlg extends JDialog implements ActionListener
 	public StatsDlg(JFrame frame)
 	{
 		super (frame, true);
-		setTitle(MainFrame.res.getString("STATISTICS"));
+		setTitle(Engine.res.getString("STATISTICS"));
 		JPanel panel = new JPanel();
 		setContentPane(panel);
 		panel.setLayout (new FormLayout(
@@ -52,7 +52,7 @@ public class StatsDlg extends JDialog implements ActionListener
 		table = new JTable();
 		panel.add (new JScrollPane(table), cc.xy(2,2));
 		
-		btnOk = new JButton(MainFrame.res.getString("OK"));
+		btnOk = new JButton(Engine.res.getString("OK"));
 		btnOk.addActionListener(this);
 		panel.add (btnOk, cc.xy(2,4));
 		
@@ -72,10 +72,10 @@ public class StatsDlg extends JDialog implements ActionListener
 		
 		tm.setColumnCount(4);
 		String[] columns = new String[] {
-				MainFrame.res.getString("DATE"),
-				MainFrame.res.getString("QUESTIONS"),
-				MainFrame.res.getString("DURATION"),
-				MainFrame.res.getString("LESSON") };
+				Engine.res.getString("DATE"),
+				Engine.res.getString("QUESTIONS"),
+				Engine.res.getString("DURATION"),
+				Engine.res.getString("LESSON") };
 		tm.setColumnIdentifiers(columns);
 		try 
 		{

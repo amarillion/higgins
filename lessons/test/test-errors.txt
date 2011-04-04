@@ -1,0 +1,5 @@
+kind, child
+vriendelijk, kind
+no-comma-in-this-line
+aardig, kind
+kind, kid

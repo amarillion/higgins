@@ -39,8 +39,8 @@ public class Quiz implements Serializable
 	private Quiz()
 	{
 		// initialize defaults
-		question1 = MainFrame.res.getString("WHAT_IS");
-		question2 = MainFrame.res.getString("WHAT_IS");
+		question1 = Engine.res.getString("WHAT_IS");
+		question2 = Engine.res.getString("WHAT_IS");
 		askBothWays = 1;
 	}
 
@@ -211,23 +211,28 @@ public class Quiz implements Serializable
 						}
 						else
 						{
-							//TODO: translate
-							System.err.println ("Warning: duplicate answer '" + last +
-									"' in line " + lineNo + ", ignored.");
+							System.err.println (
+									Engine.res.getString("WARN_DUP_ANSWER")
+									.replace("%1", last)
+									.replace("%2", "" + lineNo)
+								);
 						}
 					}
 					else
 					{
-						//TODO: translate
-						System.err.println ("Warning: duplicate question '" + first +
-								"' in line " + lineNo + ", ignored.");
+						System.err.println (
+								Engine.res.getString("WARN_DUP_QUESTION")
+								.replace("%1", last)
+								.replace("%2", "" + lineNo)
+							);
 					}
 				}
 				else
 				{
-					//TODO: translate
-					System.err.println ("Warning: syntax error in line "
-							+ lineNo + ", comma expected. ignored.");
+					System.err.println (
+							Engine.res.getString("WARN_SYNTAX")
+							.replace("%1", "" + lineNo)
+						);
 				}
 			}
 		}

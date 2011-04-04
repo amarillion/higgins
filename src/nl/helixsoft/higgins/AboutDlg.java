@@ -57,22 +57,19 @@ public class AboutDlg
 		
 		JLabel versionLabel = new JLabel ("Dr. Higgins version " + getVersion());
 		JLabel label = new JLabel();
-		//TODO: Translate
 		label.setText(
 			"<html><h2>Dr. Higgins</h2>" +
 			"(c) copyright 2003-2011<br>\n" +
 			"M.P. van Iersel <amarillion@yahoo.com>\n" +
-			"<h2>Contributors and Translators</h2>\n" +
+			"<h2>" + Engine.res.getString("CONTRIBUTORS_AND_TRANSLATORS") + "</h2>\n" +
 			"Olivia Guerra Santin (Spanish)<br>\n" +
 			"Adem Bilican (French)<br>\n" +
 			"Magdalena S\u0142upska (Polish)<br>\n" +
 			"Otto Mykk\u00e4nen (Finnish)<br>\n" +
 			"<br>\n" +
-			"This program is free and open source<br>\n" +
-			"Licensed as GPL 3 or higher,<br>\n" +
-			"see COPYING.txt for details<br>\n" +
-			"<p>\n" +
-			"Visit the website at http://www.helixsoft.nl</html>");
+			Engine.res.getString("COPYRIGHT") + 
+			"<p>" + Engine.res.getString("WEBSITE") +
+			" <a href=\"http://www.helixsoft.nl\">http://www.helixsoft.nl</a></html>");
 		
 		CellConstraints cc = new CellConstraints();
 		
@@ -81,7 +78,7 @@ public class AboutDlg
 		dialogBox .add (label, cc.xy(2,2));
 		
 		JButton btnOk = new JButton();
-		btnOk.setText(MainFrame.res.getString("OK"));
+		btnOk.setText(Engine.res.getString("OK"));
 		btnOk.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e)
 			{
@@ -94,7 +91,7 @@ public class AboutDlg
 		dialogBox.add (btnOk, cc.xy (2, 6));	
 		
 		aboutDlg.setResizable(false);
-		aboutDlg.setTitle(MainFrame.res.getString("ABOUT_DR_HIGGINS"));
+		aboutDlg.setTitle(Engine.res.getString("ABOUT_DR_HIGGINS"));
 		aboutDlg.add (dialogBox);
 		aboutDlg.pack();
 		aboutDlg.setLocationRelativeTo(parent);

@@ -51,7 +51,7 @@ public class QuizProgressPanel extends JPanel
 		{
 			for (int i = 0; i < session.getBins(); ++i)
 			{
-				g.drawString (MainFrame.res.getString("BIN") + 
+				g.drawString (Engine.res.getString("BIN") + 
 						" " + (i + 1) + ": " + session.getBinCount(i), 
 						10, 20 * (i + 1));
 			}

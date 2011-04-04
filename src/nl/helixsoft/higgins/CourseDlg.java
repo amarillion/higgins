@@ -63,7 +63,7 @@ public class CourseDlg extends JDialog implements ActionListener, ChangeListener
 		super (engine.getFrame(), true);
 		this.parent = engine;
 		this.model = engine.getModel();
-		setTitle (MainFrame.res.getString("COURSE"));
+		setTitle (Engine.res.getString("COURSE"));
 		
 		setLayout(new FormLayout(
 				"3dlu, pref:grow, 3dlu, pref, 3dlu", 
@@ -75,9 +75,9 @@ public class CourseDlg extends JDialog implements ActionListener, ChangeListener
 		tblLessons = new JTable(model);
 		add (new JScrollPane(tblLessons), cc.xy(2,2));
 
-		btnAdd= new JButton(MainFrame.res.getString("ADD"));
+		btnAdd= new JButton(Engine.res.getString("ADD"));
 		btnAdd.addActionListener(this);
-		btnRemove = new JButton(MainFrame.res.getString("REMOVE"));
+		btnRemove = new JButton(Engine.res.getString("REMOVE"));
 		btnRemove.addActionListener(this);
 		ButtonStackBuilder bsb = new ButtonStackBuilder();
 		bsb.addButtons(new JButton[] { btnAdd, btnRemove });
@@ -92,32 +92,32 @@ public class CourseDlg extends JDialog implements ActionListener, ChangeListener
 		txtLessonSize.setText("" + model.lessonSize);
 		txtLessonSize.addActionListener(this);
 		builder.add (
-				new JLabel(MainFrame.res.getString("LESSONSIZE")), cc.xy(2,2), 
+				new JLabel(Engine.res.getString("LESSONSIZE")), cc.xy(2,2), 
 				txtLessonSize, cc2.xy(4,2)
 			);
 		slErrors = new JSlider(0, 100, (int)(100.0 * model.pctErrors));
 		slErrors.addChangeListener(this);
 		builder.add (
-				new JLabel(MainFrame.res.getString("PCTERRORS")), cc.xy(2,4), 
+				new JLabel(Engine.res.getString("PCTERRORS")), cc.xy(2,4), 
 				slErrors, cc2.xy(4,4)
 			);
 		slRepeats = new JSlider(0, 100, (int)(100.0 * model.pctRepetition));
 		slRepeats.addChangeListener(this);
 		builder.add (
-				new JLabel(MainFrame.res.getString("PCTREPEAT")), cc.xy(2,6),
+				new JLabel(Engine.res.getString("PCTREPEAT")), cc.xy(2,6),
 				slRepeats, cc2.xy(4,6)
 			);
 		slNew = new JSlider(0, 100, (int)(100.0 * (1.0 - model.pctErrors - model.pctRepetition)));
 		slNew.addChangeListener(this);
 		builder.add (
-				new JLabel(MainFrame.res.getString("PCTNEW")), cc.xy(2,8), 
+				new JLabel(Engine.res.getString("PCTNEW")), cc.xy(2,8), 
 				slNew, cc2.xy(4, 8)
 			);
 		add (builder.getPanel(), cc.xy(2, 4));
 		
-		btnSave = new JButton(MainFrame.res.getString("SAVE"));
+		btnSave = new JButton(Engine.res.getString("SAVE"));
 		btnSave.addActionListener(this);
-		btnCancel = new JButton(MainFrame.res.getString("CANCEL"));
+		btnCancel = new JButton(Engine.res.getString("CANCEL"));
 		btnCancel.addActionListener(this);
 		JPanel btnPanel = ButtonBarFactory.buildLeftAlignedBar(btnSave, btnCancel);
 		add (btnPanel, cc.xy(2, 6));
@@ -164,8 +164,9 @@ public class CourseDlg extends JDialog implements ActionListener, ChangeListener
 			} 
 			catch (IOException e1) 
 			{
-				//TODO: internationalize
-				JOptionPane.showMessageDialog(this, "Couldn't save " + e1.getMessage());
+				JOptionPane.showMessageDialog(this, 
+						Engine.res.getString("COULD_NOT_SAVE_COURSE") + " " + e1.getMessage(),
+						Engine.res.getString("ERROR"), JOptionPane.ERROR_MESSAGE);
 				e1.printStackTrace();
 			}
 		}
@@ -192,9 +193,9 @@ public class CourseDlg extends JDialog implements ActionListener, ChangeListener
 					}
 					catch (IOException ex)
 					{
-						//TODO: internationalize error message
-						JOptionPane.showMessageDialog(this, "Error while adding file:\n" + ex.getMessage(), 
-								"Error", JOptionPane.ERROR_MESSAGE);
+						JOptionPane.showMessageDialog(this, 
+								Engine.res.getString("ERROR_WHILE_ADDING_FILE") + "\n" + ex.getMessage(), 
+								Engine.res.getString("ERROR"), JOptionPane.ERROR_MESSAGE);
 					}
 				}
 			}
