@@ -27,7 +27,9 @@ import java.io.ObjectOutputStream;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.HashSet;
 import java.util.ResourceBundle;
+import java.util.Set;
 
 import javax.swing.JOptionPane;
 
@@ -117,7 +119,7 @@ public class Engine
 				state.session = session;
 				if (model != null) 
 				{
-					state.courseFile = model.courseFile;
+					state.courseFile = model.getCourseFile();
 					model.saveCourse();
 				}
 								
@@ -196,7 +198,6 @@ public class Engine
 	private void nextWord()
 	{
 		session.nextQuestion();
-		mainFrame.refreshBins();
 		mainFrame.showQuestion(session.getCounter(), session.getQuestion());
 	}
 
@@ -252,7 +253,7 @@ public class Engine
 		return mainFrame.getFrame();
 	}
 
-	public CourseModel getModel() 
+	public CourseModel getCourseModel() 
 	{
 		return model;
 	}
@@ -261,7 +262,7 @@ public class Engine
 	{
 		Quiz newLesson = model.createNewLesson();
 		QuizSession session = new QuizSession(newLesson);
-		startQuiz(session);		
+		startSession(session);
 	}
 
 	private void closeQuiz()
@@ -270,7 +271,7 @@ public class Engine
 		{
 			writeLog();
 			session = null;
-			mainFrame.refreshBins();
+			mainFrame.engineChanged(EngineEventType.SESSION_FINISHED);
 		}
 	}
 
@@ -280,7 +281,7 @@ public class Engine
 	 * <p>
 	 * If any previously started quiz was not yet closed cleanly, it will be.
 	 */
-	public void startQuiz(QuizSession newQuiz)
+	public void startSession(QuizSession newQuiz)
 	{
 		mainFrame.clearOutput();
 		// stop logging current quiz, if it exists
@@ -291,29 +292,33 @@ public class Engine
 		}
 
 		session = newQuiz;
+		mainFrame.engineChanged(EngineEventType.SESSION_STARTED);
 		session.setBins(prefs.getInt(HiggPrefs.DEFAULT_BINS));
-		mainFrame.refreshBins();
 		beginLog();
 		nextWord();
 	}
 
-	public QuizSession getSession() 
+	public QuizSession getSession()
 	{
 		return session;
 	}
 
-	public void newCourse() 
+	public void setCourseModel (CourseModel value) throws IOException
 	{
-		model = new CourseModel();
-		mainFrame.viewCourseAction.setEnabled(true);
+		if (model != null)
+		{
+			model.saveCourse(); // save progress of course
+			model = null;
+		}
+		model = value;
 	}
-
+	
 	public void restartQuiz()
 	{
 		if (session != null)
 		{
 			// start quiz again with same file
-			startQuiz (loadQuiz(session.getQuiz().getFile()));
+			startSession (loadQuiz(session.getQuiz().getFile()));
 		}
 	}
 
@@ -329,7 +334,7 @@ public class Engine
 				
 				if (state.courseFile != null)
 				{
-					loadCourse(state.courseFile);
+					model = CourseModel.loadCourse(state.courseFile);
 					
 					if (state.session == null)
 					{
@@ -354,7 +359,7 @@ public class Engine
 							newSession = new QuizSession (quiz);
 						}
 					}
-					startQuiz (newSession);
+					startSession (newSession);
 				} 
 				
 				STATE.delete();					
@@ -378,10 +383,12 @@ public class Engine
 	{
 		try
 		{
+			setCourseModel(null);
 			return new QuizSession(Quiz.loadFromFile(f));
 		}
 		catch (IOException ex)
 		{
+			//TODO: translate & better handling of exception
 			JOptionPane.showMessageDialog(getFrame(), "File read error",
 					"Problem while opening lesson\n" + ex.getMessage(), 
 					JOptionPane.ERROR_MESSAGE);
@@ -390,10 +397,9 @@ public class Engine
 		}
 	}
 
-	public void loadCourse(File f) throws IOException, ClassNotFoundException 
+	public static enum EngineEventType
 	{
-		model = CourseModel.loadCourse(f);
-		mainFrame.viewCourseAction.setEnabled(true);
+		SESSION_STARTED,
+		SESSION_FINISHED;
 	}
-
 }

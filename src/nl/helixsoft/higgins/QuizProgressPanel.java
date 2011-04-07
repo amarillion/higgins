@@ -22,10 +22,13 @@ import java.awt.Graphics;
 import javax.swing.BorderFactory;
 import javax.swing.JPanel;
 
+import nl.helixsoft.higgins.QuizSession.SessionEventType;
+import nl.helixsoft.higgins.QuizSession.SessionListener;
+
 /**
  * Custom panel for viewing progress of quiz, as words move from bin to bin.
  */
-public class QuizProgressPanel extends JPanel
+public class QuizProgressPanel extends JPanel implements SessionListener
 {
 	private final Engine engine;
 	
@@ -56,5 +59,11 @@ public class QuizProgressPanel extends JPanel
 						10, 20 * (i + 1));
 			}
 		}
+	}
+
+	@Override
+	public void sessionChanged(SessionEventType type)
+	{
+		this.repaint();
 	}
 }

@@ -31,7 +31,6 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-import java.util.Stack;
 
 import javax.swing.table.AbstractTableModel;
 
@@ -52,8 +51,7 @@ public class CourseModel extends AbstractTableModel implements Serializable
 	//TODO: maybe better done as iterator "view" over wordData map
 	List<WordHistory> allWordData = new ArrayList<WordHistory>(); // all word data
 	
-	//TODO: make private
-	File courseFile = null;
+	private File courseFile = null;
 
 	int lessonSize = 100; // number of words per time
 	float pctErrors = 0.2f; // percentage of lesson that should consist of repeating previous errors
@@ -149,11 +147,11 @@ public class CourseModel extends AbstractTableModel implements Serializable
 	 */
 	public void saveCourse() throws IOException
 	{
-		if (courseFile == null) throw new IllegalStateException("Must set file first");
+		if (getCourseFile() == null) throw new IllegalStateException("Must set file first");
 		ObjectOutputStream oos = new
 		ObjectOutputStream(
 				new FileOutputStream(
-						courseFile));
+						getCourseFile()));
 		oos.writeObject(this);
 		oos.close();
 	}
@@ -406,5 +404,15 @@ public class CourseModel extends AbstractTableModel implements Serializable
 			//TODO translate
 			System.err.println ("Unknown question '" + question + "'");
 		}
+	}
+
+	public void setCourseFile(File courseFile) 
+	{
+		this.courseFile = courseFile;
+	}
+
+	public File getCourseFile() 
+	{
+		return courseFile;
 	}
 }

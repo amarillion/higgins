@@ -15,6 +15,8 @@
 //    along with Dr. Higgins.  If not, see <http://www.gnu.org/licenses/>.
 package nl.helixsoft.higgins;
 
+import java.io.IOException;
+import java.io.ObjectInputStream;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -95,6 +97,8 @@ public class QuizSession implements Serializable
 				currentWord = words.get(i).getBin() > words.get(j).getBin() ? j : i;
 			}
 		}
+		
+		fireSessionChangedEvent(SessionEventType.QUESTION_CHANGED);
 	}
 		
 	/**
@@ -176,6 +180,7 @@ public class QuizSession implements Serializable
 	public void setBins(int newCount)
 	{
 		bins = newCount;
+		fireSessionChangedEvent(SessionEventType.BINS_CHANGED);
 	}
 		
 	public QuizSession(Quiz q)
@@ -205,5 +210,44 @@ public class QuizSession implements Serializable
 	public String getCurrentWord() 
 	{
 		return words.get(currentWord).getWord().getQuestion();
+	}
+
+	public interface SessionListener
+	{
+		public void sessionChanged(SessionEventType type);
+	}
+	
+	// transient, so this doesn't get serialized.
+	transient private List<SessionListener> listeners = new ArrayList<SessionListener>();
+	
+	// necessary to make sure listeners get initialized. Deserialization bypasses constructor.
+    private void readObject(ObjectInputStream inputStream) throws IOException, ClassNotFoundException
+    {
+		inputStream.defaultReadObject();
+		listeners = new ArrayList<SessionListener>();
+    }
+	
+	public void addListener(SessionListener l) 
+	{
+		listeners.add (l);
+	}
+	
+	public void removeListener(SessionListener l)
+	{
+		listeners.remove (l);
+	}
+
+	public enum SessionEventType
+	{
+		QUESTION_CHANGED,
+		BINS_CHANGED;
+	}
+	
+	private void fireSessionChangedEvent(SessionEventType type)
+	{
+		for (SessionListener l : listeners)
+		{
+			l.sessionChanged(type);
+		}
 	}
 }

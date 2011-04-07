@@ -69,7 +69,7 @@ public class CourseDlg extends JDialog implements ActionListener, ChangeListener
 	{
 		super (engine.getFrame(), true);
 		this.parent = engine;
-		this.model = engine.getModel();
+		this.model = engine.getCourseModel();
 		setTitle (Engine.res.getString("COURSE"));
 		
 		setLayout(new FormLayout(
@@ -148,7 +148,7 @@ public class CourseDlg extends JDialog implements ActionListener, ChangeListener
 				//ignore
 			}
 			
-			if (model.courseFile == null)
+			if (model.getCourseFile() == null)
 			{
 				JFileChooser jfc = new JFileChooser();
 				jfc.setCurrentDirectory(
@@ -159,7 +159,7 @@ public class CourseDlg extends JDialog implements ActionListener, ChangeListener
 				}
 				else
 				{
-					model.courseFile = jfc.getSelectedFile();
+					model.setCourseFile(jfc.getSelectedFile());
 					parent.getPrefs().set(HiggPrefs.LAST_USED_COURSE_DIR, 
 							jfc.getCurrentDirectory());
 				}

@@ -37,16 +37,18 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
+import javax.swing.JOptionPane;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import javax.swing.KeyStroke;
 
+import nl.helixsoft.higgins.Engine.EngineEventType;
 import nl.helixsoft.util.Browser;
 
 /**
  * The main window, where the Quiz takes place
  */
-public class MainFrame 
+public class MainFrame
 {
 	private final Engine parent;
 	
@@ -82,8 +84,7 @@ public class MainFrame
 	
 	private JLabel lblResult;
 	
-	//TODO: make private
-	ViewCourseAction viewCourseAction;
+	private ViewCourseAction viewCourseAction;
 	
 	private InputMethod im;
 	
@@ -234,7 +235,7 @@ public class MainFrame
 				parent.getPrefs().set(HiggPrefs.LAST_USED_LESSONS_DIR, 
 						chooser.getCurrentDirectory());
 				File f = chooser.getSelectedFile();
-				parent.startQuiz (parent.loadQuiz(f));
+				parent.startSession (parent.loadQuiz(f));
 			}
 		}
 	};
@@ -251,7 +252,12 @@ public class MainFrame
 		
 		public void actionPerformed(ActionEvent ae) 
 		{
-			parent.newCourse();
+			try {
+				parent.setCourseModel(new CourseModel());
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 			CourseDlg dlg = new CourseDlg(parent);
 			dlg.setVisible(true);			
 		}
@@ -278,9 +284,11 @@ public class MainFrame
 						chooser.getCurrentDirectory());
 				File f = chooser.getSelectedFile();
 				try {
-					parent.loadCourse(f);
+					parent.setCourseModel (CourseModel.loadCourse(f));
+					parent.nextCourseSession();
 				} catch (IOException e) {
 					// TODO Auto-generated catch block
+					// NB: error could be caused by loading course as well as saving existing course
 					e.printStackTrace();
 				} catch (ClassNotFoundException e) {
 					// TODO Auto-generated catch block
@@ -290,8 +298,7 @@ public class MainFrame
 		}
 	};
 
-	//TODO: make private
-	public class ViewCourseAction extends AbstractAction
+	private class ViewCourseAction extends AbstractAction
 	{
 		ViewCourseAction()
 		{
@@ -299,12 +306,12 @@ public class MainFrame
 			putValue (NAME, Engine.res.getString("VIEW_COURSE"));
 			putValue(ACCELERATOR_KEY, KeyStroke.getKeyStroke(KeyEvent.VK_V, 
 					Toolkit.getDefaultToolkit().getMenuShortcutKeyMask()));		
-			setEnabled(parent.getModel() != null);
+			setEnabled(parent.getCourseModel() != null);
 		}
 		
 		public void actionPerformed(ActionEvent ae) 
 		{
-			if (parent.getModel() == null) return; // should not be able to get here. 
+			if (parent.getCourseModel() == null) return; // should not be able to get here. 
 			CourseDlg dlg = new CourseDlg(parent);
 			dlg.setVisible(true);
 		}
@@ -358,7 +365,6 @@ public class MainFrame
 			parent.close();
 		}
 	};
-
 		
 	private class StatsAction extends AbstractAction
 	{
@@ -445,9 +451,25 @@ public class MainFrame
 				+ ": " + question + "\n"); 
 	}
 
-	public void refreshBins()
+	public void engineChanged(EngineEventType type) 
 	{
-		binPanel.repaint();
+		String title = "Dr. Higgins";
+		if (parent.getCourseModel() != null)
+		{
+			title += " - " + parent.getCourseModel().getCourseFile().getName() + 
+				" (" + Engine.res.getString("COURSE") + ")";	
+		}
+		else
+			if (parent.getSession() != null)
+			{
+				title += " - " + parent.getSession().getQuiz().getFile().getName() + 
+					" (" + Engine.res.getString ("LESSON") + ")";
+			}
+ 		frame.setTitle (title);
+ 		
+		viewCourseAction.setEnabled (parent.getCourseModel() != null);
+		
+		if (parent.getSession() != null) parent.getSession().addListener (binPanel);
 	}
 	
 
