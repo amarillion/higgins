@@ -22,6 +22,7 @@ import java.io.InputStreamReader;
 import java.io.LineNumberReader;
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -39,15 +40,12 @@ public class Quiz implements Serializable
 	/** private, do not allow external instantiation */
 	private Quiz()
 	{
-		// initialize defaults
-		question1 = Engine.res.getString("WHAT_IS");
-		question2 = Engine.res.getString("WHAT_IS");
 		askBothWays = 1;
 	}
 
 	/** Instantiate a quiz directly from a list of questions. 
 	 * There is no file corresponding to this quiz */ 
-	public Quiz(List<Word> words)
+	public Quiz(Collection<Word> words)
 	{
 		this();
 		this.words.addAll (words);
@@ -62,9 +60,6 @@ public class Quiz implements Serializable
 	private List<Word> words = new ArrayList<Word>();
 	// map of answers, so that we can check for confusion
 	private Map<String, String> wordMap = new HashMap<String, String>();
-	
-	private String question1;
-	private String question2;
 	
 	private int askBothWays;
 	private File fileName;
@@ -84,18 +79,6 @@ public class Quiz implements Serializable
 		QuizLoader ql = new QuizLoader(newFileName);
 		ql.processFile();
 		return ql.getQuiz();
-	}
-
-	/** Question to ask for words on one side of the comma. Default: what is ""? */
-	public String getQuestion1() 
-	{
-		return question1;
-	}
-
-	/** Question to ask for words on the other side of the comma. Default: what is ""? */
-	public String getQuestion2() 
-	{
-		return question2;
 	}
 
 	/** Get all words, on both sides of the comma */
@@ -129,6 +112,8 @@ public class Quiz implements Serializable
 	private static class QuizLoader
 	{
 		Quiz result = new Quiz();
+		String question1;
+		String question2;
 		String encoding;
 		Set<String> questions = new HashSet<String>();
 		Set<String> answers = new HashSet<String>();
@@ -158,6 +143,8 @@ public class Quiz implements Serializable
 			result.originalTimeStamp = f.lastModified();
 			// default encoding: ISO8859-1 or iso-latin-1
 			encoding = "ISO8859-1";
+			question1 = Engine.res.getString("WHAT_IS");
+			question2 = Engine.res.getString("WHAT_IS");
 		}
 		
 		private void processFile() throws IOException
@@ -191,8 +178,8 @@ public class Quiz implements Serializable
 					first = line.substring(1, pos).trim();
 					last = line.substring(pos + 1, line.length()).trim();
 					
-					if (first.equalsIgnoreCase("question1")) { result.question1 = last; }
-					else if (first.equalsIgnoreCase("question2")) { result.question2 = last; }
+					if (first.equalsIgnoreCase("question1")) { question1 = last; }
+					else if (first.equalsIgnoreCase("question2")) { question2 = last; }
 					else if (first.equalsIgnoreCase("askbothways")) { result.askBothWays = Integer.parseInt(last); }
 				}
 			}
@@ -246,11 +233,11 @@ public class Quiz implements Serializable
 			int l = 0;
 			for (String[] pair : words)
 			{
-				result.words.add(new Word (pair[0], pair[1], 0, l));
+				result.words.add(new Word (pair[0], pair[1], 0, l, question2));
 				result.wordMap.put(pair[1], pair[0]);
 				if (result.askBothWays != 0)
 				{				
-					result.words.add(new Word (pair[1], pair[0], 1, l));
+					result.words.add(new Word (pair[1], pair[0], 1, l, question1));
 					result.wordMap.put(pair[0], pair[1]);
 				}
 			}

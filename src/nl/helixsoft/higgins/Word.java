@@ -17,6 +17,8 @@ package nl.helixsoft.higgins;
 
 import java.io.Serializable;
 
+import nl.helixsoft.util.ObjectUtils;
+
 /**
  * Represents a question-answer pair. This class is immutable.
  */
@@ -28,15 +30,18 @@ public class Word implements Serializable
 	private final String answer;
 	private final int dir; 
 	private final int pair;
+	private final String template;
 
-	Word (String q, String a, int dir, int pair)
+	Word (String q, String a, int dir, int pair, String template)
 	{
 		question = q;
 		answer = a;
 		this.dir = dir;
 		this.pair = pair;
+		this.template = template;
 	}
 	
+	public String getTemplate() { return template == null ? Engine.res.getString("WHAT_IS") : template; }
 	public String getQuestion() { return question; }
 	public String getAnswer() { return answer; }
 	
@@ -52,4 +57,19 @@ public class Word implements Serializable
 	/** Position of this question in the lesson file. 
 	 * The reverse of this question has the same index. */
 	public int getPair () { return pair; }
+	
+	@Override
+	public boolean equals(Object o)
+	{
+		return (o.getClass() == Word.class &&
+				ObjectUtils.safeEquals(((Word)o).question, question) &&
+				ObjectUtils.safeEquals(((Word)o).answer, answer));
+	}
+	
+	@Override
+	/** String representation, mainly used for debugging purposes */
+	public String toString()
+	{
+		return "\"" + question + "\" -> \"" + answer + "\"";
+	}
 }

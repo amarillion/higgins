@@ -136,7 +136,7 @@ public class QuizSession implements Serializable
 	{
 		assert (currentWord >= 0 && currentWord < quiz.getWords().size());
 		String w = words.get(currentWord).getWord().getQuestion();
-		String q = words.get(currentWord).getWord().getDir() == 0 ? quiz.getQuestion2() : quiz.getQuestion1();
+		String q = words.get(currentWord).getWord().getTemplate();
 		int pos = q.indexOf("\"\"");
 		if (pos >= 0)
 		{

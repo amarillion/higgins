@@ -27,8 +27,11 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
+import java.util.Stack;
 
 import javax.swing.table.AbstractTableModel;
 
@@ -233,26 +236,44 @@ public class CourseModel extends AbstractTableModel implements Serializable
 	 * <li> (pctRepeat)%: pick words that have been asked. Start from words with lastAsked long ago.
 	 * </ul>	
 	 */
+	@SuppressWarnings("unchecked")
 	public Quiz createNewLesson()
 	{
-		List<Word> result = new ArrayList<Word>();
+		Set<Word> result = new HashSet<Word>();
 		
-		int cErrors = (int)((float)lessonSize * (float)pctErrors);
+		float [] weights = new float[] { pctErrors, pctRepetition, 1.0f - pctErrors - pctRepetition };
+		List<Word>[] lists = new List[] { getErrorList(), getRepeatList(), getNewList() } ;
 		
-		List<Word> errorList = getErrorList();
-		if (errorList.size() < cErrors) cErrors = errorList.size();
+		// sort lists by size, biggest last
+		// bubble-sort: for only three items this is acceptable.
+		for (int i = 0; i < 3; ++i)
+			for (int j = 0; j < i; ++j)
+			{
+				if (lists[i].size() < lists[j].size())
+				{
+					float tempf = weights[i]; weights[i] = weights[j]; weights[j] = tempf;
+					List templ = lists[i]; lists[i] = lists[j];	lists[j] = templ;					
+				}
+			}
 		
-		int cRepeats = (int)(lessonSize * pctRepetition);
-		List<Word> repeatList = getRepeatList();
-		if (repeatList.size() < cRepeats) cRepeats = repeatList.size();
+		// add the smallest list
+		float remain = lessonSize;
+		int target = (int)(remain * weights[0]);
+		result.addAll (lists[0].subList(0, Math.min (target, lists[0].size())));
 		
-		int cRemain = lessonSize - cErrors - cRepeats;
-		List<Word> newList = getNewList();
-		if (newList.size() < cRemain) { /* TODO */ }
+		// two remaining weights must add up to 1.0
+		float sum = weights[1] + weights[2];
+		weights[1] /= sum;
+		weights[2] /= sum;
 		
-		result.addAll(errorList.subList(0, cErrors));
-		result.addAll(repeatList.subList(0, cRepeats));
-		result.addAll(newList.subList(0, cRemain));
+		// add middle list
+		remain = lessonSize - result.size();
+		target = (int)(remain * weights[1]);
+		result.addAll (lists[1].subList(0, Math.min(target, lists[1].size())));
+		
+		// add final list
+		target = lessonSize - result.size();
+		result.addAll (lists[2].subList(0, Math.min(target, lists[2].size())));
 		
 		Quiz quiz = new Quiz(result);
 		return quiz;
