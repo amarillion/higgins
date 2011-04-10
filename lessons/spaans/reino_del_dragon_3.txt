@@ -86,3 +86,13 @@ la aldea, het gehucht
 la hechicera / la bruja, de heks
 lamer, likken
 el asco, de walging
+
+#p46
+el garrotazo, de knuppelslag
+traicionero, verraderlijk
+el remedio casero, het huismedicijn
+la corteza, de boomschors
+amargo, bitter
+
+#p47
+exigir, eisen

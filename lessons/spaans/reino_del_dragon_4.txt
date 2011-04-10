@@ -1,0 +1,95 @@
+# This word list corresponds to
+# El Reino del Dragón de Oro
+# by Isabel Allende
+# page numbers refer to 4th edition (2004), Montena, Barcelona
+#
+# word list (c) 2009-2011 by Martijn van Iersel
+# redistribute under Creative commons CC-BY-SA
+#
+# part 4
+# áéóíúñ
+
+# p48
+
+acariciar, strelen
+el sueldo, het salaris
+insalubre, smerig
+las tribus, de stammen
+el hilo, de draad
+acribillar, overweldigen
+desquiciar, gek maken
+el auricular, de telefoonhoorn
+el manotazo, de handslag
+contundente, definitief
+
+#p49
+la pitón, de python
+el arrebato, de passie
+
+#p50
+el asunto, de zaak
+crespo, krullend
+canoso, grijzend
+el pelo, het haar
+
+#p51
+ahorrar, sparen
+andar al grano, er niet omheen draaien
+conminar, afsluiten
+el moscoso, het snotjong
+
+#p52
+la costilla, de rib
+la manada, de kudde
+mascullar, met geklemde tanden praten
+abrigado, warm aangekleed
+la risa, de lach
+
+#p53
+rastrear, opsporen
+averiguar, uitzoeken
+anodino, pijnstillend / onelegant
+el hombro, de schouder
+la calvicie, de kaalheid
+desaliño, slordig
+escaso, weinig
+escarbar, graven
+escarbar la nariz, neuspeuteren
+tragar, afkeer hebben van
+
+#p55
+la madurez, de volwassenheid
+la bóveda, de kluis
+la codicia, de hebberigheid
+el puño, de vuist
+la espada, het zwaard
+
+#p61
+la cicatriz, het litteken
+salvo, behalve
+
+#p62
+el seno, de borst / het centrum
+fingir, net doen alsof
+
+#p68
+el ladirido, het geblaf
+estrepitoso, plotseling
+
+#p69
+la ternura, de zachtheid
+ablandar, verzachten
+el seso, de hersens
+toser, kuchen
+la mejilla, de wang
+el empujón, de duw
+contener, vasthouden
+avergonzado, beschaamd
+
+#p70
+el fósforo, de lucifer
+rogar, smeken
+
+#p71
+sobrar, achterblijven
+testarudo, koppig

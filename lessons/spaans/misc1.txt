@@ -1,0 +1,52 @@
+#Spaans
+#question1=Wat is "" in het Spaans?
+#question2=Wat is "" in het Nederlands?
+
+# áéóíúñ
+el venado, het hert
+el escalador, de bergbeklimmer
+el costurero, het naaisetje
+
+# three little pigs, disney
+
+el cochino, het varken
+el lobo, de wolf
+la paja, het stro
+la oveja, het schaap
+la chimenea, de schoorsteen
+
+# jungle book, disney
+
+la selva, het woud
+rascar, krabben
+el cachorro, de welp
+la olla, de pot
+
+# robin hood en un golpe de audacio, disney
+
+el avaro, de vrek
+desmedido, onbegrensd
+aprovechar, voordeel trekken
+temblar, trillen
+internarse, binnengaan
+escondido, verstopt
+la mata, de struik
+el carruaje, de koets
+disfrazar, verkleden
+el adivinador, de waarzegger
+la peluca, de pruik
+rubio, blond
+el rinoceronte, de neushoorn
+asomar, een kijkje nemen
+dotada, begiftigd
+susurrar, fluisteren
+hacer cosquillas, kietelen
+la joya, het juweel
+la murmuración, het gefluister
+el nudo, de knoop
+el cesto, de mand
+acudir, bijwonen
+la sabiduría, de wijsheid
+apoderar, overweldigen
+el eje, de as
+el lodazal, de modderplas

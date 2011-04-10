@@ -81,8 +81,8 @@ public class CourseModel extends AbstractTableModel implements Serializable
 
 		/** 
 		 * Weighted running average of errorRate. 
-		 * Each correct answer: errorRate = 0.9 * errorRate + 0.1; 
-		 * Each wrong answer: errorRate = 0.9 * errorRate;
+		 * Each correct answer: errorRate = 0.75 * errorRate + 0.25; 
+		 * Each wrong answer: errorRate = 0.75 * errorRate;
 		 * This means effect of older answers diminishes over time.
 		 */
 		double errorRate;
@@ -396,7 +396,9 @@ public class CourseModel extends AbstractTableModel implements Serializable
 		if (found != null)
 		{
 			found.lastAsked = new Date();
-			found.errorRate = (found.errorRate * 0.9) + (correct ? 0.0 : 0.1);
+			System.out.print (found.w + " -  errorRate: " + found.errorRate);
+			found.errorRate = (found.errorRate * 0.75) + (correct ? 0.0 : 0.25);
+			System.out.println (" -> " + found.errorRate);
 			found.askedTimes++;
 		}
 		else
