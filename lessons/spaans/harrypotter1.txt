@@ -1,0 +1,89 @@
+#áéóíúñ
+# uit:
+# Harry Potter y el piedra philosophal
+#question1=Wat is "" in het Spaans?
+#question2=Wat is "" in het Nederlands?
+
+el sapo, de pad
+# ( dier )
+el alcance, het bereik
+bramar, brullen
+rizado, gekruld
+la ceja, de wenkbrauw
+chapucero, klunzig
+calvo, kaal
+acaparar, in beslag nemen
+el hierbajo, het onkruid
+el hígado, de lever
+el murciélago, de vleermuis
+el bazo, de milt
+la anguila, de aal
+el sauce, de wilg
+pestañear / parpadear, knipperen
+el roble, de eik
+ruborizar, blozen
+el pulgar, de duim
+el relámpago, de flits
+ahogar, verdrinken / stikken
+la cerilla, de lucifer
+el tobillo, de enkel
+el terciopelo, het fluweel
+el sudor, het zweet
+la tiza, het krijtje
+el celador, de concierge
+chocar, botsen
+el calabozo / la mazmorra, de kerker
+rechazar, afwijzen
+el riñón, de nier
+fastidioso, irritant
+el aro, de hoepel
+olfatear, snuiven
+desmayar, flauwvallen
+el grifo, de kraan
+la cañeria, de pijpleiding
+chillar, krijsen
+regañar, terechtwijzen
+cojear, mank lopen
+el prismático, de verrekijker
+vitorear, juichen
+tragar, doorslikken
+la derrota, de nederlaag
+celoso, jaloers
+el abeto, de denneboom
+al azar, willekeurig
+el azar, het toeval
+la nuca, de achternek
+casero, huisgemaakt
+tejer, breien
+el guisante, de erwt
+agachar, bukken
+el halcón, de valk
+bostezar, geeuwen
+la comadreja, de wezel
+acariciar, aaien
+el atajo, de kortere weg
+sollozar, snikken
+la muñeca, de pols / de pop
+la cadena, de ketting
+el farol, de lantaarn
+el musgo, het mos
+el alboroto, de oproer
+la raíz, de wortel
+deslizar, glijden
+gatear, kruipen
+vaticinar, voorspellen
+el puño, de vuist
+agotado, uitgeput
+
+# Ch 16
+la trampilla, het luik
+tener ganas, zin hebben
+el ladrido, het geblaf
+el crujido, de ritseling
+la manija, het handvat
+el acertijo, het raadsel
+tartamudo, stotterend
+agudo, pienter / schel
+la misericordia, het medelijden
+atrasado, te laat
+la codicia, de hebzucht

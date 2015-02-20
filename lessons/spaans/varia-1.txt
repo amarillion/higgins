@@ -1,0 +1,24 @@
+# word list (c) 2012 by Martijn van Iersel
+# redistribute under Creative commons CC-BY-SA
+#
+#question2=Wat is "" in het Spaans?
+#question1=Wat is "" in het Nederlands?
+# 
+# áéóíúñü
+
+ronronear, spinnen (van een kat)
+la cigüeña, de ooievaar
+el cordero, het lamsvlees
+hallar, vinden
+hallarse, zich bevinden
+el traje, het pak (kleding)
+el traje de baño, het zwempak
+el gusano, de worm
+el rabano, de radijs
+los arandanos, de cranberries
+la parabrisa, de voorruit (auto)
+la col morada, de rode kool
+el clavo, de kruidnagel
+el azulego, de tegel
+la esquina, de kruising
+adivinar, raden

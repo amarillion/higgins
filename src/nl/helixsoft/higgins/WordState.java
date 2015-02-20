@@ -30,10 +30,30 @@ public class WordState implements Serializable
 	public int getQuizCount () { return quizCount; }
 	Map<String, Integer> getWrongAnswers () { return wrongAnswers; }
 	
+	/**
+	 * Compare answer against quiz, taking into account special characters.
+	 * An answer containing a single slash means that there are two options that may be swapped.
+	 */
+	private boolean compareMagically(String a, String b)
+	{
+		if (a.equals(b)) return true;
+		
+		// if the answer has slashes in it, it is allowed to change the order
+		String[] parts = b.split (" / ");
+		if (parts.length == 2)
+		{
+			if (a.equals (parts[1] + " / " + parts[0]))
+				return true;
+		}
+		
+		return false;
+	}
+	
 	public boolean compareAnswer(String anAnswer, int counter, int[] binCount)
 	{
 		boolean result;
-		result = anAnswer.equals(w.getAnswer());
+		
+		result = compareMagically (anAnswer, w.getAnswer());
 		if (result)
 		{
 			quizCount++;
