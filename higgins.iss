@@ -1,12 +1,12 @@
 [Setup]
 AppPublisher=HelixSoft
 AppName=Dr. Higgins
-AppVerName=Dr. Higgins v0.99c~WIP
+AppVerName=Dr. Higgins v0.99d~WIP
 DefaultDirName={pf}\DrHiggins
 DefaultGroupName=Dr. Higgins
 Compression=lzma
 SolidCompression=yes
-OutputBaseFilename=DrHiggins_v0_99c~WIP_Setup
+OutputBaseFilename=DrHiggins_v0_99d~WIP_Setup
 OutputDir=.
 
 [Files]

@@ -1,4 +1,4 @@
-Dr. Higgins v0.99c
+Dr. Higgins v0.99d
 Intelligent Vocabulary Quiz
 Copyright 2003-2011 Martijn van Iersel
 
