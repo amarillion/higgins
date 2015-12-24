@@ -28,6 +28,7 @@ import java.util.Comparator;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -45,11 +46,19 @@ public class CourseModel extends AbstractTableModel implements Serializable
 {
 	private static final long serialVersionUID = 1L;
 	
-	List<File> files = new ArrayList<File>(); // ordered list of lessons
+	List<FileData> fileData = new ArrayList<FileData>();
+	
+	private static class FileData implements Serializable
+	{
+		public File file;
+		public long timestamp;
+	}
+	
 	Map<File, List<WordHistory>> wordData = new HashMap<File, List<WordHistory>>(); // word data organized per lesson
 	
-	//TODO: maybe better done as iterator "view" over wordData map
-	List<WordHistory> allWordData = new ArrayList<WordHistory>(); // all word data
+	
+	// not serialized...
+	transient List<WordHistory> allWordDataView = new ArrayList<WordHistory>(); // all word data
 	
 	private File courseFile = null;
 
@@ -97,14 +106,18 @@ public class CourseModel extends AbstractTableModel implements Serializable
 		if (wordData.containsKey(f)) return; // ignore, already added.
 		Quiz q = Quiz.loadFromFile(f);
 		
-		files.add(f);
+		FileData fd = new FileData();
+		fd.file = f;
+		fd.timestamp = f.lastModified();
+		fileData.add(fd);
+		
 		List<WordHistory> list = new ArrayList<WordHistory>();
 		wordData.put (f, list);
 		for (Word w : q.getWords())
 		{
 			WordHistory wd = new WordHistory(w);
 			list.add(wd);
-			allWordData.add(wd);
+			allWordDataView.add(wd);
 		}
 		
 		fireTableDataChanged();
@@ -118,28 +131,93 @@ public class CourseModel extends AbstractTableModel implements Serializable
 	{
 		if (!wordData.containsKey(f)) return; // ignore, wasn't in there
 		
-		files.remove(f);
-		for (WordHistory wd : wordData.get(f))
-		{
-			//TODO: linear lookup suboptimal
-			allWordData.remove(wd);
-		}
+		removeFileData(f);
 		wordData.remove(f);
+		refresh();
 		
 		fireTableDataChanged();
+	}
+
+	/**
+	 * Remove a given file from the FileData list.
+	 */
+	private void removeFileData(File f) 
+	{
+		Iterator<FileData> it = fileData.iterator();
+		while (it.hasNext())
+		{
+			FileData fd = it.next();
+			if (fd.file.equals(f))
+			{
+				it.remove();
+			}
+		}
 	}
 	
 	/**
 	 * Re-read quiz data from file.
 	 * Use this in case a File was modified on disk since the course was created.
 	 * @param f file to refresh
+	 * @throws IOException 
 	 */
-	public void refreshFile(File f)
+	public void refreshFile(FileData fd) throws IOException
 	{
-		//TODO
-		throw new UnsupportedOperationException("Not yet implemented");
+		File f = fd.file;
+		fd.timestamp = f.lastModified();
+		
+		List<WordHistory> oldWordHistory = wordData.get(f);
+		wordData.remove(f);
+		
+		List<WordHistory> newWordHistory = new ArrayList<WordHistory>();
+		wordData.put (f, newWordHistory);
+		
+		// re-read lesson
+		Quiz q = Quiz.loadFromFile(f);
+		
+		for (Word w : q.getWords())
+		{
+			WordHistory wh = popWord (oldWordHistory, w);
+			if (wh == null)
+			{
+				wh = new WordHistory(w);
+				// this is a new word;
+				System.out.println ("Word added: " + w);
+			}
+			
+			newWordHistory.add(wh);
+		}
+		
+		// remaining in oldHwordHistory
+		for (WordHistory wh : oldWordHistory)
+		{
+			System.out.println ("Word removed: " + wh.w);
+		}
+
+		refresh();
+		fireTableDataChanged();
 	}
 	
+	private static WordHistory popWord (List<WordHistory> oldHistory, Word w)
+	{
+		WordHistory result = null;
+		
+		//TODO: linear lookup suboptimal
+		Iterator<WordHistory> it = oldHistory.iterator();
+		while (it.hasNext())
+		{
+			WordHistory wh = it.next();
+			if (wh.w.getQuestion().equals(w.getQuestion()) &&
+				wh.w.getAnswer().equals(w.getAnswer()))
+			{
+				it.remove();
+				result = wh;
+				break;
+			}
+		}
+		
+		return result;
+	}
+
 	/**
 	 * Serialize course data to disk, using same file that 
 	 * it was loaded from or saved to before.
@@ -167,7 +245,46 @@ public class CourseModel extends AbstractTableModel implements Serializable
 		ObjectInputStream ois = new ObjectInputStream(
 				new FileInputStream (f));
 		CourseModel newModel = (CourseModel)ois.readObject();
+		
+		// copy any old files for backwards compatibility
+		if (newModel.fileData == null) newModel.fileData = new ArrayList<FileData>();
+		for (File i : newModel.files)
+		{
+			FileData fd = new FileData();
+			fd.file = i;
+			fd.timestamp = i.lastModified();
+			newModel.fileData.add(fd);
+		}
+		newModel.files.clear();
+		newModel.allWordData.clear();
+		
+		// create the word data view
+		newModel.refresh();
+		
+		ois.close();
+		
+		// check timestamps for out-of-date lessons
+		for (FileData fd : newModel.fileData)
+		{
+			if (fd.file.lastModified() > fd.timestamp)
+			{
+				System.out.println (fd.file.getName() + " has been modified and should be reloaded");
+				newModel.refreshFile(fd);
+			}
+		}
+		
 		return newModel;
+	}
+	
+	// refresh the wordData view by copying from the file data.
+	private void refresh()
+	{
+		if (allWordDataView == null) allWordDataView = new ArrayList<WordHistory>();
+		allWordDataView.clear();
+		for (Map.Entry<File, List<WordHistory>> e : wordData.entrySet())
+		{
+			allWordDataView.addAll(e.getValue());
+		}
 	}
 	
 	/** 
@@ -177,7 +294,7 @@ public class CourseModel extends AbstractTableModel implements Serializable
 	private List<Word> getErrorList()
 	{
 		List<WordHistory> sortedList = new ArrayList<WordHistory>();
-		sortedList.addAll(allWordData);
+		sortedList.addAll(allWordDataView);
 		Collections.sort(sortedList, new Comparator<WordHistory> () 
 				{
 					@Override
@@ -194,7 +311,6 @@ public class CourseModel extends AbstractTableModel implements Serializable
 			result.add(i.w);
 		}
 		
-
 		return result;
 	}
 	
@@ -202,7 +318,7 @@ public class CourseModel extends AbstractTableModel implements Serializable
 	private List<Word> getRepeatList()
 	{
 		List<WordHistory> sortedList = new ArrayList<WordHistory>();
-		for (WordHistory d : allWordData)
+		for (WordHistory d : allWordDataView)
 		{
 			if (d.lastAsked != null)
 				sortedList.add(d);
@@ -283,7 +399,7 @@ public class CourseModel extends AbstractTableModel implements Serializable
 	private List<Word> getNewList() 
 	{
 		List<Word> result = new ArrayList<Word>();
-		for (WordHistory wd : allWordData)
+		for (WordHistory wd : allWordDataView)
 		{
 			if (wd.askedTimes == 0) result.add (wd.w);
 		}
@@ -299,7 +415,7 @@ public class CourseModel extends AbstractTableModel implements Serializable
 	@Override
 	/** Number of rows is equal to the number of lesson files */
 	public int getRowCount() {
-		return files.size();
+		return fileData.size();
 	}
 
 	/** get number of questions in a lesson */
@@ -348,13 +464,13 @@ public class CourseModel extends AbstractTableModel implements Serializable
 		switch (col)
 		{
 		case 0: // lesson name
-			return files.get(row).getName();
+			return fileData.get(row).file.getName();
 		case 1: // lesson size
-			return getLessonSize(files.get(row));
+			return getLessonSize(fileData.get(row).file);
 		case 2: // average times asked
-			return getAvgAsked(files.get(row));
+			return getAvgAsked(fileData.get(row).file);
 		case 3: // average error rate
-			return getErrorRate(files.get(row));
+			return getErrorRate(fileData.get(row).file);
 		default:
 			throw new IndexOutOfBoundsException("Column " + col + " is out of range");
 		}
@@ -377,7 +493,7 @@ public class CourseModel extends AbstractTableModel implements Serializable
 	/** look up a lesson file by its index in the list */
 	public File getLessonByIndex(int row) 
 	{
-		return files.get(row);
+		return fileData.get(row).file;
 	}
 
 	/** Call this after a question has been answered. Record the question results. */
@@ -385,7 +501,7 @@ public class CourseModel extends AbstractTableModel implements Serializable
 	{
 		//TODO: linear search not optimal
 		WordHistory found = null;
-		for (WordHistory wd : allWordData)
+		for (WordHistory wd : allWordDataView)
 		{
 			if (wd.w.getQuestion().equals (question))
 			{
@@ -417,4 +533,10 @@ public class CourseModel extends AbstractTableModel implements Serializable
 	{
 		return courseFile;
 	}
+	
+	@Deprecated // unused, kept for backwards compatibility of serializable interface
+	List<File> files = new ArrayList<File>(); // ordered list of lessons
+
+	@Deprecated // kept for backwards compatibility
+	List<WordHistory> allWordData = new ArrayList<WordHistory>(); // all word data
 }
