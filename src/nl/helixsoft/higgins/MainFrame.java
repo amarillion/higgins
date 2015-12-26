@@ -284,7 +284,7 @@ public class MainFrame
 						chooser.getCurrentDirectory());
 				File f = chooser.getSelectedFile();
 				try {
-					parent.setCourseModel (CourseModel.loadCourse(f));
+					parent.loadCourseModel(f);
 					parent.nextCourseSession();
 				} catch (IOException e) {
 					// TODO Auto-generated catch block

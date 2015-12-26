@@ -15,6 +15,7 @@
 //    along with Dr. Higgins.  If not, see <http://www.gnu.org/licenses/>.
 package nl.helixsoft.higgins;
 
+import java.awt.Frame;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -33,6 +34,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
+import javax.swing.JOptionPane;
 import javax.swing.table.AbstractTableModel;
 
 /** 
@@ -255,6 +257,8 @@ public class CourseModel extends AbstractTableModel implements Serializable
 			fd.timestamp = i.lastModified();
 			newModel.fileData.add(fd);
 		}
+		
+		// clear deprecated data fields
 		newModel.files.clear();
 		newModel.allWordData.clear();
 		
@@ -263,20 +267,39 @@ public class CourseModel extends AbstractTableModel implements Serializable
 		
 		ois.close();
 		
+		return newModel;
+	}
+
+	public int refreshLessons(Frame frame) throws IOException 
+	{
 		// check timestamps for out-of-date lessons
-		for (FileData fd : newModel.fileData)
+		
+		//TODO translate...
+		String sep = "<html>Course contains some lessons that are out-of-date.<br>The following lessons have been refreshed: ";
+		
+		StringBuilder msg = new StringBuilder ();
+		int refreshCount = 0;
+		for (FileData fd : fileData)
 		{
 			if (fd.file.lastModified() > fd.timestamp)
 			{
-				System.out.println (fd.file.getName() + " has been modified and should be reloaded");
-				newModel.refreshFile(fd);
+				refreshCount++;
+				msg.append(sep);
+				msg.append(fd.file.getName());
+				sep = ", ";
+				refreshFile(fd);
 			}
 		}
+
+		if (refreshCount > 0)
+		{
+			JOptionPane.showMessageDialog(frame, msg);
+		}
 		
-		return newModel;
+		return refreshCount;
 	}
-	
-	// refresh the wordData view by copying from the file data.
+		
+	// refresh the allWordData view by copying from the file data.
 	private void refresh()
 	{
 		if (allWordDataView == null) allWordDataView = new ArrayList<WordHistory>();

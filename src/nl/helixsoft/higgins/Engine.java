@@ -322,6 +322,18 @@ public class Engine
 		}
 	}
 
+	/**
+	 * Load course file and refresh any lessons that have been changed.
+	 * @returns true if the lessons have changed, which indicates that the old session
+	 * should be discarded and a new session should be started
+	 */
+	boolean loadCourseModel(File f) throws ClassNotFoundException, IOException
+	{
+		setCourseModel(CourseModel.loadCourse(f));
+		int refreshCount = model.refreshLessons(getFrame());
+		return (refreshCount > 0);
+	}
+	
 	void loadState()
 	{
 		if (STATE.exists())
@@ -334,8 +346,13 @@ public class Engine
 				
 				if (state.courseFile != null)
 				{
-					model = CourseModel.loadCourse(state.courseFile);
+					boolean changed = loadCourseModel(state.courseFile);
 					
+					if (changed) 
+					{
+						state.session = null;
+					}
+
 					if (state.session == null)
 					{
 						nextCourseSession();
