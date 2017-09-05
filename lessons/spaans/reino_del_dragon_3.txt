@@ -27,7 +27,7 @@ salpicar, bespatten
 de reojo, vanuit de ooghoeken
 el agudo, de hoge toon
 aplacar, kalmeren
-la maraña, het struikgewas
+la maraña, de wirwar / het struikgewas
 la osamenta, het skelet
 balbucear, stamelen
 asustar, doen schrikken
@@ -64,7 +64,7 @@ espeluznante, afgrijselijk
 la gota, de druppel
 
 #p32
-sacar de quicio, gek maken
+sacar de quicio / desquiciar, gek maken
 la escudilla, de kom
 empapar, nat maken
 el trapo, de vaatdoek
