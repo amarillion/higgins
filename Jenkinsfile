@@ -1,5 +1,4 @@
 #!groovy
-import groovy.json.JsonSlurper
 
 node {
 	
@@ -19,14 +18,19 @@ node {
 			}
 		}
 
-		stage('Package') {
+		// stage('Package') {
+			// 'amake/innosetup' has this weird thing that it runs innosetup directly,
+			// and you need to pass only the name of the iss file.
+			// Docker-pipeline is no help here, 
+			// only way to make it work is to call docker 'manually'
 
-			docker.image('amake/innosetup').inside() {
-				sh "higgins.iss"
-			}
-			
-			archiveArtifacts artifacts: 'DrHiggins/*.exe'
-		}
+			// TODO - this almost works! But fails because the can't write to the current working directory because it's owned by jenkins.
+			// sh 'docker run --rm -i -v $(pwd):/work amake/innosetup higgins.iss'
+			// TODO - this fails because wine is strict about only providing access for one particular user
+			// sh 'docker run --rm -i -u $(id -u):$(id -g) -v $(pwd):/work amake/innosetup higgins.iss' 
+
+			// archiveArtifacts artifacts: 'DrHiggins*.exe'
+		// }
 
 	}
 	
