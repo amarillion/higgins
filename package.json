@@ -1,0 +1,32 @@
+{
+	"name": "higgins2",
+	"private": true,
+	"version": "0.0.0",
+	"type": "module",
+	"scripts": {
+		"dev": "vite",
+		"build": "vue-tsc -b && vite build",
+		"preview": "vite preview",
+		"lint": "eslint",
+		"test": "vitest"
+	},
+	"dependencies": {
+		"vue": "3.5.17"
+	},
+	"devDependencies": {
+		"@stylistic/eslint-plugin": "5.1.0",
+		"@typescript-eslint/eslint-plugin": "8.36.0",
+		"@vitejs/plugin-vue": "6.0.0",
+		"@vue/test-utils": "2.4.6",
+		"@vue/tsconfig": "0.7.0",
+		"eslint": "9.31.0",
+		"eslint-plugin-vue": "10.3.0",
+		"globals": "16.3.0",
+		"jsdom": "^26.1.0",
+		"typescript": "5.8.3",
+		"typescript-eslint": "8.37.0",
+		"vite": "7.0.4",
+		"vitest": "3.2.4",
+		"vue-tsc": "3.0.1"
+	}
+}

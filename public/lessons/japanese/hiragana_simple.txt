@@ -1,0 +1,26 @@
+#hiragana_simple
+#askbothways=0
+#question1=What is
+#encoding=UTF-8
+い, i
+く, ku
+こ, ko
+し, shi
+ち, chi
+つ, tsu
+て, te
+な, na
+に, ni
+ひ, hi
+ふ, fu
+へ, he
+ま, ma
+り, ri
+ろ, ro
+わ, wa
+ん, n
+ぐ, gu
+じ, ji
+ぜ, ze
+ぴ, pi
+

@@ -1,0 +1,301 @@
+#áéóíúñ
+# uit:
+# Harry Potter y el piedra philosophal
+#question1=Wat is "" in het Spaans?
+#question2=Wat is "" in het Nederlands?
+
+# Ch1
+la sien, de slaap (anatomie)	{zn; cat:anatomie}
+asustar, bang maken				{ww}
+el rabillo, het puntje			{zn}
+añorar, verlangen naar			{ww}
+carecer, niet hebben / missen	{ww}
+el taladro, de boor				{zn; cat:gereedschap}
+el césped, het gazon			{zn; cat:tuin}
+abatido, gedeprimeerd			{bn}
+el escarabajo, de kever			{zn; cat:natuur}
+el seto, de heg					{zn; cat:natuur; cat:tuin}
+podar, snoeien					{ww; cat:tuin}
+regar, water geven 				{ww; cat:tuin}
+la rebanada, het sneetje 		{zn; cat:eten}
+ulular, oehoeën (van een uil)	{ww; cat:natuur}
+ensimismarse, gefascineerd raken {ww}
+burlón, pesterig				{bn}
+el recelo, het wantrouwen		{zn}
+dar traspiés, struikelen		{ww}
+el anzuelo, het lokaas			{zn}
+
+# Ch 2
+frotar, wrijven					{ww}
+el fajo, de bundel				{zn}
+la reja, het traliewerk			{zn}
+la gatera, het kattenluik		{zn; stam:gato}
+la inanición, de hongerdood		{zn}
+
+# TODO: dubbel met escudilla
+el cuenco, de kom				{zn; cat:keuken}
+las tripas, de ingewanden		{zn; cat:anatomie}
+#TODO dubbel met lanzar
+arrojar, gooien					{ww}
+el rellano, de overloop			{zn; cat:huis}
+callado, stil					{bn}
+saltón, uitpuilend				{bn}
+la reverencia, de buiging		{zn}
+la alfombra, het tapijt			{zn; cat:huis}
+hipar, hikken					{ww; cat:anatomie}
+educado, beleefd				{bn}
+bizco, scheel					{bn; cat:anatomie}
+pillar, pakken / grijpen / klemmen {ww}
+sea lo que fuere, wat dan ook	{uitdrukking}
+el faro, de koplamp				{zn}
+arrojado, dapper				{bn}
+sacudir, schudden / kloppen		{ww}
+el tímpano, het trommelvlies	{zn; cat:anatomie}
+el tunante, de schurk			{zn}
+rechinar, knarsen				{ww}
+apenado, verdrietig				{bn}
+el fontanero, de loodgieter		{zn; cat:beroep}
+en cuclillas, gehurkt
+el látigo, de zweep				{zn}
+el susto, de angst				{zn}
+la fregona, de dweil			{zn; stam:fregar}
+fregar, dweilen					{ww; stam:fregar}
+
+# Ch 3
+sacar de quicio / desquiciar, gek maken		{ww}
+retrasar, uitstellen			{ww}
+reventar, barsten				{ww}
+nudoso, knobbelig				{bn}
+la cadera, de heup				{zn; cat:anatomie}
+amilanar, intimideren			{ww}
+restregar, schrobben			{ww}
+hundir, doen zinken				{ww}
+crujir, ritselen				{ww}
+jadear, hijgen					{ww; cat:anatomie}
+el alféizar, de vensterbank		{zn; cat:huis}
+abalanzar, afvliegen op			{ww}
+recostar / yacer, liggen		{ww}
+la horquilla, de haarspeld		{zn; cat:kleding}
+la casa solariego, het ouderlijk huis {zn; cat:huis; cat:familie}
+forrar, omhullen				{ww}
+el colmillo, de slagtand		{zn; cat:natuur}
+el bostezeo, de geeuw
+el forcejeo, de worsteling
+aterrizar, landen
+la redada, de inval (politie)
+el húron, de wezel
+el atizador, de pook
+los cachivaches, de troep
+estallar, uitbarsten
+la pecera, het aquarium
+
+# Ch 4
+el enchufe, de stekker			{zn}
+la llama, de vlam / de lama		{zn}
+el hollín, het roet				{zn}
+el duende, de dwerg				{zn}
+llavar a rastras, meesleuren	{ww}
+merecer, verdienen (toekomen)	{ww}
+el codo, de elleboog			{zn; cat:anatomie}
+la repisa, de kast
+el cojín, het kussentje
+la baraja, het stok (kaarten)
+el mostrador, de toonbank
+enfurruñar, mokken / pruilen
+pegajoso, kleverig
+la vela, de kaars
+apiñado / abarrotado, druk / volgepakt
+el cepillo, de borstel
+la tinta, de inkt
+cuchichear, fluisteren
+despectivo, minachtend
+sendos, ieder / elk
+agarrar, vastgrijpen
+vadear, waden
+la seta, de paddestoel
+
+# Ch 5
+despistado, verstrooid
+sujetar, vasthouden
+estropeado, kapot
+teñir, kleuren
+el salpicadero, het dashboard
+la huerta, de moestuin
+el chichón, de buil (blauwe plek)
+la abolladura, de deuk
+raído, gerafeld
+agarrotar, verstijven
+
+# Ch 6
+ensordecedor, oorverdovend
+la frente, het voorhoofd
+la bandeja, het dienblad
+la maceta, de bloempot
+el abono / el estiércol, de mest
+patalear, stampen
+el pupitre, het bureau (meubel)
+el lechero, de melkboer
+hojear, doorbladeren
+el cohete, de raket
+rociar, besprenkelen
+rasgar, verscheuren
+
+# Ch 7
+el rocío, de dauw				{zn; cat:tuin}
+la babosa, de slak				{zn; cat:natuur}
+el pozo, de bron				{zn}
+a regañadientes, met tegenzin	{uitdrukking}
+garabatear, krabbelen
+hinchado, gezwollen
+la oruga, de rups
+el regazo, de schoot
+la barbilla, de kin
+
+
+# Ch 8
+el catarro, de verkoudheid		{zn}
+calado, doorweekt				{bn}
+el tobillo, de enkel			{zn; cat:anatomie}
+mullido, zacht					{bn}
+la butaca, de luie stoel		{zn; cat:huis}
+zumbar, zoemen					{ww}
+estar arrepentido, spijt hebben	{uitdrukking}
+arañar, krassen					{ww}
+la sierra, de zaag / de bergkam	{zn; cat:gereedschap; cat:geografie}
+el fraile, de monnik			{zn; cat:beroep}
+el llorón, de huilebalk			{zn}
+el moho, de roest / de schimmel	{zn}
+la costilla, de rib				{zn; cat:anatomie}
+el sollozo, de snik
+malabarear, jongleren
+el maullido, het gemiauw
+lóbrego, donker
+las esposas, de handboeien
+la hilera, de rij
+receloso, achterdochtig
+la viuda, de weduwe
+el jinete, de ruiter
+difunto, overleden
+trastabillar, struikelen
+el heredero, de erfgenaam
+el anillo / la arjolla, de ring
+
+# Ch 9
+el despacho, het kantoor
+acercar, dichterbij brengen
+exigir, eisen
+la patraña, het sterke verhaal
+la arruga, de rimpel
+sellar, verzegelen
+el desasosiego, het onbehagen
+la soga, het touw
+el gozne, het scharnier
+alardear, opscheppen
+
+# Ch 10
+el abucheo, het boegeroep
+abuchear, boe roepen
+la manga, de mouw				{zn; cat:kleding}
+la almohada, het kussen
+la astilla, de splinter
+la alimaña, het ongedierte
+acarrear, dragen / veroorzaken
+derretir, smelten
+
+el pavoreal, de pauw
+el buitre, de gier
+acobardarse, zich laten intimideren
+incumplir, niet gehoorzamen
+bochornoso, benauwd
+guiñar un ojo, een knipoog geven
+el contrincante, de rivaal
+arreciar, erger worden
+el rumbo, de koers
+forcejear, worstelen
+arremangar, oprollen
+la yema, de vingertop
+
+# Ch. 11
+la hinchazón, de zwelling
+el tejón, de das
+aguantar, weerstaan
+el abanico, de waaier
+
+la sanguijuela, de bloedzuiger
+la tarima, het platform
+coquillear, kietelen
+tendido, liggend
+escalofriante, bloedstollend
+tiritar, rillen
+majo, aardig
+el pasamontañas, de bivakmuts
+el abanico, de waaier
+la aldaba, de deurklopper
+
+# Ch 12
+la zarpa, de klauw
+el naipe, de speelkaart
+el acebo, de hulst
+ajado, gekreukeld
+arrugado, gerimpeld
+la ansia, het verlangen
+aliviar, verlichten
+aborrecer, haten
+el mondadientes, de tandenstoker
+el cerrojo, de grendel
+los nudillos, de knokkels
+el barril, de ton
+a hurtadillas, stiekem
+labrar, bewerken
+escabullirse, wegsluipen
+el atasco, de opstopping
+
+# Ch 14
+ladrar, blaffen
+la perjuicio, de schade
+
+# Ch 15
+el recelo, de achterdocht
+la higuera, de bijgeboom
+el higo, de vijg
+el hocico, de snuit
+cálido, heet
+musitar, mompelen
+talar, omhakken
+la telaraña, het spinneweb
+la presa, de vangst
+ciego, blind
+la bocina, de toeter
+
+# Ch 16
+la zapatillas, de slippers
+retorcer, wringen / draaien
+el sorbo, de slok
+imprescindible, onmisbaar
+la sorna, het sarcasme
+estrujar, knijpen
+alisar, gladstrijken
+el pliegue, de vouw
+insoslayable, onvermijdelijk
+halagar, vleien
+henchido de orgullo, vol trots
+el lavabo, de wastafel
+
+# Ch 17
+borroso, vaag
+empañado, vochtig / beslagen
+es una lata, het is vervelend
+el cachorro, de puppie
+el harapo, het vod
+el fardo, de bundel
+socarrón, sarcastisch
+la escama, de schub
+empuñar, vastgrijpen
+esquivar, ontwijken
+tararear, neuriën
+
+# Ch 18
+averiguar, vaststellen
+el don, de gave
+deribar, omver duwen
+

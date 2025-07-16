@@ -1,0 +1,28 @@
+#encoding=UTF-8
+#askbothways=0
+#question1=What is
+
+一, one
+二, two
+三, three
+
+丘, five
+七, seven
+
+九, nine
+
+万, ten thousand
+上, up
+下, down
+中, middle
+今, now
+人, person
+女, woman
+子, child
+山, mountain
+小, small
+川, river
+左, left
+木, tree
+本, book
+林, wood

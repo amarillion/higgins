@@ -1,0 +1,32 @@
+#katakana
+#askbothways=0
+#question1=What is
+#encoding=UTF-8
+モノレール, monorail
+
+# repeated characters
+# ア, a
+# シ, shi
+# キ, ki
+# イ, i
+# フ, fu
+# ト, to
+# ク, ku
+# コ, ko
+# ル, ru
+# ス, su
+# マ, ma
+# ン, n
+# テ, te
+# タ, ta
+# カ, ka
+# レ, re
+# ナ, na
+# ラ, ra
+# ロ, ro
+# モ, mo
+# ニ, ni
+# リ, ri
+# new characters
+ノ, no
+
