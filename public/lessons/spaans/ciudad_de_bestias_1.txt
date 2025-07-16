@@ -1,3 +1,4 @@
+#encoding=UTF-8
 # This word list corresponds to
 # La ciudad de bestias
 # by Isabel Allende
@@ -6,7 +7,7 @@
 # redistribute under Creative commons CC-BY-SA
 #
 # part 1
-# áéóíúñ
+# Ã¡Ã©Ã³Ã­ÃºÃ±
 
 # p9
 
@@ -15,7 +16,7 @@ el amanecer, de dageraad
 estrellar, breken
 el fragor, het lawaai
 el buitre, de gier
-el relámpago, de bliksem
+el relÃ¡mpago, de bliksem
 el trueno. de donder
 a la deriva, verloren op zee
 rugir, brullen
@@ -25,29 +26,29 @@ la cornisa, de vensterbank
 # p10
 el aliento, de adem
 morder, bijten
-bobalicón, dom
+bobalicÃ³n, dom
 el zorrillo, het stinkdier
 tiritar, beven
 entibiar, verwarmen
 el venado, het hert
 
 #p11
-de bruces, op de knieën
+de bruces, op de knieÃ«n
 el tarado, de domme
 nefasto, gemeen
 el ensayo, de repetitie
 reventar, ontploffen
-el rincón, de hoek
+el rincÃ³n, de hoek
 
 #p12
 acechar, op de loer liggen
 el mapache, de wasbeer
-el huérfano, de wees
+el huÃ©rfano, de wees
 el pajarraco, de grote vogel
 el emparedado, de sandwich
 la nevera, de koelkast
 la ausencia, de afwezigheid
-el cariño, de tederheid
+el cariÃ±o, de tederheid
 canturrear, zingen (van een vogel)
 desconcertar, verwarren
 
@@ -71,16 +72,16 @@ la oleada, de golfbeweging
 tambalear, struikelen
 
 #p15
-el añico, het stukje
+el aÃ±ico, het stukje
 el umbral, de doorgang
 hinchado, opgezwollen
 
 #p16
-el pañuelo, de zakdoek
+el paÃ±uelo, de zakdoek
 balbucear, brabbelen
 herido, gewond
 el chorro, de waterstraal
-el puñado, de handvol
+el puÃ±ado, de handvol
 
 #p18
 farfullar, ouwehoeren

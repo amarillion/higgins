@@ -1,18 +1,19 @@
+#encoding=UTF-8
 # word list (c) 2012 by Martijn van Iersel
 # redistribute under Creative commons CC-BY-SA
 #
 #question2=Wat is "" in het Spaans?
 #question1=Wat is "" in het Nederlands?
 # 
-# áéóíúñü
+# Ã¡Ã©Ã³Ã­ÃºÃ±Ã¼
 
 ronronear, spinnen (van een kat)
-la cigüeña, de ooievaar
+la cigÃ¼eÃ±a, de ooievaar
 el cordero, het lamsvlees
 hallar, vinden
 hallarse, zich bevinden
 el traje, het pak (kleding)
-el traje de baño, het zwempak
+el traje de baÃ±o, het zwempak
 el gusano, de worm
 el rabano, de radijs
 los arandanos, de cranberries

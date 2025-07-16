@@ -1,3 +1,4 @@
+#encoding=UTF-8
 #Spaans
 #Uit "prisma - spaans leer je zo"
 #hoofdstuk 7, paragraaf 114, 124, 129

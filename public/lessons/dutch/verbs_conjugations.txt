@@ -1,3 +1,4 @@
+#encoding=UTF-8
 # verb conjugations
 #question1=Conjugate ""
 #askbothways=0

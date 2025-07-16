@@ -1,3 +1,4 @@
+#encoding=UTF-8
 kijken, to look
 gaan, to go
 zijn, to be

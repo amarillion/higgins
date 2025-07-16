@@ -1,8 +1,9 @@
-España, Spanje
+#encoding=UTF-8
+EspaÃ±a, Spanje
 l'ordinateur, de computer
-une téléphone, a phone
-une leçon, a lesson
-derrière, behind
-arrêt, stop
-table, pöytä
+une tÃ©lÃ©phone, a phone
+une leÃ§on, a lesson
+derriÃ¨re, behind
+arrÃªt, stop
+table, pÃ¶ytÃ¤
 

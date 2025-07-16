@@ -1,4 +1,5 @@
-#áéóíúñ
+#encoding=UTF-8
+#Ã¡Ã©Ã³Ã­ÃºÃ±
 # uit:
 # gente 8: gente que viaja
 #question2=Wat is "" in het Spaans?
@@ -11,16 +12,16 @@ inscribirse, zich inschrijven
 las llamadas, de telefoontjes
 la visita guiada, de rondleiding
 ocuparse, zich bezighouden
-el importe de la matrícula, het inschrijfgeld
+el importe de la matrÃ­cula, het inschrijfgeld
 optativo, facultatief
 incluido, inclusief
 la forma de pago, de betalingswijze
 la transferencia bancaria, de bankoverschrijving
-la tarjeta de crédito, de creditcard
+la tarjeta de crÃ©dito, de creditcard
 el folleto, de folder
 el prefijo, het netnummer
-la dirección, het adres
-la habitación, de kamer
+la direcciÃ³n, het adres
+la habitaciÃ³n, de kamer
 
 #4
 el medio de transporte, het vervoermiddel
@@ -28,7 +29,7 @@ el concurso, de wedstrijd
 el juego, het spel
 el participante, de deelnemer
 al menos, ten minste
-único, uniek
+Ãºnico, uniek
 la etapa, de etappe
 pasar de largo, vlug voorbijgaan
 quedarse, blijven
@@ -40,9 +41,9 @@ adjunto, bijgaand
 en moto, met de motor
 en tren, met de trein
 en coche, met de auto
-en autobús, met de bus
-en avión, met het vliegtuig
-como máximo, hoogstens
+en autobÃºs, met de bus
+en aviÃ³n, met het vliegtuig
+como mÃ¡ximo, hoogstens
 
 #6
 el cambio, de wijziging

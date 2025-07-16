@@ -1,3 +1,4 @@
+#encoding=UTF-8
 hacer, to make
 reir, to laugh
 cocinar, to cook

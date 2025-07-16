@@ -1,4 +1,5 @@
-#áéóíúñ
+#encoding=UTF-8
+#Ã¡Ã©Ã³Ã­ÃºÃ±
 # uit:
 # gente 11: gente e historias
 #question2=Wat is "" in het Spaans?
@@ -16,12 +17,12 @@ el diaro, het dagboek
 el adolescente, de tiener
 nacer, geboren worden
 escribir, schrijven
-la manifestación, de demonstratie
+la manifestaciÃ³n, de demonstratie
 unirse, zich verenigen
 la marcha, de protestmars
 ser de noche, nacht zijn
 tener la tele puesta, de tv aanhouden
-la elección, de verkiezingen
+la elecciÃ³n, de verkiezingen
 la gira, de tournee
 al salir, na afloop
 el acuerdo, het akkoord
@@ -29,8 +30,8 @@ la entrada, de toetreding
 la ONU, de VN
 el futbolista, de voetballer
 nadie, niemand
-la cafetaría, het cafetaria
+la cafetarÃ­a, het cafetaria
 encantar, heel erg bevallen
 abierto, geopend
-la constitución, de grondwet
+la constituciÃ³n, de grondwet
 

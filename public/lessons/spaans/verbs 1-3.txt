@@ -1,6 +1,7 @@
+#encoding=UTF-8
 # (C) 2009 Martijn van Iersel
 # Redistribution under Creative Commons CC-BY-SA
-# áéóíúñ¿¡
+# Ã¡Ã©Ã³Ã­ÃºÃ±Â¿Â¡
 
 zijn, ser / estar
 zien, ver

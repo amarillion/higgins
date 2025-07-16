@@ -1,3 +1,4 @@
+#encoding=UTF-8
 #question1=Wat is "" in het Spaans?
 #question2=Wat is "" in het Nederlands?
 reir, lachen

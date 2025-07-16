@@ -1,14 +1,15 @@
+#encoding=UTF-8
 #spaans
 #Uit "prisma - spaans leer je zo"
 # paragraaf 20
 #question1=Wat is "" in het Spaans?
 #question2=Wat is "" in het Nederlands?
 la llegada, de aankomst
-España, Spanje
-la señora, de mevrouw
+EspaÃ±a, Spanje
+la seÃ±ora, de mevrouw
 el tren, de trein
 parar, stoppen
-¿dónde?, waar?
+Â¿dÃ³nde?, waar?
 estamos, we zijn
 no, nee
 has leido, heb je gelezen
@@ -17,19 +18,19 @@ leido, gelezen
 leer, lezen
 el nombre, de naam
 de, van
-la estación, het station
+la estaciÃ³n, het station
 el caballero, de heer
 ya, reeds
 en, in
 acabamos de llegar, we zijn zojuist aangekomen
 llegar, aankomen
 la frontera, de grens
-española, spaans
+espaÃ±ola, spaans
 esta, dit
 es, hij is
 estar / ser, zijn
 entonces, dan
-aquí, hier
+aquÃ­, hier
 registrar, aantekenen
 el equipaje, de bagage
 si, ja
@@ -46,10 +47,10 @@ un mozo, een kruier
 para que, opdat
 nos lleve, hij draagt voor ons
 llevar, dragen / wegbrengen
-¿está usted libre?, bent u vrij?
+Â¿estÃ¡ usted libre?, bent u vrij?
 usted, u
 libre, vrij
-señor, meneer
+seÃ±or, meneer
 subir, stijgen / instappen
 el coche, de auto / de wagon
 coger, pakken / halen
@@ -59,16 +60,16 @@ yo, ik
 alargar, uitstrekken / aanreiken / verlengen
 por una ventanilla, door een raampje
 tener / haber, hebben
-sólo, slechts
+sÃ³lo, slechts
 la maleta, de koffer
 dos, twee
 la maleta de mano, de handkoffer
-el baúl grande, de grote koffer
+el baÃºl grande, de grote koffer
 muy bien, zeer goed
-hágame, doet u mij
+hÃ¡game, doet u mij
 hacer, doen / maken
 el favor, de gunst
-el talón, het vrachtbriefje
+el talÃ³n, het vrachtbriefje
 vengan conmigo, gaat u met mij mee
 vengan, gaat u mee
 venir, komen
@@ -76,9 +77,9 @@ conmigo, met mij
 un momentito, een ogenblikje
 voy a buscar, ik ga halen
 buscar, zoeken / halen
-cuánto tiempo, hoe lang
+cuÃ¡nto tiempo, hoe lang
 el tiempo, de tijd
-más de, meer dan
+mÃ¡s de, meer dan
 media hora, half uur
 la hora, het uur
 sale, hij vertrekt
@@ -88,30 +89,30 @@ las cinco, vijf uur
 temo, ik vrees
 temer, vrezen
 perder, verliezen
-el rápido, de sneltrein
+el rÃ¡pido, de sneltrein
 lo principal, het voornaamste
 descuide usted, weest u maar niet bezorgd
 descuidar, niet bezorgd zijn
-saldrá, hij zal vertrekken
+saldrÃ¡, hij zal vertrekken
 hasta que, totdat
 todos, alle
 los viajeros, de reizigers
-estén despachados, ze zijn geholpen
+estÃ©n despachados, ze zijn geholpen
 despachar, afhandelen / helpen
-tendrá usted la bondad, wilt u zo goed zijn
-tendrá, u zult hebben
+tendrÃ¡ usted la bondad, wilt u zo goed zijn
+tendrÃ¡, u zult hebben
 la bondad, de goedheid
 revisar, nazien
 el empleado, de bediende / de ambtenaar
 tiene usted que, u moet
 llegue, hij bereikt
 el turno, de beurt
-ahí, daar
+ahÃ­, daar
 viene, hij komt
 el vista, de douane
-cúal, welk
+cÃºal, welk
 este / estas, deze
-¿tiene usted algo de pago?, heeft u iets aan te geven?
+Â¿tiene usted algo de pago?, heeft u iets aan te geven?
 algo, iets
 tiene usted, hebt u
 el pago, de betaling

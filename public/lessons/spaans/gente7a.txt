@@ -1,13 +1,14 @@
+#encoding=UTF-8
 # uit:
 # gente 7
 #question2=Wat is "" in het Spaans?
 #question1=Wat is "" in het Nederlands?
-#·ÈÛÌ˙Ò
+#√°√©√≥√≠√∫√±
 
 #1
 los productos, de producten
 exportar, exporteren
-los ingredientes, de ingrediÎnten
+los ingredientes, de ingredi√´nten
 la cocina, de keuken
 los garbanzos, de kikkererwten
 los signos, de tekens
@@ -16,9 +17,9 @@ las gambas, de garnalen
 las uvas, de druiven
 los limones, de citroenen
 las almendras, de amandelen
-los esp·rragos, de asperges
+los esp√°rragos, de asperges
 las fresas, de aardbeien
-los pl·tanos, de bananen
+los pl√°tanos, de bananen
 las avellanas, de hazelnoten
 el aceite de oliva, de olijfolie
 las aceitunas, de olijven
@@ -28,7 +29,7 @@ el pan, het brood
 coincidir, overeenstemmen
 
 #2
-hablar por telÈfono, bellen
+hablar por tel√©fono, bellen
 el cliente, de klant
 el pedido, de bestelling
 la docena, het dozijn
@@ -52,7 +53,7 @@ las aclaraciones, de uitleg
 #4
 la revista, het tijdschrift
 la gente de hoy, de mensen van nu
-los tÛpicos, de onderwerpen
+los t√≥picos, de onderwerpen
 el cordero, het lamsvlees
 el litro, de liter
 adelgazar, afvallen
@@ -61,12 +62,12 @@ la receta, het recept
 solucionar, oplossen
 la moda, de mode
 el organismo, het organisme
-a travÈs de, via
+a trav√©s de, via
 o sea, dat betekent
-el lÌquido, de vloeistof
+el l√≠quido, de vloeistof
 aportar, bijdragen
 el calcio, het calcium
-los l·cteos, de melkproducten
+los l√°cteos, de melkproducten
 el yogur, de yoghurt
 adulto, volwassen
 sobre todo, vooral

@@ -1,3 +1,4 @@
+#encoding=UTF-8
 postre, desert
 pay, pie
 helado, ice cream

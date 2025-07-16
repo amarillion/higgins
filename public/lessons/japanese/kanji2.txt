@@ -1,3 +1,4 @@
+#encoding=UTF-8
 
 ####
-⼼, heart
+â¼¼, heart

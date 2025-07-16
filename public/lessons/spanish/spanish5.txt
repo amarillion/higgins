@@ -1,3 +1,4 @@
+#encoding=UTF-8
 yo soy, I am
 nosotros somos, we are
 el es, he is
@@ -78,7 +79,7 @@ el ha ganado, he has won
 el gano, he won
 el se sienta, he sits
 el se acuesta, he lays
-el se acostó, he laid
+el se acostÃ³, he laid
 yo me detengo, I stop
 el se detiene, he stops
 nosotros nos detenemos, we stop

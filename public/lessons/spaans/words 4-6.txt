@@ -1,3 +1,4 @@
+#encoding=UTF-8
 vrij, libre
 ja hoor, seguro
 ga gerust zitten, sientate por favor

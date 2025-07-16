@@ -1,3 +1,4 @@
+#encoding=UTF-8
 #paragraaf 129
 
 hasta, tot
@@ -8,7 +9,7 @@ el vino tinto, de rode wijn
 apagar, blussen / lessen
 la sed, de dorst
 por fin, eindelijk
-la música, de muziek
+la mÃºsica, de muziek
 la banda, de band
 municipal, gemeentelijk
 ganar, verdienen
@@ -17,35 +18,35 @@ ganar dinero, geld verdienen
 tomar clases de, les nemen bij
 el pueblo, het dorp / het volk
 la belleza, de schoonheid
-la región, de streek
+la regiÃ³n, de streek
 la tiendo, de winkel / de tent
 el disco, de schijf
-¿cuánto?, hoeveel?
+Â¿cuÃ¡nto?, hoeveel?
 el mismo, hetzelfde
-mañana, morgen
+maÃ±ana, morgen
 mis padres, mijn ouders
 queremos, wij willen
 la meseta, de hoogvlakte
 la puerta, de deur
-el traje de baño, het badpak
-rápido, snel
+el traje de baÃ±o, het badpak
+rÃ¡pido, snel
 tan, zozeer
 siempre, altijd
 la pena, de pijn / de moeite
 vale, het is waard
 valer, waard zijn
 que vale la pena, het is de moeite waard
-¿por qué?, waarom?
-el avión, het vliegtuig
+Â¿por quÃ©?, waarom?
+el aviÃ³n, het vliegtuig
 durante, gedurende
 de modo que, zodat
 demasiado, teveel
 demasiado caro, te duur
 la leche, de melk
 el piso, de flat
-fácil, makkelijk
+fÃ¡cil, makkelijk
 primero, eerst
-a qué hora, hoe laat
+a quÃ© hora, hoe laat
 a las ocho, om acht uur
 muchas veces, dikwijls
 la manera, de manier

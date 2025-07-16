@@ -1,3 +1,4 @@
+#encoding=UTF-8
 la mela, de appel
 la birra, het bier
 la sedia, de stoel

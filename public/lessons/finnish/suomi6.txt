@@ -1,24 +1,25 @@
+#encoding=UTF-8
 #Suomi - Lesson 6 
 #random dictionary words
 #question1=What is "" in Finnish?
 #question2=What is "" in English?
-kehitell‰, elaborate
-kehitt‰‰, to develop
+kehitell√§, elaborate
+kehitt√§√§, to develop
 keho, body
 kehotus, request
 keilailu, bowling
 keinotekoinen, artificial
-keit‰‰, to cook
+keit√§√§, to cook
 keko, stack
-keksintˆ, discovery
-keksij‰, inventor
+keksint√∂, discovery
+keksij√§, inventor
 kelvoton, worthless
 kepponen, practical joke
 kerho, club
-en kerki‰, I don't have time
+en kerki√§, I don't have time
 keruu, collection
 keskeytys, break / pause
-kesytˆn, untamed
+kesyt√∂n, untamed
 ketjukirje, chain letter
 ketteryys, agility
 keuhko, lung
@@ -26,7 +27,7 @@ keuhkokuume, pneumonia
 kiehtoa, to fascinate
 kiehumapiste, boiling point
 kiekua, crow
-kielenk‰‰nt‰j‰, translator
+kielenk√§√§nt√§j√§, translator
 kieltolaki, prohibition
 kierteinen, twisted
 kierukka, spiral
@@ -39,20 +40,20 @@ keskiaikainen, medieval
 kilpailu, contest
 kiltti, friendly
 kimppu, bunch
-kipe‰, sore
+kipe√§, sore
 kirjallisuus, literature
 kutsu, invitation
 kysymys, question
-k‰mpp‰, hut / flat
+k√§mpp√§, hut / flat
 laatikko, box
 laji, type / kind
 lakka, arctic cloudberry
-lentokentt‰, airport
+lentokentt√§, airport
 lempi, favourite
 luku, chapter
 lumi, snow
 luultavasti, probably
-l‰hes, nearly
+l√§hes, nearly
 maailma, world
 maatalous, agriculture
 maisema, landscape
@@ -81,7 +82,7 @@ prosentti, percent
 pukki, ram
 pulla, bun
 puutarha, garden
-p‰‰sy, entry
+p√§√§sy, entry
 rautatie, railroad
 rinta, breast / chest
 runo, poem
@@ -106,7 +107,7 @@ tavara, stuff
 tila, room / space
 toimi, function
 tunnelma, feeling
-t‰rke‰, important
+t√§rke√§, important
 upea, splendid
 urheilu, sport
 vaali, election
@@ -117,33 +118,33 @@ vakavasti, seriously
 valitettavasti, unfortunately
 vanhemmat, parents
 vauva, baby
-van‰j‰, russia
+van√§j√§, russia
 va"hitellen, little by little
-v‰li, interval
+v√§li, interval
 yhdysvallat, united states
-yhteens‰, all together
-yleens‰, in general
-ymp‰ri, around
-ysk‰, cough
-ˆljy, oil
+yhteens√§, all together
+yleens√§, in general
+ymp√§ri, around
+ysk√§, cough
+√∂ljy, oil
 katto, roof
-s‰rky, pain
+s√§rky, pain
 virta, stream / flow
-ker‰t‰, to collect
+ker√§t√§, to collect
 onnistua, to succeed
 kunta, municipality
 nokoset, nap
 huokaus, sigh
 huolestunut, worried
 ajatus, idea
-herkk‰, sensitive
+herkk√§, sensitive
 kiinnostaa, to interest
 tahtoa, to want
 kerkku, delicacy
 rappio, decline
-hyˆk‰t‰, to attack
-rynn‰t‰, to dash
-n‰ytelm‰, play
+hy√∂k√§t√§, to attack
+rynn√§t√§, to dash
+n√§ytelm√§, play
 romaani, novel
 perustaja, founder
 taide, art
@@ -152,24 +153,24 @@ kansa, nation
 1800-luvulla, 19th century
 teos, artwork
 kisa, contest
-elo / el‰m‰, life
+elo / el√§m√§, life
 nostella, to lift weights
-yll‰tus, surprise
+yll√§tus, surprise
 suosio, popularity
 lapsuus, childhood
-kˆyhyys, poverty
+k√∂yhyys, poverty
 sarja, series
 uni, dream / sleep
 kirkas, bright
 tyyny, pillow
 makuusali, dormitory
-v‰lke, glitter
-s‰de, beam / ray
-hirviˆ, monster
+v√§lke, glitter
+s√§de, beam / ray
+hirvi√∂, monster
 rako, gap
 loistaa, to shine
 suoraan, directly
-kuuns‰de, moonlight
+kuuns√§de, moonlight
 askel, step
 kulkea, to go / to travel / to pass
 kokenut, experienced

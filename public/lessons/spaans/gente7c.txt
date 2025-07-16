@@ -1,8 +1,9 @@
+#encoding=UTF-8
 # uit:
 # gente 7
 #question2=Wat is "" in het Spaans?
 #question1=Wat is "" in het Nederlands?
-#áéóíúñ
+#Ã¡Ã©Ã³Ã­ÃºÃ±
 
 #11
 la compra, de boodschappen
@@ -12,7 +13,7 @@ dictar, dicteren
 #12
 el libro de cocina, het kookboek
 pegar, plakken
-el tablón, het bord
+el tablÃ³n, het bord
 sentar mal, slecht vallen
 la oficina, het kantoor
 baratito, zeer goedkoop
@@ -23,9 +24,9 @@ rico, lekker / rijk
 la ensalada, de salade
 ha ido, hij is gegaan
 el bocadillo, het broodje
-el atún, de tonijn
+el atÃºn, de tonijn
 la manzanilla, de kamillethee
-quizás, misschien
+quizÃ¡s, misschien
 
 #13
 la costumbre, de gewoonte
@@ -37,7 +38,7 @@ la oda, de ode
 claro, helder
 el planeta, de planeet
 relucir, stralen
-la constelación, het sterrenbeeld
+la constelaciÃ³n, het sterrenbeeld
 redondo, rond
 la rosa, de roos
 la mesa, de tafel
@@ -47,7 +48,7 @@ hundirse, binnendringen
 el cuchillo, het mes
 la pulpa, het vruchtvlees
 viviente, levend
-las vísceras, de ingewanden
+las vÃ­sceras, de ingewanden
 fresco, fris
 profundo, diep
 inagotable, onuitputtelijk

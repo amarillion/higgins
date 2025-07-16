@@ -1,4 +1,5 @@
-#áéóíúñ
+#encoding=UTF-8
+#Ã¡Ã©Ã³Ã­ÃºÃ±
 # uit:
 # gente 9: gente de ciudad
 #question2=Wat is "" in het Spaans?
@@ -16,10 +17,10 @@ aburrirse, zich vervelen
 publicar, publiceren
 la prensa local, de plaatselijke pers
 el colegio, de school / het college
-las líneas de autobús, de buslijnen
-el índice, de index
+las lÃ­neas de autobÃºs, de buslijnen
+el Ã­ndice, de index
 el paro, de werkloosheid
-la población activa, de beroepsbevolking
+la poblaciÃ³n activa, de beroepsbevolking
 el barrio, de wijk
 el casco antiguo, de oude stadskern
 con frequencia, vaak
@@ -31,7 +32,7 @@ la zona peatonal, de voetgangerszone
 ser criticado, bekritiseerd worden
 los comerciantes, de winkeliers
 la zona, de zone
-últimamente, onlangs
+Ãºltimamente, onlangs
 estar en mal estado, in slechte staat zijn
 el estadio, het stadion
 la piscina descubierta, het openluchtzwembad
@@ -44,17 +45,17 @@ desocupado, onbewoond
 el gasto, de uitgave
 el alquiler, de huur
 los ingresos, de inkomsten
-los toxicómanos, de verslaafden
+los toxicÃ³manos, de verslaafden
 estimar, schatten
-el centro de atención, het verzorgingscentrum
+el centro de atenciÃ³n, het verzorgingscentrum
 la residencia de ancianos, het bejaardentehuis
 tener plaza, plaats hebben
-el polígono industrial, het industriegebied
-el plástico, het plastic
+el polÃ­gono industrial, het industriegebied
+el plÃ¡stico, het plastic
 contaminar, vervuilen
 
 #9
-las finanzas, de financiën
+las finanzas, de financiÃ«n
 el presupuesto general, de begroting
 el plano, de plattegrond
 el informe, het verslag
@@ -65,4 +66,4 @@ invertir, investeren
 la infraestructura, de infrastructuur
 el portavoz, de woordvoerder
 defender, verdedigen
-la sesión, de sessie
+la sesiÃ³n, de sessie

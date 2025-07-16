@@ -1,3 +1,4 @@
+#encoding=UTF-8
 rosa, pink
 blue, azul
 rojo, red

@@ -1,3 +1,4 @@
+#encoding=UTF-8
 #question1=Wat is "" in het Spaans?
 #question2=Wat is "" in het Nederlands?
 
@@ -7,15 +8,15 @@ son, zij zijn
 
 # estar
 estamos, we zijn
-est·, hij bevindt zich
-est·n, zij bevinden zich
+est√°, hij bevindt zich
+est√°n, zij bevinden zich
 
 # tener
 tenido, gehad
 
 # haber
-habÌa, ik had
-habi·s, jij had
+hab√≠a, ik had
+habi√°s, jij had
 
 # poder
 puedo, ik kan
@@ -28,16 +29,16 @@ hacemos, wij maken
 hicimos, wij hebben gemaakt
 
 # saber
-no sÈ, ik weet niet
+no s√©, ik weet niet
 sepas, jij weet
-sabÌa, hij wist
+sab√≠a, hij wist
 
 # decir
 
 diciendo, zeggende
 dice, hij zegt
 decimos, wij zeggen
-dir·, hij zal zeggen
+dir√°, hij zal zeggen
 
 # venir, gaan
 

@@ -1,3 +1,4 @@
+#encoding=UTF-8
 ik ben, I am
 wij zijn, we are
 hij is, he is

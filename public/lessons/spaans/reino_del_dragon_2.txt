@@ -1,5 +1,6 @@
+#encoding=UTF-8
 # This word list corresponds to
-# El Reino del Dragón de Oro
+# El Reino del DragÃ³n de Oro
 # by Isabel Allende
 # page numbers refer to 4th edition (2004), Montena, Barcelona
 #
@@ -7,13 +8,13 @@
 # redistribute under Creative commons CC-BY-SA
 #
 # part 2
-# áéóíúñ
+# Ã¡Ã©Ã³Ã­ÃºÃ±
 
 #p17
 ahorrar, besparen
 el esclavo, de slaaf
 abrigado, warm aangekleed
-raído, versleten
+raÃ­do, versleten
 el cacharro, de pot
 la cuncha de baloncesto, het basketbalveld
 hallar, ontdekken
@@ -30,7 +31,7 @@ la fiera, het roofdier
 el marfil, het ivoor
 
 #p19
-fétido, stinkend
+fÃ©tido, stinkend
 las fauces, het keelgat
 estremecer, doen schudden
 el pinchazo, de prik
@@ -61,13 +62,13 @@ el azufre, het zwavel
 el soplo de aire, de windvlaag
 asomar, te voorschijn komen
 la meseta, de hoogvlakte
-áspero, ruw
+Ã¡spero, ruw
 el hongo, de paddestoel
 el arroyo, de beek
 el charco, de plas
 la bruma, de mist
 borrar, doorstrepen
-la lejanía, de verte
+la lejanÃ­a, de verte
 tibio, lauw
 
 #p22
@@ -78,9 +79,9 @@ quebrado, gebroken
 #p23
 la coraza, het schild
 desviar, afleiden
-dañar, beschadigen
+daÃ±ar, beschadigen
 la flecha, de pijl
-el tropezón, de struikeling
+el tropezÃ³n, de struikeling
 la pedrada, de steenworp
 la fumarola, de rookzuil
 grueso, dik
@@ -89,14 +90,14 @@ carnoso, vlezig
 entrecerrado, half open
 el disparo, het schot
 aterrador, angstaanjagend
-el gruñido, de grom
+el gruÃ±ido, de grom
 erguir, oprichten
 
 #p24
 
 escaso, beperkt
 afilado, scherp
-enmarañado, warrig
+enmaraÃ±ado, warrig
 inmundo, vies
 chato, stomp
 peludo, harig

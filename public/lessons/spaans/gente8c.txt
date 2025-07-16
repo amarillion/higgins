@@ -1,24 +1,25 @@
-#áéóíúñ
+#encoding=UTF-8
+#Ã¡Ã©Ã³Ã­ÃºÃ±
 # uit:
 # gente 8: gente que viaja
 #question2=Wat is "" in het Spaans?
 #question1=Wat is "" in het Nederlands?
 
 # To do:
-# check if plural: útil, nuttig
+# check if plural: Ãºtil, nuttig
 #
 
 #8
 convertirse, worden
 los vuelos, de vluchten
-las manías, de manies
+las manÃ­as, de manies
 la central, het hoofdkantoor
 la llegada, de aankomst
 los vuelos directos, de non-stop vluchten
-los códigos, de codes
-las líneas aéreas, de luchtvaartmaatschappijen
-próximo, volgend
-céntrico, centraal gelegen
+los cÃ³digos, de codes
+las lÃ­neas aÃ©reas, de luchtvaartmaatschappijen
+prÃ³ximo, volgend
+cÃ©ntrico, centraal gelegen
 simular, simuleren
 el empleado, de werknemer
 la agencia de viajes, het reisbureau
@@ -29,14 +30,14 @@ el paso, de stap
 el aire acondicionado, de airconditioning
 bien comunicado, gunstig gelegen
 la caja fuerte, de kluis
-la antena parabólica, de schotelantenne
-estratégico, strategisch
-con relación a, met betrekking tot
-la estación, het station
+la antena parabÃ³lica, de schotelantenne
+estratÃ©gico, strategisch
+con relaciÃ³n a, met betrekking tot
+la estaciÃ³n, het station
 el aparcamiento, de parkeerplaats
 
 #10
-útil, nuttig
+Ãºtil, nuttig
 raro, raar
 actuar, zich gedragen
 comunicarse, communiceren
@@ -47,8 +48,8 @@ lo mismo, hetzelfde
 curioso, merkwaardig
 picar, knabbelen
 ruidoso, luidruchtig
-la contaminación, de verontreiniging
-el mediodía, de middag
+la contaminaciÃ³n, de verontreiniging
+el mediodÃ­a, de middag
 los malentendidos, de misverstanden
 reunirse, vergaderen
 decidir, besluiten
@@ -58,9 +59,9 @@ responsable, verantwoordelijk
 serio, serieus
 soso, saai
 afectivo, hartelijk
-simpático, aardig
+simpÃ¡tico, aardig
 informal, informeel
-tener razón, gelijk hebben
+tener razÃ³n, gelijk hebben
 social, sociaal
 personal, persoonlijk
 distinto, verschillend
@@ -71,4 +72,4 @@ significar, betekenen
 relacionarse, contact leggen met
 
 #11
-la comunicación, de communicatie
+la comunicaciÃ³n, de communicatie

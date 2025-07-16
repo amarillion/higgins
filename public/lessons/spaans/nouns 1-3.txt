@@ -1,3 +1,4 @@
+#encoding=UTF-8
 vrouw, esposa
 de moeder(s), la madre
 het feestje(s), la fiesta

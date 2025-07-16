@@ -1,5 +1,6 @@
+#encoding=UTF-8
 # This word list corresponds to
-# El Reino del Drag髇 de Oro
+# El Reino del Drag贸n de Oro
 # by Isabel Allende
 # page numbers refer to 4th edition (2004), Montena, Barcelona
 #
@@ -7,7 +8,7 @@
 # redistribute under Creative commons CC-BY-SA
 #
 # part 4
-# 衢箜
+# 谩茅贸铆煤帽
 
 # p48
 
@@ -22,7 +23,7 @@ el manotazo, de handslag
 contundente, definitief
 
 #p49
-la pit髇, de python
+la pit贸n, de python
 el arrebato, de passie
 
 #p50
@@ -50,7 +51,7 @@ averiguar, uitzoeken
 anodino, pijnstillend / onelegant
 el hombro, de schouder
 la calvicie, de kaalheid
-desali駉, slordig
+desali帽o, slordig
 escaso, weinig
 escarbar, graven
 escarbar la nariz, neuspeuteren
@@ -58,9 +59,9 @@ tragar, afkeer hebben van
 
 #p55
 la madurez, de volwassenheid
-la b髒eda, de kluis
+la b贸veda, de kluis
 la codicia, de hebberigheid
-el pu駉, de vuist
+el pu帽o, de vuist
 la espada, het zwaard
 
 #p61
@@ -81,12 +82,12 @@ ablandar, verzachten
 el seso, de hersens
 toser, kuchen
 la mejilla, de wang
-el empuj髇, de duw
+el empuj贸n, de duw
 contener, vasthouden
 avergonzado, beschaamd
 
 #p70
-el f髎foro, de lucifer
+el f贸sforo, de lucifer
 rogar, smeken
 
 #p71

@@ -1,5 +1,6 @@
+#encoding=UTF-8
 # This word list corresponds to
-# El Reino del Dragón de Oro
+# El Reino del DragÃ³n de Oro
 # by Isabel Allende
 # page numbers refer to 4th edition (2004), Montena, Barcelona
 #
@@ -7,26 +8,26 @@
 # redistribute under Creative commons CC-BY-SA
 #
 # part 2
-# áéóíúñ
+# Ã¡Ã©Ã³Ã­ÃºÃ±
 
 # p9
 la cumbre / la cima, de top
 el largo, de lengte
 el alumno, de student
-la travesía, de overtocht
+la travesÃ­a, de overtocht
 el pergamino, het perkament
 imperar, regeren
-fatídico, onheilspellend
+fatÃ­dico, onheilspellend
 despejado, onbewolkt
 la lana, de wol
 el cuero, het leer
 
 # p10
-el resbalón, het uitglijden
+el resbalÃ³n, het uitglijden
 el hachazo, de bijlslag
 destacar, uitsteken
 la bocanada, de mondvol
-gélido, zeer koud
+gÃ©lido, zeer koud
 la voluntad, de wilskracht
 el entrenamiento, de training
 el aprendizaje, het leerproces
@@ -36,14 +37,14 @@ el bulto, de bult / de bagage
 la manta, de deken
 la manteca, de reuzel
 la cuerda, het touw
-el bastón, de wandelstok
-la pértiga, de polsstok
+el bastÃ³n, de wandelstok
+la pÃ©rtiga, de polsstok
 emplear, in dienst hebben
 apoyar, ondersteunen
 pisar, stappen
 el hueco, het gat
 la grieta, de scheur
-el desvío, de omweg
+el desvÃ­o, de omweg
 atreverse, wagen
 brincar, springen
 ancho, breed
@@ -51,7 +52,7 @@ el palo, de stok
 alcanzar, bereiken
 el coraje, de moed / de woede
 vacilar, twijfelen
-el despeñadero, de afgrond
+el despeÃ±adero, de afgrond
 la plegaria, de smeekbede
 
 #p12

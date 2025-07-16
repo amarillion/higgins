@@ -1,8 +1,9 @@
+#encoding=UTF-8
 # uit:
 # gente 7
 #question2=Wat is "" in het Spaans?
 #question1=Wat is "" in het Nederlands?
-#áéóíúñ
+#Ã¡Ã©Ã³Ã­ÃºÃ±
 
 #5
 el cocinero, de kok
@@ -21,9 +22,9 @@ la carne de cerdo, het varkensvlees
 ir de acampada, kamperen
 el monte, de berg
 olvidar, vergeten
-allí, daar
+allÃ­, daar
 corregir, corrigeren
-añadir, toevoegen
+aÃ±adir, toevoegen
 quitar, verwijderen
 la mantequilla, de boter
 el aceite, de olie
@@ -33,11 +34,11 @@ el tomate, de tomaat
 
 #9
 caliente, warm
-frío, koud
+frÃ­o, koud
 el entrante, het voorgerecht
 a media tarde, in de loop van de middag
 completo, volledig
-la fécula, het zetmeel
+la fÃ©cula, het zetmeel
 la grasa vegetal, het plantaardige vet
 en resumen, kort samengevat
 la dificultad, de moeilijkheid
@@ -46,7 +47,7 @@ cortado, gesneden
 las rodajas, de schijfjes
 la taza, het kopje
 calentar, verhitten
-la sartén, de koekepan
+la sartÃ©n, de koekepan
 salar, zout toevoegen
 a fuego lento, op laag vuur
 blandito, zacht
@@ -63,6 +64,6 @@ por cada lado, aan iedere kant
 dar la vuelta, omdraaien
 con la ayuda de, met behulp van
 los trucos, de trucs
-freír, bakken
+freÃ­r, bakken
 sacar, weghalen
 

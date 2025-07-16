@@ -1,3 +1,4 @@
+#encoding=UTF-8
 #Spaans
 #Uit "prisma - spaans leer je zo"
 #hoofdstuk 5, paragraaf 83, 86, 90, 93
@@ -11,18 +12,18 @@ la gente, de mensen
 mucho, veel
 la sierra, de bergketen
 la pradera, de weide
-tú, jij
+tÃº, jij
 ver, zien
 visto, gezien
 casi, bijna
 dos millones de habitantes, twee miljoen inwoners
-millón, miljoen
+millÃ³n, miljoen
 el habitante, de inwoner
 nosotros, wij
 vosotros, jullie
 aprender, leren
 aprendido, geleerd
-la lección, de les
+la lecciÃ³n, de les
 tener clase, les hebben
 dar clase, les geven
 a las dos, om twee uur
@@ -30,13 +31,13 @@ en cambio, daarentegen
 valioso, waardevol
 ancho, breed
 contento, tevreden
-frío, koud
+frÃ­o, koud
 caliente, warm
 la novela, de roman
-el gabán, de jas
+el gabÃ¡n, de jas
 sucio, vuil
 limpio, schoon
-cortés, beleefd
+cortÃ©s, beleefd
 amable, vriendelijk
 la flor, de bloem
 bello, mooi
@@ -47,9 +48,9 @@ dar, geven
 dan, zij geven
 varios, verscheidene
 el profesor, de leraar
-la estación, het station
+la estaciÃ³n, het station
 los ferrocarriles, de spoorwegen
-el lápiz, het potlood
+el lÃ¡piz, het potlood
 lunes, maandag
 el trabajador, de werker
 el rey, de koning
@@ -57,21 +58,21 @@ la ley, de wet
 el joven, de jongeman
 el rascacielos, de wolkenkrabber
 los alrededores, de omstreken
-el andén, het perron
+el andÃ©n, het perron
 la industria, de nijverheid
-el río, de rivier
+el rÃ­o, de rivier
 el ruido, het lawaai
 la benevolencia, de goedheid
-la compañía, het gezelschap / de maatschappij
+la compaÃ±Ã­a, het gezelschap / de maatschappij
 dios, god
-la gramática, de grammatica
+la gramÃ¡tica, de grammatica
 el mes, de maand
 el hijo, de zoon
 el papel, het papier
 viernes, vrijdag
 la cruz, het kruis
 el bar, de bar
-el café, de koffie
+el cafÃ©, de koffie
 
 #paragraaf 90
 la aldea, het gehucht
@@ -79,13 +80,13 @@ el ala, de vleugel
 inmediatamente, onmiddelijk
 estaban pintadas, ze waren geschilderd
 pintar, schilderen
-muchísimo, zeer veel
+muchÃ­simo, zeer veel
 las gracias, de dank
 durante, gedurende
-después de, nadat
+despuÃ©s de, nadat
 recorrer, langsrijden
 el color, de kleur
-detrás, achter
+detrÃ¡s, achter
 maravilloso, schitterend
 el muchacho, de jongen
 bailar, dansen
@@ -95,7 +96,7 @@ el hambre feroz, de vreselijke honger
 feroz, wild
 la corrida, het stierengevecht
 el toro, de stier
-el espectáculo, het spektakel
+el espectÃ¡culo, het spektakel
 cruel, wreed
 la chica, het meisje
 guapo, knap
@@ -106,7 +107,7 @@ la carretera, de snelweg
 excelente, uitstekend
 desde, vanaf
 el panorama, het uitzicht
-magnífico, prachtig
+magnÃ­fico, prachtig
 la comida, de maaltijd
 preparar, voorbereiden
 abundantemente, overvloedig
@@ -114,14 +115,14 @@ el aceite de oliva, de olijfolie
 la mezquita, de moskee
 la foto, de foto
 interesante, interessant
-¿no le parece?, vindt u niet?
-pequeño
+Â¿no le parece?, vindt u niet?
+pequeÃ±o
 el balneario, de badplaats
 concurrido, druk bezocht
-todavía no, nog niet
+todavÃ­a no, nog niet
 tan, zo
 informarse a, informeren bij
-¿dónde está?, waar is dat?
+Â¿dÃ³nde estÃ¡?, waar is dat?
 las rocas, de rotsen
 los pinos, de pijnbomen
 aquel / aquellos, die
@@ -130,39 +131,39 @@ el bloque de viviendas, het flatgebouw
 el encuentro, de ontmoeting
 entusiasmar, enthousiast maken
 impresionante, indrukwekkend
-el país, het land
-la población, de bevolking
+el paÃ­s, het land
+la poblaciÃ³n, de bevolking
 carecer de, ontberen
 pero, maar
 se tiene, u hebt
-espléndido, prachtig
+esplÃ©ndido, prachtig
 verde, groen
 jueves, donderdag
 agosto, augustus
-la edición, de editie
+la ediciÃ³n, de editie
 multiplicarse, zich uitbreiden
 se han multiplicado, ze hebben zich uitgebreid
-cabía presumir, te verwachten was
+cabÃ­a presumir, te verwachten was
 volver, omdraaien
 completo, volledig
 este mes, deze maand
 las cifras de visitantes, het aantal bezoekers
 la cifra, het cijfer / het aantal
 el visitante, de bezoeker
-serán, ze zullen zijn
+serÃ¡n, ze zullen zijn
 sin duda, ongetwijfeld
 sin, zonder
 la duda, de twijfel
 sinsiblemente, gevoelig
 superior a, hoger dan
-las del año pasado, die van het vorige jaar
+las del aÃ±o pasado, die van het vorige jaar
 mismo, zelfde
-la época, het tijdvak
+la Ã©poca, het tijdvak
 encontrarse, zich ergens bevinden
 desahogar, verlichten
 convenir, overeenkomen / nodig zijn
 tener en cuenta, rekening houden met
-el número, het aantal / het nummer
+el nÃºmero, het aantal / het nummer
 mayor, groter
 incontable, ontelbaar
 enormemente, geweldig

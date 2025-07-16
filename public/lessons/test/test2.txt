@@ -1,2 +1,3 @@
-España, Spanje
-el rápido, de sneltrein
+#encoding=UTF-8
+EspaÃ±a, Spanje
+el rÃ¡pido, de sneltrein

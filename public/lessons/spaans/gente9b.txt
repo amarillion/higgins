@@ -1,4 +1,5 @@
-#áéóíúñ
+#encoding=UTF-8
+#Ã¡Ã©Ã³Ã­ÃºÃ±
 # uit:
 # gente 9: gente de ciudad
 #question2=Wat is "" in het Spaans?
@@ -14,7 +15,7 @@ rodear, omringen
 crecer, groeien
 la arquitectura, de architectuur
 adaptarse, zich aanpassen
-el relieve, het reliëf
+el relieve, het reliÃ«f
 empinado, steil
 los ascensores, de liften
 colorido, bont
@@ -27,7 +28,7 @@ por una parte .. por otra .., enerzijds .. anderzijds ..
 los apartamentos, de appartementen
 los casinos, de casino's
 los centros comerciales, de winkelcentra
-por último, tenslotte
+por Ãºltimo, tenslotte
 el complejo de islotes, de eilandengroep
 las playas coralinas, de koraalriffen
 formar parte de, deel uitmaken van
@@ -41,7 +42,7 @@ los conceptos, de concepten
 establecer, vaststellen
 
 #4
-hacerse un lío, een bende maken
+hacerse un lÃ­o, een bende maken
 las escuelas, de scholen
 el doble, het dubbele
 tanto, zoveel

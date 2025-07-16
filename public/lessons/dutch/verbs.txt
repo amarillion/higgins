@@ -1,3 +1,4 @@
+#encoding=UTF-8
 # comprehensive list of inifinitives
 #question1=What is "" in Dutch?
 #question2=What is "" in English?

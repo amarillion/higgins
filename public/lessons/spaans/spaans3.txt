@@ -1,3 +1,4 @@
+#encoding=UTF-8
 #Spaans
 #Uit "prisma - spaans leer je zo"
 # paragraaf 66, 71, 79 
@@ -7,8 +8,8 @@
 #paragraaf 66
 hay, er is / er zijn
 estar, zich bevinden
-está, hij bevindt zich
-están, zij bevinden zich
+estÃ¡, hij bevindt zich
+estÃ¡n, zij bevinden zich
 la ventaja, het voordeel
 la costa, de kust
 el turista, de tourist
@@ -30,7 +31,7 @@ pasar, doorbrengen
 lo pasamos, wij brachten door
 todo / toda, ieder
 todos / todas, alle
-el baño, het bad
+el baÃ±o, het bad
 el sitio, het plekje
 ver, zien
 hemos visto, we hebben gezien
@@ -53,7 +54,7 @@ el paquete, het pakje
 voy a pesarlo, ik zal het wegen
 pesar, wegen
 doble, dubbel
-más de, meer dan
+mÃ¡s de, meer dan
 el gramo, de gram
 veinte, twintig
 puedo, ik kan
@@ -65,35 +66,35 @@ dirigirse a, zich wenden tot
 la taquilla, het loket
 de enfrente, aan de overkant
 poner, zetten
-le dará, hij zal u geven
+le darÃ¡, hij zal u geven
 dar, geven
 el recibo, het ontvangstbewijs
 desear, wensen
-desearía, ik zou graag willen
-además, bovendien
+desearÃ­a, ik zou graag willen
+ademÃ¡s, bovendien
 diez, tien
 el sello, de postzegel
 escribir, schrijven
-aquí los tiene usted, hier hebt u ze
+aquÃ­ los tiene usted, hier hebt u ze
 treinta, dertig
-aquí van, hier is het
-me haría usted el favor de, zoudt u zo vriendelijk willen zijn om
-todavía, nog
+aquÃ­ van, hier is het
+me harÃ­a usted el favor de, zoudt u zo vriendelijk willen zijn om
+todavÃ­a, nog
 decir, zeggen
 llegar, aankomen
-para mí, voor mij
+para mÃ­, voor mij
 la carta de identidad, het identiteitsbewijs
 el pasaporte, het paspoort
-después de, na
+despuÃ©s de, na
 un rato, een ogenblikje
 recibir, ontvangen
 he recibido, ik heb ontvangen
 firmar, ondertekenen
-¡tome!, alsjeblieft!
+Â¡tome!, alsjeblieft!
 gracias, dank je
 
 #paragraaf 79
-hágame el favor, wees zo vriendelijk
+hÃ¡game el favor, wees zo vriendelijk
 pesar, wegen
 la tarde, de middag
 nadar, zwemmen
@@ -109,16 +110,16 @@ pescar, vissen
 pescado, gevist
 la langosta, de kreeft
 tenido, gehad
-espléndido, schitterend
+esplÃ©ndido, schitterend
 en coche, per auto
 comprender, begrijpen
 he comprendido, ik heb begrepen
 la llave, de sleutel
 hablar, spreken
 hablado, gesproken
-tener razón, gelijk hebben
+tener razÃ³n, gelijk hebben
 tener suerte, geluk hebben
-el razón, de rede / het verstand
+el razÃ³n, de rede / het verstand
 la suerte, het geluk
 olvidar, vergeten
 he olvidado, ik heb vergeten

@@ -1,6 +1,7 @@
+#encoding=UTF-8
 # (C) 2009 Martijn van Iersel
 # Redistribution under Creative Commons CC-BY-SA
-# áéóíúñ¿¡
+# Ã¡Ã©Ã³Ã­ÃºÃ±Â¿Â¡
 
 zitten, sentar
 roken, fumar
@@ -12,7 +13,7 @@ kennen, conocer
 moeten, deber / tener que
 uitstappen, salir / bajar
 fietsen, andar en bicicleta
-meegaan, acompañar
+meegaan, acompaÃ±ar
 koken, cocinar / hervir
 bakken, freir / hornear
 dekken, cubrir

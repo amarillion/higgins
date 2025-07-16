@@ -1,3 +1,4 @@
+#encoding=UTF-8
 #Suomi - Lesson 5
 #random dictionary words
 #question1=What is "" in Finnish?
@@ -20,14 +21,14 @@ aseeton, unarmed
 ateria, meal
 aviomies, husband
 edesvastuu, responsibility
-edet‰, to advance
+edet√§, to advance
 edistynyt, advanced
 ehdokas, candidate
 ehdot, terms / conditions
-eksy‰, to get lost
+eksy√§, to get lost
 elekieli, body language
 etuala, foreground
-ev‰t‰, to refuse
+ev√§t√§, to refuse
 haaska, carcass
 haastaa, to challenge
 hahmo, shape / figure
@@ -37,7 +38,7 @@ hallita, to gouvern
 hallitus, government
 halu, wish
 haluttu, desired
-hammass‰rky, tooth ache
+hammass√§rky, tooth ache
 hankaluus, difficulty
 hanke, project
 hankkia, to acquire
@@ -55,10 +56,10 @@ huomio, notice
 huume, drug
 huuli, lip
 huutomerkki, exclamation mark
-hyˆkk‰‰v‰, agressive
-hyˆk‰t‰, to attack
-h‰lytys, alarm
-h‰pe‰, shame
+hy√∂kk√§√§v√§, agressive
+hy√∂k√§t√§, to attack
+h√§lytys, alarm
+h√§pe√§, shame
 ihailja, fan
 ihme, wonder
 jaksaa, to manage
@@ -79,16 +80,16 @@ juotava, drinkable
 juttu, story
 juuttua, to get stuck
 juuttunut, stuck
-j‰hme‰, solid
-j‰ljell‰, left / remaining
-j‰rkytt‰‰, to shock
-j‰rjest‰j‰, organizer
-j‰‰nne, relic
-j‰‰vuori, iceberg
+j√§hme√§, solid
+j√§ljell√§, left / remaining
+j√§rkytt√§√§, to shock
+j√§rjest√§j√§, organizer
+j√§√§nne, relic
+j√§√§vuori, iceberg
 kastaa, to baptize
 kastelu, irrigation
 kasvatus, education
-kasvissyˆj‰, vegetarian
+kasvissy√∂j√§, vegetarian
 katkaisin, switch
 katsoja, viewer
 katua, to regret

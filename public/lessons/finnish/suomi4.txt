@@ -1,3 +1,4 @@
+#encoding=UTF-8
 #Suomi - Lesson 5
 #random dictionary words
 #question1=What is "" in Finnish?
@@ -20,38 +21,38 @@ alennus, discount
 aleta, to lower
 aloitus, start
 elinkeino, occupation
-eliö, organism
+eliÃ¶, organism
 elonkurjuu, to harvest
-eläköön, hurrah
-epäily, doubt
-epäröidä, to hesitate
-epätarkka, inaccurate
-epätoiva, despair
-epäusko, disbelief
-epäämätön, undeniable
+elÃ¤kÃ¶Ã¶n, hurrah
+epÃ¤ily, doubt
+epÃ¤rÃ¶idÃ¤, to hesitate
+epÃ¤tarkka, inaccurate
+epÃ¤toiva, despair
+epÃ¤usko, disbelief
+epÃ¤Ã¤mÃ¤tÃ¶n, undeniable
 erakko, hermit
 eriste, insulation
-erittäin, extremely
+erittÃ¤in, extremely
 erotella, to discriminate
 erottaa, to separate
 erotuomari, referee
 etikka, vinegar
-ilkeä / paha, evil
+ilkeÃ¤ / paha, evil
 ilmasto, climate
 ilmaus, expression
-ilmentää, to express
-ilmiö, phenomenon
+ilmentÃ¤Ã¤, to express
+ilmiÃ¶, phenomenon
 ilmoittaa, to inform
 ilmoitus, advertisement
-imeä, to suck
+imeÃ¤, to suck
 inhota, to detest
 into, enthousiasm
 irrallinen, disconnected
-päästä irti!, let go!
+pÃ¤Ã¤stÃ¤ irti!, let go!
 irtolainen, vagabond
-iskeä, to strike
+iskeÃ¤, to strike
 isku, blow / punch
-itsekäs, selfish
+itsekÃ¤s, selfish
 jakaa, to split / to distribute
 jakaja, dealer / divisor
 jakelu, delivery
@@ -63,10 +64,10 @@ haukkaus, bite
 heilua, to swing
 heiluri, pendulum
 heiluttaa, to wave
-heittää, to throw
-hengissä / elossa, alive
+heittÃ¤Ã¤, to throw
+hengissÃ¤ / elossa, alive
 hermo, nerve
-herkkä, sensitive
+herkkÃ¤, sensitive
 herne, pea
 hevonen, horse
 hiki, sweat

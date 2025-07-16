@@ -1,8 +1,9 @@
+#encoding=UTF-8
 # uit:
 # gente 2 hoofdstuk 1
 #question2=Wat is "" in het Spaans?
 #question1=Wat is "" in het Nederlands?
-#áéóíúñ
+#Ã¡Ã©Ã³Ã­ÃºÃ±
 
 #paragraaf 5
 
@@ -17,11 +18,11 @@ destacar, zich onderscheiden
 la garra, de klauw
 el gitano, de zigeuner
 el octogenario, de tachtiger
-el treintañero, de dertiger
+el treintaÃ±ero, de dertiger
 fundir, gieten / versmelten
 rendir homenaje, hulde brengen
 encargar, opdragen
-la grabación, de opname
+la grabaciÃ³n, de opname
 la entrevista, het interview
 asegurar, verzekeren
 el apuntador, de souffleur
@@ -31,10 +32,10 @@ templar, matigen
 alterar, veranderen
 suelto, los
 el humo, de rook
-esférico, bolvormig
+esfÃ©rico, bolvormig
 el sabor, de smaak
 el olor, de geur
-el oído, het gehoor
+el oÃ­do, het gehoor
 el periodismo, de journalistiek
 el periodista, de journalist
 apadrinar, peetouder zijn

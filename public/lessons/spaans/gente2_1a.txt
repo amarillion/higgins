@@ -1,15 +1,16 @@
+#encoding=UTF-8
 # uit:
 # gente 2 hoofdstuk 1
 #question2=Wat is "" in het Spaans?
 #question1=Wat is "" in het Nederlands?
-#áéóíúñ
+#Ã¡Ã©Ã³Ã­ÃºÃ±
 
 #paragraaf 1
 interesante, interessant
 amable, vriendelijk
-simpático, sympathiek
+simpÃ¡tico, sympathiek
 con buen gusto, met goede smaak
-antipático, onsympathiek
+antipÃ¡tico, onsympathiek
 con sentido del humor, met gevoel voor humor
 divertido, vermakelijk
 guapo, knap
@@ -19,44 +20,44 @@ agradable, aangenaam
 
 #paragraaf 2
 el lugar para vivir, de woonplaats
-la manía, de manie
-la estación del año, het seizoen
+la manÃ­a, de manie
+la estaciÃ³n del aÃ±o, het seizoen
 la prenda de vestir, het kledingstuk
 el actor, de acteur
 la actriz, de actrice
 el pintor, de schilder
-el tipo de música, het soort muziek
+el tipo de mÃºsica, het soort muziek
 
 #paragraaf 3
 matricular, inschrijven
-paradójicamente, paradoxaal
+paradÃ³jicamente, paradoxaal
 tan lejos, zo ver weg
 de vuelta, terug
 la bailaora, de danseres
 especializar, specializeren
 la terapia, de therapie
-a través, door
+a travÃ©s, door
 el baile, de dans
-la enseñanza, het onderwijs
-además, bovendien
+la enseÃ±anza, het onderwijs
+ademÃ¡s, bovendien
 el copropietaro, de mede-eigenaar
 el miembro, het lid
 suizo, zwitsers
 la clave, de sleutel
 el rasgo de la personalidad, de karaktertrek
-el físico, het uiterlijk
+el fÃ­sico, het uiterlijk
 el vicio, de ondeugd
 regado para, onbekwaam voor
 planchar, strijken
 la avaricia, de gierigheid
 el enimigo, de vijand
 la asignatura, het vak
-la vergüenza, de schaamte
+la vergÃ¼enza, de schaamte
 la pareja, het paar
 ordenar, schikken
 el miedo, de angst
 el ordenador, de computer
-el bolígrafo, de pen
+el bolÃ­grafo, de pen
 indignar, boos maken
 emocionar, ontroeren
 la infidelidad, de trouweloosheid
@@ -83,6 +84,6 @@ el riesgo, het risico
 aburrir, vervelen
 coleccionar, verzamelen
 maquillar, opmaken
-la araña, de spin
+la araÃ±a, de spin
 el calcetin, de sok
 

@@ -1,3 +1,4 @@
+#encoding=UTF-8
 #paragraaf 124
 # regelmatig op -ar
 trabajar, werken
@@ -37,7 +38,7 @@ pasar, binnenkomen / voorbijgaan / doorbrengen
 embalar, verpakken
 ensanchar, breder maken
 buscar, zoeken
-enseñar, uitleggen / laten zien
+enseÃ±ar, uitleggen / laten zien
 despachar, afhandelen / helpen
 entregar, afgeven
 desear, wensen

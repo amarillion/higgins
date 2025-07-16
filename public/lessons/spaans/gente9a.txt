@@ -1,4 +1,5 @@
-#áéóíúñ
+#encoding=UTF-8
+#Ã¡Ã©Ã³Ã­ÃºÃ±
 # uit:
 # gente 9: gente de ciudad
 #question2=Wat is "" in het Spaans?
@@ -13,26 +14,26 @@ el origen, de afkomst
 los metros, de meters
 sobre el nivel del mar, boven de zeespiegel
 el gobierno, de regering
-muchísmo, heel veel
+muchÃ­smo, heel veel
 
 #2
 la calidad de vida, de leefbaarheid
 residir, wonen
-la encuesta, de enquête
-la opinión, de mening
+la encuesta, de enquÃªte
+la opiniÃ³n, de mening
 el ciudadano, de burger
-el tamaño, de grootte
+el tamaÃ±o, de grootte
 el transporte, het vervoer
 funcionar, functioneren
-el transporte público, het openbaar vervoer
-la educación, het onderwijs
+el transporte pÃºblico, het openbaar vervoer
+la educaciÃ³n, het onderwijs
 la sanidad, de gezondheid
 el colegio, de hogeschool
-la guardería, de crèche
-la instalación deportiva, de sportaccomodatie
+la guarderÃ­a, de crÃ¨che
+la instalaciÃ³n deportiva, de sportaccomodatie
 los jardines, de tuinen
 el cine, de bioscoop
-la ecología, het nachtleven
+la ecologÃ­a, het nachtleven
 los parques, de parken
 llueve, het regent
 el comercio, de handel
@@ -43,6 +44,6 @@ las drogas, de drugs
 la delincuencia, de criminaliteit
 la violencia, het geweld
 lo peor, het ergste
-la decisión, de beslissing
-porqué, waarom
+la decisiÃ³n, de beslissing
+porquÃ©, waarom
 

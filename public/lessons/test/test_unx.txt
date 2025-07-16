@@ -1,1 +1,2 @@
-age, ikädeparture, lähtöEspaña, Spanje¿está usted libre?, bent u vrij?el rápido, de sneltrein
+#encoding=UTF-8
+age, ikÃ¤departure, lÃ¤htÃ¶EspaÃ±a, SpanjeÂ¿estÃ¡ usted libre?, bent u vrij?el rÃ¡pido, de sneltrein

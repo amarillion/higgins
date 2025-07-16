@@ -1,3 +1,4 @@
+#encoding=UTF-8
 kind, child
 vriendelijk, kind
 no-comma-in-this-line

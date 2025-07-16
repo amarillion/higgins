@@ -1,4 +1,5 @@
-#áéóíúñ
+#encoding=UTF-8
+#Ã¡Ã©Ã³Ã­ÃºÃ±
 # uit:
 # gente 8: gente que viaja
 #question2=Wat is "" in het Spaans?
@@ -6,36 +7,36 @@
 
 lunes, maandag
 martes, dinsdag
-miércoles, woensdag
+miÃ©rcoles, woensdag
 jueves, donderdag
 viernes, vrijdag
-sábado, zaterdag
+sÃ¡bado, zaterdag
 domingo, zondag
 abril, april
-la reunión, de vergadering
-la fábrica, de fabriek
+la reuniÃ³n, de vergadering
+la fÃ¡brica, de fabriek
 el despacho, het kantoor
 reservar, reserveren
 las entradas, de kaartjes
 la taquilla, de kassa
-la campaña, de campagne
-la inauguración, de inhuldiging
-la exposición, de expositie
+la campaÃ±a, de campagne
+la inauguraciÃ³n, de inhuldiging
+la exposiciÃ³n, de expositie
 fijar, vastleggen
 recoger, afhalen
-la tintorería, de stomerij
+la tintorerÃ­a, de stomerij
 
 #1
 la agenda, de agenda
 el ejecutivo, de leidinggevende
 fabricar, fabriceren
-cuándo, wanneer
-las páginas, de pagina's
+cuÃ¡ndo, wanneer
+las pÃ¡ginas, de pagina's
 habitualmente, gewoonlijk
 especial, speciaal
 la plancha, het strijkijzer
 la leyenda, de legende
-el apóstol, de apostel
+el apÃ³stol, de apostel
 enterrar, begraven
 la Edad Media, de Middeleeuwen
 miles, duizenden
@@ -51,7 +52,7 @@ religioso, godsdienstig
 la iglesia, de kerk
 pintoresco, pittoresk
 variado, veelzijdig
-el kilómetro, de kilometer
+el kilÃ³metro, de kilometer
 la posada, de herberg
 gratis, gratis
 las camas, de bedden
@@ -59,9 +60,9 @@ las duchas, de douches
 el Consejo de Europa, de Raad van Europa
 
 #2
-sabrás, je zult weten
+sabrÃ¡s, je zult weten
 por cierto, overigens
-sabías, je wist
+sabÃ­as, je wist
 acabar de, net gedaan hebben
 la frontera, de grens
 estar a punto de, op het punt staan om

@@ -1,3 +1,4 @@
+#encoding=UTF-8
 # Copyright 2009 Martijn van Iersel
 # Redistribution allowed under Creative Commons CC-BY-SA License
 

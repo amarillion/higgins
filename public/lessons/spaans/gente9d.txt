@@ -1,4 +1,5 @@
-#·ÈÛÌ˙Ò
+#encoding=UTF-8
+#√°√©√≥√≠√∫√±
 # uit:
 # gente 9: gente de ciudad
 #question2=Wat is "" in het Spaans?
@@ -9,30 +10,30 @@ la plaza, het plein
 la avenida, de boulevard
 el callejon, de steeg
 las luces, de lichten
-el sem·foro, het stoplicht
+el sem√°foro, het stoplicht
 la sirena, de sirene
 los supermercados, de supermarkten
 las motos, de motoren
 los camiones, de vrachtwagens
 las bicicletas, de fietsen
-los cl·xones, de claxons
+los cl√°xones, de claxons
 las voces, de stemmen
 el perro, de hond
 el gato, de kat
 el canario, de kanarie
-los policÌas, de politieagenten
+los polic√≠as, de politieagenten
 el maestro, de onderwijzer
 el enfermo, de zieke
 el enfermero, de verpleegkundige
 el funcionario, de ambtenaar
 el empresario, de ondernemer
-el mec·nico, de monteur
+el mec√°nico, de monteur
 el cura, de priester
 el obrero, de arbeider
-el telÈfono, de telefoon
+el tel√©fono, de telefoon
 la antena, de antenne
 el mensajero, de koerier
-el periÛdico, de krant
+el peri√≥dico, de krant
 los carteles, de aanplakbiljetten
 la taberna, de kroeg
 los cabarets, de nachtclubs
@@ -47,17 +48,17 @@ el olor, de geur
 las noticias, het nieuws
 el mendigo, de bedelaar
 el bombero, de brandweerman
-la alegrÌa, de vreugde
+la alegr√≠a, de vreugde
 la sorpresa, de verrassing
-la ilusiÛn, de illusie
+la ilusi√≥n, de illusie
 la esperanza, de hoop
-el ·tico, de zolder
-el sÛtano, de kelder
+el √°tico, de zolder
+el s√≥tano, de kelder
 el desamor, de onverschilligheid
 la raza, het ras
 
 #11
-la versiÛn, de versie
+la versi√≥n, de versie
 
 #12
 misterioso, mysterieus

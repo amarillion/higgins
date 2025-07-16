@@ -1,5 +1,6 @@
+#encoding=UTF-8
 # This word list corresponds to
-# El Reino del Dragón de Oro
+# El Reino del DragÃ³n de Oro
 # by Isabel Allende
 # page numbers refer to 4th edition (2004), Montena, Barcelona
 #
@@ -7,7 +8,7 @@
 # redistribute under Creative commons CC-BY-SA
 #
 # part 3
-# áéóíúñ
+# Ã¡Ã©Ã³Ã­ÃºÃ±
 
 #p25
 retorcido, gedraaid
@@ -16,10 +17,10 @@ escamoso, geschubd
 el barro, de modder
 la mugre, de viezigheid
 la garra, de klauw
-la uña, de nagel
+la uÃ±a, de nagel
 gotear, druipen
 el moquillo, de snotbel
-lagañoso, met slaperige ogen
+lagaÃ±oso, met slaperige ogen
 el mechon, de haarlok
 salpicar, bespatten
 
@@ -27,7 +28,7 @@ salpicar, bespatten
 de reojo, vanuit de ooghoeken
 el agudo, de hoge toon
 aplacar, kalmeren
-la maraña, de wirwar / het struikgewas
+la maraÃ±a, de wirwar / het struikgewas
 la osamenta, het skelet
 balbucear, stamelen
 asustar, doen schrikken
@@ -38,12 +39,12 @@ ardiente, brandend
 el pedazo, het stuk
 arrancar, losrukken
 el corral, de ren
-el peñasco, de hoge rots
+el peÃ±asco, de hoge rots
 el cuerno, de hoorn
 el carnero, de ram
 
 #p28
-el débil, de zwakkeling
+el dÃ©bil, de zwakkeling
 criar, voeden / fokken
 despedazar, verscheuren
 lanzar, gooien
@@ -56,7 +57,7 @@ frotar, wrijven
 arrastrar, voortslepen
 la hembra, het wijfje
 lacio, slap
-la cría, het jong
+la crÃ­a, het jong
 
 #p31
 sonar, laten klinken
@@ -68,7 +69,7 @@ sacar de quicio / desquiciar, gek maken
 la escudilla, de kom
 empapar, nat maken
 el trapo, de vaatdoek
-ordeñar, melken
+ordeÃ±ar, melken
 
 #p33
 ufano, verwaand
@@ -78,7 +79,7 @@ brotar, ontkiemen
 envenenar, vergiftigen
 
 #p34
-el puñado, de handvol
+el puÃ±ado, de handvol
 
 #p35
 la aldea, het gehucht
