@@ -1,15 +1,23 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 import QuestionInput from './QuestionInput.vue';
+import MultipleChoiceInput from './MultipleChoiceInput.vue';
 import QuestionResult from './QuestionResult.vue';
 
-defineProps<{
+interface Choice {
+	text: string,
+	isCorrect: boolean,
+}
+
+const props = defineProps<{
 	question: string,
 	feedback: string,
 	hint: string,
 	isCorrect: boolean | null,
 	userAnswer?: string,
 	correctAnswer?: string,
+	inputType?: 'text' | 'multiple-choice',
+	choices?: Choice[],
 }>();
 
 const emit = defineEmits<{
@@ -17,6 +25,7 @@ const emit = defineEmits<{
 }>();
 
 const questionInputRef = ref<InstanceType<typeof QuestionInput>>();
+const multipleChoiceRef = ref<InstanceType<typeof MultipleChoiceInput>>();
 
 const handleAnswer = (answer: string) => {
 	emit('answer', answer);
@@ -25,15 +34,28 @@ const handleAnswer = (answer: string) => {
 // Expose method to focus input for parent components
 defineExpose({
 	focusInput: () => {
-		questionInputRef.value?.focusInput();
+		if (props.inputType === 'text') {
+			questionInputRef.value?.focusInput();
+		}
+		// Multiple choice doesn't need focus since it uses mouse/keyboard shortcuts
 	}
 });
 </script>
 <template>
 	<div class="manual-entry">
 		<QuestionInput
+			v-if="inputType === 'text' || !inputType"
 			ref="questionInputRef"
 			:question="question"
+			:disabled="isCorrect !== null"
+			@answer="handleAnswer"
+		/>
+		
+		<MultipleChoiceInput
+			v-else-if="inputType === 'multiple-choice'"
+			ref="multipleChoiceRef"
+			:question="question"
+			:choices="choices || []"
 			:disabled="isCorrect !== null"
 			@answer="handleAnswer"
 		/>

@@ -162,6 +162,28 @@ export class QuizSession {
 		return this.words[this.currentWord].getWord().question;
 	}
 
+	getCurrentWordBin(): number {
+		if (this.currentWord < 0 || this.currentWord >= this.words.length) {
+			return 0; // Default to lowest bin if no current word
+		}
+		return this.words[this.currentWord].getBin();
+	}
+
+	getRandomIncorrectAnswers(correctAnswer: string, count: number = 3): string[] {
+		const allAnswers = this.quiz.getWords()
+			.map(word => word.answer)
+			.filter(answer => answer.toLowerCase().trim() !== correctAnswer.toLowerCase().trim());
+		
+		// Shuffle array using Fisher-Yates algorithm
+		const shuffled = [...allAnswers];
+		for (let i = shuffled.length - 1; i > 0; i--) {
+			const j = Math.floor(Math.random() * (i + 1));
+			[shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+		}
+		
+		return shuffled.slice(0, count);
+	}
+
 	addListener(listener: SessionListener): void {
 		this.listeners.push(listener);
 	}

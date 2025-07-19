@@ -31,6 +31,8 @@ const hint = ref<string>('');
 const isCorrect = ref<boolean | null>(null);
 const userAnswer = ref<string>('');
 const correctAnswer = ref<string>('');
+const inputType = ref<'text' | 'multiple-choice'>('text');
+const choices = ref<Array<{ text: string, isCorrect: boolean }>>([]);
 
 const progressData = computed(() => {
 	if (!session.value) return null;
@@ -86,6 +88,31 @@ const nextQuestion = () => {
 	isCorrect.value = null;
 	userAnswer.value = '';
 	correctAnswer.value = '';
+	
+	// Determine input type based on current word's bin level
+	const currentBin = session.value.getCurrentWordBin();
+	const correct = session.value.getCorrectAnswer();
+	
+	if (currentBin <= 1) {
+		// Use multiple choice for bins 0-1 (newer/harder words)
+		inputType.value = 'multiple-choice';
+		
+		// Get 3-7 random incorrect answers
+		const numIncorrect = Math.floor(Math.random() * 5) + 3; // 3-7 incorrect choices
+		const incorrectAnswers = session.value.getRandomIncorrectAnswers(correct, numIncorrect);
+		
+		// Create choices array with correct answer and incorrect answers
+		const allChoices = [
+			{ text: correct, isCorrect: true },
+			...incorrectAnswers.map(answer => ({ text: answer, isCorrect: false }))
+		];
+		
+		choices.value = allChoices;
+	} else {
+		// Use text input for bins 2+ (more learned words)
+		inputType.value = 'text';
+		choices.value = [];
+	}
 };
 
 const handleAnswer = (answer: string) => {
@@ -155,6 +182,8 @@ onMounted(() => {
 				:is-correct="isCorrect"
 				:user-answer="userAnswer"
 				:correct-answer="correctAnswer"
+				:input-type="inputType"
+				:choices="choices"
 				@answer="handleAnswer"
 			/>
 			
