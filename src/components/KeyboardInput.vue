@@ -49,7 +49,7 @@ defineExpose({
 </script>
 
 <template>
-	<div class="question-input">
+	<div class="keyboard-input">
 		<h2>Question</h2>
 		
 		<div class="question-container">
@@ -78,7 +78,7 @@ defineExpose({
 </template>
 
 <style scoped>
-.question-input {
+.keyboard-input {
 	margin: 20px 0;
 	padding: 20px;
 	border: 1px solid #ddd;

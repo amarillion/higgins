@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue';
-import QuestionInput from './QuestionInput.vue';
+import KeyboardInput from './KeyboardInput.vue';
 import MultipleChoiceInput from './MultipleChoiceInput.vue';
 import QuestionResult from './QuestionResult.vue';
 
@@ -24,7 +24,7 @@ const emit = defineEmits<{
 	answer: [answer: string],
 }>();
 
-const questionInputRef = ref<InstanceType<typeof QuestionInput>>();
+const keyboardInputRef = ref<InstanceType<typeof KeyboardInput>>();
 const multipleChoiceRef = ref<InstanceType<typeof MultipleChoiceInput>>();
 
 const handleAnswer = (answer: string) => {
@@ -35,17 +35,17 @@ const handleAnswer = (answer: string) => {
 defineExpose({
 	focusInput: () => {
 		if (props.inputType === 'text') {
-			questionInputRef.value?.focusInput();
+			keyboardInputRef.value?.focusInput();
 		}
 		// Multiple choice doesn't need focus since it uses mouse/keyboard shortcuts
 	}
 });
 </script>
 <template>
-	<div class="manual-entry">
-		<QuestionInput
+	<div class="question-entry">
+		<KeyboardInput
 			v-if="inputType === 'text' || !inputType"
-			ref="questionInputRef"
+			ref="keyboardInputRef"
 			:question="question"
 			:disabled="isCorrect !== null"
 			@answer="handleAnswer"
@@ -71,7 +71,7 @@ defineExpose({
 </template>
 
 <style scoped>
-.manual-entry {
+.question-entry {
 	display: flex;
 	flex-direction: column;
 	gap: 16px;

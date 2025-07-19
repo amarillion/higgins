@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref, onMounted, computed } from 'vue';
-import ManualEntry from './ManualEntry.vue';
+import QuestionEntry from './QuestionEntry.vue';
 import ProgressView from './ProgressView.vue';
 import { Quiz, QuizSession } from '../model';
 
@@ -175,7 +175,7 @@ onMounted(() => {
 		</div>
 		
 		<div v-else>
-			<ManualEntry
+			<QuestionEntry
 				:question="currentQuestion"
 				:feedback="feedback"
 				:hint="hint"
