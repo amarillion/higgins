@@ -1,4 +1,7 @@
 <script setup lang="ts">
+import { ref } from 'vue';
+import HowItWorks from './HowItWorks.vue';
+
 interface BinData {
 	bin: number,
 	count: number,
@@ -14,9 +17,15 @@ const props = defineProps<{
 	progress: ProgressData,
 }>();
 
+const showHowItWorks = ref(false);
+
 const getBinWidth = (count: number) => {
 	const maxCount = Math.max(...props.progress.bins.map(b => b.count));
 	return maxCount > 0 ? (count / maxCount) * 100 : 0;
+};
+
+const toggleHowItWorks = () => {
+	showHowItWorks.value = !showHowItWorks.value;
 };
 </script>
 <template>
@@ -59,14 +68,16 @@ const getBinWidth = (count: number) => {
 			</div>
 		</div>
 		
-		<div class="explanation">
-			<p><strong>How it works:</strong></p>
-			<ul>
-				<li><strong>Bin 1:</strong> New words or recently missed words</li>
-				<li><strong>Bin 2-3:</strong> Words you're learning</li>
-				<li><strong>Bin 4:</strong> Well-learned words (asked less frequently)</li>
-			</ul>
-			<p>Words move up when answered correctly and back to Bin 1 when answered incorrectly.</p>
+		<div class="help-section">
+			<button
+				@click="toggleHowItWorks"
+				class="help-button"
+				:class="{ 'active': showHowItWorks }"
+			>
+				{{ showHowItWorks ? '✕ Hide' : '? How it Works' }}
+			</button>
+			
+			<HowItWorks v-if="showHowItWorks" />
 		</div>
 	</div>
 </template>
@@ -173,18 +184,39 @@ const getBinWidth = (count: number) => {
 	background: #ccc;
 }
 
-.explanation {
+.help-section {
 	margin-top: 20px;
+}
+
+.help-button {
+	padding: 8px 16px;
+	background: #f8f9fa;
+	border: 2px solid #dee2e6;
+	border-radius: 6px;
+	color: #495057;
 	font-size: 14px;
-	color: #666;
+	font-weight: 500;
+	cursor: pointer;
+	transition: all 0.2s ease;
+	display: flex;
+	align-items: center;
+	gap: 6px;
 }
 
-.explanation ul {
-	margin: 10px 0;
-	padding-left: 20px;
+.help-button:hover {
+	background: #e9ecef;
+	border-color: #adb5bd;
+	color: #343a40;
 }
 
-.explanation li {
-	margin: 5px 0;
+.help-button.active {
+	background: #007bff;
+	border-color: #007bff;
+	color: white;
+}
+
+.help-button.active:hover {
+	background: #0056b3;
+	border-color: #0056b3;
 }
 </style>
