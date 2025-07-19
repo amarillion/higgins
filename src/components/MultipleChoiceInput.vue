@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, computed, onMounted, onBeforeUnmount } from 'vue';
+import { ref, computed, onMounted, onBeforeUnmount, watch } from 'vue';
 
 interface Choice {
 	text: string,
@@ -27,6 +27,15 @@ const shuffledChoices = computed(() => {
 		[choices[i], choices[j]] = [choices[j], choices[i]];
 	}
 	return choices;
+});
+
+// Clear selection when question/choices change
+watch(() => props.question, () => {
+	selectedChoice.value = null;
+});
+
+watch(() => props.choices, () => {
+	selectedChoice.value = null;
 });
 
 const handleChoiceClick = (index: number) => {
@@ -98,8 +107,7 @@ defineExpose({
 					@mouseleave="hoveredChoice = null"
 					:disabled="disabled"
 				>
-					<span class="choice-number">{{ index + 1 }}</span>
-					<span class="choice-text">{{ choice.text }}</span>
+					{{ choice.text }}
 				</button>
 			</div>
 		</div>
@@ -164,9 +172,7 @@ defineExpose({
 }
 
 .choice-button {
-	display: flex;
-	align-items: center;
-	gap: 12px;
+	display: block;
 	padding: 15px;
 	border: 2px solid #ddd;
 	border-radius: 8px;
@@ -175,6 +181,8 @@ defineExpose({
 	transition: all 0.2s ease;
 	text-align: left;
 	font-size: 16px;
+	font-weight: 500;
+	line-height: 1.4;
 	min-height: 60px;
 }
 
@@ -196,33 +204,6 @@ defineExpose({
 	background-color: #f8f9fa;
 }
 
-.choice-number {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	width: 28px;
-	height: 28px;
-	border-radius: 50%;
-	background-color: #6c757d;
-	color: white;
-	font-weight: bold;
-	font-size: 14px;
-	flex-shrink: 0;
-}
-
-.choice-button:hover:not(.disabled) .choice-number {
-	background-color: #007bff;
-}
-
-.choice-button.selected .choice-number {
-	background-color: #007bff;
-}
-
-.choice-text {
-	flex: 1;
-	font-weight: 500;
-	line-height: 1.4;
-}
 
 /* Responsive design for smaller screens */
 @media (max-width: 600px) {

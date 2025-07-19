@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { ref, nextTick, onMounted } from 'vue';
+import { ref, nextTick, onMounted, watch } from 'vue';
 
-defineProps<{
+const props = defineProps<{
 	question: string,
 	disabled?: boolean,
 }>();
@@ -40,6 +40,13 @@ const focusInput = () => {
 // Auto-focus input when component mounts
 onMounted(() => {
 	focusInput();
+});
+
+// Focus input when question changes (new question shown)
+watch(() => props.question, () => {
+	if (!props.disabled) {
+		focusInput();
+	}
 });
 
 // Expose focus method for parent components
