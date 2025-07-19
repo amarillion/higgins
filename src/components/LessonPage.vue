@@ -29,6 +29,8 @@ const currentAnswer = ref<string>('');
 const feedback = ref<string>('');
 const hint = ref<string>('');
 const isCorrect = ref<boolean | null>(null);
+const userAnswer = ref<string>('');
+const correctAnswer = ref<string>('');
 
 const progressData = computed(() => {
 	if (!session.value) return null;
@@ -82,20 +84,25 @@ const nextQuestion = () => {
 	feedback.value = '';
 	hint.value = '';
 	isCorrect.value = null;
+	userAnswer.value = '';
+	correctAnswer.value = '';
 };
 
 const handleAnswer = (answer: string) => {
 	if (!session.value) return;
 	
 	const correct = session.value.compareAnswer(answer);
-	const correctAnswer = session.value.getCorrectAnswer();
+	const sessionCorrectAnswer = session.value.getCorrectAnswer();
 	
+	// Store the user's answer and correct answer
+	userAnswer.value = answer;
+	correctAnswer.value = sessionCorrectAnswer;
 	isCorrect.value = correct;
 	
 	if (correct) {
 		feedback.value = 'Correct!';
 	} else {
-		feedback.value = `Incorrect. The correct answer is: ${correctAnswer}`;
+		feedback.value = 'Incorrect.';
 		const sessionHint = session.value.getHint();
 		if (sessionHint) {
 			hint.value = sessionHint;
@@ -146,6 +153,8 @@ onMounted(() => {
 				:feedback="feedback"
 				:hint="hint"
 				:is-correct="isCorrect"
+				:user-answer="userAnswer"
+				:correct-answer="correctAnswer"
 				@answer="handleAnswer"
 			/>
 			
