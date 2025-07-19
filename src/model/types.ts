@@ -15,20 +15,20 @@
 //    along with Dr. Higgins.  If not, see <http://www.gnu.org/licenses/>.
 
 export interface Word {
-	question: string;
-	answer: string;
-	side: number;
-	lineNumber: number;
-	template: string;
+	question: string,
+	answer: string,
+	side: number,
+	lineNumber: number,
+	template: string,
 }
 
 export interface WordState {
-	word: Word;
-	bin: number;
-	howSoon: number;
-	quizCount: number;
-	correctInARow: number;
-	compareAnswer(answer: string, counter: number, binCount: number[]): boolean;
+	word: Word,
+	bin: number,
+	howSoon: number,
+	quizCount: number,
+	correctInARow: number,
+	compareAnswer(answer: string, counter: number, binCount: number[]): boolean,
 }
 
 export enum SessionEventType {
@@ -37,5 +37,5 @@ export enum SessionEventType {
 }
 
 export interface SessionListener {
-	sessionChanged(type: SessionEventType): void;
+	sessionChanged(type: SessionEventType): void,
 }

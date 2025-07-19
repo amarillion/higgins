@@ -63,9 +63,9 @@ export class Quiz {
 
 class QuizLoader {
 	private result = new Quiz();
-	private question1 = "What is";
-	private question2 = "What is";
-	private encoding = "UTF-8";
+	private question1 = 'What is';
+	private question2 = 'What is';
+	private encoding = 'UTF-8';
 	private questions = new Set<string>();
 	private answers = new Set<string>();
 	private words: [string, string][] = [];

@@ -1,17 +1,17 @@
 <script setup lang="ts">
 interface BinData {
-	bin: number;
-	count: number;
+	bin: number,
+	count: number,
 }
 
 interface ProgressData {
-	bins: BinData[];
-	counter: number;
-	isFinished: boolean;
+	bins: BinData[],
+	counter: number,
+	isFinished: boolean,
 }
 
 const props = defineProps<{
-	progress: ProgressData;
+	progress: ProgressData,
 }>();
 
 const getBinWidth = (count: number) => {
@@ -39,8 +39,8 @@ const getBinWidth = (count: number) => {
 		<div class="bins">
 			<h3>Learning Bins</h3>
 			<div class="bins-container">
-				<div 
-					v-for="binData in progress.bins" 
+				<div
+					v-for="binData in progress.bins"
 					:key="binData.bin"
 					class="bin"
 					:class="{ 'empty': binData.count === 0 }"
@@ -50,8 +50,8 @@ const getBinWidth = (count: number) => {
 						<span class="bin-count">{{ binData.count }}</span>
 					</div>
 					<div class="bin-bar">
-						<div 
-							class="bin-fill" 
+						<div
+							class="bin-fill"
 							:style="{ width: getBinWidth(binData.count) + '%' }"
 						></div>
 					</div>

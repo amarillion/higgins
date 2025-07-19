@@ -33,7 +33,7 @@ const fsFileLoader: FileLoader = async (fileName: string): Promise<string> => {
 async function askQuestion(question: string): Promise<string> {
 	const rl = readline.createInterface({
 		input: process.stdin,
-		output: process.stdout,
+		output: process.stdout
 	});
 
 	return new Promise((resolve) => {
@@ -105,7 +105,7 @@ async function runQuiz(): Promise<void> {
 			console.log('All words have been moved to the final bin.');
 		}
 
-		console.log(`\n📈 Final Statistics:`);
+		console.log('\n📈 Final Statistics:');
 		console.log(`Total questions asked: ${questionCount}`);
 		console.log(`Current counter: ${session.getCounter()}`);
 

@@ -71,14 +71,14 @@ export class QuizSession {
 		// If no current word found, or there is no word with due higher than threshold
 		if (this.currentWord === -1 || maxDue < dueWait) {
 			let i = 0;
-			while (i < this.quiz.getWords().length && 
+			while (i < this.quiz.getWords().length &&
 				   (this.words[i].getBin() >= this.bins - 1 || this.words[i].getHowSoon() !== -1)) {
 				i++;
 			}
 			
 			let j = i;
 			if (i < this.quiz.getWords().length) {
-				while (j < this.quiz.getWords().length && 
+				while (j < this.quiz.getWords().length &&
 					   (this.words[j].getBin() >= this.bins - 1 || this.words[j].getHowSoon() !== -1)) {
 					j++;
 				}

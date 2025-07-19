@@ -2,14 +2,14 @@
 import { ref, nextTick } from 'vue';
 
 const props = defineProps<{
-	question: string;
-	feedback: string;
-	hint: string;
-	isCorrect: boolean | null;
+	question: string,
+	feedback: string,
+	hint: string,
+	isCorrect: boolean | null,
 }>();
 
 const emit = defineEmits<{
-	answer: [answer: string];
+	answer: [answer: string],
 }>();
 
 const userAnswer = ref('');
@@ -51,7 +51,7 @@ const handleKeydown = (event: KeyboardEvent) => {
 				@keydown="handleKeydown"
 				:disabled="isCorrect !== null"
 			/>
-			<button 
+			<button
 				@click="handleSubmit"
 				:disabled="!userAnswer.trim() || isCorrect !== null"
 				class="submit-button"
@@ -61,7 +61,7 @@ const handleKeydown = (event: KeyboardEvent) => {
 		</div>
 		
 		<div v-if="feedback" class="feedback-container">
-			<div 
+			<div
 				class="feedback"
 				:class="{
 					'correct': isCorrect === true,
