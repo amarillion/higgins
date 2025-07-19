@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref, nextTick } from 'vue';
 
-const props = defineProps<{
+defineProps<{
 	question: string,
 	feedback: string,
 	hint: string,

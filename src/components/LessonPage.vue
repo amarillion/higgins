@@ -4,6 +4,22 @@ import ManualEntry from './ManualEntry.vue';
 import ProgressView from './ProgressView.vue';
 import { Quiz, QuizSession } from '../model';
 
+interface SelectedLesson {
+	language: string,
+	lessonPath: string,
+	lessonName: string,
+}
+
+interface Props {
+	selectedLesson: SelectedLesson,
+}
+
+const props = defineProps<Props>();
+
+const emit = defineEmits<{
+	goBack: [],
+}>();
+
 const quiz = ref<Quiz | null>(null);
 const session = ref<QuizSession | null>(null);
 const loading = ref(true);
@@ -39,8 +55,8 @@ const loadQuiz = async () => {
 		loading.value = true;
 		error.value = null;
 		
-		// Load the Spanish lesson
-		const loadedQuiz = await Quiz.loadFromFile('/lessons/spaans/ciudad_de_bestias_1.txt');
+		// Load the selected lesson
+		const loadedQuiz = await Quiz.loadFromFile(props.selectedLesson.lessonPath);
 		quiz.value = loadedQuiz;
 		
 		// Create a new session
@@ -104,7 +120,10 @@ onMounted(() => {
 </script>
 <template>
 	<div class="lesson-page">
-		<h1>Spanish Lesson Quiz</h1>
+		<div class="lesson-header">
+			<button @click="emit('goBack')" class="back-button">← Back to Lessons</button>
+			<h1>{{ props.selectedLesson.language }} - {{ props.selectedLesson.lessonName }}</h1>
+		</div>
 		
 		<div v-if="loading" class="loading">
 			Loading quiz...
@@ -142,6 +161,33 @@ onMounted(() => {
 .lesson-page {
 	max-width: 800px;
 	margin: 0 auto;
+}
+
+.lesson-header {
+	display: flex;
+	align-items: center;
+	gap: 15px;
+	margin-bottom: 20px;
+}
+
+.back-button {
+	padding: 8px 12px;
+	background-color: #6c757d;
+	color: white;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	font-size: 14px;
+	transition: background-color 0.2s;
+}
+
+.back-button:hover {
+	background-color: #5a6268;
+}
+
+.lesson-header h1 {
+	margin: 0;
+	flex: 1;
 }
 
 .loading {
