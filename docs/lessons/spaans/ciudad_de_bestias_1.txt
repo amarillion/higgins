@@ -1,0 +1,109 @@
+#encoding=UTF-8
+# This word list corresponds to
+# La ciudad de bestias
+# by Isabel Allende
+#
+# word list (c) 2012 by Martijn van Iersel
+# redistribute under Creative commons CC-BY-SA
+#
+# part 1
+# áéóíúñ
+
+# p9
+
+la pesadilla, de nachtmerrie
+el amanecer, de dageraad
+estrellar, breken
+el fragor, het lawaai
+el buitre, de gier
+el relámpago, de bliksem
+el trueno. de donder
+a la deriva, verloren op zee
+rugir, brullen
+desbordar, overlopen
+la cornisa, de vensterbank
+
+# p10
+el aliento, de adem
+morder, bijten
+bobalicón, dom
+el zorrillo, het stinkdier
+tiritar, beven
+entibiar, verwarmen
+el venado, het hert
+
+#p11
+de bruces, op de knieën
+el tarado, de domme
+nefasto, gemeen
+el ensayo, de repetitie
+reventar, ontploffen
+el rincón, de hoek
+
+#p12
+acechar, op de loer liggen
+el mapache, de wasbeer
+el huérfano, de wees
+el pajarraco, de grote vogel
+el emparedado, de sandwich
+la nevera, de koelkast
+la ausencia, de afwezigheid
+el cariño, de tederheid
+canturrear, zingen (van een vogel)
+desconcertar, verwarren
+
+#p13
+el entorno, de omgeving
+demacrado, bleek
+hundido, afgezonken
+la tela, de stof
+el tubo, de buis
+achicado, gekrompen
+el bicho, het beestje
+mimar, vertroetelen
+el llanto, het gehuil
+el taburete, de kruk
+la navaja de afeitar, het scheermes
+
+#p14
+el mechon, de haarlok
+afeitado, geschoren
+la oleada, de golfbeweging
+tambalear, struikelen
+
+#p15
+el añico, het stukje
+el umbral, de doorgang
+hinchado, opgezwollen
+
+#p16
+el pañuelo, de zakdoek
+balbucear, brabbelen
+herido, gewond
+el chorro, de waterstraal
+el puñado, de handvol
+
+#p18
+farfullar, ouwehoeren
+sacudido, geschud
+
+#p19
+la metralleta, de mitrailleur
+
+#p21
+apurado, gehaast
+arrugado, opgetrommeld
+sudoroso, zweterig
+la golosina, het snoepje
+
+#p22
+musitar, zachtjes praten
+atrasar, vertraagd zijn
+
+#p23
+truculento, plaaggeesterig
+gozar, genieten
+el bullicio, het geklets op de achtergrond
+la ventisca, de regenbui
+la aguja, de naald
+latir, bonzen

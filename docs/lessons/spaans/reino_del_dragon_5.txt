@@ -1,0 +1,49 @@
+#encoding=UTF-8
+# This word list corresponds to
+# El Reino del Dragón de Oro
+# by Isabel Allende
+# page numbers refer to 4th edition (2004), Montena, Barcelona
+#
+# word list (c) 2009-2011 by Martijn van Iersel
+# redistribute under Creative commons CC-BY-SA
+#
+# part 5
+# áéóíúñ
+
+#p72
+el chaleco, het vest
+el agujero, het gat
+la azafata, de stewardess
+ubicarse, zich bevinden
+
+#p73
+el almacén, de opbergruimte
+apretar, klemmen / drukken
+la clavija, de klep
+la cancha, het veld
+el patinaje, het schaatsen
+la malle, het net
+el mono, de aap
+
+#p75
+el calambre, de kramp
+delgado, dun
+el trago, de hap
+taparse, zich bedekken
+la trenza, de vlecht
+el vaquero, de cowboy
+el tacon, de hiel
+la arruga, de rimpel
+la lona, het zeil
+
+#p76
+vislumbrar, ontwaren
+la carcajada, het bulderend gelach
+
+#p79
+la pestañada, het geknipper
+la bofetada, de klap
+tragado, doorgeslikt
+la muchedumbre, de menigte
+
+# áéóíúñ

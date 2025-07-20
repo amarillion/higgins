@@ -1,0 +1,62 @@
+#encoding=UTF-8
+# uit:
+# gente 7
+#question2=Wat is "" in het Spaans?
+#question1=Wat is "" in het Nederlands?
+#áéóíúñ
+
+#11
+la compra, de boodschappen
+ser el encargado, de verantwoordelijke zijn
+dictar, dicteren
+
+#12
+el libro de cocina, het kookboek
+pegar, plakken
+el tablón, het bord
+sentar mal, slecht vallen
+la oficina, het kantoor
+baratito, zeer goedkoop
+seguramente, waarschijnlijk
+ha sido, hij is geweest
+el bacalao, de kabeljauw
+rico, lekker / rijk
+la ensalada, de salade
+ha ido, hij is gegaan
+el bocadillo, het broodje
+el atún, de tonijn
+la manzanilla, de kamillethee
+quizás, misschien
+
+#13
+la costumbre, de gewoonte
+
+#14
+la cebolla, de ui
+intentar, proberen
+la oda, de ode
+claro, helder
+el planeta, de planeet
+relucir, stralen
+la constelación, het sterrenbeeld
+redondo, rond
+la rosa, de roos
+la mesa, de tafel
+por desgracia, helaas
+asesinar, vermoorden
+hundirse, binnendringen
+el cuchillo, het mes
+la pulpa, het vruchtvlees
+viviente, levend
+las vísceras, de ingewanden
+fresco, fris
+profundo, diep
+inagotable, onuitputtelijk
+llenar, vullen
+alegremente, vrolijk
+celebrar, vieren
+dejarse caer, zich laten vallen
+el hijo, de zoon
+essencial, essentieel
+el olivo, de olijfboom
+la fragancia, de geur

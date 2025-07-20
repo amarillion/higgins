@@ -1,0 +1,63 @@
+#encoding=UTF-8
+#question1=Wat is "" in het Spaans?
+#question2=Wat is "" in het Nederlands?
+reir, lachen
+cocinar, koken
+dibujar, tekenen
+tomar, pakken
+convertir, worden
+cantar, zingen
+manejar, rijden
+dar, geven
+regalar, een cadeau geven
+poner, zetten
+robar, stelen
+besar, kussen
+caer, vallen
+soltar, laten vallen
+romper, breken
+mover, bewegen
+esperar, wachten / hopen
+levantar, opstaan
+despertar, wakker worden
+traer, brengen
+venir, komen
+dejar, weggaan
+volar, vliegen
+probar, proeven / proberen
+oler, ruiken
+dormir, slapen
+caminar, lopen
+correr, rennen
+comer, eten
+tomar, drinken
+leer, lezen
+escribir, schrijven
+sentar, zitten
+ver, zien
+observar, bekijken
+mirar, kijken
+estudiar, studeren
+jugar, een spel spelen
+tocar, aanraken / bespelen
+vivir, leven
+amar, houden van
+gustar, bevallen
+querer, willen
+tener / deber, moeten
+poder, kunnen
+decir, zeggen
+lavar, wassen
+limpiar, schoonmaken
+vestir, aankleden
+desvestir, uitkleden
+calcular, rekenen
+pensar, denken
+encontrar, vinden
+buscar, zoeken
+hablar, praten
+usar, gebruiken
+llorar, huilen
+callar / llamar, roepen
+mostrar, laten zien
+cambiar, veranderen

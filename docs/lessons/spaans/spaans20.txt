@@ -1,0 +1,98 @@
+#encoding=UTF-8
+#paragraaf 124
+# regelmatig op -ar
+trabajar, werken
+acabar de, zojuist zijn
+practicar, beoefenen
+hablar, spreken
+aceptar, aannemen
+pescar, vissen
+llegar, aankomen
+alargar, uistrekken / aanreiken / verlengen
+edificar, bouwen
+contestar, antwooren
+aprovechar, benutten
+realizar, tot stand brengen
+escuchar, luisteren
+apuntar, opschrijven
+usar, gebruiken
+admirar, bewonderen
+aventajar, overtreffen
+revisar, nazien
+tomar, nemen
+bailar, dansen
+resultar, blijken
+viajar, reizen
+bajar de, dalen
+registrar, aantekenen
+alquilar, huren
+convidar a, uitnodigen tot
+quedar, blijven
+veranear, de zomer doorbrengen
+desahogar, verlichten
+preparar, voorbereiden
+esperar, wachten / hopen
+descuidar, geen zorg hebben
+pintar, schilderen
+pasar, binnenkomen / voorbijgaan / doorbrengen
+embalar, verpakken
+ensanchar, breder maken
+buscar, zoeken
+enseñar, uitleggen / laten zien
+despachar, afhandelen / helpen
+entregar, afgeven
+desear, wensen
+entusiasmar, enthousiast maken
+pesar, wegen
+entrar, binnenkomen
+faltar, ontbreken
+pegar / azotar / golpear, slaan
+informar, mededelen
+firmar, ondertekenen
+parar, verblijven / stoppen
+pagar, betalen
+franquear, frankeren
+olvidar, vergeten
+saludar, groeten
+gustar, smaken / bevallen
+necesitar, nodig hebben
+comprar, kopen
+limitar, begrenzen
+nadar, zwemmen
+tratar de, trachten
+llamar, roepen / noemen / bellen
+visitar, bezoeken
+llevar, dragen / wegbrengen
+molestar, lastig vallen
+preguntar, vragen
+pronunciar, uitspreken
+gastar, uitgeven
+mirar, kijken
+cambiar, wisselen
+mejorar, verbeteren
+fumar, roken
+
+# regelmatig op -er
+comprender, begrijpen
+beber, drinken
+creer, geloven
+aprender, leren
+leer, lezen
+vender, verkopen
+comer, eten
+temer, vrezen
+deber, moeten
+responder, antwoorden
+
+# regelmatig op -ir
+vivir, leven / wonen
+subir, omhooggaan
+existir, bestaan
+partir, vertrekken
+recibir, ontvangen
+permitir, toestaan
+remitir, zenden
+escribir, schrijven
+decidir, besluiten
+asistir a, bijwonen
+abrir, openen

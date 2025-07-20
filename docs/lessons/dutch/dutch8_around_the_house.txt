@@ -1,0 +1,73 @@
+#encoding=UTF-8
+# Copyright 2009 Martijn van Iersel
+# Redistribution allowed under Creative Commons CC-BY-SA License
+
+#rooms
+de slaapkamer, the bedroom
+de woonkamer, the living room
+de zolder, the attic
+de hal, the hall
+de kelder, the basement
+de muur, the wall
+de vloer, the floor
+het plafond, the ceiling
+de deur, the door
+het balkon, the balcony
+
+# furniture
+de tafel, the table
+het bed, the bed
+de stoel, the chair
+de kast, the shelf / the cupboard
+de bank, the couch
+de lade, the drawer
+het bureau, the desk
+
+#kitchen
+de pot, the jar
+de fles, the bottle
+de pan, the pot
+de koekepan, the pan
+de kom, the bowl
+het bord, the plate
+de kop, the cup
+de schotel, the saucer
+de vergiet, the colander
+de lepel, the spoon
+de vork, the fork
+het mes, the knife
+
+#tools
+de hamer, the hammer
+de schroevendraaier, the screw driver
+de schroef, the screw
+de spijker, the nail
+de zaag, the saw
+de boor, the drill
+de tang, the pliers
+
+#office
+de schaar, the scissors
+de nietmachine, the stapler
+de perforator, the hole punch
+het plakband, the clear tape
+het papier, the paper
+het potlood, the pencil
+de pen, the pen
+de lineaal, the ruler
+de lijm, the glue
+de rekenmachine, the calculator
+het kladblok, the notepad
+
+# materialen
+het hout, the wood
+de baksteen, the brick
+de tegel, the tile
+de balk, the beam
+het ijzer, the iron
+het staal, the steel
+de steen, the stone
+het koper, the cupper
+het goud, the gold
+het zilver, the silver
+de stof, the textile

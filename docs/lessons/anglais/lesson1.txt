@@ -1,0 +1,4 @@
+#encoding=UTF-8
+the patch, le pansement
+the book, le livre
+the computer, l'ordinateur

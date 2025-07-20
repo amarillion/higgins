@@ -1,0 +1,63 @@
+#encoding=UTF-8
+vrouw, esposa
+de moeder(s), la madre
+het feestje(s), la fiesta
+het jaar (jaren), el a^o
+de straat, la calle
+het nummer(s), el numero
+de bank(en), el banco
+Frankrijk, Francia
+Nederland, Holanda/Paises Bajos
+Nederlands, Neerlandes
+de telefoon(s), el telefono
+de agenda(s), la agenda
+de telefoniste(s), la operadora
+inlichtingen/ de informatie, informacion
+de naam (namen), el nombre
+het gesprek(ken), conversacion
+de fax(en), el fax
+de letter(s), la carta
+de klank(en), el sonido
+het woord(en), la palabra
+hel alfabet, el alfabeto
+de punt(en), el punto
+de vader(s), el padre
+de zus(sen), la hermana
+het adres(sen), la direccion
+het formulier(en), el formulario
+de achternaam(namen), el apellido
+de voornaam(namen), nombre
+het huisnummer(s), el numero de casa
+het huis (huizen), la casa
+de postcode(s), el codigo postal
+de (woon)plaats(en), el lugar (de residencia)
+het netnummer(s), el codigo de larga distancia
+het abonneenummer(s), el numero de suscriptor
+de geboortedatum(s), la fecha de nacimiento
+de geboorteplaats(en), el lugar de nacimiento
+het geboorteland, el pais de origen
+het land(en), el pais
+de nationaliteit(en), la nacionalidad
+het geslacht, el sexo
+de man(nen), el hombre
+de vrouw(en), la mujer
+de tram(s), el tranvia
+het centraalstation, la estacion central
+de taxi(s), el taxi
+de lijn(en), la linea
+de (tram)halte(s), la parada (del tranvia)
+het kaartje(s), el boleto
+Londen, Londres
+de enkele reis, boleto sencillo
+het retourtje(s), boleto redondo
+de trein(en), el tren
+de boot (boten), el bote
+het kind(eren), el ni^o/la ni^a
+de vraag (vragen), la pregunta
+de dag(en), el dia
+de middag(en)/de avond(en), la tarde
+de ochtend(en)/ de morgen, la ma^ana
+de nacht, la noche
+de tijd, el tiempo
+het uur (uren), la hora
+de minuut (minuten), el minuto

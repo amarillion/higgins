@@ -1,0 +1,185 @@
+#encoding=UTF-8
+# comprehensive list of inifinitives
+#question1=What is "" in Dutch?
+#question2=What is "" in English?
+gaan, to go
+zijn, to be
+hebben, to have
+roepen, to call
+doen, to do
+mogen, to be allowed to
+kunnen, to be able to
+willen, to want
+zeggen, to say
+zetten / leggen, to put
+nemen, to take
+besluiten / beslissen, to decide
+brengen, to bring
+houden, to keep
+halen, to fetch
+bedoelen, to mean
+denken, to think
+dragen, to carry
+verdelen, to distribute
+worden, to become / passive
+ophouden / stoppen, to stop
+vergaan, to perish
+rotten, to rot
+slaan, to hit
+vloeken, to swear
+schelden, to call names
+vermoorden, to kill
+sterven, to die
+liggen, to lay
+liegen, to lie
+vertellen, to tell
+vragen, to ask
+vergeten, to forget
+durven, to dare
+moeten, to have to
+invullen, to fill out
+ondertekenen, to sign
+tekenen, to draw
+zenden, to send
+verzoeken, to request
+werken, to work
+winnen, to win
+verliezen, to lose
+leren, to learn / to teach
+veranderen, to change
+bestuderen, to examine
+studeren, to study
+uitvoeren, to execute
+ontwikkelen, to develop
+ontwerpen, to design
+ontbijten, to have breakfast
+richten, to aim
+voorbereiden, to prepare
+verbeteren, to improve
+verwachten, to expect
+wachten, to wait
+hopen, to hope
+wensen, to wish
+bestaan, to exist
+vinden, to find
+zoeken, to search
+opzoeken, to look up
+kijken, to look
+zien, to see
+praten, to talk
+spreken, to speak
+kletsen, to chat
+drinken, to drink
+eten, to eat
+regeren, to govern
+leiden, to lead
+lijden, to suffer
+komen, to come
+voorkomen, to prevent / to occur
+verzamelen, to collect
+drukken, to press
+schrijven, to write
+schieten, to shoot
+schoppen, to kick
+deelnemen, to participate
+onderzoeken, to investigate
+ontvangen, to receive
+helpen, to help
+wijzen, to point
+afwijken, to deviate
+overwegen, to contemplate
+benaderen, to approach
+meten, to measure
+aankleden, to dress
+uitkleden, to undress
+rekenen, to calculate
+kennen / weten, to know
+begrijpen, to understand
+schreeuwen, to scream
+lachen, to laugh
+glimlachen, to smile
+laten, to let / to not do
+zingen, to sing
+rijmen, to rhyme
+redden, to rescue
+zwemmen, to swim
+lezen, to read
+lopen, to walk
+rennen, to run
+missen, to miss
+klagen, to complain
+klieren, to bully
+zeuren, to nag
+kloppen, to knock
+duwen, to push
+trekken, to pull
+huilen, to cry
+groeien, to grow
+krimpen, to shrink
+smelten, to melt
+koken, to cook / to boil
+bakken, to bake
+vriezen, to freeze
+frituren, to deep-fry
+roeren, to stir
+afwassen, to do the dishes
+wassen, to wash
+poetsen, to brush
+schoonmaken, to clean
+opruimen, to clean up
+kopen, to buy
+verkopen, to sell
+zagen, to saw
+knippen, to cut
+plakken, to paste
+zaaien, to sow
+oogsten, to harvest
+blijken, to appear
+openen, to open
+sluiten, to close
+kiezen, to choose
+beroven, to rob
+stelen, to steal
+graven, to dig
+sluipen, to sneak
+valsspelen, to cheat
+springen, to jump
+stuiteren, to bounce
+staken, to go on strike
+steken, to stab
+vastzitten, to be stuck
+zitten, to sit
+kruipen, to crowl
+vallen, to fall
+douchen, to take a shower
+slapen, to sleep
+dromen, to dream
+strekken, to stretch
+strijken, to iron
+verlangen, to desire
+verdragen, to bear
+doorgaan, to continue
+presenteren, to present
+laten zien, to show
+blazen, to blow
+zuigen, to suck
+naaien, to sew
+voelen, to feel
+aanraken, to touch
+aaien, to pet
+omhelzen, to hug
+wrijven, to rub
+krabben, to scratch
+scheuren, to tear
+verlaten, to leave
+draaien, to turn
+terugkomen, to return
+vliegen, to fly
+drijven, to float
+grijpen, to grab
+repareren, to repair
+breken, to break
+vermeerderen, to increase
+verminderen, to decrease
+vermenigvuldigen, to multiply
+

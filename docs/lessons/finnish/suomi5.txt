@@ -1,0 +1,101 @@
+#encoding=UTF-8
+#Suomi - Lesson 5
+#random dictionary words
+#question1=What is "" in Finnish?
+#question2=What is "" in English?
+aavelaiva, ghost ship
+aavikko, desert
+aavistaa, to foresee / to anticipate
+ahdas, narrow / tight
+ahdasmielinen, narrow-minded
+ahdinko, distress
+ankara, strict
+ansaita, to earn / to deserve
+antelias, generous
+arkisto, archive
+arpi, scar
+arvoitus, riddle / puzzle
+arvokkuus, dignity
+arvostelu, criticism
+aseeton, unarmed
+ateria, meal
+aviomies, husband
+edesvastuu, responsibility
+edetä, to advance
+edistynyt, advanced
+ehdokas, candidate
+ehdot, terms / conditions
+eksyä, to get lost
+elekieli, body language
+etuala, foreground
+evätä, to refuse
+haaska, carcass
+haastaa, to challenge
+hahmo, shape / figure
+haave, illusion
+hallinto, administration
+hallita, to gouvern 
+hallitus, government
+halu, wish
+haluttu, desired
+hammassärky, tooth ache
+hankaluus, difficulty
+hanke, project
+hankkia, to acquire
+hapan, sour
+harjoitus, exercise
+harkita, to consider / to deliberate
+harras, devoted
+huolestuttaa, to worry
+huolestunut, worried
+huoli, worry
+huolto, care / service
+huomata, to notice
+huomauttaa, to point out
+huomio, notice
+huume, drug
+huuli, lip
+huutomerkki, exclamation mark
+hyökkäävä, agressive
+hyökätä, to attack
+hälytys, alarm
+häpeä, shame
+ihailja, fan
+ihme, wonder
+jaksaa, to manage
+jalan, on foot
+jano, thirst
+jatkoaika, extension
+jatkuva, constant
+jauhe, powder
+jauhaa, to grind
+johtaa, to lead
+joukko, crowd
+joustava, elastic
+joutava, futile
+joutomaa, wasteland
+juhla, party
+julma, cruel
+juotava, drinkable
+juttu, story
+juuttua, to get stuck
+juuttunut, stuck
+jähmeä, solid
+jäljellä, left / remaining
+järkyttää, to shock
+järjestäjä, organizer
+jäänne, relic
+jäävuori, iceberg
+kastaa, to baptize
+kastelu, irrigation
+kasvatus, education
+kasvissyöjä, vegetarian
+katkaisin, switch
+katsoja, viewer
+katua, to regret
+katumus, remorse
+kaupunginjohtaja, mayor
+kauppasaarto, embargo
+kausi, period / season
+kausittainen, seasonal
+

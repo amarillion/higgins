@@ -1,0 +1,71 @@
+#encoding=UTF-8
+# Copyright 2009 Martijn van Iersel
+# Redistribution allowed under Creative Commons CC-BY-SA License
+
+#food
+
+het vlees, the meat
+de vis, the fish
+de groente, the vegetable
+het fruit, the fruit
+het eten, the food
+
+de soup, the soup
+de saus, the sauce
+het zout, the salt
+het water, the water
+het vet, the fat
+de olie, the oil
+de olijf, the olive
+het azijn, the vinegar
+
+het varkensvlees, the pork
+het kalfsvlees, the veal
+het rundsvlees, the beef
+de zalm, the salmon
+de haring, the herring
+de kabeljauw, the cod
+het gehakt, the minced meat
+
+de tomaat, the tomato
+de prei, the leek
+de erwt, the pea
+de bloemkool, the coliflower
+de aardappel, the potato
+de boon, the bean
+
+het brood, the bread
+de boterham, the slice of bread
+de bloem, the flour
+de taart, the cake / the pie
+de jam, the marmelade
+
+de melk, the milk
+de boter, the butter
+de yoghurt, the yoghurt
+de kaas, the cheese
+
+de bes, the berry
+de aardbei, the strawberry
+de appel, the apple
+de kers, the cherry
+de sinaasappel, the orange
+de ananas, the pineapple
+
+de noot, the nut
+de amandel, the almond
+de hazelnoot, the hazelnut
+
+de koffie, the coffee
+de suiker, the sugar
+de thee, the tea
+het bier, the beer
+de wijn, the wine
+de sap, the juice
+de sinaasappelsap, the orange juice
+
+het snoep, the candy
+het toetje, the desert
+de chocolade, the chocolate
+het ijs, the ice-cream
+het slagroom, the whipped cream

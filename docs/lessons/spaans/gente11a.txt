@@ -1,0 +1,37 @@
+#encoding=UTF-8
+#áéóíúñ
+# uit:
+# gente 11: gente e historias
+#question2=Wat is "" in het Spaans?
+#question1=Wat is "" in het Nederlands?
+
+#1
+el acontecimiento, de gebeurtenis
+suceder, plaatsvinden
+el usario, de gebruiker
+ganar, winnen
+singular, enkelvoud
+
+#2
+el diaro, het dagboek
+el adolescente, de tiener
+nacer, geboren worden
+escribir, schrijven
+la manifestación, de demonstratie
+unirse, zich verenigen
+la marcha, de protestmars
+ser de noche, nacht zijn
+tener la tele puesta, de tv aanhouden
+la elección, de verkiezingen
+la gira, de tournee
+al salir, na afloop
+el acuerdo, het akkoord
+la entrada, de toetreding
+la ONU, de VN
+el futbolista, de voetballer
+nadie, niemand
+la cafetaría, het cafetaria
+encantar, heel erg bevallen
+abierto, geopend
+la constitución, de grondwet
+

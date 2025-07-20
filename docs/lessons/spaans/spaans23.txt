@@ -1,0 +1,161 @@
+#encoding=UTF-8
+#paragraaf 157
+el avión, het vliegtuig
+¿qué tal?, hoe gaat het?
+alegrarse de, zich verheugen over
+meter, stoppen / plaatsen
+en todo este tiempo, in al die tijd
+divertirse, zich vermaken
+divertido, vermaakt
+salimos, wij zijn vertrokken
+el aeropuerto, de luchthaven
+el puerto, de haven
+lunes, maandag
+mayo, mei
+a las once y cuarto, om kwart over elf
+once, elf
+el cuarto, het kwartier
+aterrizamos, wij zijn geland
+aterrizar, landen
+unos diez, ongeveer tien
+el kilómetro, de kilometer
+solamente, alleen
+la distancia / el recorrido, de afstand
+hicimos, wij hebben gemaakt
+hacer escalas, tussenlandingen maken
+en avión, per vliegtuig
+es recomendable, het is aan te bevelen
+mientras, terwijl
+casi, bijna
+la diferencia, het verschil
+el vuelo, de vlucht
+estupendo, prachtig
+la línea aérea, de luchtvaartmaatschappij
+sobrevolar, vliegen over
+volar, vliegen
+se ven, men ziet
+tan claramente, zo duidelijk
+el paisaje, het landschap
+bastante, tamelijk
+más caro, duurder
+en ferocarril, per spoor
+el billete, het plaatsbewijs
+compensar, verrekenen
+ganar tiempo, tijd winnen
+sin embargo, echter
+se viaja, men reist
+seguro, veilig
+más seguro, veiliger
+el medio de transporte, het transportmiddel
+absolutamente, absoluut
+verdad es, dat is waar
+la verdad, de waarheid
+el año proximo, het volgend jaar
+nuestro, onze
+quizá, misschien
+vayamos, we gaan
+
+#166
+primero, eerste
+segundo, tweede
+tercero, derde
+cuarto, vierde
+quinto, vijfde
+sexto, zesde
+séptimo, zevende
+octavo, achtste
+noveno, negende
+décimo, tiende
+
+#173
+la primavera, de lente
+el verano / el estío, de zomer
+el otoño, de herfst
+el invierno, de winter
+el mes, de maand
+la semana, de week
+el siglo, de eeuw
+mensual, maandelijks
+semanal, wekelijks
+anual, jaarlijks
+diario, dagelijks
+
+#177
+disierto, verlaten
+el castillo, het kasteel
+el florín, de gulden
+el dólar, de dollar
+construir, opbouwen
+el chalet, de bungalow
+el proyecto, het project
+el obrero, de arbeider
+la huelga, de staking
+declarar, verklaren
+el cumpleaños, de verjaardag
+el segundo, de seconde
+el minuto, de minuut
+la hora, het uur
+el papa, de paus
+el grado, de graad
+bajo, laag / onder
+conquistar, veroveren
+qonquistó, hij veroverde
+Méjico, Mexico
+el trono, de troon
+hacerse a la vela, de zeilen hijsen
+la vela, het zeil
+insignificante, onbetekenend
+la fiesta, het feest
+celebrar, vieren
+la república, de republiek
+en conmemoración de, ter herdenking van
+conmemorar, herdenken
+el descubrimiento, de ontdekking
+descubrir, ontdekken
+nacional, nationaal
+la defensa, de verdediging
+heroico, heldhaftig
+contra, tegen
+dividir, verdelen
+se divide, wordt verdeeld
+la estación, het jaargetijde / het station
+la temporada, het seizoen
+el refrán, het gezegde
+el clima, het klimaat
+el infierno, de hel
+quedar en, afspreken
+según, volgens
+el suelto, het kleingeld
+el billete, het biljet
+la edad, de leeftijd
+andar, lopen
+deber de, moeten
+la libra, het pond
+conocer, kennen
+es conocido, hij is bekend
+el nombre, de naam
+el sobrenombre, de bijnaam
+la historia, de geschiedenis
+el emperador, de keizer
+el rey, de koning
+la reina, de koningin
+la princesa, de prinses
+el piso, de verdieping / het appartement
+la parte, het deel
+el habitante, de inwoner
+el almuerzo, de lunch
+almorzar, lunchen
+el desayuno, het ontbijt
+desayunarse, ontbijten
+la cena, het avondeten
+la comida, de maaltijd
+comer, eten
+servir, bedienen
+echar, inschenken
+hace calor, het is warm
+hace frío, het is koud
+sobre todo, vooral
+la meseta, de hoogvlakte
+la uva, de druif
+la ciruela, de pruim
+la naranja, de sinasappel

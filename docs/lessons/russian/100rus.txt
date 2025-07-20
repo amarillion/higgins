@@ -1,0 +1,35 @@
+#askbothways=0
+#encoding=UTF-8
+Спасибо, thank you
+Пожалуйста, please / you're welcome
+Да, yes
+Нет, no
+Здравствуйте, hello
+Привет, hi
+Меня зовут .., My name is ..
+Как вас зовут?, What is your name?
+Очень приятно, Pleased to meet you
+Как дела?, How are you?
+Хорошо спасибо, Good thanks
+Плохо, Bad
+До свидания, Good bye
+Пока, bye
+Я понимаю, I understand
+Я не понимаю, I don't understand
+Я говорю по-английски, I speak English
+Я говорю по-русски, I speak Russian
+Папа, dad
+Дядя, uncle
+Дедушка, grandfather
+Мужчина, man
+Кофе, coffee
+Я, I
+Ты, you
+работать, to work
+понимать, to understand
+Знать, to know
+не, not
+говорить, to speak
+слышать, to hear
+Жить, to live
+Ехать, to go

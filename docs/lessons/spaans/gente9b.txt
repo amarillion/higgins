@@ -1,0 +1,55 @@
+#encoding=UTF-8
+#áéóíúñ
+# uit:
+# gente 9: gente de ciudad
+#question2=Wat is "" in het Spaans?
+#question1=Wat is "" in het Nederlands?
+
+#3
+eligir, kiezen
+el clima templado, het gematigd klimaat
+el patrimonio cultural, het cultureel erfgoed
+el atractivo, de aantrekkelijkheid
+los cerros / las colinas, de heuvels
+rodear, omringen
+crecer, groeien
+la arquitectura, de architectuur
+adaptarse, zich aanpassen
+el relieve, het reliëf
+empinado, steil
+los ascensores, de liften
+colorido, bont
+la influencia, de invloed
+instalarse, zich vestigen
+el clima tropical, het tropische klimaat
+sin lugar a dudas, ongetwijfeld
+declarar, verklaren
+por una parte .. por otra .., enerzijds .. anderzijds ..
+los apartamentos, de appartementen
+los casinos, de casino's
+los centros comerciales, de winkelcentra
+por último, tenslotte
+el complejo de islotes, de eilandengroep
+las playas coralinas, de koraalriffen
+formar parte de, deel uitmaken van
+los parques naturales, de natuurreservaten
+los eventos, de evenementen
+reunir, bijeenbrengen
+representativo, representatief
+acogedor, gezellig
+repasar, herhalen
+los conceptos, de concepten
+establecer, vaststellen
+
+#4
+hacerse un lío, een bende maken
+las escuelas, de scholen
+el doble, het dubbele
+tanto, zoveel
+
+#5
+las propuestas, de voorstellen
+
+#6
+gustar, bevallen
+la temporada, de periode

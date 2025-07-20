@@ -1,0 +1,34 @@
+#encoding=UTF-8
+# (C) 2009 Martijn van Iersel
+# Redistribution under Creative Commons CC-BY-SA
+# áéóíúñ¿¡
+
+zijn, ser / estar
+zien, ver
+drinken, tomar
+zeggen, decir
+denken, pensar
+wonen, vivir
+werken, trabajar
+komen, venir
+praten / spreken, hablar
+tellen, contar
+luisteren, escuchar
+kunnen, poder
+helpen, ayudar
+weten, saber
+liggen, estar situado
+geven, dar
+spellen, deletrear
+roepen / bellen, llamar
+sturen, mandar
+hebben, tener
+willen, querer
+brengen, traer
+mogen, permitir 
+nemen, tomar
+kosten, costar
+verstaan, entender
+gaan, ir
+opschrijven, anotar
+schrijven, escribir

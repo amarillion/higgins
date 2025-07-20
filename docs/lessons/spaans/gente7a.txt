@@ -1,0 +1,84 @@
+#encoding=UTF-8
+# uit:
+# gente 7
+#question2=Wat is "" in het Spaans?
+#question1=Wat is "" in het Nederlands?
+#áéóíúñ
+
+#1
+los productos, de producten
+exportar, exporteren
+los ingredientes, de ingrediënten
+la cocina, de keuken
+los garbanzos, de kikkererwten
+los signos, de tekens
+he probado, ik heb geproefd
+las gambas, de garnalen
+las uvas, de druiven
+los limones, de citroenen
+las almendras, de amandelen
+los espárragos, de asperges
+las fresas, de aardbeien
+los plátanos, de bananen
+las avellanas, de hazelnoten
+el aceite de oliva, de olijfolie
+las aceitunas, de olijven
+las nueces, de walnoten
+las cerezas, de kersen
+el pan, het brood
+coincidir, overeenstemmen
+
+#2
+hablar por teléfono, bellen
+el cliente, de klant
+el pedido, de bestelling
+la docena, het dozijn
+los huevos, de eieren
+los cartones, de pakken
+la leche entera, de volle melk
+la botella, de fles
+el vino tinto, de rode wijn
+el paquete, het pak
+la leche desnatada, de magere melk
+el vino blanco, de witte wijn
+las cantidades, de hoeveelheden
+hacer el pedido, de bestelling plaatsen
+tomar nota, noteren
+
+#3
+el camarero, de ober
+entender, begrijpen
+las aclaraciones, de uitleg
+
+#4
+la revista, het tijdschrift
+la gente de hoy, de mensen van nu
+los tópicos, de onderwerpen
+el cordero, het lamsvlees
+el litro, de liter
+adelgazar, afvallen
+las reglas, de regels
+la receta, het recept
+solucionar, oplossen
+la moda, de mode
+el organismo, het organisme
+a través de, via
+o sea, dat betekent
+el líquido, de vloeistof
+aportar, bijdragen
+el calcio, het calcium
+los lácteos, de melkproducten
+el yogur, de yoghurt
+adulto, volwassen
+sobre todo, vooral
+la sal, het zout
+por supuesto, uiteraard
+el secreto, het geheim
+las legumbres, de peulvruchten
+los cereales, de graanproducten
+las aves de corral, het pluimvee
+las hortalizas, de verse groente
+el arroz, de rijst
+las patatas, de aardappelen
+alimentarse, zich voeden
+

@@ -1,0 +1,298 @@
+#encoding=UTF-8
+#question1=What is "" in Finnish?
+#question2=What is "" in English?
+uusi, new
+vanha, old
+iloinen, happy
+surullinen, sad
+nuori, young
+kaunis, beautiful
+ruma, ugly
+pitkä, tall
+lyhyt, short
+terve, healthy
+sairas, ill
+lihava, fat
+laiha, thin / lean
+paksu, wide
+ohut, thin
+auki, open
+täysi, full
+tyhjä, empty
+kallis, expensive
+halpa, cheap
+vaikea, difficult
+rikas, rich
+köyhä, poor
+kuuma, hot
+kylmä, cold
+kuiva, dry
+märkä, wet
+valoisa, light
+pimeä, dark
+nauhallinen, silent
+sotkuinen, messy
+siisty, neat
+leveä, broad / wide
+kapea, narrow
+pehmeä, soft
+kova, hard
+raskas, heavy
+kevyt, light / not heavy
+terävä, sharp
+tylsä, blunt / boring
+hidas, slow
+nopea, fast
+korkea, high
+matala, low
+hapan, sour
+makea, sweet
+hauska, funny / nice
+tyhmä, stupid
+ahkera, hard working
+laiska, lazy
+likainen, dirty
+puhdas, clean
+vahva, strong
+heikko, weak
+kuunnella, to listen to
+suudella, to kiss
+juopotella, to get drunk
+valehdella, to lie
+jutella, to chat
+pakata, to pack
+meikata, to make up
+hakata, to beat / to hit
+tavata, to meet
+levätä, to rest
+kammata, to comb
+maata, to lie down
+hypätä, to jump
+pedata, to make the bed
+muistaa, to remember
+elää, to live
+uskoa, to believe
+säästää, to pollute
+tuoda, to bring / to import
+myydä, to sell
+viedä, to take away / to export
+luulla, to think
+järjestellä, to organise
+kuulla, to hear
+retkeillä, to go on a trip
+surra, to mourn
+ratkaista, to solve
+päästä, to manage
+lisätä, to add
+tuomita, to judge / to sentence
+aina, always
+usein, often
+joskus, sometimes
+kerran, once
+kerran vielä, one more time
+ei vielä, not yet
+ei enää, not anymore
+ei koskaan, never
+ei koskaan enää, never again
+nyt, now
+nykyisin, nowadays
+nyttemmin, lately
+äskettäin, recently
+äsken, just now
+pian, soon
+heti, at once
+ase, weapon
+metsä, forest
+muukalainen, stranger / alien
+kukkaro, purse
+voittaa, to win
+noita, witch
+laskea, to drop / to calculate
+loppu, end
+kuitenkin, however
+oikea, right / true
+aarre, treasure
+varma, sure
+aalto, wave
+aasi, donkey
+hansikas, glove
+ikävöidä / kaivata, to miss
+hölkätä, to jog
+syy, reason
+tai, or
+kai, maybe
+työ, work
+tee, tea
+soida, to ring / to sound
+jäädä, to remain
+voida, to be able to
+käydä, to go and return
+syödä, to eat
+juoda, to drink
+jälkeen, after
+ja, and
+kohdalla, at
+ennen, before
+takana, behind
+alla, below / under
+vällissä, between
+mutta, but
+alas, down
+suntaan, for
+suunnasta, from
+sisässä, in
+sisään, inside
+lähellä, near
+vieressä, next to
+ei yhtään, none
+ei, not
+ei mitään, nothing
+päällä, on top of
+only, vain
+ehkä, perhaps
+kohti, towards
+asti, until
+kanssa, with
+vielä, yet
+vähän, a little
+paljon, a lot
+kukaan, anyone
+yhtään, any
+mitään, anything
+missään, anywhere
+vähintään, at least
+joku, someone
+jotain, something
+jossain, somewhere
+joka, every
+kaikki, everything
+kuinka, how
+eräs, a certain
+jättää, to abandon
+lähteä, to leave
+noin vain, just like that
+eväs, snack
+poissa, away
+avaruus, space
+pitää, to like / to keep / to take care of
+saada, to get / to be allowed to
+saatta, to accompany
+rauta, iron
+kantaa, to carry
+kaataa, to pour / to turn
+lantti, coin
+alkaa, to begin
+itse, self
+kyky, ability
+valta, power
+tuntu, air / flavour
+tuoksua, to smell
+sadekuuro, shower
+pusertaa, to press
+näytää, to show / to appear
+tuoksu, scent
+lahti, bay
+palaa, to burn
+näyte, sample
+taika, magic
+eteen, in front of / before
+hylätä, to reject
+jälki, trace / track
+liittää, to join / to attach
+nero, genius
+palvelut, service
+pettää, to betray / to cheat
+pulma, problem / puzzle
+etunimi, first name
+sukunimi, family name
+vastakohta, opposite
+sävellys, composition
+esitellä, to introduce
+ilma, air / weather
+neiti, miss
+sekki, paycheck
+vaimo, wife
+onni, happiness
+asunto, appartment
+kiva, fun
+mukava, comfortable
+valtio, state
+merkitä, to mean / to signify
+toivoa, to hope
+koska, because / when
+liian, too much
+liike, business
+naapuri, neighbour
+vastata, to answer
+aikoa, to intend
+kihloissa, engaged
+panna, to put
+salaisuus, secret
+vihainen, loud / angry
+jälkiruoka, dessert
+liha, meat
+paistettu, fried
+tavallisesti, usually
+ihana, wounderful
+asiakas, customer
+pihvi, steak
+keittiö, kitchen
+mennä ostoksille, to go shopping
+painaa, to weigh / to press / to print
+toinen, other
+vuoro, turn
+hylly, shelf
+puolitoista, one and a half
+tarpeeksi, enough
+kiire, hurry
+nälkä, hunger
+liikkua, to move
+toimia, to act / to function
+vika, fault
+pysähtyä, to stop
+pelätä, to fear
+ihailla, to admire
+tiedemies, scientist
+sijamuoto, case
+yksikkö, singular
+monikko, plural
+kielleinen, negative
+liukas, slippery
+viisas, clever
+läksy, homework
+kettu, fox
+uskonto, religion
+alleviivata, to underline
+olla kännissä, to be drunk
+mahdollinen, possible
+pakastin, freezer
+värikäs, colourful
+valhe, lie
+vessa, toilet
+velka, debt
+meikki, make-up
+mahdoton, impossible
+ruumis, corpse
+sopia, to agree / to make up
+kätellä, to shake hands
+riidellä, to argue
+astevaihtelu, consonant changes
+takki, coat
+mato, worm
+luonto, nature
+liitu, chalk
+hame, skirt
+laskettelu, downhill skiing
+lenkkeily, jogging
+harrastus, hobby
+jääkeikko, ice hockey
+arka, shy
+kärsivällisyys, patience
+suojella, to protect
+erilainen, different
+muurahainen, ant
+muurahaiskeko, anthill
+kummallinen, odd
+herne, pea
+huuli, lip
+kirjain, letter of the alphabet

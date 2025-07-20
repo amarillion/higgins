@@ -1,0 +1,63 @@
+#encoding=UTF-8
+hacer, to make
+reir, to laugh
+cocinar, to cook
+dibujar, to draw
+tomar, to take
+convertir, to become
+cantar, to sing
+manejar, to drive
+dar, to give
+regalar, to give a present
+poner, to put
+robar, to steal
+besar, to kiss
+caer, to fall
+soltar, to drop
+romper, to break
+mover, to move
+esperar, to wait / to hope
+levantar, to stand up
+despertar, to wake up
+traer, to bring
+venir, to come
+dejar, to leave
+volar, to fly
+probar, to taste / to try
+oler, to smell
+dormir, to sleep
+caminar, to walk
+correr, to run
+comer, to eat
+tomar, to drink
+leer, to read
+escribir, to write
+sentar, to sit
+ver, to see
+observar, to watch
+mirar, to look
+estudiar, to study
+jugar, to play a game
+tocar, to touch / to play an instrument
+vivir, to live
+amar, to love
+gustar, to like
+querer, to want
+tener / deber, to have to
+poder, to be able to
+decir, to say
+lavar, to wash
+limpiar, to clean
+vestir, to dress
+desvestir, to undress
+calcular, to calculate
+pensar, to think
+encontrar, to find
+buscar, to search
+hablar, to talk
+usar, to use
+llorar, to cry
+callar, to shout
+llamar, to call
+mostrar, to show
+cambiar, to change

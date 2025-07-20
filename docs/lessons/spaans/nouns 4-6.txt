@@ -1,0 +1,85 @@
+#encoding=UTF-8
+deze plaats(en), este asiento
+het vliegtuig(en), el avion
+de reis (reizen), viaje
+de familie, la familia
+het museum (musea/museums), el museo
+de kerk(en), la iglesia
+de broer(s), el hermano
+de koffer(s), la maleta/el equipaje
+de fiets(en), la bicicleta
+de vakantie(s), las vacaciones
+het volgende, lo siguiente
+het loket(ten), la ventana/la ventanilla
+de dagkaart(en), el boleto por dia
+de stalling(en), el almacen
+de hele dag, todo el dia
+het paspoort(en), el pasaporte
+het rijbewijs (rijbewijzen), la licencia de manejo
+de prijs (prijzen), el precio
+de week (weken), la semana
+de auto(s), el auto
+het cafe(s), el cafe/el bar
+het glas (glazen), el vaso
+de wijn, el vino
+juffrouw, la mesera
+het pilsje(s), el vaso de cerveza
+de pils, la cerveza
+de borrel(s), la fiesta
+de bus(sen), el autobus
+het bezoek, las visitas
+de supermarkt(en), el supermercado
+de vis, el pescado
+het vlees, la carne
+de kaas, el queso
+de pasta, la pasta
+het idee (ideeen), la idea
+de groente, los vegetales
+de sla, la ensalada
+de tomaat (tomaten), el jitomate
+de ui(en), la cebolla
+de aardappel(s/en), la papa
+het fruit, la fruta
+de appel(s), la manzana
+de sinaasappel, la naranja
+de citroen(en), el limon
+de frisdrank(en), el refresco
+de boter, la mantequilla
+het ei (eieren), el huevo
+de melk, la leche
+het koekje(s), la galleta
+het toetje(s), el postre
+het ijs, el hielo/helado
+de bril(len), los lentes
+de bloem(en), la flor
+het bier, la cerveza
+de koffie, el cafe
+de thee, el te
+alcohol, el alcohol
+de keuken(s), la cocina
+nasi goreng, el arrox frito indones
+de rijst, el arroz
+de olie, el aceite
+kruiden, las hierbas y las especias
+de pan(nen), el sarten
+de tafel(s), la mesa
+het restaurant(s), el restaurante
+de lunch(es), el almuerzo
+de kip(pen), el pollo
+de ober(s), el mesero
+de (kippen) soep(en), la sopa (de pollo)
+het broodje(s), el pancito
+de ham, el jamon
+de haring(en), el arenque
+het witbrood, el pan blanco
+het bruinbrood, el pan moreno
+het brood (broden), la pieza de pan/el pan
+het visrestaurant, el restaurante de mariscos
+de kop(pen), la copa
+de rekening(en), la cuenta/la nota
+de cappuccino, el capuchino
+de espresso, el expresso
+de suiker, el azucar
+het raam (ramen), la ventana
+het zout, la sal
+de peper, la pimienta

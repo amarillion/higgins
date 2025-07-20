@@ -1,0 +1,25 @@
+#encoding=UTF-8
+#askbothways=0
+おはよう, good morning
+こんにちは, good afternoon
+こんばんは, good evening
+おやすみなさい, good night
+さよなら, good bye
+ではまた, see you later
+また明日, see you tomorrow
+元気ですか, how are you?
+はい, yes
+いいえ, no
+どうも, thanks
+すみません, excuse me
+どういたしまして, you are welcome
+知りません, I don't know
+すみません, excuse me
+日本語を話しますか, do you speak japanese?
+分かりません, I don't understand
+なに, what
+どこ, where
+だれ, who
+いつ, when
+どれ, which
+いくら, how much

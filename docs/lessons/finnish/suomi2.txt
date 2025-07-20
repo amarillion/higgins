@@ -1,0 +1,152 @@
+#encoding=UTF-8
+amerikkalainen, american
+asua, to inhabit 
+englantilainen, english
+kansallisuus, nationality
+kerros, floor / level
+kotimaa, home country
+minkämaalainen?, which nationality?
+minä, I
+me, we
+olla, to be
+puhua, to speak
+ulkomaalainen, foreigner
+vähän, a little
+todella, really
+sanasto, vocabulary
+sama, same
+sinä, you
+yksi, 1
+kaksi, 2
+kolme, 3
+neljä, 4
+viisi, 5
+kuusi, 6
+seitsemän, 7
+kahdeksan, 8
+yhdeksän, 9
+kymmenen, 10
+aloittaa, to start
+haluta, to want
+kirjoittaa, to write
+kurssi, course
+enemmän / lisää, more
+meillä on, we have
+mutta, but
+nimi, name
+opettaja, teacher
+oppia, to learn
+osata, to be able to / to know
+pian, soon
+pieni, small
+puhelin, telephone
+ranska, france
+ryhmä, group
+saksa, germany
+tervetuloa, welcome
+tulla, to come
+äiti, mother
+sata, 100
+tuhat, 1000
+opiskelija, student
+maalari, painter
+valokuvaaja, photographer
+poliisi, police
+palomies, firefighter
+sairaanhoitaja, nurse
+insinööri, engineer
+kirjailija, writer
+leipuri, baker
+tuomari, judge
+ohjaaja, director
+lehtimies, journalist
+tarjoilija, waiter
+talo, house
+hölmö, fool
+ovi, door
+katu, street
+kauppa, shop
+hinta, price
+lukko, lock
+laki, law
+tuoli, chair
+ääni, sound
+väki, people
+tuli, fire
+hetki, moment
+palata, to return
+selvä, clear
+kuolla, to die
+opiskella, to study
+mennä, to go
+voimistella, to stretch / to exercise
+luistella, to skate
+pyöräillä, to cycle
+kävellä, to walk
+telttailla, to go camping
+pestä, to wash
+nousta, to get up / to rise
+lakaista, to sweep / to clean
+purra, to bite
+tuulla, to blow
+kiroilla, to swear
+hymyillä, to smile
+siivota, to clean up
+pelata, to play a game
+korjata, to repair
+tiskata, to do the dishes
+grillata, to grill
+maalata, to paint
+kuorsata, to snore
+avata, to open
+herätä, to wake up
+kuivata, to dry
+tarvita, to need
+valita, to choose
+häirätä, to disturb
+kysyä, to ask
+etsiä, to search
+sulkea, to close
+tilata, to order
+hakea, to fetch
+auttaa, to help
+odottaa, to wait
+muuttaa, to change / to move
+soittaa, to play an instrument
+hiihtää, to ski
+piirtää, to draw
+antaa, to give
+ottaa, to take
+huutaa, to shout
+pyytää, to ask for
+kääntää, to turn / to carry
+lentää, to fly
+viheltää, to hate
+uskaltaa, to dare
+nukkua, to sleep
+lukea, to read
+pukea, to dress up
+leipoa, to bake
+kylpeä, to bathe
+hiipiä, to walk quietly
+syöttää, to feed
+herättää, to wake somebody
+souttaa, to row
+onkia, to fish
+vaihtaa, to change
+sataa, to rain
+saattaa, to escort
+ampua, to shoot
+tappaa, to kill
+hoitaa, to take care of
+leikkiä, to play
+tietää, to know
+kertoa, to tell
+tuntea, to know / to feel
+tanään, today
+ylihuomenna, the day after tomorrow
+eilen, yesterday
+toissipäivänä, the day before yesterday
+
+
+

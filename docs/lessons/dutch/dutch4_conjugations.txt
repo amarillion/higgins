@@ -1,0 +1,107 @@
+#encoding=UTF-8
+# Copyright 2009 Martijn van Iersel
+# Redistribution allowed under Creative Commons CC-BY-SA License
+
+ik ben, I am
+wij zijn, we are
+hij is, he is
+zij zijn, they are
+we were, wij waren
+ik ben geweest, I have been
+jij was, you were
+ik kom, I come
+hij komt, he comes
+wij komen, we come
+kom jij?, do you come?
+hij kwam, he came
+ik ben gekomen, I have come
+hij ziet, he sees
+jij ziet, you see
+wij zagen, we saw
+wij hebben gezien, we have seen
+zij hadden gezien, they had seen
+ik wil, I want
+wil jij, do you want?
+wij willen, we want
+zij zouden willen, they would want
+ik ga, I go
+hij gaat, he goes
+wij gaan, we go
+wij gingen, we went
+hij ging, he went
+wij zijn gegaan, we have gone
+hij doet, he does
+zij doen, they do
+zij deden, they did
+hij heeft gedaan, he has done
+ik had gedaan, I had done
+ik zeg, I say
+hij zegt, he says
+wij zeggen, we say
+hij zei, he said
+zij zeiden, they said
+hij heeft gezegd, he has said
+het wordt gezegd, it is said
+hij zal zeggen, he will say
+het regent, it is raining
+het is koud, it is cold
+ik heb het koud, I am cold
+ik ben twintig jaar oud, I am twenty years old
+ik heb honger, I am hungry
+ik heb dorst, I am thirsty
+ik ben zien, I am ill
+ik ben blij, I am happy
+het sneeuwt, it is snowing
+ik ben moe, I am tired
+ik wordt, I become
+ik werd, I became
+hij wordt, he becomes
+wij worden, we become
+wij werden, we became
+ik kijk, I look
+hij keek, he looked
+wij hebben gekeken, we have looked
+hij loopt, he walks
+hij liep, he walked
+ik heb gelopen, I have walked
+jij praat, you talk
+wij praten, we talk
+wij praatten, we talked
+wij hebben gepraat, we have talked
+ik zit, I sit
+wij zitten, we sit
+ik zat, I sat
+zij hebben gezeten, they have sat
+ik ren, I run
+hij rende, he ran
+ik zal, I will
+hij zou, he would
+wij zullen, we will
+hij brengt, he brings
+hij pakt, he takes
+ik zet, I put
+ik heb gepakt, I have taken
+ik verlies, I lose
+hij verliest, he loses
+wij hebben verloren, we have lost
+wij verloren, we lost
+ik win, I win
+hij wint, he wins
+wij winnen, we win
+hij heeft gewonnen, he has won
+hij won, he won
+ik sta, I stand
+hij staat, he stands
+zij staan, they stand
+ik stond, I stood
+hij zit, he sits
+hij ligt, he lays
+hij lag, he laid
+ik stop, I stop
+hij stopt, he stops
+wij stoppen, we stop
+hij is gestopt, he has stopped
+ik begin, I begin
+ik begon, I began
+ik ben begonnen, I have begun
+Wij beginnen, we begin

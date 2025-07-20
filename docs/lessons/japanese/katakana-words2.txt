@@ -1,0 +1,85 @@
+#katakana
+#askbothways=0
+#question1=What is
+#encoding=UTF-8
+キウイ, kiwi
+シエフ, chef
+ヨツト, yacht
+セクシ, sexy
+セールスマン, salesman
+セールスウーマン, saleswoman
+ユースホステル, youth hostel
+カルシウム, calcium
+スナツク, snack
+チヨコレート, chocolate
+パン, bread
+ソース, sauce
+ハム, ham
+チーヅ, cheese
+コーヒー, coffee
+テレビ, television
+ビール, beer
+オレンジ, orange
+オランダ, holland
+マヨネーヅ, mayonaise
+エコロジー, ecology
+ハーモニカ, harmonica
+ハイキング, hiking
+ホームレス, homeless
+リムジン, limousine
+ネオン, neon
+ナイトカラブ, night club
+オーブン, oven
+パーセント, percent
+ラジオ, radio
+ランニング, running
+レスリング, wrestling
+マラソン, marathon
+# repeated characters
+# ア, a
+# シ, shi
+# キ, ki
+# イ, i
+# フ, fu
+# ト, to
+# ク, ku
+# コ, ko
+# ル, ru
+# ス, su
+# マ, ma
+# ン, n
+# テ, te
+# タ, ta
+# カ, ka
+# レ, re
+# ナ, na
+# ラ, ra
+# ロ, ro
+# モ, mo
+# ニ, ni
+# リ, ri
+# new, more than twice
+セ, se
+ウ, u
+オ, o
+ヅ, zu
+ヨ, yo
+ハ, ha
+ム, mu
+ジ, ji
+グ, gu
+# new, twice
+ツ, tsu
+ビ, bi
+エ, e
+ホ, ho
+ネ, ne
+ブ, bu
+パ, pa
+チ, chi
+ソ, so
+# new, once
+ユ, yu
+ヒ, hi
+ダ, da
+

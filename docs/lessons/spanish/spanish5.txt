@@ -1,0 +1,90 @@
+#encoding=UTF-8
+yo soy, I am
+nosotros somos, we are
+el es, he is
+ellos son, they are
+nosotros fuimos, we were/we went
+yo he sido, I have been
+tu fuiste, you were
+yo vengo, I come
+el viene, he comes
+nosotros venimos, we come
+tu vienes?, do you come?
+el vino, he came
+yo he venido, I have come
+el ve, he sees
+tu ves, you see
+nosotros vimos, we saw
+nosotros hemos visto, we have seen
+ellos habian visto, they had seen
+yo quiero, I want
+tu quieres, do you want?
+nosotros queremos, we want
+ellos querian, they would want
+yo voy, I go
+el viene, he goes
+ellos vienen, we go
+el fue, he went/he was
+nosotros hemos venido, we have gone
+el hace, he does
+ellos hacen, they do
+ellos hicieron, they did
+el ha hecho, he has done
+yo he hecho, I had done
+yo digo, I say
+el dice, he says
+nosotros decimos, we say
+el dijo, he said
+ellos dijeron, they said
+el ha dicho, he has said
+es dicho, it is said
+el dira, he will say
+esta lloviendo, it is raining
+hace frio, it is cold
+tengo frio, I am cold
+yo tengo hambre, I am hungry
+yo tengo sed, I am thirsty
+yo estoy enfermo, I am ill
+yo soy/estoy feliz, I am happy
+esta nevando, it is snowing
+yo estoy cansado, I am tired
+yo veo, I look
+el vio, he looked
+nosotros hemos visto, we have looked
+el camina, he walks
+el camino, he walked
+yo he caminado, I have walked
+tu hablas, you talk
+nosotros hablamos, we talk
+nosotros hablamos (past), we talked
+nosotros hemos hablado, we have talked
+yo me siento, I sit
+nosotros nos sentamos, we sit
+yo me sente, I sat
+ellos se han sentado, they have sat
+yo corro, I run
+el corrio, he ran
+el lleva, he brings
+el toma, he takes
+yo pongo, I put
+yo he tomado, I have taken
+yo pierdo, I lose
+el pierde, he loses
+nosotros hemos perdido, we have lost
+nosotros perdimos, we lost
+yo gano, I win
+el gana, he wins
+nosotros ganamos, we win
+el ha ganado, he has won
+el gano, he won
+el se sienta, he sits
+el se acuesta, he lays
+el se acostó, he laid
+yo me detengo, I stop
+el se detiene, he stops
+nosotros nos detenemos, we stop
+el se ha detenido, he has stopped
+yo comienzo, I begin
+yo comence, I began
+yo he comenzado, I have begun
+nosotros comenzamos, we begin

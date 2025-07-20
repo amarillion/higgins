@@ -1,0 +1,35 @@
+#encoding=UTF-8
+zijn, ser/estar
+zien, ver
+drinken, tomar
+zeggen, decir
+denken, pensar
+wonen, vivir
+werken, trabajar
+komen, venir
+spreken (e), hablar (to speak)
+tellen, contar
+luisteren, escuchar
+telefoneren, llamar por telefono
+kunnen, poder
+helpen, ayudar
+weten, saber
+staan, to stand
+liggen, estar situado
+geven, dar
+spellen, deletrear
+bellen, llamar
+sturen, mandar
+hebben, tener
+willen, querer
+praten (e), hablar (to talk/to speak)
+zullen (e),  [-re]
+brengen, traer
+mogen (e), permitir 
+nemen (e), tomar (to take)
+kosten, costar
+verstaan, entender
+gaan, ir
+vertrekken, dejar/ir
+opschrijven, anotar
+schrijven, escribir

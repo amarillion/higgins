@@ -1,0 +1,14 @@
+#encoding=UTF-8
+#Spaans
+#Uit "prisma - spaans leer je zo"
+#hoofdstuk 7, paragraaf 114, 124, 129
+#question1=Wat is "" in het Spaans?
+#question2=Wat is "" in het Nederlands?
+
+#paragraaf 114
+
+
+#paragraaf 124
+
+
+#paragraaf 129

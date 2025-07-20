@@ -1,0 +1,57 @@
+#encoding=UTF-8
+#áéóíúñ
+# uit:
+# gente 8: gente que viaja
+#question2=Wat is "" in het Spaans?
+#question1=Wat is "" in het Nederlands?
+
+#3
+el curso, de cursus
+el joven, de jongere
+inscribirse, zich inschrijven
+las llamadas, de telefoontjes
+la visita guiada, de rondleiding
+ocuparse, zich bezighouden
+el importe de la matrícula, het inschrijfgeld
+optativo, facultatief
+incluido, inclusief
+la forma de pago, de betalingswijze
+la transferencia bancaria, de bankoverschrijving
+la tarjeta de crédito, de creditcard
+el folleto, de folder
+el prefijo, het netnummer
+la dirección, het adres
+la habitación, de kamer
+
+#4
+el medio de transporte, het vervoermiddel
+el concurso, de wedstrijd
+el juego, het spel
+el participante, de deelnemer
+al menos, ten minste
+único, uniek
+la etapa, de etappe
+pasar de largo, vlug voorbijgaan
+quedarse, blijven
+siguiente, volgend
+tardar, lang duren
+las distancias, de afstanden
+la tabla, de tabel
+adjunto, bijgaand
+en moto, met de motor
+en tren, met de trein
+en coche, met de auto
+en autobús, met de bus
+en avión, met het vliegtuig
+como máximo, hoogstens
+
+#6
+el cambio, de wijziging
+las observaciones, de opmerkingen
+
+#7
+en este mismo momento, op datzelfde moment
+mientras, terwijl
+los estableciemientos, de gelegenheden
+el ayuntamiento, het gemeentehuis
+

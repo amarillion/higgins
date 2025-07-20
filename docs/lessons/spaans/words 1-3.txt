@@ -1,0 +1,79 @@
+#encoding=UTF-8
+dat, eso
+wat leuk, que agradable
+leuk, agradable
+en, y
+ook, tambien
+dank u, gracias
+leuk je te zien, que gusto verte
+wat, algo/what
+nu, ahora
+naar huis, hacia la casa
+een, un(a)
+drie jaar, tres a^os
+lang, largo
+ja, si
+geleden (e), hace (ago)
+ik ga, yo voy (i am going)
+ga je mee?, vienes? (are you coming?)
+veel plezier, diviertete (have fun)
+hier, aqui
+in, en
+precies, right/precisamente/exactamente
+de, el/la/los/las
+welk, cual 
+daar (e), ahi (there)
+vlakbij, cerca de
+bij een bank, en un banco
+niet, no
+maar, pero
+al (e), ya (already)
+goed, bien
+tot, hasta
+achter, detras/atras
+dom, tonto
+van, de
+thuis, en la casa
+die, eso
+(een) ogenblikje, un momentito
+nou (e), bien (well)
+in gesprek, ocupado
+dan, entonces
+straks, despues
+of, o
+bestaat uit, consiste en
+op, en/sobre
+hoe, como
+oud, viejo
+bijna, casi
+zo, bueno
+gezellig, agradable/confortable
+wil je/wilt u? podrias?
+langzaam, lenta(mente)
+alsjeblieft/alstublieft, por favor
+even (e), solo/justo (just)
+graag, si gracias
+voluit, lleno
+iets, algo
+waar, donde
+nogal (s), algo (rather/quite)
+ver, lejos
+het beste, lo mejor
+aan de overkant, del otro lado/cruzando
+hoeveel, cuanto
+het spijt me, lo siento
+met de trein, por tren
+voor (e), por/antes (for/before)
+een kind van zes, un ni^o de seis
+nog een vraag, una pregunta mas
+twee keer per dag, dos veces al dia
+x keer, x veces
+om...uur, a las...
+'s middags/'s avonds, en la tarde
+'s ochtends/'s morgens, en la ma^ana
+'s nachts, en la noche
+ja zeker, claro/seguro
+het is, son
+kwart, cuarto
+over, despues
+half, mitad/medio(a)

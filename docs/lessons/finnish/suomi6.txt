@@ -1,0 +1,182 @@
+#encoding=UTF-8
+#Suomi - Lesson 6 
+#random dictionary words
+#question1=What is "" in Finnish?
+#question2=What is "" in English?
+kehitellä, elaborate
+kehittää, to develop
+keho, body
+kehotus, request
+keilailu, bowling
+keinotekoinen, artificial
+keitää, to cook
+keko, stack
+keksintö, discovery
+keksijä, inventor
+kelvoton, worthless
+kepponen, practical joke
+kerho, club
+en kerkiä, I don't have time
+keruu, collection
+keskeytys, break / pause
+kesytön, untamed
+ketjukirje, chain letter
+ketteryys, agility
+keuhko, lung
+keuhkokuume, pneumonia
+kiehtoa, to fascinate
+kiehumapiste, boiling point
+kiekua, crow
+kielenkääntäjä, translator
+kieltolaki, prohibition
+kierteinen, twisted
+kierukka, spiral
+kiertorata, orbit
+kiertotie, detour
+kiihoke, impulse
+kiihtynyt, excited
+keino, means
+keskiaikainen, medieval
+kilpailu, contest
+kiltti, friendly
+kimppu, bunch
+kipeä, sore
+kirjallisuus, literature
+kutsu, invitation
+kysymys, question
+kämppä, hut / flat
+laatikko, box
+laji, type / kind
+lakka, arctic cloudberry
+lentokenttä, airport
+lempi, favourite
+luku, chapter
+lumi, snow
+luultavasti, probably
+lähes, nearly
+maailma, world
+maatalous, agriculture
+maisema, landscape
+malli, model
+marja, berry
+mansikka, strawberry
+melkein, quite
+meri, sea
+mieli, mind
+mummo, grandma
+muualla, elsewhere
+niinkuin, like / as
+osa, part
+paitsi, beside / except
+paketti, package
+pala, piece
+palkinto, prize
+paras, best
+parempi, better
+pari, pair
+perinteinen, traditional
+peura, wild reindeer
+poikki, across
+poro, domesticated reindeer
+prosentti, percent
+pukki, ram
+pulla, bun
+puutarha, garden
+pääsy, entry
+rautatie, railroad
+rinta, breast / chest
+runo, poem
+ruotsalainen, swedish
+saaristo, archipelago
+sairaala, hospital
+samanlainen, similar
+sekaisin, messed up
+seteli, banknote
+sijaan, instead of
+sisko, sister
+sopimus, agreement
+sosiaaliturva, social security
+sukellus, diving
+suosittu, popular
+synty, birth
+taiteilija, artist
+tarha, yard
+tarina, story
+tarkoitus, purpose
+tavara, stuff
+tila, room / space
+toimi, function
+tunnelma, feeling
+tärkeä, important
+upea, splendid
+urheilu, sport
+vaali, election
+vaihtoehto, alternative
+vaikka, although / even / for example
+vaiva, difficulty
+vakavasti, seriously
+valitettavasti, unfortunately
+vanhemmat, parents
+vauva, baby
+vanäjä, russia
+va"hitellen, little by little
+väli, interval
+yhdysvallat, united states
+yhteensä, all together
+yleensä, in general
+ympäri, around
+yskä, cough
+öljy, oil
+katto, roof
+särky, pain
+virta, stream / flow
+kerätä, to collect
+onnistua, to succeed
+kunta, municipality
+nokoset, nap
+huokaus, sigh
+huolestunut, worried
+ajatus, idea
+herkkä, sensitive
+kiinnostaa, to interest
+tahtoa, to want
+kerkku, delicacy
+rappio, decline
+hyökätä, to attack
+rynnätä, to dash
+näytelmä, play
+romaani, novel
+perustaja, founder
+taide, art
+todellisuus, reality
+kansa, nation
+1800-luvulla, 19th century
+teos, artwork
+kisa, contest
+elo / elämä, life
+nostella, to lift weights
+yllätus, surprise
+suosio, popularity
+lapsuus, childhood
+köyhyys, poverty
+sarja, series
+uni, dream / sleep
+kirkas, bright
+tyyny, pillow
+makuusali, dormitory
+välke, glitter
+säde, beam / ray
+hirviö, monster
+rako, gap
+loistaa, to shine
+suoraan, directly
+kuunsäde, moonlight
+askel, step
+kulkea, to go / to travel / to pass
+kokenut, experienced
+kokea, to experience
+kuiskata, to whisper
+otus, creature
+piilo, hiding place
+rangaistus, punishment
+

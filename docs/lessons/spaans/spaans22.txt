@@ -1,0 +1,145 @@
+#encoding=UTF-8
+
+#paragraaf 133
+el mecánico, de monteur
+?usted desea señor¿, wat wenst u meneer?
+el automovilista, de automobilist
+repasar, controleren / doornemen
+para ver, om te zien
+todo está en orden, alles is in orde
+le advierto a usted, ik waarschuw u dat
+advertir, opmerken / waarschuwen
+tener que, moeten
+pronto, spoedig
+la mañana, de ochtend
+mañana por la mañana, morgenochtend
+tengo que salir, ik moet vertrekken
+en seguida, dadelijk
+lo miraré, ik zal er naar kijken
+estará arreglado, hij zal in orde zijn
+arreglar, in orde maken / regelen
+engrasar, doorsmeren
+ya se lo he dicho, ik heb het u al gezegd
+detenidamente, zorgvuldig
+ya veo que, ik zie al dat
+las bujías, de bougies
+funcionar, functioneren
+tengo que cambiarlas, ik moet ze vervangen
+cambiar, wisselen
+el carburador, de carburator
+ajustar, afstellen
+el ajuste, het afstellen
+necesitar, nodig hebben
+avisar, inlichten
+el defecto, het gebrek
+los frenos, de remmen
+el caso, het geval
+la necesidad, de noodzakelijkheid
+lo haré, ik zal het doen
+los faros, de koplampen
+potente, krachtig
+la bombilla, de gloeilamp
+la batería, de accu
+esté gastada, hij is versleten
+gastar, verbruiken
+en tal caso, in dat geval
+el viaje de regreso, de terugreis
+regresar, terugkeren
+el viaje, de reis
+me falta el dinero, ik heb geen geld
+cargar, opladen
+mejor será, het zal beter zijn
+una vez más, nog een keer
+la vez, de keer / de beurt
+la gasolina, de benzine
+el plomo, het lood
+poner, plaatsen
+cuarenta, veertig
+el litro, de liter
+bastar, voldoende zijn
+costará, het zal kosten
+la reparación, de reparatie
+una factura detallada, een gespecificeerde rekening
+corriente, gewoon
+el céntimo, de cent
+reparar, repareren
+quedar, blijven
+hasta mañana, tot morgen
+
+#paragraaf 153
+la cuenta, de rekening
+dicho, gezegd
+diciendo, zeggende
+dice, hij zegt
+decimos, wij zeggen
+dirá, hij zal zeggen
+estar contento, tevreden zijn
+veinte, twintig
+¿cómo?, hoe?
+posible, mogelijk
+imposible, onmogelijk
+saber, weten
+sepas, jij weet
+no lo sé, ik weet het niet
+sabía, hij wist
+no puedo, ik kan niet
+no ... tampoco, evenmin
+vas, je gaat
+vamos a, we gaan
+vamos a hacer, we gaan maken
+hecho, gedaan / gemaakt
+me hace el favor de, wilt u zo goed zijn
+hacemos, wij maken
+hace un tiempo espléndido, het is mooi weer
+invitar, uitnodigen
+el jefe, de chef
+tan de prisa, zo snel
+en serio, in ernst
+en broma, voor de grap
+había, ik had
+habiás, jij had
+creído, geloofd
+prometer, beloven
+ayudar, helpen
+pasar, doorgeven
+la sal, het zout
+el plato, de schotel
+querer, willen
+quiero, ik wil
+subió, hij stapte in
+desaparecer, verdwijnen
+desapareció, hij verdween
+pensar en, denken aan
+cuando, wanneer
+pasear / andar, wandelen
+andábamos, wij liepen
+la novia, de verloofde
+de pronto, plotseling
+dado, gegeven
+da, hij geeft
+ver, zien
+visto, gezien
+el regalo, het geschenk
+el urbano, de verkeersagent
+detrás de, achter
+el puente, de brug
+el camino, de weg
+todo derecho, steeds rechtuit
+a la izquierda, links
+a la derecha, rechts
+la noche, de avond
+esta noche, deze avond
+el menú, het menu
+marcharse, weggaan
+?cuándo se marchan?, wanneer gaat u weg?
+deber, moeten / schuldig zijn
+bañar, baden
+leer de, lezen over
+más interesante, interessanter
+allí, daar
+la botella, het flesje
+un vaso de cerveza, een glas bier
+luego, straks
+dejar, laten liggen
+la cerveza, het bier
+el pabellón, de tent

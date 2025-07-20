@@ -1,0 +1,111 @@
+#encoding=UTF-8
+une voiture, a car
+un bus, a bus
+un arbre, a tree
+un ordinateur, a computer
+un garçon, a boy
+une fille, a girl
+grand, big
+petit, little
+vert, green
+bleu, blue
+eau, water
+un bureau, a desktop
+occupé, busy
+fatigué, tired
+un jeux, a game
+la fin, the end
+le début, the beginning
+un mot, a word
+traduction, translation
+un pays, a country
+une personne, a people
+un roi, a king
+jaune, yellow
+rouge, red
+rose, pink
+blanc, white
+noir, black
+une téléphone, a phone
+un livre, a book
+une fenêtre, a window
+une porte, a door
+un serpent, a snake
+un loup, a wolf
+un chien, a dog
+un chat, a cat
+une souris, a mouse
+un stylo, a pen
+un film, a movie
+une table, a table
+une chaise, a chair
+un parfum, a fragrance
+une montre, a clock
+une virgule, a coma
+un point, a point
+une ligne, a line
+un fichier, a file
+un dossier, a directory
+aide, help
+un câble, a cable
+une recherche, a search
+une requéte, a query
+lundi, monday
+mardi, tuesday
+mercredi, wednesday
+jeudi, thirsday
+vendredi, friday
+samedi, saturday
+dimanche, sunday
+un mois, a month
+une année, a year
+un jour, a day
+une période, a period
+temps, time
+un arbre, a tree
+une racine, a root
+une leçon, a lesson
+une histoire, a story
+amour, love
+un ami, a friend
+un groupe, a group
+ensemble, together
+seul, alone
+uniquement, only
+droite, right
+gauche, left
+devant, in front of
+derrière, behind
+le coin, the corner
+la plage, the beach
+eau, water
+lait, milk
+pain, bread
+une main, a hand
+le dos, the back
+un pied, a foot
+la jambe, the leg
+la tête, the head
+le nez, the noise
+le yeux, the eyes
+la bouche, the mouth
+lent, slow
+rapide, rapid
+demain, tomorrow
+aujourd'hui, today
+hier, yesterday
+un lit, a bed
+une rose, a rose
+une boîte, a box
+un docteur, a doctor
+tout, all
+arrêt, stop
+une chambre, a room
+un studio, a studio
+une distance, the distance
+un voisin, a neighbor
+un locataire, a tenant
+un loyer, a rent
+le propriétaire, the owner
+la salle de bain, the bathroom
+la cuisine, the kitchen

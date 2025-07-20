@@ -1,0 +1,169 @@
+#encoding=UTF-8
+#Spaans
+#Uit "prisma - spaans leer je zo"
+#hoofdstuk 5, paragraaf 83, 86, 90, 93
+#question1=Wat is "" in het Spaans?
+#question2=Wat is "" in het Nederlands?
+
+#paragraaf 83
+setenta, zeventig
+el restaurante, het restaurant
+la gente, de mensen
+mucho, veel
+la sierra, de bergketen
+la pradera, de weide
+tú, jij
+ver, zien
+visto, gezien
+casi, bijna
+dos millones de habitantes, twee miljoen inwoners
+millón, miljoen
+el habitante, de inwoner
+nosotros, wij
+vosotros, jullie
+aprender, leren
+aprendido, geleerd
+la lección, de les
+tener clase, les hebben
+dar clase, les geven
+a las dos, om twee uur
+en cambio, daarentegen
+valioso, waardevol
+ancho, breed
+contento, tevreden
+frío, koud
+caliente, warm
+la novela, de roman
+el gabán, de jas
+sucio, vuil
+limpio, schoon
+cortés, beleefd
+amable, vriendelijk
+la flor, de bloem
+bello, mooi
+
+#paragraaf 86
+la escuela, de school
+dar, geven
+dan, zij geven
+varios, verscheidene
+el profesor, de leraar
+la estación, het station
+los ferrocarriles, de spoorwegen
+el lápiz, het potlood
+lunes, maandag
+el trabajador, de werker
+el rey, de koning
+la ley, de wet
+el joven, de jongeman
+el rascacielos, de wolkenkrabber
+los alrededores, de omstreken
+el andén, het perron
+la industria, de nijverheid
+el río, de rivier
+el ruido, het lawaai
+la benevolencia, de goedheid
+la compañía, het gezelschap / de maatschappij
+dios, god
+la gramática, de grammatica
+el mes, de maand
+el hijo, de zoon
+el papel, het papier
+viernes, vrijdag
+la cruz, het kruis
+el bar, de bar
+el café, de koffie
+
+#paragraaf 90
+la aldea, het gehucht
+el ala, de vleugel
+inmediatamente, onmiddelijk
+estaban pintadas, ze waren geschilderd
+pintar, schilderen
+muchísimo, zeer veel
+las gracias, de dank
+durante, gedurende
+después de, nadat
+recorrer, langsrijden
+el color, de kleur
+detrás, achter
+maravilloso, schitterend
+el muchacho, de jongen
+bailar, dansen
+el amigo, de vriend
+lo ha hecho, hij heeft het gedaan
+el hambre feroz, de vreselijke honger
+feroz, wild
+la corrida, het stierengevecht
+el toro, de stier
+el espectáculo, het spektakel
+cruel, wreed
+la chica, het meisje
+guapo, knap
+inteligente, intelligent
+
+#paragraaf 93
+la carretera, de snelweg
+excelente, uitstekend
+desde, vanaf
+el panorama, het uitzicht
+magnífico, prachtig
+la comida, de maaltijd
+preparar, voorbereiden
+abundantemente, overvloedig
+el aceite de oliva, de olijfolie
+la mezquita, de moskee
+la foto, de foto
+interesante, interessant
+¿no le parece?, vindt u niet?
+pequeño
+el balneario, de badplaats
+concurrido, druk bezocht
+todavía no, nog niet
+tan, zo
+informarse a, informeren bij
+¿dónde está?, waar is dat?
+las rocas, de rotsen
+los pinos, de pijnbomen
+aquel / aquellos, die
+el pueblo de pescadores, het vissersdorp
+el bloque de viviendas, het flatgebouw
+el encuentro, de ontmoeting
+entusiasmar, enthousiast maken
+impresionante, indrukwekkend
+el país, het land
+la población, de bevolking
+carecer de, ontberen
+pero, maar
+se tiene, u hebt
+espléndido, prachtig
+verde, groen
+jueves, donderdag
+agosto, augustus
+la edición, de editie
+multiplicarse, zich uitbreiden
+se han multiplicado, ze hebben zich uitgebreid
+cabía presumir, te verwachten was
+volver, omdraaien
+completo, volledig
+este mes, deze maand
+las cifras de visitantes, het aantal bezoekers
+la cifra, het cijfer / het aantal
+el visitante, de bezoeker
+serán, ze zullen zijn
+sin duda, ongetwijfeld
+sin, zonder
+la duda, de twijfel
+sinsiblemente, gevoelig
+superior a, hoger dan
+las del año pasado, die van het vorige jaar
+mismo, zelfde
+la época, het tijdvak
+encontrarse, zich ergens bevinden
+desahogar, verlichten
+convenir, overeenkomen / nodig zijn
+tener en cuenta, rekening houden met
+el número, het aantal / het nummer
+mayor, groter
+incontable, ontelbaar
+enormemente, geweldig

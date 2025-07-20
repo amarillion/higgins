@@ -1,0 +1,76 @@
+#encoding=UTF-8
+#Spaans
+#Uit "prisma - spaans leer je zo"
+#hoofdstuk 7, paragraaf 114, 124, 129
+#question1=Wat is "" in het Spaans?
+#question2=Wat is "" in het Nederlands?
+
+#paragraaf 114
+buscar, zoeken
+buscando, zoekende
+buscado, gezocht
+buenas tardes, goedemiddag
+buenos d'ias, goedendag
+servir, bedienen
+pasar, binnenkomen / doorbrengen / voorbijgaan
+vivir, wonen
+no s'e, ik weet niet
+saber, weten
+me acuerdo, ik herinner mij
+acordarse, zich herinneren
+faltar, ontbreken
+'el me ha recomendado, hij heeft mij aanbevolen
+recomendar, aanbevelen
+siento, het spijt me
+sentir, spijten / betreuren
+el momento, het moment
+no haya, er is niet
+dentro de, binnen
+dentro de dos d'ias, binnen twee dagen
+piensa marcharse, hij denkt weg te gaan
+pensar, denken
+marcharse, weggaan
+parar, stoppen / verblijven
+all'i estoy muy bien, daar heb ik het naar mijn zin
+prefiero, ik wil liever
+preferir, liever willen
+ya comprendo, ik begrijp het al
+practicar, oefenen
+puede usted, kunt u
+poder, kunnen
+el tel'efono, de telefoon
+cuando, wanneer
+apuntar, opschrijven
+para servir a usted, om u te dienen
+no se moleste usted, doet u geen moeite
+la molestia, de last / de moeite
+hace dos horas, twee uur geleden
+mirar, kijken
+no se sentir'a, men zal niet horen
+ning'un ruido, geen enkel geluid
+el ruido, het lawaai
+nada, niets
+el sol, de zon
+todo el d'ia, de gehele dag
+doscientos, tweehonderd
+el diez por ciento, tien procent
+el servicio, de bediening
+ya veo, ik zie wel
+la limpieza, de netheid
+el ba~no, het bad
+al lado, hiernaast
+la cama, het bed
+duro, hard
+bland'isimo, zeer zacht
+ver'a usted, u zult zien
+usted estrer'a contento, u zult tevreden zijn
+espero, ik hoop
+esperar, hopen
+cuanto antes, zo spoedig mogelijk
+posible, mogelijk
+hasta muy pronto, tot spoedig weerziens
+
+#paragraaf 124
+
+
+#paragraaf 129

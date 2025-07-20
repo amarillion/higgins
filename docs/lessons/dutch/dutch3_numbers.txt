@@ -1,0 +1,72 @@
+#encoding=UTF-8
+# Copyright 2009 Martijn van Iersel
+# Redistribution allowed under Creative Commons CC-BY-SA License
+
+een, one
+twee, two
+drie, three
+vier, four
+vijf, five
+zes, six
+zeven, seven
+acht, eight
+negen, nine
+tien, ten
+elf, eleven
+twaalf, twelve
+dertien, thirteen
+veertien, fourteen
+vijftien, fifteen
+zestien, sixteen
+zeventien, seventeen
+achttien, eighteen
+negentien, nineteen
+twintig, twenty
+eenentwintig, twenty-one
+dertig, thirty
+veertig, fourty
+vijftig, fifty
+zestig, sixty
+zeventig, seventy
+tachtig, eighty
+negentig, ninety
+honderd, one hundred
+tweehonderd, two hundred
+duizend, one thousand
+miljoen, one million
+miljard, one billion
+biljoen, one trillion
+een derde, one third
+een kwart, one quarter
+anderhalf, one and a half
+eerste, first
+tweede, second
+derde, third
+vierde, fourth
+vijfde, fifth
+zesde, sixth
+zevende, seventh
+achtste, eighth
+negende, ninth
+tiende, tenth
+
+maandag, Monday
+dinsdag, Tuesday
+woensdag, Wednesday
+donderdag, Thursday
+vrijdag, Friday
+zaterdag, Saturday
+zondag, Sunday
+
+januari, January
+februari, February
+maart, March
+april, April
+mei, May
+juni, June
+juli, July
+augustus, August
+september, September
+oktober, October
+november, November
+december, December
