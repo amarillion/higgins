@@ -13,6 +13,14 @@ export default defineConfig({
 		vue(),
 		VitePWA({
 			registerType: 'autoUpdate',
+			// cache all the imports
+			workbox: {
+				globPatterns: ["**/*"],
+			},
+			// cache all the static assets in the public folder
+			includeAssets: [
+				"**/*",
+			],
 			manifest: {
 				name: 'Dr. Higgins',
 				short_name: 'higgins',
