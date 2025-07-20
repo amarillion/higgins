@@ -2,10 +2,11 @@ import js from '@eslint/js';
 import globals from 'globals';
 import tseslint from 'typescript-eslint';
 import pluginVue from 'eslint-plugin-vue';
-import { defineConfig } from 'eslint/config';
+import { defineConfig, globalIgnores } from 'eslint/config';
 import stylistic from '@stylistic/eslint-plugin';
 
 export default defineConfig([
+	globalIgnores([ 'node_modules', 'dist' ]),
 	{
 		files: ['**/*.{js,ts,vue}'],
 		plugins: { js, '@stylistic': stylistic }, extends: ['js/recommended'],
