@@ -19,11 +19,11 @@ import type { Word } from './types';
 export type FileLoader = (fileName: string) => Promise<string>;
 
 export class Quiz {
-	private words: Word[] = [];
-	private wordMap: Map<string, string> = new Map();
-	private askBothWays: number = 1;
-	private fileName: string | null = null;
-	private originalTimeStamp: number = 0;
+	words: Word[] = [];
+	wordMap: Map<string, string> = new Map();
+	askBothWays: number = 1;
+	fileName: string | null = null;
+	originalTimeStamp: number = 0;
 
 	constructor(words?: Word[]) {
 		if (words) {
@@ -65,7 +65,7 @@ class QuizLoader {
 	private result = new Quiz();
 	private question1 = 'What is';
 	private question2 = 'What is';
-	private encoding = 'UTF-8';
+	encoding = 'UTF-8';
 	private questions = new Set<string>();
 	private answers = new Set<string>();
 	private words: [string, string][] = [];
