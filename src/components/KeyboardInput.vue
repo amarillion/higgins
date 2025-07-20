@@ -57,8 +57,7 @@ defineExpose({
 
 <template>
 	<div class="keyboard-input">
-		<h2>Question</h2>
-		
+
 		<div class="question-container">
 			<p class="question">{{ question }}</p>
 		</div>

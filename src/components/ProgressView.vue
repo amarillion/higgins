@@ -30,23 +30,15 @@ const toggleHowItWorks = () => {
 </script>
 <template>
 	<div class="progress-view">
-		<h2>Progress</h2>
-		
+		<h3>Progress</h3>
 		<div class="stats">
 			<div class="stat">
-				<span class="label">Questions Asked:</span>
+				<span class="label">Questions Asked: </span>
 				<span class="value">{{ progress.counter }}</span>
-			</div>
-			<div class="stat">
-				<span class="label">Status:</span>
-				<span class="value" :class="{ 'finished': progress.isFinished }">
-					{{ progress.isFinished ? 'Completed!' : 'In Progress' }}
-				</span>
 			</div>
 		</div>
 		
 		<div class="bins">
-			<h3>Learning Bins</h3>
 			<div class="bins-container">
 				<div
 					v-for="binData in progress.bins"
@@ -95,12 +87,6 @@ const toggleHowItWorks = () => {
 	display: flex;
 	gap: 20px;
 	margin-bottom: 20px;
-}
-
-.stat {
-	display: flex;
-	flex-direction: column;
-	gap: 4px;
 }
 
 .label {

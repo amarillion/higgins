@@ -156,7 +156,7 @@ onMounted(() => {
 	<div class="lesson-page">
 		<div class="lesson-header">
 			<button @click="emit('goBack')" class="back-button">← Back to Lessons</button>
-			<h1>{{ props.selectedLesson.language }} - {{ props.selectedLesson.lessonName }}</h1>
+			<h3>{{ props.selectedLesson.language }} - {{ props.selectedLesson.lessonName }}</h3>
 		</div>
 		
 		<div v-if="loading" class="loading">

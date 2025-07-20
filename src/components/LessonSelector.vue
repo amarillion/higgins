@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { ref, onMounted, computed } from 'vue';
+import AppHeader from './AppHeader.vue';
 
 interface LessonDirectory {
 	[language: string]: string[],
@@ -90,6 +91,7 @@ onMounted(() => {
 
 <template>
 	<div class="lesson-selector">
+		<AppHeader />
 		<h1>Select a Lesson</h1>
 		
 		<div v-if="loading" class="loading">
