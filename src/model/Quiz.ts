@@ -78,7 +78,7 @@ class QuizLoader {
 	}
 
 	private defaultFetchLoader: FileLoader = async (fileName: string): Promise<string> => {
-		const response = await fetch(fileName);
+		const response = await fetch(`./${fileName}`);
 		return response.text();
 	};
 

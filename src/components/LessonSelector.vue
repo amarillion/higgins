@@ -34,7 +34,7 @@ const loadLessonDirectory = async () => {
 		loading.value = true;
 		error.value = null;
 		
-		const response = await fetch('/lesson-directory.json');
+		const response = await fetch('./lesson-directory.json');
 		if (!response.ok) {
 			throw new Error(`Failed to load lesson directory: ${response.statusText}`);
 		}
