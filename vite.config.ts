@@ -15,11 +15,11 @@ export default defineConfig({
 			registerType: 'autoUpdate',
 			// cache all the imports
 			workbox: {
-				globPatterns: ["**/*"],
+				globPatterns: ['**/*']
 			},
 			// cache all the static assets in the public folder
 			includeAssets: [
-				"**/*",
+				'**/*'
 			],
 			manifest: {
 				name: 'Dr. Higgins',
