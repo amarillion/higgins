@@ -2,6 +2,7 @@
 import { ref, onMounted, computed } from 'vue';
 import AppHeader from './AppHeader.vue';
 
+const versionStr = `Version ${__VERSION__} - ${__BUILD_DATE__}`;
 interface LessonDirectory {
 	[language: string]: string[],
 }
@@ -150,6 +151,7 @@ onMounted(() => {
 			</button>
 		</div>
 	</div>
+	<footer><small>{{versionStr}}</small></footer>
 </template>
 
 <style scoped>

@@ -11,7 +11,7 @@ export default defineConfig([
 		files: ['**/*.{js,ts,vue}'],
 		plugins: { js, '@stylistic': stylistic },
 		extends: ['js/recommended'],
-		languageOptions: { globals: globals.browser },
+		languageOptions: { globals: { ...globals.browser, '__VERSION__': false, '__BUILD_DATE__': false },
 		rules: {
 			'eqeqeq': [ 'error', 'always' ],
 			'camelcase': [ 'error' ],
