@@ -21,17 +21,17 @@ const goBackToSelection = () => {
 </script>
 
 <template>
-  <main>
-    <LessonSelector
-      v-if="!selectedLesson"
-      @lesson-selected="handleLessonSelected"
-    />
-    <LessonPage
-      v-else
-      :selected-lesson="selectedLesson"
-      @go-back="goBackToSelection"
-    />
-  </main>
+	<main>
+		<LessonSelector
+			v-if="!selectedLesson"
+			@lesson-selected="handleLessonSelected"
+		/>
+		<LessonPage
+			v-else
+			:selected-lesson="selectedLesson"
+			@go-back="goBackToSelection"
+		/>
+	</main>
 </template>
 
 <style scoped>

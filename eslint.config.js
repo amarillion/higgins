@@ -9,7 +9,8 @@ export default defineConfig([
 	globalIgnores([ 'node_modules', 'dist' ]),
 	{
 		files: ['**/*.{js,ts,vue}'],
-		plugins: { js, '@stylistic': stylistic }, extends: ['js/recommended'],
+		plugins: { js, '@stylistic': stylistic },
+		extends: ['js/recommended'],
 		languageOptions: { globals: globals.browser },
 		rules: {
 			'eqeqeq': [ 'error', 'always' ],
@@ -35,7 +36,7 @@ export default defineConfig([
 			'@stylistic/no-mixed-spaces-and-tabs': ['error', 'smart-tabs'],
 			'@stylistic/quotes': ['error', 'single', { 'avoidEscape': true }],
 			'@stylistic/semi': ['error', 'always'],
-			'@stylistic/comma-dangle': ['error', 'never'],
+			'@stylistic/comma-dangle': 'off',
 
 			'@stylistic/no-trailing-spaces': [ 'error', {
 				skipBlankLines: true
@@ -53,7 +54,9 @@ export default defineConfig([
 			} ],
 
 			'@stylistic/padded-blocks': 'off',
-			'@stylistic/max-statements-per-line': 'off'
+			'@stylistic/max-statements-per-line': 'off',
+
+			'vue/html-indent': [ 'error', 'tab' ]
 		}
 	},
 	tseslint.configs.recommended,
