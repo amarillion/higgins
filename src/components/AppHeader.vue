@@ -2,8 +2,8 @@
 </script>
 <template>
 	<header class="app-header">
-		<h1>🎓 Dr. Higgins - Language Learning</h1>
-		<p>Master vocabulary with spaced repetition</p>
+		<h1>🎓 Dr. Higgins</h1>
+		<p>Learn a Language</p>
 	</header>
 </template>
 <style scoped>
