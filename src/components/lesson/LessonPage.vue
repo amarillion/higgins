@@ -2,10 +2,10 @@
 import { ref, onMounted, computed } from 'vue';
 import QuestionEntry from './QuestionEntry.vue';
 import ProgressView from './ProgressView.vue';
-import { Quiz, QuizSession } from '../model';
+import { Quiz, QuizSession } from '../../model';
 
-import { store } from '../store';
-import { notNull } from '../assert';
+import { store } from '../../store';
+import { notNull } from '../../assert';
 
 const quiz = ref<Quiz | null>(null);
 const session = ref<QuizSession | null>(null);

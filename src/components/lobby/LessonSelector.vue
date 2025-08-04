@@ -1,16 +1,10 @@
 <script setup lang="ts">
 import { ref, onMounted, computed } from 'vue';
-import AppHeader from './AppHeader.vue';
+import type { SelectedLesson } from '../../store';
 
 const versionStr = `Version ${__VERSION__} - ${__BUILD_DATE__}`;
 interface LessonDirectory {
 	[language: string]: string[],
-}
-
-interface SelectedLesson {
-	language: string,
-	lessonPath: string,
-	lessonName: string,
 }
 
 const emit = defineEmits<{

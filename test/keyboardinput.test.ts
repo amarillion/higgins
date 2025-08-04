@@ -1,5 +1,5 @@
 import { mount } from '@vue/test-utils';
-import KeyboardInput from '../src/components/KeyboardInput.vue';
+import KeyboardInput from '../src/components/lesson/KeyboardInput.vue';
 import { describe, expect, test } from 'vitest';
 
 describe('KeyboardInput Component Test', () => {

@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import LessonPage from './components/LessonPage.vue';
-import LobbyPage from './components/LobbyPage.vue';
+import LessonPage from './components/lesson/LessonPage.vue';
+import LobbyPage from './components/lobby/LobbyPage.vue';
 
 import { store } from './store/index.ts';
 </script>

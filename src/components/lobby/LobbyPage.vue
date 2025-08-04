@@ -2,7 +2,7 @@
 
 import { ref } from 'vue';
 import LessonSelector from './LessonSelector.vue';
-import { store } from '../store';
+import { store } from '../../store';
 import AppHeader from './AppHeader.vue';
 import StreakPage from './StreakPage.vue';
 
