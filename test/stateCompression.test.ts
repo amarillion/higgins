@@ -24,18 +24,19 @@ describe('StateCompression', () => {
 		it('should serialize fresh session correctly', () => {
 			const compactState = StateCompression.serialize(session);
 			
-			expect(compactState).toHaveLength(6); // [version, counter, bins, currentWord, binCount, wordStates]
-			expect(compactState[0]).toBe(1); // version
+			expect(compactState).toHaveLength(7); // [version, counter, bins, currentWord, sessionCorrectAnswers, binCount, wordStates]
+			expect(compactState[0]).toBe(2); // version
 			expect(compactState[1]).toBe(1); // counter starts at 1
 			expect(compactState[2]).toBe(4); // bins
 			expect(compactState[3]).toBe(0); // currentWord starts at 0
-			expect(compactState[4]).toEqual([3, 0, 0, 0]); // binCount: all words in bin 0
-			expect(compactState[5]).toHaveLength(3); // 3 word states
+			expect(compactState[4]).toBe(0); // sessionCorrectAnswers starts at 0
+			expect(compactState[5]).toEqual([3, 0, 0, 0]); // binCount: all words in bin 0
+			expect(compactState[6]).toHaveLength(3); // 3 word states
 		});
 
 		it('should serialize word states correctly', () => {
 			const compactState = StateCompression.serialize(session);
-			const wordStates = compactState[5];
+			const wordStates = compactState[6];
 			
 			// Fresh word state should be [bin=0, howSoon=-1, quizCount=0, correctInARow=0]
 			expect(wordStates[0]).toEqual([0, -1, 0, 0]);
@@ -49,7 +50,7 @@ describe('StateCompression', () => {
 			expect(result).toBe(true);
 			
 			const compactState = StateCompression.serialize(session);
-			const wordStates = compactState[5];
+			const wordStates = compactState[6];
 			
 			// First word should have been moved to bin 1, with howSoon set
 			expect(wordStates[0][0]).toBe(1); // bin = 1
@@ -64,10 +65,11 @@ describe('StateCompression', () => {
 			const compactState = StateCompression.serialize(session);
 			const restored = StateCompression.deserialize(compactState);
 			
-			expect(restored.version).toBe(1);
+			expect(restored.version).toBe(2);
 			expect(restored.counter).toBe(1);
 			expect(restored.bins).toBe(4);
 			expect(restored.currentWord).toBe(0);
+			expect(restored.sessionCorrectAnswers).toBe(0);
 			expect(restored.binCount).toEqual([3, 0, 0, 0]);
 			expect(restored.wordStates).toHaveLength(3);
 			
@@ -104,7 +106,7 @@ describe('StateCompression', () => {
 		});
 
 		it('should throw error for unsupported version', () => {
-			const invalidState = [999, 1, 4, 0, [3, 0, 0, 0], []]; // version 999
+			const invalidState = [999, 1, 4, 0, 0, [3, 0, 0, 0], []]; // version 999
 			
 			expect(() => {
 				StateCompression.deserialize(invalidState as CompactQuizState);

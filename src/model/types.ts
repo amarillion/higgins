@@ -33,7 +33,8 @@ export interface WordState {
 
 export enum SessionEventType {
 	QUESTION_CHANGED = 'QUESTION_CHANGED',
-	BINS_CHANGED = 'BINS_CHANGED'
+	BINS_CHANGED = 'BINS_CHANGED',
+	ANSWER_CORRECT = 'ANSWER_CORRECT'
 }
 
 export interface SessionListener {

@@ -2,9 +2,11 @@
 
 import { reactive } from 'vue';
 import { SessionStorage, type SessionData, type SelectedLesson } from './sessionStorage';
+import { StreakStorage, type StreakData } from './streakStorage';
 import { StateCompression } from './stateCompression';
 import { Quiz } from '../model/Quiz';
 import { QuizSession } from '../model/QuizSession';
+import { SessionEventType } from '../model/types';
 
 export type { SelectedLesson };
 
@@ -13,11 +15,18 @@ export const store = reactive({
 	selectedLesson: null as SelectedLesson | null,
 	currentLessonHash: null as string | null,
 	currentQuizSession: null as QuizSession | null,
+	streakData: null as StreakData | null,
 
 	closeLesson() {
-		// Save session before closing
+		// Save session and streak data before closing
 		if (this.selectedLesson && this.currentLessonHash) {
 			this.saveSession();
+		}
+		this.saveStreakData();
+		
+		// Remove quiz session listener
+		if (this.currentQuizSession) {
+			this.currentQuizSession.removeListener(this);
 		}
 		
 		this.lessonActive = false;
@@ -33,11 +42,17 @@ export const store = reactive({
 		this.selectedLesson = lesson;
 		this.lessonActive = true;
 		
+		// Initialize streak data if not already loaded
+		this.initializeStreakData();
+		
 		// Load lesson to get hash and create session
 		try {
 			const quiz = await Quiz.loadFromFile(lesson.lessonPath);
 			this.currentLessonHash = quiz.getContentHash();
 			this.currentQuizSession = new QuizSession(quiz);
+			
+			// Add listener for correct answers
+			this.currentQuizSession.addListener(this);
 			
 			// Save session with current hash
 			this.saveSession();
@@ -95,6 +110,12 @@ export const store = reactive({
 			this.currentQuizSession = new QuizSession(quiz);
 			this.lessonActive = true;
 			
+			// Initialize streak data
+			this.initializeStreakData();
+			
+			// Add listener for correct answers
+			this.currentQuizSession.addListener(this);
+			
 			// Restore quiz state if available
 			if (sessionData.quizState) {
 				try {
@@ -114,5 +135,44 @@ export const store = reactive({
 			SessionStorage.clear();
 			return false;
 		}
+	},
+
+	// SessionListener implementation
+	sessionChanged(type: SessionEventType): void {
+		if (type === SessionEventType.ANSWER_CORRECT) {
+			this.handleCorrectAnswer();
+		}
+	},
+
+	// Streak tracking methods
+	initializeStreakData() {
+		if (!this.streakData) {
+			this.streakData = StreakStorage.load() || StreakStorage.getDefaultData();
+		}
+	},
+
+	handleCorrectAnswer() {
+		if (!this.streakData) {
+			this.initializeStreakData();
+		}
+		
+		if (this.streakData) {
+			this.streakData = StreakStorage.addCorrectAnswers(this.streakData, 1);
+			this.saveStreakData();
+		}
+	},
+
+	saveStreakData() {
+		if (this.streakData) {
+			StreakStorage.save(this.streakData);
+		}
+	},
+
+	getStreakInfo() {
+		if (!this.streakData) {
+			this.initializeStreakData();
+		}
+		
+		return this.streakData ? StreakStorage.getStreakInfo(this.streakData) : null;
 	},
 });

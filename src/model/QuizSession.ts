@@ -28,6 +28,7 @@ export class QuizSession {
 	private currentWord: number = -1;
 	private binCount: number[] = new Array(WordState.MAXBINS).fill(0);
 	private listeners: SessionListener[] = [];
+	private sessionCorrectAnswers: number = 0;
 
 	constructor(quiz: Quiz) {
 		this.quiz = quiz;
@@ -101,6 +102,10 @@ export class QuizSession {
 			if (otherWord) {
 				this.hint = `You may be confused with "${answer}" -> "${otherWord}"`;
 			}
+		} else {
+			// Track correct answers for streak tracking
+			this.sessionCorrectAnswers++;
+			this.fireSessionChangedEvent(SessionEventType.ANSWER_CORRECT);
 		}
 		
 		this.counter++;
@@ -193,6 +198,10 @@ export class QuizSession {
 		return this.currentWord;
 	}
 
+	getSessionCorrectAnswers(): number {
+		return this.sessionCorrectAnswers;
+	}
+
 	// Restore state from serialized data
 	restoreState(state: {
 		counter: number,
@@ -205,11 +214,13 @@ export class QuizSession {
 			quizCount: number,
 			correctInARow: number,
 		}>,
+		sessionCorrectAnswers?: number,
 	}): void {
 		this.counter = state.counter;
 		this.bins = state.bins;
 		this.currentWord = state.currentWord;
 		this.binCount = [...state.binCount];
+		this.sessionCorrectAnswers = state.sessionCorrectAnswers || 0;
 		
 		// Restore word states
 		for (let i = 0; i < this.words.length && i < state.wordStates.length; i++) {

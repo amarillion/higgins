@@ -3,7 +3,7 @@ import type { QuizSession } from '../model/QuizSession';
 /**
  * Compact serialization format for QuizSession state
  *
- * Format: [version, counter, bins, currentWord, binCount[], wordStates[]]
+ * Format: [version, counter, bins, currentWord, sessionCorrectAnswers, binCount[], wordStates[]]
  * WordState format: [bin, howSoon, quizCount, correctInARow]
  *
  * Space optimizations:
@@ -12,13 +12,14 @@ import type { QuizSession } from '../model/QuizSession';
  * - Version allows future format changes
  */
 
-const SERIALIZATION_VERSION = 1;
+const SERIALIZATION_VERSION = 2;
 
 export type CompactQuizState = [
 	number, // version
 	number, // counter
 	number, // bins
 	number, // currentWord
+	number, // sessionCorrectAnswers
 	number[], // binCount
 	number[][], // wordStates as [bin, howSoon, quizCount, correctInARow][]
 ];
@@ -52,6 +53,7 @@ export class StateCompression {
 			session.getCounter(),
 			session.getBins(),
 			session.getCurrentWordIndex(),
+			session.getSessionCorrectAnswers(),
 			binCount,
 			wordStates
 		];
@@ -74,6 +76,7 @@ export class StateCompression {
 		counter: number,
 		bins: number,
 		currentWord: number,
+		sessionCorrectAnswers: number,
 		binCount: number[],
 		wordStates: Array<{
 			bin: number,
@@ -82,7 +85,7 @@ export class StateCompression {
 			correctInARow: number,
 		}>,
 	} {
-		const [version, counter, bins, currentWord, binCount, rawWordStates] = compactState;
+		const [version, counter, bins, currentWord, sessionCorrectAnswers, binCount, rawWordStates] = compactState;
 		
 		if (version !== SERIALIZATION_VERSION) {
 			throw new Error(`Unsupported serialization version: ${version}`);
@@ -100,6 +103,7 @@ export class StateCompression {
 			counter,
 			bins,
 			currentWord,
+			sessionCorrectAnswers,
 			binCount,
 			wordStates
 		};
