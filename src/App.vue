@@ -1,36 +1,14 @@
 <script setup lang="ts">
-import { ref } from 'vue';
-import LessonSelector from './components/LessonSelector.vue';
 import LessonPage from './components/LessonPage.vue';
+import LobbyPage from './components/LobbyPage.vue';
 
-interface SelectedLesson {
-	language: string,
-	lessonPath: string,
-	lessonName: string,
-}
-
-const selectedLesson = ref<SelectedLesson | null>(null);
-
-const handleLessonSelected = (lesson: SelectedLesson) => {
-	selectedLesson.value = lesson;
-};
-
-const goBackToSelection = () => {
-	selectedLesson.value = null;
-};
+import { store } from './store/index.ts';
 </script>
 
 <template>
 	<main>
-		<LessonSelector
-			v-if="!selectedLesson"
-			@lesson-selected="handleLessonSelected"
-		/>
-		<LessonPage
-			v-else
-			:selected-lesson="selectedLesson"
-			@go-back="goBackToSelection"
-		/>
+		<LessonPage v-if="store.lessonActive"/>
+		<LobbyPage v-else/>
 	</main>
 </template>
 

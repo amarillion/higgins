@@ -4,21 +4,8 @@ import QuestionEntry from './QuestionEntry.vue';
 import ProgressView from './ProgressView.vue';
 import { Quiz, QuizSession } from '../model';
 
-interface SelectedLesson {
-	language: string,
-	lessonPath: string,
-	lessonName: string,
-}
-
-interface Props {
-	selectedLesson: SelectedLesson,
-}
-
-const props = defineProps<Props>();
-
-const emit = defineEmits<{
-	goBack: [],
-}>();
+import { store } from '../store';
+import { notNull } from '../assert';
 
 const quiz = ref<Quiz | null>(null);
 const session = ref<QuizSession | null>(null);
@@ -59,8 +46,10 @@ const loadQuiz = async () => {
 		loading.value = true;
 		error.value = null;
 		
+		const selectedLesson = notNull(store.selectedLesson);
+		
 		// Load the selected lesson
-		const loadedQuiz = await Quiz.loadFromFile(props.selectedLesson.lessonPath);
+		const loadedQuiz = await Quiz.loadFromFile(selectedLesson.lessonPath);
 		quiz.value = loadedQuiz;
 		
 		// Create a new session
@@ -151,12 +140,18 @@ const resetQuiz = () => {
 onMounted(() => {
 	loadQuiz();
 });
+
+function stopLesson() {
+	// TODO: confirm dialog
+	store.closeLesson();
+};
+
 </script>
 <template>
 	<div class="lesson-page">
 		<div class="lesson-header">
-			<button @click="emit('goBack')" class="back-button">← Back to Lessons</button>
-			<h3>{{ props.selectedLesson.language }} - {{ props.selectedLesson.lessonName }}</h3>
+			<button @click="stopLesson" class="back-button">← Back to Lessons</button>
+			<h3>{{ store.selectedLesson?.language }} - {{ store.selectedLesson?.lessonName }}</h3>
 		</div>
 		
 		<div v-if="loading" class="loading">
@@ -171,7 +166,7 @@ onMounted(() => {
 		<div v-else-if="progressData?.isFinished" class="finished">
 			<h2>🎉 Congratulations!</h2>
 			<p>You have completed the quiz!</p>
-			<button @click="resetQuiz">Start Over</button>
+			<button @click="store.closeLesson">Back to Lobby</button>
 		</div>
 		
 		<div v-else>

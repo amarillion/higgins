@@ -92,7 +92,6 @@ onMounted(() => {
 
 <template>
 	<div class="lesson-selector">
-		<AppHeader />
 		<h1>Select a Lesson</h1>
 		
 		<div v-if="loading" class="loading">
