@@ -20,8 +20,8 @@ import { SessionEventType } from './types';
 import type { SessionListener, Word } from './types';
 
 export class QuizSession {
-	private static readonly MAX_LESSON_SIZE = 25;
-	
+	private static readonly MAX_LESSON_SIZE = 15;
+
 	private quiz: Quiz;
 	private words: WordState[] = [];
 	private bins: number = 4;
