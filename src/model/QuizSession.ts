@@ -84,10 +84,12 @@ export class QuizSession {
 		let maxDue = -1;
 		this.currentWord = -1;
 
-		// Look for word with highest due
+		// Look for word with highest due, but exclude words from highest bin
 		for (let i = 0; i < this.words.length; i++) {
 			const due = this.counter - this.words[i].getHowSoon();
-			if (this.words[i].getHowSoon() !== -1 && due > maxDue) {
+			if (this.words[i].getHowSoon() !== -1 &&
+				due > maxDue &&
+				this.words[i].getBin() < this.bins - 1) {
 				maxDue = due;
 				this.currentWord = i;
 			}
@@ -97,6 +99,9 @@ export class QuizSession {
 
 		// If no current word found, or there is no word with due higher than threshold
 		if (this.currentWord === -1 || maxDue < dueWait) {
+			// Reset current word to ensure we don't keep a highest-bin word from previous selection
+			this.currentWord = -1;
+			
 			let i = 0;
 			while (i < this.quiz.getWords().length &&
 				   (this.words[i].getBin() >= this.bins - 1 || this.words[i].getHowSoon() !== -1)) {

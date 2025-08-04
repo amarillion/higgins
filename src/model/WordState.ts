@@ -17,7 +17,7 @@
 import type { Word } from './types';
 
 export class WordState {
-	static readonly MAXBINS = 10;
+	static readonly MAXBINS = 4;
 
 	private word: Word;
 	private bin: number = 0;
