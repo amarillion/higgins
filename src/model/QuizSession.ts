@@ -184,6 +184,41 @@ export class QuizSession {
 		return shuffled.slice(0, count);
 	}
 
+	// State serialization support
+	getWordStates(): WordState[] {
+		return [...this.words];
+	}
+
+	getCurrentWordIndex(): number {
+		return this.currentWord;
+	}
+
+	// Restore state from serialized data
+	restoreState(state: {
+		counter: number,
+		bins: number,
+		currentWord: number,
+		binCount: number[],
+		wordStates: Array<{
+			bin: number,
+			howSoon: number,
+			quizCount: number,
+			correctInARow: number,
+		}>,
+	}): void {
+		this.counter = state.counter;
+		this.bins = state.bins;
+		this.currentWord = state.currentWord;
+		this.binCount = [...state.binCount];
+		
+		// Restore word states
+		for (let i = 0; i < this.words.length && i < state.wordStates.length; i++) {
+			this.words[i].restoreState(state.wordStates[i]);
+		}
+		
+		this.fireSessionChangedEvent(SessionEventType.QUESTION_CHANGED);
+	}
+
 	addListener(listener: SessionListener): void {
 		this.listeners.push(listener);
 	}

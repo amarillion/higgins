@@ -19,5 +19,6 @@ export { QuizSession } from './QuizSession';
 export { WordState } from './WordState';
 export { State } from './State';
 export { SessionEventType } from './types';
+export { hashString, hashLessonContent } from './hash';
 export type { Word, WordState as IWordState, SessionListener } from './types';
 export type { FileLoader } from './Quiz';

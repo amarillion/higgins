@@ -15,6 +15,7 @@
 //    along with Dr. Higgins.  If not, see <http://www.gnu.org/licenses/>.
 
 import type { Word } from './types';
+import { hashLessonContent } from './hash';
 
 export type FileLoader = (fileName: string) => Promise<string>;
 
@@ -24,12 +25,14 @@ export class Quiz {
 	askBothWays: number = 1;
 	fileName: string | null = null;
 	originalTimeStamp: number = 0;
+	contentHash: string | null = null;
 
 	constructor(words?: Word[]) {
 		if (words) {
 			this.words = [...words];
 			this.fileName = null;
 			this.originalTimeStamp = 0;
+			this.contentHash = null;
 			for (const word of words) {
 				this.wordMap.set(word.answer, word.question);
 			}
@@ -38,6 +41,10 @@ export class Quiz {
 
 	getFile(): string | null {
 		return this.fileName;
+	}
+
+	getContentHash(): string | null {
+		return this.contentHash;
 	}
 
 	static async loadFromFile(fileName: string, fileLoader?: FileLoader): Promise<Quiz> {
@@ -70,6 +77,7 @@ class QuizLoader {
 	private answers = new Set<string>();
 	private words: [string, string][] = [];
 	private fileLoader: FileLoader;
+	private originalContent = '';
 
 	constructor(fileName: string, fileLoader?: FileLoader) {
 		this.result.fileName = fileName;
@@ -85,6 +93,7 @@ class QuizLoader {
 	async processFile(): Promise<void> {
 		try {
 			const text = await this.fileLoader(this.result.fileName!);
+			this.originalContent = text;
 			const lines = text.split('\n');
 			
 			for (let i = 0; i < lines.length; i++) {
@@ -165,6 +174,9 @@ class QuizLoader {
 			}
 			lineNumber++;
 		}
+
+		// Calculate content hash
+		this.result.contentHash = hashLessonContent(this.originalContent);
 
 		return this.result;
 	}

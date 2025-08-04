@@ -76,4 +76,12 @@ export class WordState {
 
 		return correct;
 	}
+
+	// State restoration support
+	restoreState(state: { bin: number, howSoon: number, quizCount: number, correctInARow: number }): void {
+		this.bin = state.bin;
+		this.howSoon = state.howSoon;
+		this.quizCount = state.quizCount;
+		this.correctInARow = state.correctInARow;
+	}
 }
