@@ -83,7 +83,7 @@ cat, gato
 		expect(hash1).toBe(hash2);
 	});
 
-	it('should ignore comment lines', () => {
+	it('should include comment lines (preserving line numbers)', () => {
 		const content1 = `hello, hola
 goodbye, adiós
 cat, gato`;
@@ -98,10 +98,10 @@ cat, gato`;
 		const hash1 = hashLessonContent(content1);
 		const hash2 = hashLessonContent(content2);
 		
-		expect(hash1).toBe(hash2);
+		expect(hash1).not.toBe(hash2); // Should be different because comments affect line numbers
 	});
 
-	it('should be order-independent', () => {
+	it('should be order-dependent (preserving line order)', () => {
 		const content1 = `hello, hola
 goodbye, adiós
 cat, gato`;
@@ -113,7 +113,7 @@ goodbye, adiós`;
 		const hash1 = hashLessonContent(content1);
 		const hash2 = hashLessonContent(content2);
 		
-		expect(hash1).toBe(hash2);
+		expect(hash1).not.toBe(hash2); // Should be different because order affects line numbers
 	});
 
 	it('should detect content changes', () => {

@@ -1,12 +1,12 @@
 export interface StreakData {
 	currentStreak: number,
 	checkedDays: string[], // Array of date strings in YYYY-MM-DD format for past 28 days
-	dailyCorrectAnswers: Record<string, number>, // Track correct answers per day
+	dailyLessonsCompleted: Record<string, number>, // Track completed lessons per day
 	lastUpdated: number, // Timestamp of last update
 }
 
 const STREAK_STORAGE_KEY = 'higgins2-streak';
-const REQUIRED_DAILY_CORRECT = 20;
+const REQUIRED_DAILY_LESSONS = 1;
 const STREAK_HISTORY_DAYS = 28;
 
 export class StreakStorage {
@@ -28,7 +28,7 @@ export class StreakStorage {
 			// Validate the structure
 			if (typeof data.currentStreak !== 'number' ||
 				!Array.isArray(data.checkedDays) ||
-				typeof data.dailyCorrectAnswers !== 'object' ||
+				typeof data.dailyLessonsCompleted !== 'object' ||
 				typeof data.lastUpdated !== 'number') {
 				console.warn('Invalid streak data structure, clearing');
 				StreakStorage.clear();
@@ -55,7 +55,7 @@ export class StreakStorage {
 		return {
 			currentStreak: 0,
 			checkedDays: [],
-			dailyCorrectAnswers: {},
+			dailyLessonsCompleted: {},
 			lastUpdated: Date.now()
 		};
 	}
@@ -93,40 +93,40 @@ export class StreakStorage {
 		// Filter checked days to only include recent days
 		const filteredCheckedDays = data.checkedDays.filter(day => cutoffSet.has(day));
 		
-		// Filter daily correct answers to only include recent days
-		const filteredDailyCorrect: Record<string, number> = {};
+		// Filter daily completed lessons to only include recent days
+		const filteredDailyLessons: Record<string, number> = {};
 		for (const day of cutoffDays) {
-			if (data.dailyCorrectAnswers[day] !== undefined) {
-				filteredDailyCorrect[day] = data.dailyCorrectAnswers[day];
+			if (data.dailyLessonsCompleted[day] !== undefined) {
+				filteredDailyLessons[day] = data.dailyLessonsCompleted[day];
 			}
 		}
 		
 		return {
 			...data,
 			checkedDays: filteredCheckedDays,
-			dailyCorrectAnswers: filteredDailyCorrect
+			dailyLessonsCompleted: filteredDailyLessons
 		};
 	}
 
 	/**
-	 * Add correct answers for today and check if day should be marked as complete
+	 * Add completed lesson for today and check if day should be marked as complete
 	 */
-	static addCorrectAnswers(data: StreakData, count: number): StreakData {
+	static addCompletedLesson(data: StreakData): StreakData {
 		const today = StreakStorage.getTodayString();
-		const currentCount = data.dailyCorrectAnswers[today] || 0;
-		const newCount = currentCount + count;
+		const currentCount = data.dailyLessonsCompleted[today] || 0;
+		const newCount = currentCount + 1;
 		
 		const updatedData = {
 			...data,
-			dailyCorrectAnswers: {
-				...data.dailyCorrectAnswers,
+			dailyLessonsCompleted: {
+				...data.dailyLessonsCompleted,
 				[today]: newCount
 			},
 			lastUpdated: Date.now()
 		};
 
 		// Check if today should be marked as complete
-		if (newCount >= REQUIRED_DAILY_CORRECT && !data.checkedDays.includes(today)) {
+		if (newCount >= REQUIRED_DAILY_LESSONS && !data.checkedDays.includes(today)) {
 			updatedData.checkedDays = [...data.checkedDays, today];
 			updatedData.currentStreak = StreakStorage.calculateStreak(updatedData.checkedDays);
 		}
@@ -185,26 +185,26 @@ export class StreakStorage {
 		past28Days: Array<{
 			date: string,
 			isChecked: boolean,
-			correctAnswers: number,
+			lessonsCompleted: number,
 		}>,
 	} {
 		const today = StreakStorage.getTodayString();
-		const todayCorrect = data.dailyCorrectAnswers[today] || 0;
+		const todayLessons = data.dailyLessonsCompleted[today] || 0;
 		const past28Days = StreakStorage.getPastDays(STREAK_HISTORY_DAYS);
 		
 		return {
 			currentStreak: data.currentStreak,
-			todayProgress: todayCorrect,
+			todayProgress: todayLessons,
 			todayComplete: data.checkedDays.includes(today),
 			past28Days: past28Days.map(date => ({
 				date,
 				isChecked: data.checkedDays.includes(date),
-				correctAnswers: data.dailyCorrectAnswers[date] || 0
+				lessonsCompleted: data.dailyLessonsCompleted[date] || 0
 			}))
 		};
 	}
 
-	static getRequiredDailyCorrect(): number {
-		return REQUIRED_DAILY_CORRECT;
+	static getRequiredDailyLessons(): number {
+		return REQUIRED_DAILY_LESSONS;
 	}
 }

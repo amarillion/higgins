@@ -13,16 +13,14 @@ export function hashString(str: string): string {
 
 /**
  * Calculate hash for lesson content
- * This normalizes the content by removing whitespace variations
- * and calculates a hash that will change if the lesson content changes
+ * This preserves line order and includes comments since line numbers matter for state restoration
  */
 export function hashLessonContent(content: string): string {
-	// Normalize content: trim lines, remove empty lines, sort for consistent hashing
+	// Normalize content: only trim whitespace but preserve line order and comments
 	const normalizedContent = content
 		.split('\n')
 		.map(line => line.trim())
-		.filter(line => line.length > 0 && !line.startsWith('#')) // Remove comments for content hash
-		.sort() // Sort to handle reordering
+		.filter(line => line.length > 0) // Only remove empty lines
 		.join('\n');
 	
 	return hashString(normalizedContent);

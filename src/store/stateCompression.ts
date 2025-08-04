@@ -4,7 +4,7 @@ import type { QuizSession } from '../model/QuizSession';
  * Compact serialization format for QuizSession state
  *
  * Format: [version, counter, bins, currentWord, sessionCorrectAnswers, binCount[], wordStates[]]
- * WordState format: [bin, howSoon, quizCount, correctInARow]
+ * WordState format: [bin, howSoon, quizCount, correctInARow, lineNumber, side]
  *
  * Space optimizations:
  * - Array format eliminates JSON key repetition
@@ -12,7 +12,7 @@ import type { QuizSession } from '../model/QuizSession';
  * - Version allows future format changes
  */
 
-const SERIALIZATION_VERSION = 2;
+const SERIALIZATION_VERSION = 3;
 
 export type CompactQuizState = [
 	number, // version
@@ -21,7 +21,7 @@ export type CompactQuizState = [
 	number, // currentWord
 	number, // sessionCorrectAnswers
 	number[], // binCount
-	number[][], // wordStates as [bin, howSoon, quizCount, correctInARow][]
+	number[][], // wordStates as [bin, howSoon, quizCount, correctInARow, lineNumber, side][]
 ];
 
 export class StateCompression {
@@ -39,8 +39,9 @@ export class StateCompression {
 			const howSoon = wordState.getHowSoon();
 			const quizCount = wordState.getQuizCount();
 			const correctInARow = wordState.getCorrectInARow();
+			const word = wordState.getWord();
 			
-			wordStates.push([bin, howSoon, quizCount, correctInARow]);
+			wordStates.push([bin, howSoon, quizCount, correctInARow, word.lineNumber, word.side]);
 		}
 		
 		const binCount: number[] = [];
@@ -83,6 +84,8 @@ export class StateCompression {
 			howSoon: number,
 			quizCount: number,
 			correctInARow: number,
+			lineNumber: number,
+			side: number,
 		}>,
 	} {
 		const [version, counter, bins, currentWord, sessionCorrectAnswers, binCount, rawWordStates] = compactState;
@@ -91,11 +94,13 @@ export class StateCompression {
 			throw new Error(`Unsupported serialization version: ${version}`);
 		}
 		
-		const wordStates = rawWordStates.map(([bin, howSoon, quizCount, correctInARow]) => ({
+		const wordStates = rawWordStates.map(([bin, howSoon, quizCount, correctInARow, lineNumber, side]) => ({
 			bin,
 			howSoon,
 			quizCount,
-			correctInARow
+			correctInARow,
+			lineNumber,
+			side
 		}));
 		
 		return {

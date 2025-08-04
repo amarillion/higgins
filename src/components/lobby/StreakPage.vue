@@ -22,7 +22,7 @@
 					></div>
 				</div>
 				<p class="progress-text">
-					{{ streakInfo.todayProgress }} / {{ requiredDaily }} correct answers
+					{{ streakInfo.todayProgress }} / {{ requiredDaily }} lessons completed
 					<span v-if="streakInfo.todayComplete" class="completed">✓ Complete!</span>
 				</p>
 			</div>
@@ -37,7 +37,7 @@
 						class="calendar-day"
 						:class="{
 							'completed': day.isChecked,
-							'partial': day.correctAnswers > 0 && !day.isChecked,
+							'partial': day.lessonsCompleted > 0 && !day.isChecked,
 							'today': isToday(day.date)
 						}"
 						:title="getDayTooltip(day)"
@@ -52,7 +52,7 @@
 			<div class="legend">
 				<div class="legend-item">
 					<div class="legend-dot completed"></div>
-					<span>Complete ({{ requiredDaily }}+ correct)</span>
+					<span>Complete ({{ requiredDaily }}+ lessons)</span>
 				</div>
 				<div class="legend-item">
 					<div class="legend-dot partial"></div>
@@ -77,7 +77,7 @@ import { store } from '../../store';
 import { StreakStorage } from '../../store/streakStorage';
 
 const streakInfo = ref(store.getStreakInfo());
-const requiredDaily = StreakStorage.getRequiredDailyCorrect();
+const requiredDaily = StreakStorage.getRequiredDailyLessons();
 
 const progressPercentage = computed(() => {
 	if (!streakInfo.value) return 0;
@@ -101,12 +101,12 @@ function getMonthName(dateStr: string): string {
 	return new Date(dateStr).toLocaleDateString('en-US', { month: 'short' });
 }
 
-function getDayTooltip(day: { date: string, isChecked: boolean, correctAnswers: number }): string {
+function getDayTooltip(day: { date: string, isChecked: boolean, lessonsCompleted: number }): string {
 	const date = new Date(day.date).toLocaleDateString();
 	if (day.isChecked) {
-		return `${date}: Complete! (${day.correctAnswers} correct answers)`;
-	} else if (day.correctAnswers > 0) {
-		return `${date}: ${day.correctAnswers} correct answers (need ${requiredDaily})`;
+		return `${date}: Complete! (${day.lessonsCompleted} lessons completed)`;
+	} else if (day.lessonsCompleted > 0) {
+		return `${date}: ${day.lessonsCompleted} lessons completed (need ${requiredDaily})`;
 	} else {
 		return `${date}: No activity`;
 	}

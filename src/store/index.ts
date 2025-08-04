@@ -138,9 +138,10 @@ export const store = reactive({
 	},
 
 	// SessionListener implementation
-	sessionChanged(type: SessionEventType): void {
-		if (type === SessionEventType.ANSWER_CORRECT) {
-			this.handleCorrectAnswer();
+	sessionChanged(_type: SessionEventType): void {
+		// Check if lesson is completed after any change
+		if (this.currentQuizSession && this.currentQuizSession.isFinished()) {
+			this.handleLessonCompletion();
 		}
 	},
 
@@ -151,13 +152,13 @@ export const store = reactive({
 		}
 	},
 
-	handleCorrectAnswer() {
+	handleLessonCompletion() {
 		if (!this.streakData) {
 			this.initializeStreakData();
 		}
 		
 		if (this.streakData) {
-			this.streakData = StreakStorage.addCorrectAnswers(this.streakData, 1);
+			this.streakData = StreakStorage.addCompletedLesson(this.streakData);
 			this.saveStreakData();
 		}
 	},

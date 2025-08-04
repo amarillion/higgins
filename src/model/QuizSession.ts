@@ -17,9 +17,11 @@
 import { Quiz } from './Quiz';
 import { WordState } from './WordState';
 import { SessionEventType } from './types';
-import type { SessionListener } from './types';
+import type { SessionListener, Word } from './types';
 
 export class QuizSession {
+	private static readonly MAX_LESSON_SIZE = 25;
+	
 	private quiz: Quiz;
 	private words: WordState[] = [];
 	private bins: number = 4;
@@ -33,13 +35,37 @@ export class QuizSession {
 	constructor(quiz: Quiz) {
 		this.quiz = quiz;
 		
-		for (const word of quiz.getWords()) {
+		// Get all available words
+		const allWords = quiz.getWords();
+		
+		// Randomly select up to MAX_LESSON_SIZE words
+		const selectedWords = this.selectRandomWords(allWords, QuizSession.MAX_LESSON_SIZE);
+		
+		for (const word of selectedWords) {
 			this.words.push(new WordState(word));
 		}
 		
 		this.binCount[0] = this.words.length;
 		this.shuffleWords();
 		this.currentWord = 0;
+	}
+
+	/**
+	 * Randomly select up to maxCount words from the given array
+	 */
+	private selectRandomWords(words: Word[], maxCount: number): Word[] {
+		if (words.length <= maxCount) {
+			return [...words]; // Return all words if we have fewer than maxCount
+		}
+		
+		// Fisher-Yates shuffle algorithm to randomly select words
+		const shuffled = [...words];
+		for (let i = shuffled.length - 1; i > 0; i--) {
+			const j = Math.floor(Math.random() * (i + 1));
+			[shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+		}
+		
+		return shuffled.slice(0, maxCount);
 	}
 
 	isFinished(): boolean {
@@ -213,6 +239,8 @@ export class QuizSession {
 			howSoon: number,
 			quizCount: number,
 			correctInARow: number,
+			lineNumber: number,
+			side: number,
 		}>,
 		sessionCorrectAnswers?: number,
 	}): void {
@@ -222,9 +250,16 @@ export class QuizSession {
 		this.binCount = [...state.binCount];
 		this.sessionCorrectAnswers = state.sessionCorrectAnswers || 0;
 		
-		// Restore word states
-		for (let i = 0; i < this.words.length && i < state.wordStates.length; i++) {
-			this.words[i].restoreState(state.wordStates[i]);
+		// Restore word states by matching lineNumber and side
+		for (const savedWordState of state.wordStates) {
+			const matchingWordState = this.words.find(ws =>
+				ws.getWord().lineNumber === savedWordState.lineNumber &&
+				ws.getWord().side === savedWordState.side
+			);
+			
+			if (matchingWordState) {
+				matchingWordState.restoreState(savedWordState);
+			}
 		}
 		
 		this.fireSessionChangedEvent(SessionEventType.QUESTION_CHANGED);

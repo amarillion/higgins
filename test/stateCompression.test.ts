@@ -4,6 +4,31 @@ import { Quiz } from '../src/model/Quiz';
 import { QuizSession } from '../src/model/QuizSession';
 import type { Word } from '../src/model/types';
 
+// Test constants - keep separate from implementation to avoid tight coupling
+const TEST_EXPECTED_VERSION = 3;
+const TEST_COMPACT_STATE_LENGTH = 7;
+
+// Indices for compact state array - for test readability
+enum CompactStateIndex {
+	VERSION = 0,
+	COUNTER = 1,
+	BINS = 2,
+	CURRENT_WORD = 3,
+	SESSION_CORRECT_ANSWERS = 4,
+	BIN_COUNT = 5,
+	WORD_STATES = 6
+}
+
+// Indices for word state arrays - for test readability
+enum WordStateIndex {
+	BIN = 0,
+	HOW_SOON = 1,
+	QUIZ_COUNT = 2,
+	CORRECT_IN_A_ROW = 3,
+	LINE_NUMBER = 4,
+	SIDE = 5
+}
+
 describe('StateCompression', () => {
 	let quiz: Quiz;
 	let session: QuizSession;
@@ -24,24 +49,29 @@ describe('StateCompression', () => {
 		it('should serialize fresh session correctly', () => {
 			const compactState = StateCompression.serialize(session);
 			
-			expect(compactState).toHaveLength(7); // [version, counter, bins, currentWord, sessionCorrectAnswers, binCount, wordStates]
-			expect(compactState[0]).toBe(2); // version
-			expect(compactState[1]).toBe(1); // counter starts at 1
-			expect(compactState[2]).toBe(4); // bins
-			expect(compactState[3]).toBe(0); // currentWord starts at 0
-			expect(compactState[4]).toBe(0); // sessionCorrectAnswers starts at 0
-			expect(compactState[5]).toEqual([3, 0, 0, 0]); // binCount: all words in bin 0
-			expect(compactState[6]).toHaveLength(3); // 3 word states
+			expect(compactState).toHaveLength(TEST_COMPACT_STATE_LENGTH);
+			expect(compactState[CompactStateIndex.VERSION]).toBe(TEST_EXPECTED_VERSION);
+			expect(compactState[CompactStateIndex.COUNTER]).toBe(1); // counter starts at 1
+			expect(compactState[CompactStateIndex.BINS]).toBe(4); // bins
+			expect(compactState[CompactStateIndex.CURRENT_WORD]).toBe(0); // currentWord starts at 0
+			expect(compactState[CompactStateIndex.SESSION_CORRECT_ANSWERS]).toBe(0); // sessionCorrectAnswers starts at 0
+			expect(compactState[CompactStateIndex.BIN_COUNT]).toEqual([3, 0, 0, 0]); // binCount: all words in bin 0
+			expect(compactState[CompactStateIndex.WORD_STATES]).toHaveLength(3); // 3 word states
 		});
 
 		it('should serialize word states correctly', () => {
 			const compactState = StateCompression.serialize(session);
-			const wordStates = compactState[6];
+			const wordStates = compactState[CompactStateIndex.WORD_STATES];
 			
-			// Fresh word state should be [bin=0, howSoon=-1, quizCount=0, correctInARow=0]
-			expect(wordStates[0]).toEqual([0, -1, 0, 0]);
-			expect(wordStates[1]).toEqual([0, -1, 0, 0]);
-			expect(wordStates[2]).toEqual([0, -1, 0, 0]);
+			// Fresh word state should be [bin=0, howSoon=-1, quizCount=0, correctInARow=0, lineNumber, side]
+			// Note: lineNumber and side will vary based on the test data, so we check the structure
+			expect(wordStates[0]).toHaveLength(6); // Should have 6 elements now
+			expect(wordStates[0][WordStateIndex.BIN]).toBe(0);
+			expect(wordStates[0][WordStateIndex.HOW_SOON]).toBe(-1);
+			expect(wordStates[0][WordStateIndex.QUIZ_COUNT]).toBe(0);
+			expect(wordStates[0][WordStateIndex.CORRECT_IN_A_ROW]).toBe(0);
+			expect(typeof wordStates[0][WordStateIndex.LINE_NUMBER]).toBe('number');
+			expect(typeof wordStates[0][WordStateIndex.SIDE]).toBe('number');
 		});
 
 		it('should serialize modified session state', () => {
@@ -50,13 +80,13 @@ describe('StateCompression', () => {
 			expect(result).toBe(true);
 			
 			const compactState = StateCompression.serialize(session);
-			const wordStates = compactState[6];
+			const wordStates = compactState[CompactStateIndex.WORD_STATES];
 			
 			// First word should have been moved to bin 1, with howSoon set
-			expect(wordStates[0][0]).toBe(1); // bin = 1
-			expect(wordStates[0][1]).toBe(3); // howSoon = counter + 2^bin = 1 + 2^1 = 3
-			expect(wordStates[0][2]).toBe(1); // quizCount = 1
-			expect(wordStates[0][3]).toBe(1); // correctInARow = 1
+			expect(wordStates[0][WordStateIndex.BIN]).toBe(1); // bin = 1
+			expect(wordStates[0][WordStateIndex.HOW_SOON]).toBe(3); // howSoon = counter + 2^bin = 1 + 2^1 = 3
+			expect(wordStates[0][WordStateIndex.QUIZ_COUNT]).toBe(1); // quizCount = 1
+			expect(wordStates[0][WordStateIndex.CORRECT_IN_A_ROW]).toBe(1); // correctInARow = 1
 		});
 	});
 
@@ -65,7 +95,7 @@ describe('StateCompression', () => {
 			const compactState = StateCompression.serialize(session);
 			const restored = StateCompression.deserialize(compactState);
 			
-			expect(restored.version).toBe(2);
+			expect(restored.version).toBe(TEST_EXPECTED_VERSION);
 			expect(restored.counter).toBe(1);
 			expect(restored.bins).toBe(4);
 			expect(restored.currentWord).toBe(0);
@@ -73,13 +103,14 @@ describe('StateCompression', () => {
 			expect(restored.binCount).toEqual([3, 0, 0, 0]);
 			expect(restored.wordStates).toHaveLength(3);
 			
-			// Check first word state
-			expect(restored.wordStates[0]).toEqual({
-				bin: 0,
-				howSoon: -1,
-				quizCount: 0,
-				correctInARow: 0
-			});
+			// Check first word state structure (values will depend on test data)
+			const firstWordState = restored.wordStates[0];
+			expect(firstWordState.bin).toBe(0);
+			expect(firstWordState.howSoon).toBe(-1);
+			expect(firstWordState.quizCount).toBe(0);
+			expect(firstWordState.correctInARow).toBe(0);
+			expect(typeof firstWordState.lineNumber).toBe('number');
+			expect(typeof firstWordState.side).toBe('number');
 		});
 
 		it('should handle -1 howSoon values correctly', () => {
@@ -106,11 +137,12 @@ describe('StateCompression', () => {
 		});
 
 		it('should throw error for unsupported version', () => {
-			const invalidState = [999, 1, 4, 0, 0, [3, 0, 0, 0], []]; // version 999
+			const invalidVersion = 999;
+			const invalidState = [invalidVersion, 1, 4, 0, 0, [3, 0, 0, 0], []];
 			
 			expect(() => {
 				StateCompression.deserialize(invalidState as CompactQuizState);
-			}).toThrow('Unsupported serialization version: 999');
+			}).toThrow(`Unsupported serialization version: ${invalidVersion}`);
 		});
 	});
 
