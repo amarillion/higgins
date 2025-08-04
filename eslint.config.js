@@ -11,7 +11,7 @@ export default defineConfig([
 		files: ['**/*.{js,ts,vue}'],
 		plugins: { js, '@stylistic': stylistic },
 		extends: ['js/recommended'],
-		languageOptions: { globals: { ...globals.browser, '__VERSION__': false, '__BUILD_DATE__': false },
+		languageOptions: { globals: { ...globals.browser, '__VERSION__': false, '__BUILD_DATE__': false } },
 		rules: {
 			'eqeqeq': [ 'error', 'always' ],
 			'camelcase': [ 'error' ],
@@ -56,7 +56,7 @@ export default defineConfig([
 			'@stylistic/padded-blocks': 'off',
 			'@stylistic/max-statements-per-line': 'off',
 
-			'vue/html-indent': [ 'error', 'tab' ]
+			'vue/html-indent': [ 'error', 'tab' ],
 		}
 	},
 	tseslint.configs.recommended,

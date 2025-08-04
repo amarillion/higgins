@@ -22,7 +22,7 @@ const availableLessons = computed(() => {
 	if (!selectedLanguage.value || !lessonDirectory.value[selectedLanguage.value]) {
 		return [];
 	}
-	return lessonDirectory.value[selectedLanguage.value].sort();
+	return lessonDirectory.value[selectedLanguage.value].slice().sort();
 });
 
 const loadLessonDirectory = async () => {

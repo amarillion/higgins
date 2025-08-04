@@ -1,6 +1,6 @@
 // simple store modeled after https://vuejs.org/guide/scaling-up/state-management.html
 
-import { reactive } from 'vue'
+import { reactive } from 'vue';
 
 export interface SelectedLesson {
 	language: string,
