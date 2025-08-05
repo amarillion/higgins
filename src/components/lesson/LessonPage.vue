@@ -49,11 +49,12 @@ const loadQuiz = async () => {
 		const selectedLesson = notNull(store.selectedLesson);
 		
 		// Load the selected lesson
+		// TODO: should this be in store as well?
 		const loadedQuiz = await Quiz.loadFromFile(selectedLesson.lessonPath);
 		quiz.value = loadedQuiz;
 		
-		// Create a new session
-		session.value = new QuizSession(loadedQuiz);
+		// Use session from store.
+		session.value = store.currentQuizSession;
 		
 		// Get first question
 		nextQuestion();
