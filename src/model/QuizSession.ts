@@ -202,7 +202,11 @@ export class QuizSession {
 	}
 
 	getRandomIncorrectAnswers(correctAnswer: string, count: number = 3): string[] {
+		// get side of the current word
+		const currentSide = this.words[this.currentWord].getWord().side;
+
 		const allAnswers = this.quiz.getWords()
+			.filter(word => word.side === currentSide)
 			.map(word => word.answer)
 			.filter(answer => answer.toLowerCase().trim() !== correctAnswer.toLowerCase().trim());
 		
