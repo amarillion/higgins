@@ -14,7 +14,7 @@
 //    You should have received a copy of the GNU General Public License
 //    along with Dr. Higgins.  If not, see <http://www.gnu.org/licenses/>.
 
-import { shuffle } from '../util/random';
+import { pickOne, shuffle } from '../util/random';
 import { Quiz } from './Quiz';
 import { WordState } from './WordState';
 import { SessionEventType } from './types';
@@ -28,7 +28,7 @@ export class QuizSession {
 	private bins: number = WordState.MAXBINS;
 	private counter: number = 1;
 	private hint: string | null = null;
-	private currentWord: number = -1;
+	private currentWordIdx: number = -1;
 	private binCount: number[] = new Array(WordState.MAXBINS).fill(0);
 	private listeners: SessionListener[] = [];
 	private sessionCorrectAnswers: number = 0;
@@ -48,7 +48,7 @@ export class QuizSession {
 		
 		this.binCount[0] = this.words.length;
 		shuffle(this.words);
-		this.currentWord = 0;
+		this.currentWordIdx = 0;
 	}
 
 	/**
@@ -77,51 +77,41 @@ export class QuizSession {
 
 	nextQuestion(): void {
 		shuffle(this.words);
-		let maxDue = -1;
-		this.currentWord = -1;
 
-		// Look for word with highest due, but exclude words from highest bin
-		for (let i = 0; i < this.words.length; i++) {
-			const due = this.counter - this.words[i].getHowSoon();
-			if (this.words[i].getHowSoon() !== -1 &&
-				due > maxDue &&
-				this.words[i].getBin() < this.bins - 1) {
-				maxDue = due;
-				this.currentWord = i;
+		const available = this.words.filter(word => word.getBin() < this.bins - 1);
+
+		let selectedWord: WordState | null = null;
+
+		// Look for word with highest due
+		const [ firstDue ] = available
+			.filter(word => word.getHowSoon() !== -1) // discard words that are not scheduled at all
+			.filter(word => this.counter - word.getHowSoon() >= 0) // discard words that are not yet due
+			.sort((a, b) => b.getHowSoon() - a.getHowSoon()); // highest due first
+		
+		if (firstDue) {
+			selectedWord = firstDue;
+		}
+
+		if (!selectedWord) {
+			const notDue = available.filter(word => word.getHowSoon() === -1);
+			if (notDue.length > 0) {
+				// do two random samples, and pick the one in the lowest bin.
+				const word1 = pickOne(notDue);
+				const word2 = pickOne(notDue);
+				selectedWord = word1.getBin() > word2.getBin() ? word2 : word1;
 			}
 		}
 
-		const dueWait = Math.random() < 0.4 ? 2 : 3;
-
-		// If no current word found, or there is no word with due higher than threshold
-		if (this.currentWord === -1 || maxDue < dueWait) {
-			// Reset current word to ensure we don't keep a highest-bin word from previous selection
-			this.currentWord = -1;
-			
-			let i = 0;
-			while (i < this.quiz.getWords().length &&
-				   (this.words[i].getBin() >= this.bins - 1 || this.words[i].getHowSoon() !== -1)) {
-				i++;
-			}
-			
-			let j = i;
-			if (i < this.quiz.getWords().length) {
-				while (j < this.quiz.getWords().length &&
-					   (this.words[j].getBin() >= this.bins - 1 || this.words[j].getHowSoon() !== -1)) {
-					j++;
-				}
-			}
-			
-			if (i < this.quiz.getWords().length && j < this.quiz.getWords().length) {
-				this.currentWord = this.words[i].getBin() > this.words[j].getBin() ? j : i;
-			}
+		if (!selectedWord) {
+			selectedWord = pickOne(available);
 		}
-
+		
+		this.currentWordIdx = this.words.indexOf(selectedWord);
 		this.fireSessionChangedEvent(SessionEventType.QUESTION_CHANGED);
 	}
 
 	compareAnswer(answer: string): boolean {
-		const result = this.words[this.currentWord].compareAnswer(answer, this.counter, this.binCount);
+		const result = this.words[this.currentWordIdx].compareAnswer(answer, this.counter, this.binCount);
 		this.hint = null;
 		
 		if (!result) {
@@ -140,16 +130,16 @@ export class QuizSession {
 	}
 
 	getCorrectAnswer(): string {
-		return this.words[this.currentWord].getWord().answer;
+		return this.words[this.currentWordIdx].getWord().answer;
 	}
 
 	getQuestion(): string {
-		if (this.currentWord < 0 || this.currentWord >= this.quiz.getWords().length) {
+		if (this.currentWordIdx < 0 || this.currentWordIdx >= this.quiz.getWords().length) {
 			throw new Error('Invalid current word index');
 		}
 		
-		const word = this.words[this.currentWord].getWord().question;
-		const template = this.words[this.currentWord].getWord().template;
+		const word = this.words[this.currentWordIdx].getWord().question;
+		const template = this.words[this.currentWordIdx].getWord().template;
 		const pos = template.indexOf('""');
 		
 		if (pos >= 0) {
@@ -191,19 +181,19 @@ export class QuizSession {
 	}
 
 	getCurrentWord(): string {
-		return this.words[this.currentWord].getWord().question;
+		return this.words[this.currentWordIdx].getWord().question;
 	}
 
 	getCurrentWordBin(): number {
-		if (this.currentWord < 0 || this.currentWord >= this.words.length) {
+		if (this.currentWordIdx < 0 || this.currentWordIdx >= this.words.length) {
 			return 0; // Default to lowest bin if no current word
 		}
-		return this.words[this.currentWord].getBin();
+		return this.words[this.currentWordIdx].getBin();
 	}
 
 	getRandomIncorrectAnswers(correctAnswer: string, count: number = 3): string[] {
 		// get side of the current word
-		const currentSide = this.words[this.currentWord].getWord().side;
+		const currentSide = this.words[this.currentWordIdx].getWord().side;
 
 		const allAnswers = this.quiz.getWords()
 			.filter(word => word.side === currentSide)
@@ -223,7 +213,7 @@ export class QuizSession {
 	}
 
 	getCurrentWordIndex(): number {
-		return this.currentWord;
+		return this.currentWordIdx;
 	}
 
 	getSessionCorrectAnswers(): number {
@@ -248,7 +238,7 @@ export class QuizSession {
 	}): void {
 		this.counter = state.counter;
 		this.bins = state.bins;
-		this.currentWord = state.currentWord;
+		this.currentWordIdx = state.currentWord;
 		this.binCount = [...state.binCount];
 		this.sessionCorrectAnswers = state.sessionCorrectAnswers || 0;
 		

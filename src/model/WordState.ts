@@ -14,6 +14,7 @@
 //    You should have received a copy of the GNU General Public License
 //    along with Dr. Higgins.  If not, see <http://www.gnu.org/licenses/>.
 
+import { randomIntBetween } from '../util/random';
 import type { Word } from './types';
 
 /**
@@ -39,8 +40,18 @@ export class WordState {
 
 	private word: Word;
 	private bin: number = 0;
+
+	/* howSoon is used to insert repetitions into the upcoming queue
+	 it is either -1, or a counter value indicating when it's going to be overdue */
 	private howSoon: number = -1;
+
 	private quizCount: number = 0;
+	
+	/**
+	 * Words start off with only 1 required repetition for advancement.
+	 * Mistakes must be repeated two times before they can advance to the next bin.
+	 * After a mistake is cleared, the required repetitions go back to 1.
+	 */
 	private remainingRepetitions: number = 1;
 
 	constructor(word: Word) {
@@ -84,15 +95,15 @@ export class WordState {
 			}
 			else {
 				// Still more correct answers needed to move to next bin, so
-				// set to be repeated ASAP
-				this.howSoon = counter;
+				// set to be repeated soon, but not immediately
+				this.howSoon = counter + randomIntBetween(2, 3);
 			}
 		} else {
 			// Incorrect answer, repeat two times
 			this.remainingRepetitions = 2;
-			this.howSoon = counter; // Ask again soon
+			this.howSoon = counter + randomIntBetween(2, 3);
 
-			// TODO: keep statistics on wrong answers
+			// TODO: keep statistics on wrong answers here.
 		}
 
 		return correct;
