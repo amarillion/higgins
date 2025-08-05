@@ -5,7 +5,7 @@ import ProgressView from './ProgressView.vue';
 import { Quiz, QuizSession } from '../../model';
 
 import { store } from '../../store';
-import { notNull } from '../../assert';
+import { notNull } from '../../util/assert';
 
 const quiz = ref<Quiz | null>(null);
 const session = ref<QuizSession | null>(null);

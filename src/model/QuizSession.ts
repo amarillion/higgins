@@ -14,6 +14,7 @@
 //    You should have received a copy of the GNU General Public License
 //    along with Dr. Higgins.  If not, see <http://www.gnu.org/licenses/>.
 
+import { shuffle } from '../util/random';
 import { Quiz } from './Quiz';
 import { WordState } from './WordState';
 import { SessionEventType } from './types';
@@ -46,7 +47,7 @@ export class QuizSession {
 		}
 		
 		this.binCount[0] = this.words.length;
-		this.shuffleWords();
+		shuffle(this.words);
 		this.currentWord = 0;
 	}
 
@@ -58,12 +59,8 @@ export class QuizSession {
 			return [...words]; // Return all words if we have fewer than maxCount
 		}
 		
-		// Fisher-Yates shuffle algorithm to randomly select words
 		const shuffled = [...words];
-		for (let i = shuffled.length - 1; i > 0; i--) {
-			const j = Math.floor(Math.random() * (i + 1));
-			[shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
-		}
+		shuffle(shuffled);
 		
 		return shuffled.slice(0, maxCount);
 	}
@@ -79,8 +76,7 @@ export class QuizSession {
 	}
 
 	nextQuestion(): void {
-		this.shuffleWords();
-
+		shuffle(this.words);
 		let maxDue = -1;
 		this.currentWord = -1;
 
@@ -212,10 +208,7 @@ export class QuizSession {
 		
 		// Shuffle array using Fisher-Yates algorithm
 		const shuffled = [...allAnswers];
-		for (let i = shuffled.length - 1; i > 0; i--) {
-			const j = Math.floor(Math.random() * (i + 1));
-			[shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
-		}
+		shuffle(shuffled);
 		
 		return shuffled.slice(0, count);
 	}
@@ -278,13 +271,6 @@ export class QuizSession {
 		const index = this.listeners.indexOf(listener);
 		if (index > -1) {
 			this.listeners.splice(index, 1);
-		}
-	}
-
-	private shuffleWords(): void {
-		for (let i = this.words.length - 1; i > 0; i--) {
-			const j = Math.floor(Math.random() * (i + 1));
-			[this.words[i], this.words[j]] = [this.words[j], this.words[i]];
 		}
 	}
 
