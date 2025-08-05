@@ -82,7 +82,7 @@ const nextQuestion = () => {
 	const currentBin = session.value.getCurrentWordBin();
 	const correct = session.value.getCorrectAnswer();
 	
-	if (currentBin <= 1) {
+	if (currentBin === 0) {
 		// Use multiple choice for bins 0-1 (newer/harder words)
 		inputType.value = 'multiple-choice';
 		
@@ -98,7 +98,7 @@ const nextQuestion = () => {
 		
 		choices.value = allChoices;
 	} else {
-		// Use text input for bins 2+ (more learned words)
+		// Use text input for bins 1+ (more learned words)
 		inputType.value = 'text';
 		choices.value = [];
 	}

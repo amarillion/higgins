@@ -7,6 +7,7 @@ import type { Word } from '../src/model/types';
 // Test constants - keep separate from implementation to avoid tight coupling
 const TEST_EXPECTED_VERSION = 4;
 const TEST_COMPACT_STATE_LENGTH = 7;
+const TEST_MAXBINS = 3;
 
 // Indices for compact state array - for test readability
 enum CompactStateIndex {
@@ -52,10 +53,10 @@ describe('StateCompression', () => {
 			expect(compactState).toHaveLength(TEST_COMPACT_STATE_LENGTH);
 			expect(compactState[CompactStateIndex.VERSION]).toBe(TEST_EXPECTED_VERSION);
 			expect(compactState[CompactStateIndex.COUNTER]).toBe(1); // counter starts at 1
-			expect(compactState[CompactStateIndex.BINS]).toBe(4); // bins
+			expect(compactState[CompactStateIndex.BINS]).toBe(TEST_MAXBINS); // bins
 			expect(compactState[CompactStateIndex.CURRENT_WORD]).toBe(0); // currentWord starts at 0
 			expect(compactState[CompactStateIndex.SESSION_CORRECT_ANSWERS]).toBe(0); // sessionCorrectAnswers starts at 0
-			expect(compactState[CompactStateIndex.BIN_COUNT]).toEqual([3, 0, 0, 0]); // binCount: all words in bin 0
+			expect(compactState[CompactStateIndex.BIN_COUNT]).toEqual([3, 0, 0]); // binCount: all words in bin 0
 			expect(compactState[CompactStateIndex.WORD_STATES]).toHaveLength(3); // 3 word states
 		});
 
@@ -96,10 +97,10 @@ describe('StateCompression', () => {
 			
 			expect(restored.version).toBe(TEST_EXPECTED_VERSION);
 			expect(restored.counter).toBe(1);
-			expect(restored.bins).toBe(4);
+			expect(restored.bins).toBe(TEST_MAXBINS);
 			expect(restored.currentWord).toBe(0);
 			expect(restored.sessionCorrectAnswers).toBe(0);
-			expect(restored.binCount).toEqual([3, 0, 0, 0]);
+			expect(restored.binCount).toEqual([3, 0, 0]);
 			expect(restored.wordStates).toHaveLength(3);
 			
 			// Check first word state structure (values will depend on test data)
@@ -166,7 +167,7 @@ describe('StateCompression', () => {
 				counter: session.getCounter(),
 				bins: session.getBins(),
 				currentWord: session.getCurrentWordIndex(),
-				binCount: [3, 0, 0, 0],
+				binCount: [3, 0, 0],
 				wordStates: [
 					{ bin: 0, howSoon: -1, quizCount: 0, remainingRepetitions: 1 },
 					{ bin: 0, howSoon: -1, quizCount: 0, remainingRepetitions: 1 },

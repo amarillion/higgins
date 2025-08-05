@@ -35,7 +35,7 @@ export function compareMagically(aRaw: string, bRaw: string) {
 }
 
 export class WordState {
-	static readonly MAXBINS = 4;
+	static readonly MAXBINS = 3;
 
 	private word: Word;
 	private bin: number = 0;
