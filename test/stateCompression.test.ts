@@ -5,7 +5,7 @@ import { QuizSession } from '../src/model/QuizSession';
 import type { Word } from '../src/model/types';
 
 // Test constants - keep separate from implementation to avoid tight coupling
-const TEST_EXPECTED_VERSION = 3;
+const TEST_EXPECTED_VERSION = 4;
 const TEST_COMPACT_STATE_LENGTH = 7;
 
 // Indices for compact state array - for test readability
@@ -24,7 +24,7 @@ enum WordStateIndex {
 	BIN = 0,
 	HOW_SOON = 1,
 	QUIZ_COUNT = 2,
-	CORRECT_IN_A_ROW = 3,
+	REMAINING_REPETITIONS = 3,
 	LINE_NUMBER = 4,
 	SIDE = 5
 }
@@ -63,13 +63,12 @@ describe('StateCompression', () => {
 			const compactState = StateCompression.serialize(session);
 			const wordStates = compactState[CompactStateIndex.WORD_STATES];
 			
-			// Fresh word state should be [bin=0, howSoon=-1, quizCount=0, correctInARow=0, lineNumber, side]
 			// Note: lineNumber and side will vary based on the test data, so we check the structure
 			expect(wordStates[0]).toHaveLength(6); // Should have 6 elements now
 			expect(wordStates[0][WordStateIndex.BIN]).toBe(0);
 			expect(wordStates[0][WordStateIndex.HOW_SOON]).toBe(-1);
 			expect(wordStates[0][WordStateIndex.QUIZ_COUNT]).toBe(0);
-			expect(wordStates[0][WordStateIndex.CORRECT_IN_A_ROW]).toBe(0);
+			expect(wordStates[0][WordStateIndex.REMAINING_REPETITIONS]).toBe(1);
 			expect(typeof wordStates[0][WordStateIndex.LINE_NUMBER]).toBe('number');
 			expect(typeof wordStates[0][WordStateIndex.SIDE]).toBe('number');
 		});
@@ -84,9 +83,9 @@ describe('StateCompression', () => {
 			
 			// First word should have been moved to bin 1, with howSoon set
 			expect(wordStates[0][WordStateIndex.BIN]).toBe(1); // bin = 1
-			expect(wordStates[0][WordStateIndex.HOW_SOON]).toBe(3); // howSoon = counter + 2^bin = 1 + 2^1 = 3
+			expect(wordStates[0][WordStateIndex.HOW_SOON]).toBe(-1);
 			expect(wordStates[0][WordStateIndex.QUIZ_COUNT]).toBe(1); // quizCount = 1
-			expect(wordStates[0][WordStateIndex.CORRECT_IN_A_ROW]).toBe(1); // correctInARow = 1
+			expect(wordStates[0][WordStateIndex.REMAINING_REPETITIONS]).toBe(1);
 		});
 	});
 
@@ -108,7 +107,7 @@ describe('StateCompression', () => {
 			expect(firstWordState.bin).toBe(0);
 			expect(firstWordState.howSoon).toBe(-1);
 			expect(firstWordState.quizCount).toBe(0);
-			expect(firstWordState.correctInARow).toBe(0);
+			expect(firstWordState.remainingRepetitions).toBe(1);
 			expect(typeof firstWordState.lineNumber).toBe('number');
 			expect(typeof firstWordState.side).toBe('number');
 		});
@@ -169,9 +168,9 @@ describe('StateCompression', () => {
 				currentWord: session.getCurrentWordIndex(),
 				binCount: [3, 0, 0, 0],
 				wordStates: [
-					{ bin: 0, howSoon: -1, quizCount: 0, correctInARow: 0 },
-					{ bin: 0, howSoon: -1, quizCount: 0, correctInARow: 0 },
-					{ bin: 0, howSoon: -1, quizCount: 0, correctInARow: 0 }
+					{ bin: 0, howSoon: -1, quizCount: 0, remainingRepetitions: 1 },
+					{ bin: 0, howSoon: -1, quizCount: 0, remainingRepetitions: 1 },
+					{ bin: 0, howSoon: -1, quizCount: 0, remainingRepetitions: 1 },
 				]
 			};
 			const objectSize = JSON.stringify(objectFormat).length;

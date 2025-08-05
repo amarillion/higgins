@@ -4,7 +4,7 @@ import type { QuizSession } from '../model/QuizSession';
  * Compact serialization format for QuizSession state
  *
  * Format: [version, counter, bins, currentWord, sessionCorrectAnswers, binCount[], wordStates[]]
- * WordState format: [bin, howSoon, quizCount, correctInARow, lineNumber, side]
+ * WordState format: [bin, howSoon, quizCount, remainingRepetitions, lineNumber, side]
  *
  * Space optimizations:
  * - Array format eliminates JSON key repetition
@@ -12,7 +12,7 @@ import type { QuizSession } from '../model/QuizSession';
  * - Version allows future format changes
  */
 
-const SERIALIZATION_VERSION = 3;
+const SERIALIZATION_VERSION = 4;
 
 export type CompactQuizState = [
 	number, // version
@@ -21,7 +21,7 @@ export type CompactQuizState = [
 	number, // currentWord
 	number, // sessionCorrectAnswers
 	number[], // binCount
-	number[][], // wordStates as [bin, howSoon, quizCount, correctInARow, lineNumber, side][]
+	number[][], // wordStates as [bin, howSoon, quizCount, left, lineNumber, side][]
 ];
 
 export class StateCompression {
@@ -38,7 +38,7 @@ export class StateCompression {
 			const bin = wordState.getBin();
 			const howSoon = wordState.getHowSoon();
 			const quizCount = wordState.getQuizCount();
-			const correctInARow = wordState.getCorrectInARow();
+			const correctInARow = wordState.getRemainingRepetitions();
 			const word = wordState.getWord();
 			
 			wordStates.push([bin, howSoon, quizCount, correctInARow, word.lineNumber, word.side]);
@@ -83,7 +83,7 @@ export class StateCompression {
 			bin: number,
 			howSoon: number,
 			quizCount: number,
-			correctInARow: number,
+			remainingRepetitions: number,
 			lineNumber: number,
 			side: number,
 		}>,
@@ -94,11 +94,11 @@ export class StateCompression {
 			throw new Error(`Unsupported serialization version: ${version}`);
 		}
 		
-		const wordStates = rawWordStates.map(([bin, howSoon, quizCount, correctInARow, lineNumber, side]) => ({
+		const wordStates = rawWordStates.map(([bin, howSoon, quizCount, remainingRepetitions, lineNumber, side]) => ({
 			bin,
 			howSoon,
 			quizCount,
-			correctInARow,
+			remainingRepetitions,
 			lineNumber,
 			side
 		}));

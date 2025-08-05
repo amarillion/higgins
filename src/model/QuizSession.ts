@@ -236,7 +236,7 @@ export class QuizSession {
 			bin: number,
 			howSoon: number,
 			quizCount: number,
-			correctInARow: number,
+			remainingRepetitions: number,
 			lineNumber: number,
 			side: number,
 		}>,

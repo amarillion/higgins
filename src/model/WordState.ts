@@ -41,7 +41,7 @@ export class WordState {
 	private bin: number = 0;
 	private howSoon: number = -1;
 	private quizCount: number = 0;
-	private correctInARow: number = 0;
+	private remainingRepetitions: number = 1;
 
 	constructor(word: Word) {
 		this.word = word;
@@ -63,43 +63,46 @@ export class WordState {
 		return this.quizCount;
 	}
 
-	getCorrectInARow(): number {
-		return this.correctInARow;
+	getRemainingRepetitions(): number {
+		return this.remainingRepetitions;
 	}
-	
+
 	compareAnswer(answer: string, counter: number, binCount: number[]): boolean {
 		const correct = compareMagically(this.word.answer, answer);
 		this.quizCount++;
 
 		if (correct) {
-			this.correctInARow++;
 			// Move to next bin if answered correctly enough times
-			if (this.bin < WordState.MAXBINS - 1) {
-				binCount[this.bin]--;
-				this.bin++;
-				binCount[this.bin]++;
+			if (--this.remainingRepetitions === 0) {
+				if (this.bin < WordState.MAXBINS - 1) {
+					binCount[this.bin]--;
+					this.bin++;
+					binCount[this.bin]++;
+				}
+				this.howSoon = -1;
+				this.remainingRepetitions = 1;
 			}
-			// Set when this word should be asked again
-			this.howSoon = counter + Math.pow(2, this.bin);
+			else {
+				// Still more correct answers needed to move to next bin, so
+				// set to be repeated ASAP
+				this.howSoon = counter;
+			}
 		} else {
-			this.correctInARow = 0;
-			// Move back to first bin on wrong answer
-			if (this.bin > 0) {
-				binCount[this.bin]--;
-				this.bin = 0;
-				binCount[this.bin]++;
-			}
-			this.howSoon = -1; // Ask again soon
+			// Incorrect answer, repeat two times
+			this.remainingRepetitions = 2;
+			this.howSoon = counter; // Ask again soon
+
+			// TODO: keep statistics on wrong answers
 		}
 
 		return correct;
 	}
 
 	// State restoration support
-	restoreState(state: { bin: number, howSoon: number, quizCount: number, correctInARow: number }): void {
+	restoreState(state: { bin: number, howSoon: number, quizCount: number, remainingRepetitions: number }): void {
 		this.bin = state.bin;
 		this.howSoon = state.howSoon;
 		this.quizCount = state.quizCount;
-		this.correctInARow = state.correctInARow;
+		this.remainingRepetitions = state.remainingRepetitions;
 	}
 }
