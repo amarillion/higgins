@@ -16,6 +16,24 @@
 
 import type { Word } from './types';
 
+/**
+ * Compare answer against quiz, taking into account special characters.
+ * An answer containing a single slash means that there are two options that may be swapped.
+ */
+export function compareMagically(aRaw: string, bRaw: string) {
+	const a = aRaw.toLowerCase().trim();
+	const b = bRaw.toLowerCase().trim();
+	if (a === b) return true;
+	
+	// if the answer has slashes in it, it is allowed to change the order
+	const parts = b.split (' / ');
+	if ((parts.length === 2) && (a === `${parts[1]} / ${parts[0]}`)) {
+		return true;
+	}
+	
+	return false;
+}
+
 export class WordState {
 	static readonly MAXBINS = 4;
 
@@ -48,9 +66,9 @@ export class WordState {
 	getCorrectInARow(): number {
 		return this.correctInARow;
 	}
-
+	
 	compareAnswer(answer: string, counter: number, binCount: number[]): boolean {
-		const correct = this.word.answer.toLowerCase() === answer.toLowerCase();
+		const correct = compareMagically(this.word.answer, answer);
 		this.quizCount++;
 
 		if (correct) {
