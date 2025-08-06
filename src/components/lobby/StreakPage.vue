@@ -42,10 +42,8 @@
 <script setup lang="ts">
 import { onMounted, ref } from 'vue';
 import { store } from '../../store';
-import { StreakStorage } from '../../store/streakStorage';
 
 const streakInfo = ref(store.getStreakInfo());
-const requiredDaily = StreakStorage.getRequiredDailyLessons();
 
 function isToday(dateStr: string): boolean {
 	const today = new Date().toISOString().split('T')[0];
@@ -53,7 +51,8 @@ function isToday(dateStr: string): boolean {
 }
 
 function getDayNumber(dateStr: string): number {
-	return new Date(dateStr).getDate();
+	// avoid converting to Date() because then timezones get involved again.
+	return parseInt(dateStr.split('-')[2]);
 }
 
 function isFirstOfMonth(dateStr: string): boolean {
@@ -65,13 +64,10 @@ function getMonthName(dateStr: string): string {
 }
 
 function getDayTooltip(day: { date: string, isChecked: boolean, lessonsCompleted: number }): string {
-	const date = new Date(day.date).toLocaleDateString();
 	if (day.isChecked) {
-		return `${date}: Complete! (${day.lessonsCompleted} lessons completed)`;
-	} else if (day.lessonsCompleted > 0) {
-		return `${date}: ${day.lessonsCompleted} lessons completed (need ${requiredDaily})`;
+		return `${day.date}: Checked! (${day.lessonsCompleted} lessons completed)`;
 	} else {
-		return `${date}: No activity`;
+		return `${day.date}: No activity`;
 	}
 }
 
