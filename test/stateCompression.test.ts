@@ -216,9 +216,8 @@ describe('StateCompression', () => {
 			const compactState = StateCompression.serialize(session);
 			
 			// Restore state
-			const newSession = new QuizSession(quiz);
 			const restoredState = StateCompression.deserialize(compactState);
-			newSession.restoreState(restoredState);
+			const newSession = QuizSession.restoreState(quiz, restoredState);
 			
 			// Verify restoration
 			expect(newSession.getCounter()).toBe(originalCounter);
@@ -238,16 +237,10 @@ describe('StateCompression', () => {
 			// Serialize the session
 			const compactState = StateCompression.serialize(originalSession);
 			
-			// Create a new session from the same quiz (will select different random subset)
-			const newSession = new QuizSession(largeQuiz);
-						
-			// Restore state - this is where the bug occurs
+			// Create a new session from the same quiz
 			const restoredState = StateCompression.deserialize(compactState);
-			newSession.restoreState(restoredState);
+			const newSession = QuizSession.restoreState(largeQuiz, restoredState);
 			
-			// BUG: The restored session now may have inconsistent state
-			// The serialized state contains word states for words not in the new session's subset
-			// After restoration, some word states will be silently ignored
 			const restoredWords = new Set(newSession.getWordStates().map(ws => ws.getWord().question));
 			
 			// Verify that the subsets of words are the same before & after restoration.
@@ -265,9 +258,8 @@ describe('StateCompression', () => {
 			const compactState = StateCompression.serialize(originalSession);
 			
 			// And deserialize agains
-			const newSession = new QuizSession(quiz);
 			const restoredState = StateCompression.deserialize(compactState);
-			newSession.restoreState(restoredState);
+			const newSession = QuizSession.restoreState(quiz, restoredState);
 			
 			// aggregate bin counts of all words
 			const actualBinCounts = new Array(newSession.getBins()).fill(0);
@@ -294,7 +286,7 @@ function createSimpleQuiz() {
 	];
 	
 	const quiz = new Quiz(words);
-	const session = new QuizSession(quiz);
+	const session = QuizSession.newInstance(quiz);
 
 	return { quiz, session };
 }
@@ -313,7 +305,7 @@ function createLargeQuiz() {
 	}
 	
 	const quiz = new Quiz(largeWordSet);
-	const session = new QuizSession(quiz);
+	const session = QuizSession.newInstance(quiz);
 	
 	return { quiz, session };
 }

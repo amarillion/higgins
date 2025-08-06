@@ -49,7 +49,7 @@ export const store = reactive({
 		try {
 			const quiz = await Quiz.loadFromFile(lesson.lessonPath);
 			this.currentLessonHash = quiz.getContentHash();
-			this.currentQuizSession = new QuizSession(quiz);
+			this.currentQuizSession = QuizSession.newInstance(quiz);
 			
 			// Add listener for correct answers
 			this.currentQuizSession.addListener(this);
@@ -107,28 +107,26 @@ export const store = reactive({
 			// Hash matches, restore session
 			this.selectedLesson = sessionData.selectedLesson;
 			this.currentLessonHash = sessionData.lessonHash;
-			this.currentQuizSession = new QuizSession(quiz);
+			
 			this.lessonActive = true;
-			
-			// Initialize streak data
 			this.initializeStreakData();
-			
-			// Add listener for correct answers
-			this.currentQuizSession.addListener(this);
 			
 			// Restore quiz state if available
 			if (sessionData.quizState) {
 				try {
 					const restoredState = StateCompression.deserialize(sessionData.quizState);
-					this.currentQuizSession.restoreState(restoredState);
+					this.currentQuizSession = QuizSession.restoreState(quiz, restoredState);
 					console.log('Session and quiz state restored successfully');
 				} catch (error) {
+					this.currentQuizSession = QuizSession.newInstance(quiz);
 					console.error('Failed to restore quiz state, starting fresh session:', error);
 				}
 			} else {
+				this.currentQuizSession = QuizSession.newInstance(quiz);
 				console.log('Session restored successfully (no quiz state saved)');
 			}
-			
+
+			this.currentQuizSession.addListener(this);
 			return true;
 		} catch (error) {
 			console.error('Failed to restore session:', error);

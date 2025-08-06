@@ -54,8 +54,12 @@ export class WordState {
 	 */
 	private remainingRepetitions: number = 1;
 
-	constructor(word: Word) {
+	private constructor(word: Word) {
 		this.word = word;
+	}
+
+	static newInstance(word: Word) {
+		return new WordState(word);
 	}
 
 	getWord(): Word {
@@ -110,10 +114,13 @@ export class WordState {
 	}
 
 	// State restoration support
-	restoreState(state: { bin: number, howSoon: number, quizCount: number, remainingRepetitions: number }): void {
-		this.bin = state.bin;
-		this.howSoon = state.howSoon;
-		this.quizCount = state.quizCount;
-		this.remainingRepetitions = state.remainingRepetitions;
+	static restoreState(word: Word, state: { bin: number, howSoon: number, quizCount: number, remainingRepetitions: number }) {
+		const result = new WordState(word);
+		result.bin = state.bin;
+		result.howSoon = state.howSoon;
+		result.quizCount = state.quizCount;
+		result.remainingRepetitions = state.remainingRepetitions;
+		return result;
 	}
+
 }

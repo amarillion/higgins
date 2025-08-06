@@ -34,7 +34,11 @@ export class QuizSession {
 	private listeners: SessionListener[] = [];
 	private sessionCorrectAnswers: number = 0;
 
-	constructor(quiz: Quiz) {
+	static newInstance(quiz: Quiz) {
+		return new QuizSession(quiz);
+	}
+
+	private constructor(quiz: Quiz) {
 		this.quiz = quiz;
 		
 		// Get all available words
@@ -43,9 +47,7 @@ export class QuizSession {
 		// Randomly select up to MAX_LESSON_SIZE words
 		const selectedWords = this.selectRandomWords(allWords, QuizSession.MAX_LESSON_SIZE);
 		
-		for (const word of selectedWords) {
-			this.words.push(new WordState(word));
-		}
+		this.words = selectedWords.map(word => WordState.newInstance(word));
 		
 		this.binCount[0] = this.words.length;
 		shuffle(this.words);
@@ -222,7 +224,7 @@ export class QuizSession {
 	}
 
 	// Restore state from serialized data
-	restoreState(state: {
+	static restoreState(quiz: Quiz, state: {
 		counter: number,
 		bins: number,
 		currentWord: number,
@@ -236,29 +238,29 @@ export class QuizSession {
 			side: number,
 		}>,
 		sessionCorrectAnswers?: number,
-	}): void {
-		this.counter = state.counter;
-		this.bins = state.bins;
-		this.currentWordIdx = state.currentWord;
-		this.binCount = [...state.binCount];
-		this.sessionCorrectAnswers = state.sessionCorrectAnswers || 0;
+	}) {
+		const qs = new QuizSession(quiz);
+		qs.counter = state.counter;
+		qs.bins = state.bins;
+		qs.currentWordIdx = state.currentWord;
+		qs.binCount = [...state.binCount];
+		qs.sessionCorrectAnswers = state.sessionCorrectAnswers || 0;
 
 		// Get all available words
-		const allWords = this.quiz.getWords();
+		const allWords = quiz.getWords();
 
-		this.words = state.wordStates.map(ws => {
+		qs.words = state.wordStates.map(ws => {
 			const matchingWord = allWords.find(w =>
 				w.lineNumber === ws.lineNumber && w.side === ws.side
 			);
 			//TODO: graceful degradation instead of assert
 			assert(matchingWord, `Word not found for lineNumber ${ws.lineNumber} and side ${ws.side}`);
 			
-			const wordState = new WordState(matchingWord);
-			wordState.restoreState(ws);
-			return wordState;
+			return WordState.restoreState(matchingWord, ws);
 		});
 		
-		this.fireSessionChangedEvent(SessionEventType.QUESTION_CHANGED);
+		qs.fireSessionChangedEvent(SessionEventType.QUESTION_CHANGED);
+		return qs;
 	}
 
 	addListener(listener: SessionListener): void {

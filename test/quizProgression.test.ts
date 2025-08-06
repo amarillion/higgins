@@ -17,7 +17,7 @@ describe('Quiz Progression', () => {
 		];
 		
 		quiz = new Quiz(words);
-		session = new QuizSession(quiz);
+		session = QuizSession.newInstance(quiz);
 	});
 
 	it('should not select words from the highest bin for questioning', () => {
