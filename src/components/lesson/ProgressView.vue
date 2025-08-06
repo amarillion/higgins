@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { ref } from 'vue';
-
 interface BinData {
 	bin: number,
 	count: number,
@@ -8,6 +6,7 @@ interface BinData {
 
 interface ProgressData {
 	bins: BinData[],
+	totalWords: number,
 	counter: number,
 	isFinished: boolean,
 }
@@ -16,16 +15,11 @@ const props = defineProps<{
 	progress: ProgressData,
 }>();
 
-const showHowItWorks = ref(false);
-
 const getBinWidth = (count: number) => {
-	const maxCount = Math.max(...props.progress.bins.map(b => b.count));
+	const maxCount = props.progress.totalWords;
 	return maxCount > 0 ? (count / maxCount) * 100 : 0;
 };
 
-const toggleHowItWorks = () => {
-	showHowItWorks.value = !showHowItWorks.value;
-};
 </script>
 <template>
 	<div class="progress-view">
@@ -43,7 +37,6 @@ const toggleHowItWorks = () => {
 					v-for="binData in progress.bins"
 					:key="binData.bin"
 					class="bin"
-					:class="{ 'empty': binData.count === 0 }"
 				>
 					<div class="bin-header">
 						<span class="bin-number">Bin {{ binData.bin }}</span>
@@ -113,10 +106,6 @@ h3 {
 	border-radius: 6px;
 	padding: 10px;
 	transition: all 0.2s ease;
-}
-
-.bin.empty {
-	opacity: 0.6;
 }
 
 .bin-header {

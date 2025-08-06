@@ -37,7 +37,8 @@ const progressData = computed(() => {
 	return {
 		bins: binData,
 		counter: session.value.getCounter(),
-		isFinished: session.value.isFinished()
+		isFinished: session.value.isFinished(),
+		totalWords: session.value.getWordStates().length,
 	};
 });
 
