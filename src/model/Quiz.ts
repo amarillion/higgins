@@ -86,7 +86,8 @@ class QuizLoader {
 	}
 
 	private defaultFetchLoader: FileLoader = async (fileName: string): Promise<string> => {
-		const response = await fetch(`./${fileName}`);
+		const normalizedFileName = fileName.startsWith('/') ? fileName.substring(1) : fileName; // double slashes trip up serviceWorker
+		const response = await fetch(normalizedFileName);
 		return response.text();
 	};
 
