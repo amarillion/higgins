@@ -14,6 +14,7 @@
 //    You should have received a copy of the GNU General Public License
 //    along with Dr. Higgins.  If not, see <http://www.gnu.org/licenses/>.
 
+import { assert } from '../util/assert';
 import { pickOne, shuffle } from '../util/random';
 import { Quiz } from './Quiz';
 import { WordState } from './WordState';
@@ -241,18 +242,21 @@ export class QuizSession {
 		this.currentWordIdx = state.currentWord;
 		this.binCount = [...state.binCount];
 		this.sessionCorrectAnswers = state.sessionCorrectAnswers || 0;
-		
-		// Restore word states by matching lineNumber and side
-		for (const savedWordState of state.wordStates) {
-			const matchingWordState = this.words.find(ws =>
-				ws.getWord().lineNumber === savedWordState.lineNumber &&
-				ws.getWord().side === savedWordState.side
+
+		// Get all available words
+		const allWords = this.quiz.getWords();
+
+		this.words = state.wordStates.map(ws => {
+			const matchingWord = allWords.find(w =>
+				w.lineNumber === ws.lineNumber && w.side === ws.side
 			);
+			//TODO: graceful degradation instead of assert
+			assert(matchingWord, `Word not found for lineNumber ${ws.lineNumber} and side ${ws.side}`);
 			
-			if (matchingWordState) {
-				matchingWordState.restoreState(savedWordState);
-			}
-		}
+			const wordState = new WordState(matchingWord);
+			wordState.restoreState(ws);
+			return wordState;
+		});
 		
 		this.fireSessionChangedEvent(SessionEventType.QUESTION_CHANGED);
 	}
