@@ -1,4 +1,4 @@
-import { describe, it, expect, beforeEach } from 'vitest';
+import { describe, it, expect } from 'vitest';
 import { StateCompression, type CompactQuizState } from '../src/store/stateCompression';
 import { Quiz } from '../src/model/Quiz';
 import { QuizSession } from '../src/model/QuizSession';
@@ -31,23 +31,10 @@ enum WordStateIndex {
 }
 
 describe('StateCompression', () => {
-	let quiz: Quiz;
-	let session: QuizSession;
-
-	beforeEach(() => {
-		// Create a small quiz for testing
-		const words: Word[] = [
-			{ question: 'hello', answer: 'hola', side: 0, lineNumber: 0, template: 'What is' },
-			{ question: 'goodbye', answer: 'adiós', side: 0, lineNumber: 1, template: 'What is' },
-			{ question: 'cat', answer: 'gato', side: 0, lineNumber: 2, template: 'What is' }
-		];
-		
-		quiz = new Quiz(words);
-		session = new QuizSession(quiz);
-	});
 
 	describe('serialize', () => {
 		it('should serialize fresh session correctly', () => {
+			const { session } = createSimpleQuiz();
 			const compactState = StateCompression.serialize(session);
 			
 			expect(compactState).toHaveLength(TEST_COMPACT_STATE_LENGTH);
@@ -61,6 +48,8 @@ describe('StateCompression', () => {
 		});
 
 		it('should serialize word states correctly', () => {
+			const { session } = createSimpleQuiz();
+
 			const compactState = StateCompression.serialize(session);
 			const wordStates = compactState[CompactStateIndex.WORD_STATES];
 			
@@ -75,6 +64,8 @@ describe('StateCompression', () => {
 		});
 
 		it('should serialize modified session state', () => {
+			const { session } = createSimpleQuiz();
+
 			// Simulate answering first question correctly
 			const result = session.compareAnswer(session.getCorrectAnswer());
 			expect(result).toBe(true);
@@ -92,6 +83,8 @@ describe('StateCompression', () => {
 
 	describe('deserialize', () => {
 		it('should deserialize fresh session state', () => {
+			const { session } = createSimpleQuiz();
+
 			const compactState = StateCompression.serialize(session);
 			const restored = StateCompression.deserialize(compactState);
 			
@@ -114,6 +107,8 @@ describe('StateCompression', () => {
 		});
 
 		it('should handle -1 howSoon values correctly', () => {
+			const { session } = createSimpleQuiz();
+
 			const compactState = StateCompression.serialize(session);
 			const restored = StateCompression.deserialize(compactState);
 			
@@ -124,6 +119,8 @@ describe('StateCompression', () => {
 		});
 
 		it('should round-trip serialize/deserialize correctly', () => {
+			const { session } = createSimpleQuiz();
+
 			// Modify session state
 			session.compareAnswer(session.getCorrectAnswer());
 			session.compareAnswer('wrong');
@@ -148,6 +145,8 @@ describe('StateCompression', () => {
 
 	describe('estimateSize', () => {
 		it('should calculate reasonable size estimate', () => {
+			const { session } = createSimpleQuiz();
+
 			const compactState = StateCompression.serialize(session);
 			const estimatedSize = StateCompression.estimateSize(compactState);
 			const actualSize = JSON.stringify(compactState).length;
@@ -158,6 +157,8 @@ describe('StateCompression', () => {
 		});
 
 		it('should show space savings vs object format', () => {
+			const { session } = createSimpleQuiz();
+
 			const compactState = StateCompression.serialize(session);
 			const compactSize = StateCompression.estimateSize(compactState);
 			
@@ -183,17 +184,20 @@ describe('StateCompression', () => {
 
 	describe('validateSize', () => {
 		it('should validate small state as acceptable', () => {
+			const { session } = createSimpleQuiz();
 			const compactState = StateCompression.serialize(session);
 			expect(StateCompression.validateSize(compactState)).toBe(true);
 		});
 
 		it('should reject state exceeding size limit', () => {
+			const { session } = createSimpleQuiz();
 			const compactState = StateCompression.serialize(session);
 			const tinyLimit = 0.01; // 10 bytes - way too small
 			expect(StateCompression.validateSize(compactState, tinyLimit)).toBe(false);
 		});
 
 		it('should use default 1MB limit', () => {
+			const { session } = createSimpleQuiz();
 			const compactState = StateCompression.serialize(session);
 			expect(StateCompression.validateSize(compactState)).toBe(true);
 		});
@@ -201,16 +205,18 @@ describe('StateCompression', () => {
 
 	describe('session restoration integration', () => {
 		it('should restore session state correctly', () => {
+			const { session, quiz } = createSimpleQuiz();
+
 			// Modify original session
 			session.compareAnswer(session.getCorrectAnswer());
 			const originalCounter = session.getCounter();
 			const originalBinCount = session.getBinCount(1);
 			
-			// Serialize and create new session
+			// Serialize
 			const compactState = StateCompression.serialize(session);
-			const newSession = new QuizSession(quiz);
 			
 			// Restore state
+			const newSession = new QuizSession(quiz);
 			const restoredState = StateCompression.deserialize(compactState);
 			newSession.restoreState(restoredState);
 			
@@ -218,5 +224,96 @@ describe('StateCompression', () => {
 			expect(newSession.getCounter()).toBe(originalCounter);
 			expect(newSession.getBinCount(1)).toBe(originalBinCount);
 		});
+
+		it('should handle lesson subset consistency across serialization', () => {
+			const { session: originalSession, quiz: largeQuiz } = createLargeQuiz();
+
+			// Capture the original selected words
+			const originalWordStates = originalSession.getWordStates();
+			const originalWords = originalWordStates.map(ws => ws.getWord().question);
+			
+			// Modify session state
+			originalSession.compareAnswer(originalSession.getCorrectAnswer());
+			
+			// Serialize the session
+			const compactState = StateCompression.serialize(originalSession);
+			
+			// Create a new session from the same quiz (will select different random subset)
+			const newSession = new QuizSession(largeQuiz);
+						
+			// Restore state - this is where the bug occurs
+			const restoredState = StateCompression.deserialize(compactState);
+			newSession.restoreState(restoredState);
+			
+			// BUG: The restored session now may have inconsistent state
+			// The serialized state contains word states for words not in the new session's subset
+			// After restoration, some word states will be silently ignored
+			const restoredWords = new Set(newSession.getWordStates().map(ws => ws.getWord().question));
+			
+			// Verify that the subsets of words are the same before & after restoration.
+			const intersection = new Set([...originalWords].filter(x => restoredWords.has(x)));
+			expect(intersection.size).toBe(originalWords.length);
+		});
+
+		it('should restore bin counts accurately', () => {
+			const { session: originalSession, quiz } = createSimpleQuiz();
+
+			// Modify session state
+			originalSession.compareAnswer(originalSession.getCorrectAnswer());
+			
+			// Serialize the session
+			const compactState = StateCompression.serialize(originalSession);
+			
+			// And deserialize agains
+			const newSession = new QuizSession(quiz);
+			const restoredState = StateCompression.deserialize(compactState);
+			newSession.restoreState(restoredState);
+			
+			// aggregate bin counts of all words
+			const actualBinCounts = new Array(newSession.getBins()).fill(0);
+			for (const wordState of newSession.getWordStates()) {
+				actualBinCounts[wordState.getBin()]++;
+			}
+			
+			// Verify that restored bin counts match actual word distribution
+			for (let i = 0; i < newSession.getBins(); i++) {
+				expect(newSession.getBinCount(i)).toBe(actualBinCounts[i]);
+			}
+		});
+	
 	});
+
 });
+
+function createSimpleQuiz() {
+	// Create a small quiz for testing
+	const words: Word[] = [
+		{ question: 'hello', answer: 'hola', side: 0, lineNumber: 0, template: 'What is' },
+		{ question: 'goodbye', answer: 'adiós', side: 0, lineNumber: 1, template: 'What is' },
+		{ question: 'cat', answer: 'gato', side: 0, lineNumber: 2, template: 'What is' }
+	];
+	
+	const quiz = new Quiz(words);
+	const session = new QuizSession(quiz);
+
+	return { quiz, session };
+}
+
+function createLargeQuiz() {
+	// Create a larger quiz with more words than MAX_LESSON_SIZE (20)
+	const largeWordSet: Word[] = [];
+	for (let i = 0; i < 30; i++) {
+		largeWordSet.push({
+			question: `word${i}`,
+			answer: `answer${i}`,
+			side: 0,
+			lineNumber: i,
+			template: 'What is'
+		});
+	}
+	
+	const quiz = new Quiz(largeWordSet);
+	const session = new QuizSession(quiz);
+	
+	return { quiz, session };
+}
