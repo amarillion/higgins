@@ -151,7 +151,7 @@ function stopLesson() {
 <template>
 	<div class="lesson-page">
 		<div class="lesson-header">
-			<button @click="stopLesson" class="back-button">← Back to Lessons</button>
+			<button @click="stopLesson" class="back-button">← Quit Lesson</button>
 			<h3>{{ store.selectedLesson?.language }} - {{ store.selectedLesson?.lessonName }}</h3>
 		</div>
 		

@@ -9,8 +9,7 @@
 <style scoped>
 .app-header {
 	text-align: center;
-	margin-bottom: 30px;
-	padding: 20px;
+	padding: 10px;
 	background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
 	color: white;
 	border-radius: 10px;

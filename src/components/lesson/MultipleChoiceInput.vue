@@ -114,14 +114,6 @@ defineExpose({
 </template>
 
 <style scoped>
-.multiple-choice-input {
-	margin: 20px 0;
-	padding: 20px;
-	border: 1px solid #ddd;
-	border-radius: 8px;
-	background-color: #fff;
-}
-
 .question-container {
 	margin: 20px 0;
 }
@@ -167,7 +159,7 @@ defineExpose({
 .choices-grid {
 	display: grid;
 	gap: 12px;
-	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
 }
 
 .choice-button {
@@ -206,9 +198,6 @@ defineExpose({
 
 /* Responsive design for smaller screens */
 @media (max-width: 600px) {
-	.choices-grid {
-		grid-template-columns: 1fr;
-	}
 	
 	.choice-button {
 		min-height: 50px;

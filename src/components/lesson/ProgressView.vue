@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { ref } from 'vue';
-import HowItWorks from './HowItWorks.vue';
 
 interface BinData {
 	bin: number,
@@ -59,18 +58,6 @@ const toggleHowItWorks = () => {
 				</div>
 			</div>
 		</div>
-		
-		<div class="help-section">
-			<button
-				@click="toggleHowItWorks"
-				class="help-button"
-				:class="{ 'active': showHowItWorks }"
-			>
-				{{ showHowItWorks ? '✕ Hide' : '? How it Works' }}
-			</button>
-			
-			<HowItWorks v-if="showHowItWorks" />
-		</div>
 	</div>
 </template>
 
@@ -110,9 +97,13 @@ const toggleHowItWorks = () => {
 	color: #333;
 }
 
+h3 {
+	margin: 0 0 1rem 0;
+}
+
 .bins-container {
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+	grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
 	gap: 10px;
 }
 

@@ -1,30 +1,14 @@
 <template>
 	<div class="streak-page">
-		<h1>Learning Streak</h1>
-		
 		<div v-if="streakInfo" class="streak-content">
+			<h1>Current Streak</h1>
+
 			<!-- Current Streak Display -->
 			<div class="streak-summary">
 				<div class="streak-number">
 					<span class="streak-count">{{ streakInfo.currentStreak }}</span>
 					<span class="streak-label">day{{ streakInfo.currentStreak !== 1 ? 's' : '' }}</span>
 				</div>
-				<p class="streak-description">Current streak</p>
-			</div>
-
-			<!-- Today's Progress -->
-			<div class="today-progress">
-				<h3>Today's Progress</h3>
-				<div class="progress-bar">
-					<div
-						class="progress-fill"
-						:style="{ width: progressPercentage + '%' }"
-					></div>
-				</div>
-				<p class="progress-text">
-					{{ streakInfo.todayProgress }} / {{ requiredDaily }} lessons completed
-					<span v-if="streakInfo.todayComplete" class="completed">✓ Complete!</span>
-				</p>
 			</div>
 
 			<!-- 28-Day Calendar -->
@@ -37,7 +21,6 @@
 						class="calendar-day"
 						:class="{
 							'completed': day.isChecked,
-							'partial': day.lessonsCompleted > 0 && !day.isChecked,
 							'today': isToday(day.date)
 						}"
 						:title="getDayTooltip(day)"
@@ -48,21 +31,6 @@
 				</div>
 			</div>
 
-			<!-- Legend -->
-			<div class="legend">
-				<div class="legend-item">
-					<div class="legend-dot completed"></div>
-					<span>Complete ({{ requiredDaily }}+ lessons)</span>
-				</div>
-				<div class="legend-item">
-					<div class="legend-dot partial"></div>
-					<span>Some progress</span>
-				</div>
-				<div class="legend-item">
-					<div class="legend-dot empty"></div>
-					<span>No activity</span>
-				</div>
-			</div>
 		</div>
 
 		<div v-else class="loading">
@@ -72,17 +40,12 @@
 </template>
 
 <script setup lang="ts">
-import { computed, onMounted, ref } from 'vue';
+import { onMounted, ref } from 'vue';
 import { store } from '../../store';
 import { StreakStorage } from '../../store/streakStorage';
 
 const streakInfo = ref(store.getStreakInfo());
 const requiredDaily = StreakStorage.getRequiredDailyLessons();
-
-const progressPercentage = computed(() => {
-	if (!streakInfo.value) return 0;
-	return Math.min((streakInfo.value.todayProgress / requiredDaily) * 100, 100);
-});
 
 function isToday(dateStr: string): boolean {
 	const today = new Date().toISOString().split('T')[0];
@@ -129,7 +92,6 @@ onMounted(() => {
 
 h1 {
 	color: #333;
-	margin-bottom: 2rem;
 	font-size: 2rem;
 }
 
@@ -147,9 +109,8 @@ h3 {
 
 /* Streak Summary */
 .streak-summary {
-	background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-	color: white;
 	padding: 2rem;
+	border: 1px solid #eee;
 	border-radius: 12px;
 	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
@@ -171,12 +132,6 @@ h3 {
 .streak-label {
 	font-size: 1.5rem;
 	opacity: 0.9;
-}
-
-.streak-description {
-	font-size: 1.1rem;
-	opacity: 0.9;
-	margin: 0;
 }
 
 /* Today's Progress */
