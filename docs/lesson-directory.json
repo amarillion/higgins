@@ -1,5 +1,5 @@
 {
-	"Spaans": [
+	"Spaans 🇳🇱 → 🇪🇸": [
 		"public/lessons/spaans/gente7a.txt", 
 		"public/lessons/spaans/spaans23.txt", 
 		"public/lessons/spaans/nouns 4-6.txt", 
@@ -43,7 +43,7 @@
 		"public/lessons/spaans/conjugations.txt", 
 		"public/lessons/spaans/reino_del_dragon_2.txt"
 	],
-	"Dutch": [
+	"Dutch 🇬🇧 → 🇳🇱": [
 		"public/lessons/dutch/dutch5.txt", 
 		"public/lessons/dutch/jipjan1-2.txt", 
 		"public/lessons/dutch/dutch2_verbs.txt", 
@@ -64,7 +64,7 @@
 		"public/lessons/dutch/dutch1_verbs.txt", 
 		"public/lessons/dutch/dutch11-animals.txt"
 	],
-	"Finnish": [
+	"Finnish 🇬🇧 → 🇫🇮": [
 		"public/lessons/finnish/suomi1.txt", 
 		"public/lessons/finnish/suomi6.txt", 
 		"public/lessons/finnish/suomi4.txt", 
@@ -72,7 +72,7 @@
 		"public/lessons/finnish/suomi5.txt", 
 		"public/lessons/finnish/suomi3.txt"
 	],
-	"Japanese": [
+	"Japanese 🇬🇧 → 🇯🇵": [
 		"public/lessons/japanese/katakana-words3.txt", 
 		"public/lessons/japanese/katakana-words1.txt", 
 		"public/lessons/japanese/myfirstkanji.txt", 
