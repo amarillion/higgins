@@ -12,8 +12,13 @@
 	padding: 10px;
 	background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
 	color: white;
-	border-radius: 10px;
 	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+@media (min-width: 800px) {
+	.app-header {
+		border-radius: 10px;
+	}
 }
 
 .app-header h1 {

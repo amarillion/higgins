@@ -81,7 +81,6 @@ onMounted(() => {
 
 <style scoped>
 .streak-page {
-	padding: 2rem;
 	max-width: 800px;
 	margin: 0 auto;
 	text-align: center;
@@ -106,6 +105,7 @@ h3 {
 
 /* Streak Summary */
 .streak-summary {
+	margin: 0 2rem;
 	padding: 2rem;
 	border: 1px solid #eee;
 	border-radius: 12px;
@@ -163,7 +163,6 @@ h3 {
 .completed {
 	color: #28a745;
 	font-weight: bold;
-	margin-left: 0.5rem;
 }
 
 /* Calendar */
@@ -177,22 +176,22 @@ h3 {
 .calendar-grid {
 	display: grid;
 	grid-template-columns: repeat(7, 1fr);
-	gap: 4px;
 	max-width: 400px;
 	margin: 0 auto;
+	border-right: 1px dashed grey;
+	border-bottom: 1px dashed grey;
 }
 
 .calendar-day {
-	aspect-ratio: 1;
+	aspect-ratio: 1; /* makes them square */
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	border-radius: 4px;
-	cursor: pointer;
-	transition: all 0.2s ease;
 	position: relative;
 	min-height: 40px;
+	border-left: 1px dashed grey;
+	border-top: 1px dashed grey;
 }
 
 .calendar-day.completed {
@@ -231,62 +230,20 @@ h3 {
 	opacity: 0.8;
 }
 
-/* Legend */
-.legend {
-	display: flex;
-	justify-content: center;
-	gap: 2rem;
-	flex-wrap: wrap;
-}
-
-.legend-item {
-	display: flex;
-	align-items: center;
-	gap: 0.5rem;
-	font-size: 0.9rem;
-	color: #666;
-}
-
-.legend-dot {
-	width: 16px;
-	height: 16px;
-	border-radius: 2px;
-}
-
-.legend-dot.completed {
-	background-color: #28a745;
-}
-
-.legend-dot.partial {
-	background-color: #ffc107;
-}
-
-.legend-dot.empty {
-	background-color: #e9ecef;
-}
-
 .loading {
 	padding: 2rem;
 	color: #666;
 }
 
-@media (max-width: 600px) {
-	.streak-page {
-		padding: 1rem;
-	}
-	
+@media (max-width: 800px) {
+
 	.streak-count {
 		font-size: 3rem;
 	}
-	
-	.legend {
-		flex-direction: column;
-		align-items: center;
-		gap: 1rem;
-	}
-	
-	.calendar-grid {
-		gap: 2px;
+
+	.calendar-section {
+		border-radius: 0;
 	}
 }
+
 </style>

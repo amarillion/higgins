@@ -121,6 +121,7 @@ defineExpose({
 
 .input-container {
 	display: flex;
+	flex-wrap: wrap;
 	gap: 10px;
 	margin: 20px 0;
 }
