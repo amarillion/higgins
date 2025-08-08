@@ -1,3 +1,5 @@
+import { getTodayString, localDateToString } from '../util/localDate';
+
 export interface StreakData {
 	currentStreak: number,
 	checkedDays: string[], // Array of date strings in YYYY-MM-DD format for past 28 days
@@ -61,13 +63,6 @@ export class StreakStorage {
 	}
 
 	/**
-	 * Get today's date in YYYY-MM-DD format
-	 */
-	static getTodayString(): string {
-		return new Date().toISOString().split('T')[0];
-	}
-
-	/**
 	 * Get array of the past N days in YYYY-MM-DD format
 	 */
 	static getPastDays(days: number): string[] {
@@ -77,7 +72,7 @@ export class StreakStorage {
 		for (let i = 0; i < days; i++) {
 			const date = new Date(today);
 			date.setDate(today.getDate() - i);
-			result.push(date.toISOString().split('T')[0]);
+			result.push(localDateToString(date));
 		}
 		
 		return result.reverse(); // Return oldest to newest
@@ -112,7 +107,7 @@ export class StreakStorage {
 	 * Add completed lesson for today and check if day should be marked as complete
 	 */
 	static addCompletedLesson(data: StreakData): StreakData {
-		const today = StreakStorage.getTodayString();
+		const today = getTodayString();
 		const currentCount = data.dailyLessonsCompleted[today] || 0;
 		const newCount = currentCount + 1;
 		
@@ -142,14 +137,13 @@ export class StreakStorage {
 		
 		// Sort days in descending order (newest first)
 		const sortedDays = [...checkedDays].sort().reverse();
-		const today = StreakStorage.getTodayString();
+		const today = getTodayString();
 		
 		let streak = 0;
 		let currentDay = new Date(today);
 		
-		// Check if today or yesterday is checked (allow for timezone differences)
 		const todayStr = today;
-		const yesterdayStr = new Date(currentDay.getTime() - 24 * 60 * 60 * 1000).toISOString().split('T')[0];
+		const yesterdayStr = localDateToString(new Date(currentDay.getTime() - 24 * 60 * 60 * 1000));
 		
 		let startDate: Date;
 		if (sortedDays.includes(todayStr)) {
@@ -163,7 +157,7 @@ export class StreakStorage {
 		// Count consecutive days backwards from start date
 		currentDay = new Date(startDate);
 		while (true) {
-			const dayStr = currentDay.toISOString().split('T')[0];
+			const dayStr = localDateToString(currentDay);
 			if (sortedDays.includes(dayStr)) {
 				streak++;
 				currentDay.setDate(currentDay.getDate() - 1);
@@ -188,7 +182,7 @@ export class StreakStorage {
 			lessonsCompleted: number,
 		}>,
 	} {
-		const today = StreakStorage.getTodayString();
+		const today = getTodayString();
 		const todayLessons = data.dailyLessonsCompleted[today] || 0;
 		const past28Days = StreakStorage.getPastDays(STREAK_HISTORY_DAYS);
 		

@@ -42,11 +42,12 @@
 <script setup lang="ts">
 import { onMounted, ref } from 'vue';
 import { store } from '../../store';
+import { getTodayString } from '../../util/localDate';
 
 const streakInfo = ref(store.getStreakInfo());
 
 function isToday(dateStr: string): boolean {
-	const today = new Date().toISOString().split('T')[0];
+	const today = getTodayString();
 	return dateStr === today;
 }
 
