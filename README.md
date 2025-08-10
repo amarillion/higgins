@@ -4,6 +4,16 @@ Intelligent Vocabulary Quiz
 
 Copyright 2003-2025 Martijn van Iersel
 
+## Running the app
+
+You can open the app at:
+
+https://amarillion.github.io/higgins/
+
+On Android phones, you can install the app like any PWA.
+
+## Information
+
 This release comes with vocabularies for the following languages:
 
 - Spanish-English: 7 lessons
