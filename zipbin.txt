@@ -1,9 +1,0 @@
-COPYING.txt
-doc/**/*
-doc/index.html
-higgins.jar
-higgins.bat
-higgins.sh
-lessons/**/*.txt
-lib/*.jar
-README.txt
