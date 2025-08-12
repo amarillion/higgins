@@ -298,7 +298,7 @@ electricity, sähkö
 newspaper, lehti
 floor, lattia
 money, raha
-kuori, enveloppe
+enveloppe, kuori
 tent, teltta
 village, kylä
 floppy disk, korppu
@@ -362,7 +362,7 @@ yellow, keltainen
 blue, sininen
 brown, ruskea
 open, auki
-pitkä, tall
-raskas, heavy
-heikko, weak
+tall, pitkä
+heavy, raskas
+weak, heikko
 heti, at once
