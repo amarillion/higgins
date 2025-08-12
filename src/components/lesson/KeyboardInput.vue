@@ -89,9 +89,8 @@ defineExpose({
 .keyboard-input {
 	margin: 20px 0;
 	padding: 20px;
-	border: 1px solid #ddd;
+	border: 1px solid var(--background-border);
 	border-radius: 8px;
-	background-color: #fff;
 }
 
 .question-container {
@@ -101,11 +100,11 @@ defineExpose({
 .question {
 	font-size: 18px;
 	font-weight: bold;
-	color: #333;
+	color: var(--text-color-soft);
 	margin: 0;
 	padding: 15px;
-	background-color: #f8f9fa;
-	border: 1px solid #e9ecef;
+	background-color: var(--background-soft);
+	border: 1px solid var(--background-border);
 	border-radius: 6px;
 	animation: fadeIn 0.3s ease-in;
 }
@@ -132,7 +131,7 @@ defineExpose({
 	flex: 1;
 	padding: 12px;
 	font-size: 16px;
-	border: 2px solid #ddd;
+	border: 2px solid var(--background-border);
 	border-radius: 6px;
 	outline: none;
 	transition: border-color 0.2s ease;
@@ -143,7 +142,7 @@ defineExpose({
 }
 
 .answer-input:disabled {
-	background-color: #f8f9fa;
+	background-color: var(--background-soft);
 	cursor: not-allowed;
 }
 

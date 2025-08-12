@@ -158,7 +158,7 @@ onMounted(() => {
 	text-align: center;
 	padding: 40px;
 	font-size: 18px;
-	color: #666;
+	color: var(--text-color-subtle);;
 }
 
 .error {
@@ -198,7 +198,7 @@ onMounted(() => {
 
 .form-group label {
 	font-weight: 600;
-	color: #333;
+	color: var(--text-color-soft);
 }
 
 .form-control {
@@ -206,7 +206,6 @@ onMounted(() => {
 	border: 2px solid #ddd;
 	border-radius: 6px;
 	font-size: 16px;
-	background-color: white;
 }
 
 .form-control:focus {
@@ -218,7 +217,6 @@ onMounted(() => {
 .start-button {
 	padding: 15px 30px;
 	background-color: #28a745;
-	color: white;
 	border: none;
 	border-radius: 8px;
 	font-size: 18px;

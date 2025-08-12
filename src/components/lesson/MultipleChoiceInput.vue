@@ -121,11 +121,10 @@ defineExpose({
 .question {
 	font-size: 18px;
 	font-weight: bold;
-	color: #333;
+	color: --var(--text-color-soft);
 	margin: 0;
 	padding: 15px;
-	background-color: #f8f9fa;
-	border: 1px solid #e9ecef;
+	border: 1px solid var(--background-border);
 	border-radius: 6px;
 	animation: fadeIn 0.3s ease-in;
 }
@@ -152,7 +151,7 @@ defineExpose({
 .choices-instruction p {
 	margin: 0;
 	font-size: 14px;
-	color: #666;
+	color: var(--text-color-subtle);
 	text-align: center;
 }
 
@@ -165,9 +164,8 @@ defineExpose({
 .choice-button {
 	display: block;
 	padding: 15px;
-	border: 2px solid #ddd;
+	border: 2px solid var(--background-border);
 	border-radius: 8px;
-	background-color: white;
 	cursor: pointer;
 	transition: all 0.2s ease;
 	text-align: left;
@@ -179,7 +177,7 @@ defineExpose({
 
 .choice-button:hover:not(.disabled) {
 	border-color: #007bff;
-	background-color: #f8f9ff;
+	background-color: var(--background);
 	transform: translateY(-2px);
 	box-shadow: 0 4px 12px rgba(0, 123, 255, 0.15);
 }
@@ -192,7 +190,7 @@ defineExpose({
 .choice-button.disabled {
 	cursor: not-allowed;
 	opacity: 0.7;
-	background-color: #f8f9fa;
+	background-color: var(--background-soft);
 }
 
 

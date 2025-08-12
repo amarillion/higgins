@@ -60,7 +60,7 @@ const getBinWidth = (count: number) => {
 	padding: 20px;
 	border: 1px solid #ddd;
 	border-radius: 8px;
-	background-color: #f9f9f9;
+	background-color: var(--background-soft);
 }
 
 .stats {
@@ -71,13 +71,13 @@ const getBinWidth = (count: number) => {
 
 .label {
 	font-weight: bold;
-	color: #666;
+	color: var(--text-color-subtle);
 	font-size: 14px;
 }
 
 .value {
 	font-size: 16px;
-	color: #333;
+	color: var(--text-color-soft);
 }
 
 .value.finished {
@@ -101,8 +101,7 @@ h3 {
 }
 
 .bin {
-	background: white;
-	border: 1px solid #ddd;
+	border: 1px solid var(--background-secondary);
 	border-radius: 6px;
 	padding: 10px;
 	transition: all 0.2s ease;
@@ -117,7 +116,7 @@ h3 {
 
 .bin-number {
 	font-weight: bold;
-	color: #555;
+	color: var(--text-color-soft);
 }
 
 .bin-count {
@@ -130,12 +129,12 @@ h3 {
 }
 
 .bin.empty .bin-count {
-	background: #ccc;
+	background: var(--background-secondary);
 }
 
 .bin-bar {
 	height: 6px;
-	background: #e9ecef;
+	background: var(--background-soft);
 	border-radius: 3px;
 	overflow: hidden;
 }
@@ -147,42 +146,7 @@ h3 {
 }
 
 .bin.empty .bin-fill {
-	background: #ccc;
+	background: var(--background-secondary);
 }
 
-.help-section {
-	margin-top: 20px;
-}
-
-.help-button {
-	padding: 8px 16px;
-	background: #f8f9fa;
-	border: 2px solid #dee2e6;
-	border-radius: 6px;
-	color: #495057;
-	font-size: 14px;
-	font-weight: 500;
-	cursor: pointer;
-	transition: all 0.2s ease;
-	display: flex;
-	align-items: center;
-	gap: 6px;
-}
-
-.help-button:hover {
-	background: #e9ecef;
-	border-color: #adb5bd;
-	color: #343a40;
-}
-
-.help-button.active {
-	background: #007bff;
-	border-color: #007bff;
-	color: white;
-}
-
-.help-button.active:hover {
-	background: #0056b3;
-	border-color: #0056b3;
-}
 </style>

@@ -87,12 +87,12 @@ onMounted(() => {
 }
 
 h1 {
-	color: #333;
+	color: var(--text-color-soft);
 	font-size: 2rem;
 }
 
 h3 {
-	color: #555;
+	color: var(--text-color-subtle);
 	margin-bottom: 1rem;
 	font-size: 1.2rem;
 }
@@ -131,35 +131,6 @@ h3 {
 	opacity: 0.9;
 }
 
-/* Today's Progress */
-.today-progress {
-	background: #f8f9fa;
-	padding: 1.5rem;
-	border-radius: 8px;
-	border: 1px solid #e9ecef;
-}
-
-.progress-bar {
-	width: 100%;
-	height: 20px;
-	background-color: #e9ecef;
-	border-radius: 10px;
-	overflow: hidden;
-	margin: 1rem 0;
-}
-
-.progress-fill {
-	height: 100%;
-	background: linear-gradient(90deg, #28a745, #20c997);
-	border-radius: 10px;
-	transition: width 0.3s ease;
-}
-
-.progress-text {
-	margin: 0;
-	color: #555;
-}
-
 .completed {
 	color: #28a745;
 	font-weight: bold;
@@ -167,10 +138,10 @@ h3 {
 
 /* Calendar */
 .calendar-section {
-	background: #f8f9fa;
+	background: var(--background-soft);
 	padding: 1.5rem;
 	border-radius: 8px;
-	border: 1px solid #e9ecef;
+	border: 1px solid var(--background-border);
 }
 
 .calendar-grid {
@@ -178,8 +149,8 @@ h3 {
 	grid-template-columns: repeat(7, 1fr);
 	max-width: 400px;
 	margin: 0 auto;
-	border-right: 1px dashed grey;
-	border-bottom: 1px dashed grey;
+	border-right: 1px dashed var(--background-border);
+	border-bottom: 1px dashed var(--background-border);
 }
 
 .calendar-day {
@@ -190,8 +161,8 @@ h3 {
 	justify-content: center;
 	position: relative;
 	min-height: 40px;
-	border-left: 1px dashed grey;
-	border-top: 1px dashed grey;
+	border-left: 1px dashed var(--background-border);
+	border-top: 1px dashed var(--background-border);
 }
 
 .calendar-day.completed {
@@ -199,14 +170,9 @@ h3 {
 	color: white;
 }
 
-.calendar-day.partial {
-	background-color: #ffc107;
-	color: #333;
-}
-
-.calendar-day:not(.completed):not(.partial) {
-	background-color: #e9ecef;
-	color: #6c757d;
+.calendar-day:not(.completed) {
+	background-color:var(--background-secondary);
+	color: var(--text-color-soft);
 }
 
 .calendar-day.today {
