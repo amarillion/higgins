@@ -113,6 +113,11 @@ export class QuizSession {
 		this.fireSessionChangedEvent(SessionEventType.QUESTION_CHANGED);
 	}
 
+	getCurrentAnswerLang(): string | undefined {
+		const currentSide = this.words[this.currentWordIdx].getWord().side;
+		return currentSide === 0 ? this.quiz.rightLang : this.quiz.leftLang;
+	}
+
 	compareAnswer(answer: string): boolean {
 		const result = this.words[this.currentWordIdx].compareAnswer(answer, this.counter, this.binCount);
 		this.hint = null;

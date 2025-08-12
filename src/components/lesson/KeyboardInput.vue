@@ -3,6 +3,7 @@ import { ref, nextTick, onMounted, watch } from 'vue';
 
 const props = defineProps<{
 	question: string,
+	lang: string | undefined,
 	disabled?: boolean,
 }>();
 
@@ -71,6 +72,7 @@ defineExpose({
 				class="answer-input"
 				@keydown="handleKeydown"
 				:disabled="disabled"
+				:lang="lang"
 			/>
 			<button
 				@click="handleSubmit"

@@ -18,6 +18,7 @@ const props = defineProps<{
 	correctAnswer?: string,
 	inputType?: 'text' | 'multiple-choice',
 	choices?: Choice[],
+	lang?: string,
 }>();
 
 const emit = defineEmits<{
@@ -49,6 +50,7 @@ defineExpose({
 			:question="question"
 			:disabled="isCorrect !== null"
 			@answer="handleAnswer"
+			:lang="lang"
 		/>
 		
 		<MultipleChoiceInput

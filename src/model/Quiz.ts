@@ -26,6 +26,8 @@ export class Quiz {
 	fileName: string | null = null;
 	originalTimeStamp: number = 0;
 	contentHash: string | null = null;
+	leftLang?: string = undefined;
+	rightLang?: string = undefined;
 
 	constructor(words?: Word[]) {
 		if (words) {
@@ -115,17 +117,26 @@ class QuizLoader {
 		if (line.charAt(0) === '#') {
 			const pos = line.indexOf('=');
 			if (pos >= 0) {
-				const first = line.substring(1, pos).trim();
+				const first = line.substring(1, pos).toLowerCase().trim();
 				const last = line.substring(pos + 1).trim();
 
-				if (first.toLowerCase() === 'question1') {
+				if (first === 'question1') {
 					this.question1 = last;
-				} else if (first.toLowerCase() === 'question2') {
+				}
+				else if (first === 'question2') {
 					this.question2 = last;
-				} else if (first.toLowerCase() === 'askbothways') {
+				}
+				else if (first === 'askbothways') {
 					this.result.askBothWays = parseInt(last);
-				} else if (first.toLowerCase() === 'encoding') {
+				}
+				else if (first === 'encoding') {
 					this.encoding = last;
+				}
+				else if (first === 'left') {
+					this.result.leftLang = last;
+				}
+				else if (first === 'right') {
+					this.result.rightLang = last;
 				}
 			}
 		} else {

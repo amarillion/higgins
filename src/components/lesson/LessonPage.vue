@@ -20,6 +20,7 @@ const userAnswer = ref<string>('');
 const correctAnswer = ref<string>('');
 const inputType = ref<'text' | 'multiple-choice'>('text');
 const choices = ref<Array<{ text: string, isCorrect: boolean }>>([]);
+const lang = ref<string | undefined>(undefined);
 
 const progressData = computed(() => {
 	if (!session.value) return null;
@@ -73,6 +74,7 @@ const nextQuestion = () => {
 	
 	session.value.nextQuestion();
 	currentQuestion.value = session.value.getQuestion();
+	lang.value = session.value.getCurrentAnswerLang();
 	currentAnswer.value = '';
 	feedback.value = '';
 	hint.value = '';
@@ -181,6 +183,7 @@ function stopLesson() {
 				:correct-answer="correctAnswer"
 				:input-type="inputType"
 				:choices="choices"
+				:lang="lang"
 				@answer="handleAnswer"
 			/>
 			

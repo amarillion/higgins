@@ -1,6 +1,8 @@
 #encoding=UTF-8
 #question1=What is "" in Finnish?
 #question2=What is "" in English?
+#left=fi
+#right=en
 uusi, new
 vanha, old
 iloinen, happy
