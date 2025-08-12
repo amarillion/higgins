@@ -3,6 +3,8 @@
 #random dictionary words
 #question1=What is "" in Finnish?
 #question2=What is "" in English?
+#left=fi
+#right=en
 aavelaiva, ghost ship
 aavikko, desert
 aavistaa, to foresee / to anticipate

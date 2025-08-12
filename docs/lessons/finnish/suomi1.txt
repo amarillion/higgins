@@ -1,4 +1,6 @@
 #encoding=UTF-8
+#left=en
+#right=fi
 address, osoite
 age, ikä
 alphabet, aakkoset

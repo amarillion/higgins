@@ -1,4 +1,6 @@
 #encoding=UTF-8
+#left=fi
+#right=en
 amerikkalainen, american
 asua, to inhabit 
 englantilainen, english
