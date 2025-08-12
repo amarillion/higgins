@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, onMounted, computed } from 'vue';
+import { ref, onMounted, computed, watch } from 'vue';
 import QuestionEntry from './QuestionEntry.vue';
 import ProgressView from './ProgressView.vue';
 import { Quiz, QuizSession } from '../../model';
@@ -21,6 +21,12 @@ const correctAnswer = ref<string>('');
 const inputType = ref<'text' | 'multiple-choice'>('text');
 const choices = ref<Array<{ text: string, isCorrect: boolean }>>([]);
 const lang = ref<string | undefined>(undefined);
+
+watch(lang, (newLang) => {
+	if (newLang) {
+		document.documentElement.lang = newLang;
+	}
+});
 
 const progressData = computed(() => {
 	if (!session.value) return null;
