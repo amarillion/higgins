@@ -141,12 +141,17 @@ export class QuizSession {
 		return this.words[this.currentWordIdx].getWord().answer;
 	}
 
+	static simplifyWord(raw: string) {
+		// clean up word by hiding possible alternative answers
+		return raw.split(' | ')[0];
+	};
+
 	getQuestion(): string {
 		if (this.currentWordIdx < 0 || this.currentWordIdx >= this.quiz.getWords().length) {
 			throw new Error('Invalid current word index');
 		}
 		
-		const word = this.words[this.currentWordIdx].getWord().question;
+		const word = QuizSession.simplifyWord(this.words[this.currentWordIdx].getWord().question);
 		const template = this.words[this.currentWordIdx].getWord().template;
 		const pos = template.indexOf('""');
 		
@@ -206,13 +211,11 @@ export class QuizSession {
 		const allAnswers = this.quiz.getWords()
 			.filter(word => word.side === currentSide)
 			.map(word => word.answer)
-			.filter(answer => answer.toLowerCase().trim() !== correctAnswer.toLowerCase().trim());
+			.filter(answer => answer !== correctAnswer);
 		
-		// Shuffle array using Fisher-Yates algorithm
-		const shuffled = [...allAnswers];
-		shuffle(shuffled);
+		shuffle(allAnswers);
 		
-		return shuffled.slice(0, count);
+		return allAnswers.slice(0, count);
 	}
 
 	// State serialization support

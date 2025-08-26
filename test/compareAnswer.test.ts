@@ -18,6 +18,11 @@ describe('compareMagically', () => {
 		expect(result).toBe(true);
 	});
 
+	it('should return true for optional answers', () => {
+		const result = compareMagically('grey', 'grey | gray');
+		expect(result).toBe(true);
+	});
+
 	it('should return true for swapped options with slashes', () => {
 		const result = compareMagically('option1 / option2', 'option2 / option1');
 		expect(result).toBe(true);

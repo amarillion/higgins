@@ -21,14 +21,20 @@ import type { Word } from './types';
  * Compare answer against quiz, taking into account special characters.
  * An answer containing a single slash means that there are two options that may be swapped.
  */
-export function compareMagically(aRaw: string, bRaw: string) {
-	const a = aRaw.toLowerCase().trim();
-	const b = bRaw.toLowerCase().trim();
+export function compareMagically(observed: string, expected: string) {
+	const a = observed.toLowerCase().trim();
+	const b = expected.toLowerCase().trim();
 	if (a === b) return true;
 	
 	// if the answer has slashes in it, it is allowed to change the order
 	const parts = b.split (' / ');
 	if ((parts.length === 2) && (a === `${parts[1]} / ${parts[0]}`)) {
+		return true;
+	}
+	
+	// if the answer has a pipe in it, then only one of the two has to match
+	const options = b.split (' | ');
+	if ((options.length === 2) && (a === options[0] || a === options[1])) {
 		return true;
 	}
 	
@@ -83,7 +89,7 @@ export class WordState {
 	}
 
 	compareAnswer(answer: string, counter: number, binCount: number[]): boolean {
-		const correct = compareMagically(this.word.answer, answer);
+		const correct = compareMagically(answer, this.word.answer);
 		this.quizCount++;
 
 		if (correct) {

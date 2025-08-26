@@ -118,7 +118,7 @@ gold, kulta
 good, hyvä
 grandfather, isoisä
 grandmother, isoäiti
-gray, harmaa
+gray | grey, harmaa
 green, vihreä
 group, ryhmä
 habit, tapa

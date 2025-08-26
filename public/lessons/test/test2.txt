@@ -1,3 +1,4 @@
 #encoding=UTF-8
 España, Spanje
 el rápido, de sneltrein
+gris, grey | gray

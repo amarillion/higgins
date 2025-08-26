@@ -7,7 +7,7 @@ verde, green
 naranja, orange
 morado, purple
 cafe, brown
-gris, grey
+gris, grey | gray
 negro, black
 blanco, white
 recamara, bedroom

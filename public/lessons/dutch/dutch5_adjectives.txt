@@ -68,7 +68,7 @@ paars, purple
 oranje, orange
 zwart, black
 wit, white
-grijs, grey
+grijs, grey | gray
 
 makkelijk, easy
 moeilijk, hard

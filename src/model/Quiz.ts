@@ -142,8 +142,7 @@ class QuizLoader {
 		} else {
 			const pos = line.indexOf(', ');
 			if (pos >= 0) {
-				const first = line.substring(0, pos).trim();
-				const last = line.substring(pos + 2).trim();
+				const [ first, last ] = line.split(', ');
 
 				if (!this.questions.has(first)) {
 					this.questions.add(first);
@@ -165,6 +164,7 @@ class QuizLoader {
 	getQuiz(): Quiz {
 		let lineNumber = 0;
 		for (const [question, answer] of this.words) {
+			
 			this.result.words.push({
 				question,
 				answer,

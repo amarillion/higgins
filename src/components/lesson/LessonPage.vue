@@ -102,8 +102,8 @@ const nextQuestion = () => {
 		
 		// Create choices array with correct answer and incorrect answers
 		const allChoices = [
-			{ text: correct, isCorrect: true },
-			...incorrectAnswers.map(answer => ({ text: answer, isCorrect: false }))
+			{ text: QuizSession.simplifyWord(correct), isCorrect: true },
+			...incorrectAnswers.map(answer => ({ text: QuizSession.simplifyWord(answer), isCorrect: false }))
 		];
 		
 		choices.value = allChoices;
