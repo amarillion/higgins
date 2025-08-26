@@ -60,7 +60,6 @@ complaint, valitus
 cookie, keksi
 country, maa
 cream, kerma
-credit, luotto
 cup, kuppi
 danger, vaara
 day, päivä
@@ -119,7 +118,7 @@ gold, kulta
 good, hyvä
 grandfather, isoisä
 grandmother, isoäiti
-gray, harmaa
+gray | grey, harmaa
 green, vihreä
 group, ryhmä
 habit, tapa
@@ -199,7 +198,6 @@ left, vasen
 road, tie
 river, joki
 room, huone
-rope, köysi
 rucksack, reppu
 sale, myynti
 sand, hiekka
@@ -207,7 +205,6 @@ salt, suola
 sausage, makkara
 school, koulu
 sea, meri
-scissors, sakset
 sentence, lause
 shirt, paita
 ship, laiva
@@ -231,8 +228,6 @@ spoon, lusikka
 sport, urheilu
 spring, kevät
 star, tähti
-stamp, postimerkki
-statue, patsas
 strange, outo
 street, katu
 strawberry, mansikka
@@ -243,12 +238,9 @@ summer, kesä
 sun, aurinko
 sweet, makea
 table, pöytä
-tax, vero
 telephone, puhelin
 than, kuin
 then, sitten
-thigh, reisi
-thread, lanka
 through, läpi
 ticket, lippu
 time, aika
@@ -258,18 +250,15 @@ also, myös
 tooth, hammas
 towel, pyyhe
 tower, torni
-toy, leikkikalu
-traffic, liikenne
+toy, leikkikalu / lelu
 train, juna
 trip, matka
 tree, puu
 ugly, ruma
 uncle, setä
 until, asti
-value, arvo
 very, tosi
 wall, muuri
-wallet, lompakko
 warm, lämmin
 wave, aalto
 weather, sää
@@ -287,7 +276,6 @@ young, nuori
 yesterday, eilen
 taste, maku
 shop, kauppa
-law, laki
 small, pieni
 people, väki
 person, henki
@@ -295,17 +283,13 @@ moment, hetki
 coffee, kahvi
 winter, talvi
 electricity, sähkö
-newspaper, lehti
 floor, lattia
 money, raha
-enveloppe, kuori
 tent, teltta
 village, kylä
-floppy disk, korppu
 beard, parta
 stone, kivi
 empty, tyhjä
-salary, palkka
 friend, kaveri / ystävä
 sandwich, voileivän
 plate, lautanen

@@ -181,4 +181,18 @@ kuiskata, to whisper
 otus, creature
 piilo, hiding place
 rangaistus, punishment
-
+credit, luotto
+rope, köysi
+scissors, sakset
+stamp, postimerkki
+statue, patsas
+tax, vero
+thigh, reisi
+thread, lanka
+traffic, liikenne
+value, arvo
+law, laki
+newspaper, lehti
+enveloppe, kuori
+salary, palkka
+wallet, lompakko
