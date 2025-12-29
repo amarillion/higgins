@@ -14,7 +14,7 @@ node {
 		stage('Build') {
 
 			echo "Running ${env.BUILD_ID} on ${env.JENKINS_URL}."
-			docker.image('node:latest').inside() {
+			docker.image('node:lts').inside() {
 				withEnv(['HOME=.']) {
 					sh "npm ci"
 				}
@@ -23,7 +23,7 @@ node {
 
 		stage('Lint') {
 
-			docker.image('node:latest').inside() {
+			docker.image('node:lts').inside() {
 				withEnv(['HOME=.']) {
 					sh "npm run lint"
 				}
@@ -32,7 +32,7 @@ node {
 		}
 
 		stage('Test') {
-			docker.image('node:latest').inside() {
+			docker.image('node:lts').inside() {
 				withEnv(['HOME=.']) {
 					sh "npm test -- run"
 				}
