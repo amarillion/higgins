@@ -1,0 +1,146 @@
+# Words corresponding to Duolingo, unit 1-1 through 1-10.
+# Unit 1-1
+
+coffee, 咖啡, kāfēi
+tea, 茶, chá
+water, 水, shuǐ
+rice, 米饭, mǐfàn
+and, 和, hé
+soup, 汤, tāng
+tofu, 豆腐, dòufu
+porridge, 粥, zhōu
+hot, 热, rè
+this, 这, zhè
+is, 是, shì
+
+# Unit 1-2
+
+I, 我, wǒ
+China, 中国, Zhōngguó
+person, 人, rén
+Japan, 日本, Rìběn
+USA, 美国, Měiguó
+and you?, 你呢？, nǐ ne?
+South Korea, 韩国, Hánguó
+
+# Unit 1-3
+
+right?, 对不对, duìbùduì
+correct, 对, duì
+you, 你, nǐ
+teacher, 老师, lǎoshī
+doctor, 医生, yīshēng
+English, 英文, Yīngwén
+lawyer, 律师, lǜshī
+England, 英国, Yīngguó
+Chinese, 中文, Zhōngwén
+Korean, 韩文, Hánwén
+
+# Unit 1-4
+
+mathematics, 数学, shùxué
+to attend, 上, shàng
+college student, 大学生, dàxuéshēng
+class, 课, kè
+he, 他, tā
+like, 喜欢, xǐhuān
+hi, 你好, nǐhǎo
+student, 学生, xuésheng
+to speak, 说, shuō
+
+# Unit 1-5
+
+question marker, 吗, ma
+possessive maker, 的, de
+daughter, 女儿, nǚ'ér
+son, 儿子, érzi
+Canada, 加拿大, Jiānádà
+father, 爸爸, bàba
+mother, 妈妈, māma
+she, 她, tā
+also, 也, yě
+middle school student, 中学生, zhōngxuéshēng
+wife, 老婆, lǎopo
+husband, 老公, lǎogōng
+music, 音乐, yīnyuè
+
+# Unit 1-6
+
+supermarket, 超市, chāoshì
+book, 书, shū
+bookstore, 书店, shūdiàn
+to go, 去, qù
+frequently, 常常, chángcháng
+quisine, 菜, cài
+restaurant, 饭馆, fànguǎn
+to eat, 吃, chī
+snack, 零食, língshí
+to buy, 买, mǎi
+infrequently, 不常, bùcháng
+to look / to read, 看, kàn
+
+# Unit 1-7
+
+thanks, 谢谢, xièxie
+one cup, 一杯, yī bēi
+milk tea, 奶茶, nǎichá
+two cups, 两杯, liǎng bēi
+three cups, 三杯, sān bēi
+to want, 要, yào
+milk, 牛奶, niúnǎi
+ice, 冰, bīng
+sugar, 糖, táng
+green tea, 绿茶, lǜchá
+You're welcome, 不客气, bù kèqi
+
+# Unit 1-8
+
+wallet, 钱包, qiánbāo
+cell phone, 手机, shǒujī
+here, 这里, zhèlǐ
+where, 哪里, nǎlǐ
+train station, 火车站, huǒchēzhàn
+bathroom, 洗手间, xǐshǒujiān
+to be located, 在, zài
+ticket, 车票, chēpiào
+luggage, 行李, xíngli
+Oh no!, 哎呀！, āiyā!
+two, 二, èr
+train, 火车, huǒchē
+first, 第一, dì-yī
+second, 第二, dì-èr
+platform, 站台, zhàntái
+
+# Unit 1-9
+
+one person, 一个人, yī gè rén
+two persons, 两个人, liǎng gè rén
+classmate, 同学, tóngxué
+three persons, 三个人, sān gè rén
+to have, 有, yǒu
+Hello, 你好, nǐhǎo
+to be called, 叫, jiào
+one class, 一节课, yī jié kè
+two classes, 两节课, liǎng jié kè
+four classes, 四节课, sì jié kè
+today, 今天, jīntiān
+history, 历史, lìshǐ
+Really?, 真的吗, zhēn de ma?
+we, 我们, wǒmen
+both / all, 都, dōu
+
+# Unit 1-10
+
+basketball, 篮球, lánqiú
+sports, 运动, yùndòng
+to play, 打, dǎ
+volleyball, 排球, páiqiú
+running, 跑步, pǎobù
+really / extremely, 非常, fēicháng
+tennis, 网球, wǎngqiú
+to swim, 游泳, yóuyǒng
+rather, 比较, bǐjiào
+or, 还是, háishì
+park, 公园, gōngyuán
+gym, 健身房, jiànshēnfáng
+you all, 你们, nǐmen

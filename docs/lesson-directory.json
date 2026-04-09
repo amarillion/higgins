@@ -84,5 +84,8 @@
 		"public/lessons/japanese/hiragana.txt", 
 		"public/lessons/japanese/100jap.txt", 
 		"public/lessons/japanese/kanji.txt"
+	],
+	"Chinese 🇬🇧 → 🇨🇳": [
+		"public/lessons/chinese/duolingo1.txt"
 	]
 }
