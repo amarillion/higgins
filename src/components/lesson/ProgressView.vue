@@ -24,13 +24,6 @@ const getBinWidth = (count: number) => {
 <template>
 	<div class="progress-view">
 		<h3>Progress</h3>
-		<div class="stats">
-			<div class="stat">
-				<span class="label">Questions Asked: </span>
-				<span class="value">{{ progress.counter }}</span>
-			</div>
-		</div>
-		
 		<div class="bins">
 			<div class="bins-container">
 				<div
@@ -55,12 +48,21 @@ const getBinWidth = (count: number) => {
 </template>
 
 <style scoped>
+
 .progress-view {
 	margin: 20px 0;
 	padding: 20px;
 	border: 1px solid #ddd;
 	border-radius: 8px;
-	background-color: var(--background-soft);
+}
+
+@media (max-width: 800px) {
+	
+	.progress-view {
+		padding: 0;
+		border: 0;
+		border-radius: 0;
+	}
 }
 
 .stats {

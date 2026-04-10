@@ -195,7 +195,7 @@ defineExpose({
 
 
 /* Responsive design for smaller screens */
-@media (max-width: 600px) {
+@media (max-width: 800px) {
 	
 	.choice-button {
 		min-height: 50px;

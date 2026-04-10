@@ -160,7 +160,7 @@ function stopLesson() {
 <template>
 	<div class="lesson-page">
 		<div class="lesson-header">
-			<button @click="stopLesson" class="back-button">← Quit Lesson</button>
+			<button @click="stopLesson" class="back-button">←</button>
 			<h3>{{ store.selectedLesson?.language }} - {{ store.selectedLesson?.lessonName }}</h3>
 		</div>
 		
@@ -179,7 +179,7 @@ function stopLesson() {
 			<button @click="store.closeLesson">Back to Lobby</button>
 		</div>
 		
-		<div v-else>
+		<div v-else class="lesson-content">
 			<QuestionEntry
 				:question="currentQuestion"
 				:feedback="feedback"
@@ -194,6 +194,7 @@ function stopLesson() {
 			/>
 			
 			<ProgressView
+				class="progress-view"
 				v-if="progressData"
 				:progress="progressData"
 			/>
@@ -205,7 +206,11 @@ function stopLesson() {
 .lesson-page {
 	max-width: 800px;
 	margin: 0 auto;
-	padding: 0 1rem;
+
+	display: grid;
+	grid-template-rows: auto 1fr;
+	align-items: stretch;
+	height: 100vh;
 }
 
 .lesson-header {
@@ -213,6 +218,24 @@ function stopLesson() {
 	align-items: center;
 	gap: 15px;
 	margin-bottom: 20px;
+	padding: 0 1rem;
+}
+
+.progress-view {
+	align-self: end;
+}
+
+.lesson-content {
+	display: grid;
+	align-content: stretch;
+	grid-template-rows: auto 1fr;
+	padding: 0 1rem;
+}
+
+@media (max-width: 800px) {
+	.lesson-header {
+		margin-bottom: 0;
+	}
 }
 
 .back-button {
