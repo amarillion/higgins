@@ -1,3 +1,6 @@
+#left=en
+#right=zh
+
 # Words corresponding to Duolingo, unit 1-1 through 1-10.
 # Unit 1-1
 
@@ -43,8 +46,8 @@ to attend, 上, shàng
 college student, 大学生, dàxuéshēng
 class, 课, kè
 he, 他, tā
-like, 喜欢, xǐhuān
-hi, 你好, nǐhǎo
+to like, 喜欢, xǐhuān
+hi, 嗨, hāi
 student, 学生, xuésheng
 to speak, 说, shuō
 
@@ -104,7 +107,7 @@ bathroom, 洗手间, xǐshǒujiān
 to be located, 在, zài
 ticket, 车票, chēpiào
 luggage, 行李, xíngli
-Oh no!, 哎呀！, āiyā!
+Oh no!, 哎呀, āiyā!
 two, 二, èr
 train, 火车, huǒchē
 first, 第一, dì-yī
