@@ -77,7 +77,7 @@ class QuizLoader {
 	encoding = 'UTF-8';
 	private questions = new Set<string>();
 	private answers = new Set<string>();
-	private words: [string, string][] = [];
+	private words: [string, string, string | undefined][] = [];
 	private fileLoader: FileLoader;
 	private originalContent = '';
 
@@ -142,13 +142,13 @@ class QuizLoader {
 		} else {
 			const pos = line.indexOf(', ');
 			if (pos >= 0) {
-				const [ first, last ] = line.split(', ');
+				const [ first, last, meta ] = line.split(', ');
 
 				if (!this.questions.has(first)) {
 					this.questions.add(first);
 					if (!this.answers.has(last)) {
 						this.answers.add(last);
-						this.words.push([first, last]);
+						this.words.push([first, last, meta]);
 					} else {
 						console.warn(`Duplicate answer "${last}" at line ${lineNo}`);
 					}
@@ -163,14 +163,15 @@ class QuizLoader {
 
 	getQuiz(): Quiz {
 		let lineNumber = 0;
-		for (const [question, answer] of this.words) {
+		for (const [question, answer, meta] of this.words) {
 			
 			this.result.words.push({
 				question,
 				answer,
 				side: 0,
 				lineNumber,
-				template: this.question2
+				template: this.question2,
+				meta
 			});
 			this.result.wordMap.set(answer, question);
 
@@ -180,7 +181,8 @@ class QuizLoader {
 					answer: question,
 					side: 1,
 					lineNumber,
-					template: this.question1
+					template: this.question1,
+					meta
 				});
 				this.result.wordMap.set(question, answer);
 			}

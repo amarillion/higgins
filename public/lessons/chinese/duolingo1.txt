@@ -1,7 +1,7 @@
 #left=en
 #right=zh
+# Words corresponding to Duolingo units 1-1 to 1-8.
 
-# Words corresponding to Duolingo, unit 1-1 through 1-10.
 # Unit 1-1
 
 coffee, 咖啡, kāfēi
@@ -23,7 +23,7 @@ China, 中国, Zhōngguó
 person, 人, rén
 Japan, 日本, Rìběn
 USA, 美国, Měiguó
-and you?, 你呢？, nǐ ne?
+and you?, 你呢, nǐne?
 South Korea, 韩国, Hánguó
 
 # Unit 1-3
@@ -85,16 +85,16 @@ to look / to read, 看, kàn
 # Unit 1-7
 
 thanks, 谢谢, xièxie
-one cup, 一杯, yī bēi
+one cup, 一杯, yībēi
 milk tea, 奶茶, nǎichá
-two cups, 两杯, liǎng bēi
-three cups, 三杯, sān bēi
+two cups, 两杯, liǎngbēi
+three cups, 三杯, sānbēi
 to want, 要, yào
 milk, 牛奶, niúnǎi
 ice, 冰, bīng
 sugar, 糖, táng
 green tea, 绿茶, lǜchá
-You're welcome, 不客气, bù kèqi
+You're welcome, 不客气, bùkèqi
 
 # Unit 1-8
 
@@ -113,37 +113,3 @@ train, 火车, huǒchē
 first, 第一, dì-yī
 second, 第二, dì-èr
 platform, 站台, zhàntái
-
-# Unit 1-9
-
-one person, 一个人, yī gè rén
-two persons, 两个人, liǎng gè rén
-classmate, 同学, tóngxué
-three persons, 三个人, sān gè rén
-to have, 有, yǒu
-Hello, 你好, nǐhǎo
-to be called, 叫, jiào
-one class, 一节课, yī jié kè
-two classes, 两节课, liǎng jié kè
-four classes, 四节课, sì jié kè
-today, 今天, jīntiān
-history, 历史, lìshǐ
-Really?, 真的吗, zhēn de ma?
-we, 我们, wǒmen
-both / all, 都, dōu
-
-# Unit 1-10
-
-basketball, 篮球, lánqiú
-sports, 运动, yùndòng
-to play, 打, dǎ
-volleyball, 排球, páiqiú
-running, 跑步, pǎobù
-really / extremely, 非常, fēicháng
-tennis, 网球, wǎngqiú
-to swim, 游泳, yóuyǒng
-rather, 比较, bǐjiào
-or, 还是, háishì
-park, 公园, gōngyuán
-gym, 健身房, jiànshēnfáng
-you all, 你们, nǐmen

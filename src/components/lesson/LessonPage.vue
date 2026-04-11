@@ -120,11 +120,18 @@ const handleAnswer = (answer: string) => {
 	const correct = session.value.compareAnswer(answer);
 	const sessionCorrectAnswer = session.value.getCorrectAnswer();
 	
+
 	// Store the user's answer and correct answer
 	userAnswer.value = answer;
 	correctAnswer.value = sessionCorrectAnswer;
 	isCorrect.value = correct;
-	
+
+	// Add pinyin when showing the correct answer.
+	// TODO: refactor language-specific code to a 'formatAnswer' function.
+	if (session.value.getCurrentAnswerLang() === 'zh') {
+		correctAnswer.value = `${sessionCorrectAnswer} ${session.value.getCurrentMeta()}`;
+	}
+
 	if (correct) {
 		feedback.value = 'Correct!';
 	} else {

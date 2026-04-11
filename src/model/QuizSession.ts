@@ -118,6 +118,10 @@ export class QuizSession {
 		return currentSide === 0 ? this.quiz.rightLang : this.quiz.leftLang;
 	}
 
+	getCurrentMeta(): string | undefined {
+		return this.words[this.currentWordIdx].getWord().meta;
+	}
+
 	compareAnswer(answer: string): boolean {
 		const result = this.words[this.currentWordIdx].compareAnswer(answer, this.counter, this.binCount);
 		this.hint = null;

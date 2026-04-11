@@ -20,6 +20,7 @@ export interface Word {
 	side: number,
 	lineNumber: number,
 	template: string,
+	meta?: string,
 }
 
 export interface WordState {
