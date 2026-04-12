@@ -56,6 +56,7 @@ defineExpose({
 		<MultipleChoiceInput
 			v-else-if="inputType === 'multiple-choice'"
 			ref="multipleChoiceRef"
+			:lang="lang"
 			:question="question"
 			:choices="choices || []"
 			:disabled="isCorrect !== null"

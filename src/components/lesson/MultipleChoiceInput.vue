@@ -10,6 +10,7 @@ const props = defineProps<{
 	question: string,
 	choices: Choice[],
 	disabled?: boolean,
+	lang?: string,
 }>();
 
 const emit = defineEmits<{
@@ -107,7 +108,7 @@ defineExpose({
 					:disabled="disabled"
 				>
 					<span class="choice-number">{{ index + 1 }}</span>
-					<span class="choice-text">{{ choice.text }}</span>
+					<span class="choice-text" :lang="props.lang">{{ choice.text }}</span>
 				</button>
 			</div>
 		</div>
@@ -217,6 +218,11 @@ defineExpose({
 	color: #6c757d;
 	font-size: 14px;
 	flex-shrink: 0;
+}
+
+/* Make Chinese characters a bit easier to read */
+.choice-text[lang="zh"] {
+	font-size: x-large;
 }
 
 @media (max-width: 800px) {
