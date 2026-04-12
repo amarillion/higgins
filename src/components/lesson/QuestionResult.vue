@@ -110,7 +110,7 @@ defineProps<{
 }
 
 .user-answer {
-	font-family: 'Courier New', monospace;
+	font-family: 'Source Code Pro', monospace;
 	background-color: rgba(220, 53, 69, 0.1);
 	padding: 4px 8px;
 	border-radius: 4px;
@@ -119,7 +119,7 @@ defineProps<{
 }
 
 .correct-answer {
-	font-family: 'Courier New', monospace;
+	font-family: 'Source Code Pro', monospace;
 	background-color: rgba(40, 167, 69, 0.1);
 	padding: 4px 8px;
 	border-radius: 4px;
