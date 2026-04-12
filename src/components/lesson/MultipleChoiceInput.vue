@@ -89,7 +89,7 @@ defineExpose({
 		
 		<div class="choices-container">
 			<div class="choices-instruction">
-				<p>Select the correct answer (or press number keys 1-{{ shuffledChoices.length }}):</p>
+				<p>Select the correct answer<span class="input-key-message"> (or press number keys 1-{{ shuffledChoices.length }})</span>:</p>
 			</div>
 			
 			<div class="choices-grid">
@@ -106,7 +106,8 @@ defineExpose({
 					@mouseleave="hoveredChoice = null"
 					:disabled="disabled"
 				>
-					{{ choice.text }}
+					<span class="choice-number">{{ index + 1 }}</span>
+					<span class="choice-text">{{ choice.text }}</span>
 				</button>
 			</div>
 		</div>
@@ -162,7 +163,9 @@ defineExpose({
 }
 
 .choice-button {
-	display: block;
+	display: flex;
+	align-items: center;
+	gap: 1rem;
 	padding: 15px;
 	border: 2px solid var(--background-border);
 	border-radius: 8px;
@@ -200,6 +203,29 @@ defineExpose({
 	.choice-button {
 		min-height: 50px;
 		padding: 12px;
+	}
+}
+
+.choice-number {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 28px;
+	height: 28px;
+	border-radius: 4px;
+	border: 1px solid #6c757d;
+	color: #6c757d;
+	font-size: 14px;
+	flex-shrink: 0;
+}
+
+@media (max-width: 800px) {
+	.choice-number {
+		display: none;
+	}
+
+	.input-key-message {
+		display: none;
 	}
 }
 </style>
