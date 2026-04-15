@@ -1,6 +1,6 @@
 #left=en
 #right=zh
-# Words corresponding to Duolingo units 1-1 to 1-8.
+# Words corresponding to units 1-1 to 1-8 from the app with the owl.
 
 # Unit 1-1
 

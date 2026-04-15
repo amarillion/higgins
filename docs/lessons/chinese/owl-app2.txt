@@ -1,0 +1,86 @@
+#left=en
+#right=zh
+# Words corresponding to units 1-9 to .... from the app with the owl.
+
+# Unit 1-9
+
+one person, 一个人, yīgèrén
+two persons, 两个人, liǎnggèrén
+classmate, 同学, tóngxué
+three persons, 三个人, sāngèrén
+to have, 有, yǒu
+Hello, 你好, nǐhǎo
+to be called, 叫, jiào
+one class, 一节课, yī jié kè
+two classes, 两节课, liǎng jié kè
+four classes, 四节课, sì jié kè
+today, 今天, jīntiān
+history, 历史, lìshǐ
+Really?, 真的吗, zhēndema?
+we, 我们, wǒmen
+both / all, 都, dōu
+
+# Unit 1-10
+
+basketball, 篮球, lánqiú
+sports, 运动, yùndòng
+to play, 打, dǎ
+volleyball, 排球, páiqiú
+running, 跑步, pǎobù
+really / extremely, 非常, fēicháng
+tennis, 网球, wǎngqiú
+to swim, 游泳, yóuyǒng
+rather, 比较, bǐjiào
+or, 还是, háishì
+park, 公园, gōngyuán
+gym, 健身房, jiànshēnfáng
+you all, 你们, nǐmen
+
+# Unit 2-1
+
+house, 房子, fángzi
+apartment, 公寓, gōngyù
+is (before adjective), 很, hěn
+big, 大, dà
+room, 房间, fángjiān
+living room, 客厅, kètīng
+small, 小, xiǎo
+only, 只, zhǐ
+kitchen, 厨房, chúfáng
+bedroom, 卧室, wòshì
+wow, 哇, wā
+beautiful, 漂亮, piàoliang
+bed, 床, chuáng
+TV, 电视, diànshì
+sofa, 沙发, shāfā
+comfortable, 舒服, shūfu
+fridge, 冰箱, bīngxiāng
+table, 桌子, zhuōzi
+old, 旧, jiù
+messy, 乱, luàn
+
+# Unit 2-2
+
+summer, 夏天, xiàtiān
+home town, 老家, lǎojiā
+Beijing, 北京, Běijīng
+lively, 热闹, rènao
+fun, 好玩儿, hǎowánr
+cold, 冷, lěng
+winter, 冬天, dōngtiān
+especially, 特别, tèbié
+during, 时候, shíhou
+autumn, 秋天, qiūtiān
+Great Wall, 长城, Chángchéng
+Forbidden City, 故宫, Gùgōng
+famous, 有名, yǒumíng
+people, 人们, rénmen
+spring, 春天, chūntiān
+zoo, 动物园, dòngwùyuán
+admission, 门票, ménpiào
+far, 远, yuǎn
+expensive, 贵, guì
+roast duck, 烤鸭, kǎoyā
+hot pot, 火锅, huǒguō
+spciy, 辣, là
+delicious, 好吃, hǎochī
