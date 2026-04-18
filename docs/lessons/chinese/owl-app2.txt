@@ -82,5 +82,5 @@ far, 远, yuǎn
 expensive, 贵, guì
 roast duck, 烤鸭, kǎoyā
 hot pot, 火锅, huǒguō
-spciy, 辣, là
+spicy, 辣, là
 delicious, 好吃, hǎochī
