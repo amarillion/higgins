@@ -1,10 +1,9 @@
-#encoding=UTF-8
 regarder, to look
 manger, to eat
 bouger, to move
 demeurer, to abide
 se lever, to arise
-se rveiller, to awake
+se réveiller, to awake
 être, to be
 supporter, to bear
 battre, to beat
@@ -26,8 +25,8 @@ souffler, to blow
 casser, to break
 apporter, to bring
 construire, to build
-brler, to burn
-clater, to burst
+brûler, to burn
+éclater, to burst
 acheter, to buy
 jeter, to cast
 attraper, to catch
@@ -35,9 +34,9 @@ gronder, to chide
 choisir, to choose
 fendre, to cleave
 s'accrocher, to cling
-vtir, to clothe
+vêtir, to clothe
 venir, to come
-coter, to cost
+coûter, to cost
 ramper, to creep
 couper, to cut
 oser, to dare
@@ -46,21 +45,21 @@ creuser, to dig
 plonger, to dive
 faire, to do
 dessiner, to draw
-rver, to dream
+rêver, to dream
 boire, to drink
 conduire, to drive
 habiter, to dwell
 manger, to eat
 tomber, to fall
 nourrir, to feed
-sentir / prouvern, to feel
+sentir / éprouver, to feel
 combattre, to fight
 trouver, to find
 s'enfuir, to flee
 voler, to fly
 s'abstenir, to forbear
 interdire, to forbid
-prdire, to forecast
+prédire, to forecast
 oublier, to forget
 pardonner, to forgive
 abandonner, to forsake
@@ -90,7 +89,7 @@ mener, to lead
 sauter, to leap
 apprendre, to learn
 laisser, to leave
-prter, to lend
+prêter, to lend
 permettre, to let
 allumer, to light
 perdre, to lose
@@ -104,8 +103,8 @@ payer, to pay
 mettre, to put
 quitter, to quit
 lire, to read
-dchirer, to rend
-dbarasser, to rid
+déchirer, to rend
+débarasser, to rid
 chevaucher, to ride
 sonner, to ring
 courir, to run
@@ -122,25 +121,25 @@ secouer, to shake
 briller, to shine
 tirer, to shoot
 montrer, to show
-lacrer, to shred
-rtrcir, to shrink
+lacérer, to shred
+rétrécir, to shrink
 confesser, to shrive
 fermer, to shut
 chanter, to sing
 couler, to sink
-tre assis, to sit
+être assis, to sit
 massacrer, to slay
 dormir, to sleep
 glisser, to slide
 frapper, to smite
 semer, to sow
 parler, to speak
-peler, to spell
-dpenser, to spend
+épeler, to spell
+dépenser, to spend
 renverser, to spill
 cracher, to spit
 fendre, to split
-rpandre, to spread
+répandre, to spread
 coller, to stick
 piquer, to sting
 joncher, to strew
@@ -154,16 +153,16 @@ nager, to swim
 se balancer, to swing
 prendre, to take
 enseigner, to teach
-dchirer, to tear
+déchirer, to tear
 raconter, to tell
 penser, to think
-prosprer, to thrive
+prospérer, to thrive
 jeter, to throw
 enfoncer, to thrust
 comprendre, to understand
-dfaire, to undo
+défaire, to undo
 renverser, to upset
-se rveiller, to wake
+se réveiller, to wake
 tisser, to weave
 pleurer, to weep
 gagner, to win
@@ -171,5 +170,4 @@ enrouler, to wind
 retirer, to withdraw
 travailler, to work
 tordre, to wring
-crire, to write
-
+écrire, to write
