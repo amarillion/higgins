@@ -1,0 +1,425 @@
+# REGULARS
+to serve, dienen/diende/gediend
+to earn, verdienen/verdiende/verdiend
+to reach, bereiken/bereikte/bereikt
+to burden, belasten/belastte/belast
+to overload, overbelasten/overbelastte/overbelast
+to illuminate, belichten/belichtte/belicht
+to spend, besteden/besteedde/bested
+to populate, bevolken/bevolkte/bevolkt
+to bluff, bluffen/blufte/gebluft
+to book, boeken/boekte/geboekt
+to build, bouwen/bouwde/gebouwd
+to support, onderbouwen/onderbouwde/onderbouwd
+to expand, uitbreiden/breidde uit/uitgebreid
+to bridge, overbruggen/overbrugde/overbrugd
+to circle, cirkelen/cirkelde/gecirkeld
+to encircle, omcirkelen/omcirkelde/omcirkeld
+to cover, dekken/dekte/gedekt
+to discover, ontdekken/ontdekte/ontdekt
+to cover (roof), overdekken/overdekte/overdekt
+to thunder, donderen/donderde/gedonderd
+to intimidate, overdonderen/overdonderde/overdonderd
+to turn, draaien/draaide/gedraaid
+to threaten, dreigen/dreigde/gedreigd
+to soak, doordrenken/doordrenkte/doordrenkt
+to drench, drenken/drenkte/gedrenkt
+to press, drukken/drukte/gedrukt
+to oppress, onderdrukken/onderdrukte/onderdrukt
+to dare, durven/durfde/gedurfd
+to inherit, erven/erfde/geërfd
+to throw, gooien/gooide/gegooid
+to tie, vastmaken/maakte vast/vatgemaakt
+to fill up, volmaken/maakte vol/volgemaakt
+to make up, opmaken/maakte op/opgemaakt
+to overpower, overmannen/overmande/overmand
+to believe, menen/meende/gemeend
+to remark, opmerken/merkte op/opgemerkt
+to undermine, ondermijnen/ondermijnde/ondermijnd
+to wall in, ommuren/ommuurde/ommuurd
+to stay the night, overnachten/overnachtte/overnacht
+to embrace, omarmen/omarmde/omarmd
+to develop, ontwikkelen/ontwikkelde/ontwikkeld
+to reflect, overpeinzen/overpeinsde/overpeinsd
+to contemplate, peinzen/peinsde/gepeinsd
+to cram, proppen/propte/gepropt
+to stuff, volproppen/propte vol/volgepropt
+to persuade, overreden/overreedde/overreed
+to aim, richten/richtte/gericht
+to instruct, onderrichten/onderrichtte/onderricht
+to perform/do, verrichten/verrichtte/verricht
+to surround, omringen/omringde/omringd
+to shadow, shaduwen/shaduwde/geschaduwd
+to overshadow, overshaduwen/overshaduwde/overshaduwd
+to estimate, schatten/schatte/geschat
+to underestimate, onderschatten/onderschatte/onderschat
+to overestimate, overschatten/overschatte/overschat
+to differ, schelen/scheelde/gescheeld
+to intercept, onderscheppen/onderschepte/onderschept
+to witness, aanschouwen/aanschouwde/aanschouwd
+to siege, omsingelen/omsingelde/omsingeld
+to play, spelen/speelde/gespeeld
+to reflect, weerspiegelen/weerspiegelde/weerspiegeld
+to suppose, onderstellen/onderstelde/ondersteld
+to set, stellen/stelde/gesteld
+to compose, samenstellen/stelde samen/samengesteld
+to disappoint, teleurstellen/stelde teleur/teleurgesteld
+to adjust, vestellen/verstelde/versteld
+to propose/imagine, voorstellen/stelde voor/voorgesteld
+to stem/stop, stelpen/stelpte/gestelpt
+to overwhelm, overstelpen/overstelpte/overstelpt
+to miss target, misgooien/gooide mis/misgegooid
+to fill up, volgooien/gooide vol/volgegooid
+to hurry, haasten/haastte/gehaast
+to rush, zich overhaasten/zich overhaastte/zich overhaast
+to fetch, halen/haalde/gehaald
+to recover, achterhalen/achterhaalde/achterhaald
+to convince, overhalen/haalde over/overgehaald
+to handle, handelen/handelde/gehandeld
+to treat/handle, behandelen/behandelde/behandeld
+to negotiate, onderhandelen/onderhandelde/onderhandeld
+to hand over, overhandigen/overhandigde/overhandigd
+to hate, haten/haatte/gehaat
+to rule/govern, heersen/heerste/geheerst
+to dominate, overheersen/overheerste/overheerst
+to hug, omhelzen/omhelsde/omhelsd
+to remember, herinneren/herinnerde/herinnerd
+to name/ heten/heette/geheten
+to hear, horen/hoorde/gehoord
+to overhear, overhoren/overhoorde/overhoord
+to wrap, hullen/hulde/gehuld
+to envelop, omhullen/omhulde/omhuld
+to hunt, jagen/jaagde-joeg/gejaagd
+to reflect, weerkaatsen/weerkaatste/weerkaatst 
+to cut, kappen/kapte/gekapt
+to know, kennen/kende/gekend
+to acknowledge, onderkennen/onderkende/onderkend
+to reject, afkeuren/keurde af/afgekeurd
+to approve, goedkeuren/keurde goed/goedgekeurd
+to judge, keuren/keurde/gekeurd
+to complain, klagen/klaagde/geklaagd
+to dress, zich aankleden/kleedde/gekleed
+to pitch, klemmen/klemde/geklemd
+to clasp, omklemmen/omklemde/omklemd
+to cool, koelen/koelde/gekoeld
+to super cool, onderkoelen/onderkoelde/onderkoeld
+to coordinate/pool, overkoepelen/overkoepelde/overkoepeld
+to put, leggen/legde/gelegd
+to put down, neerleggen/ledge neer/neergelegd
+to discuss, overleggen/overlegde/overlegd
+to lead, leiden/leidde/geleid
+to live, level/leefde/geleefd
+to survive, overleven/overleefde/overleefd
+to outline, omlijnen/omlijnde/omlijnd
+to underline, onderlijnen/onderlijnde/onderlijnd
+to frame, omlijsten/omlijstte/omlijst
+to make, maken/maakte/gemaakt
+to participate, meemaken/maakte mee/meegemaakt
+to finish/decide, uitmaken/maakte uit/uitgemaakt
+to guide, voeren/voerde/gevoerd
+to supersaturate, oververzadigen/oververzadigde/oververzadigd
+to saturate, verzadigen/verzadigde/verzadigd
+to establish, vestigen/vestigde/gevestigd
+to surpass, overvleugelen/overvleugelde/overvleugeld
+to starve, ondervoeden/ondervoedde/ondervoed
+to overfeed, overvoeden/overvoedde/overvoed
+to feed, voeden/voedde/gevoed
+to sense, voorvoelen/voorvoelde/voorvoeld
+to feel, voelen/voelde/gevoeld
+to execure, uitvoeren/voerde uit/uitgevoerd
+to chase, achtervolgen/achtervolgde/achtervolgd
+to follow, volgen/volgde/gevolgd
+to ask too much, overvragen/overvroeg/overvraagd
+to fan, waaien/waaide/gewaaid
+to expect, verwachten/verwachtte/verwacht
+to wall in, omwallen/omwalde/omwald
+to refuse, weigeren/weigerde/geweigerd
+to overwhelm, overweldigen/overweldigde/overweldigd
+to get used to, wennen/wende/gewend
+to finish, afwerken/werkte af/afgewerkt
+to work, werken/werkte/gewerkt
+to work overtime, overwerken/werkte over/overgewerkt
+to overwork, zich overwerken/overwerkte/overwerkt
+to want, willen/wilde-wou/gewild
+to overgrow, overwoekeren/overwoekerde/overwoekerd
+to vote, stemmen/stemde/gestemd
+to support, (onder)steunen/(onder)steunde/(onder)steunt
+to stop, stoppen/stopte/gestopt
+to stuff, volstoppen/stopte vol/volgestopt
+to underline, onderstrepen/onderstreepte/onderstreept
+to streak, strepen/streepte/gestreept
+to oppose, weerstreven/weerstreefde/weerstreefd
+to flood, overstromen/overstroomde/overstroomd
+to overflow, overstromen/stroomde over/is overgestroomd
+to sign, ondertekenen/ondertekende/ondertekend
+to draw, tekenen/tekende/getekend
+to subtitle, ondertitelen/ondertitelde/ondertiteld
+to trump, troeven/troefde/getroefd
+to convince, overtuigen/overtuigde/overtuigd
+to gear, tuigen/tuigde/getuigd
+to accept, aanvaarden/aanvaarde/aanvaard
+to include/cover, omvatten/omvatte/omvat
+to overheat, oververhitten/oververhitte/oververhit
+to heat, verhitten/verhitte/verhit
+to tire, vermoeien/vermoeide/vermoeid
+to overlabour, zich oververmoeien/oververmoeide/oververmoeid
+to hurry, zich overijlen/overijlde/overijld
+to care, verzorgen/verzorgde/verzorgd
+
+#E/A/A
+to bring, brengen/bracht/gebracht
+to spend time, doorbrengen/bracht door/doorgebracht
+to invent, bedenken/bedacht/bedacht
+to think, denken/dacht/gedacht
+to consider, overdenken/overdacht/overdacht
+to have, hebben/had/gehad
+
+#A/A/A-en
+to bake, bakken/bakte/gebakken
+to burst, barsten/barstte/is gebarsten
+to roast, braden/braadde/gebraden
+to guess, raden/raadde/geraden
+to advise, aanraden/raadde aan/aangeraden
+to guess wrong, misraden/raadde mis/misgeraden
+to laugh, lachen/lachte/gelachen
+to load, laden/laadde/geladen
+to overload, overladen/overlaadde/overladen
+to wash, wassen/waste/gewassen
+
+#E/A/O-en
+to command, bevelen/beval/bevolen
+to break, breken/brak/gebroken
+to interrupt, onderbreken/onderbrak/onderbroken
+to take, nemen/nam/genomen
+to decrease, afnemen/nam af/is afgenomen
+to increase, toenemen/toenam/is toegenomen
+to undertake, ondernemen/ondernam/ondernomen
+to speak, spreken/spraak/gesproken
+to stab, steken/stak/gestoken
+to steal, stelen/stal/gestolen
+
+to enter, binnenkomen/kwam binnen/is binnengekomen
+to come, komen/kwam/gekomen
+to overcome/happen, overkomen/overkwam/is overkomen
+to come out, uitkomen/kwam uit/is uitgekomen
+to occur, voorkomen/voorkwam/voorkomen
+to prevent, voorkomen/kwam voor/is voorgekomen
+to release, vrijkomen/kwam vrij/is vrijgekomen
+
+#X/A/E-en
+to worship, aanbidden/aanbad/aanbeden
+to pray, bidden/bad/gebeden
+to overeat, (zich) overeten/overat/zich overeten
+to eat, eten/at/gegeten
+to heal, genezen/genas/genezen
+to give, geven/gaf/gegeven
+to surround, omgeven/omgaf/omgeven
+to give up, opgeven/gaf op/opgegeven
+to spend/publish, uitgeven/gaf uit/uitgegeven
+to perform, optreden/trad op/opgetreden
+to break a rule, overtreden/overtrad/overtreden
+to step, treden/trad/getreden
+to lie, liggen/lag/gelegen
+to read, lezen/las/gelezen
+to forget, vergeten/vergat/is vergeten
+to sit, zitten/zat/gezeten
+
+#X/Oo/O-en
+to start, beginnen/begon/is begonnen
+to convince, doordringen/doordrong/doordrongen
+to push, dringen/drong/gedrongen
+to drink, drinken/dronk/gedronken
+to force, dwingen/dwong/gedwongen
+to bind, binden/bond/gebonden
+to shine, blinken/blonk/geblonken
+to obtain, gelden/gold/gegolden
+to gleam, glimmen/glom/geglommen
+to jump, springen/sprong/is gesprongen
+to cheat, bedriegen/bedroog/bedrogen
+to enjoy, genieten/genoot/genoten
+to offer, aanbieden/bood aan/aangeboden
+to move, bewegen/bewoog/bewogen
+to bid, bieden/bood/geboden
+to bend, buigen/boog/gebogen
+to dive, duiken/dook/is gedoken
+to whistle, fluiten/floot/gefloten
+to pour, gieten/goot/gegoten
+to pour over, overgieten/overgoot/overgoten
+to fill up, volgieten/goot vol/volgegoten
+to progress, opschieten/schoot op/is opgeschoten
+to smell, ruiken/rook/geroken
+to curse/scold, schelden/schold/gescholden
+to donate, schenken/schonk/geschonken
+tos have, scheren/shoor/geschoren
+to shoot, schieten/schoot/geschoten
+to miss target, misschieten/schoot mis/misgeschoten
+to startle, schrikken/schrok/is geschrokken
+to push/shove, schuiven/schoof/geschoven
+to close,sluiten/sloot/gesloten
+to connect, aansluiten/sloot aan/aangesloten
+to enclose, omsluiten/omsloot/omsloten
+to melt, smelten/smolt/gesmolten
+to spray, spuiten/spoot/gespoten
+to invent, verzinnen/verzon/verzonnen
+to experience/encounter, ondervinden/ondervond/ondervonden
+to find, vinden/vond/gevonden
+to fly, vliegen/vloog/is gevlogen
+to freeze, vriezen/vroor/gevroren
+to consider, overwegen/overwoog/overwogen
+to swim, zwemmen/zwom/is gezwommen
+to suck, zuigen/zoog/gezogen
+to sing, zingen/zong/gezongen
+to sink, zinken/zonk/is gezonken
+to send, zenden/zond/gezonden
+to prefer, verkiezen/verkoos/verkozen
+to lose, verliezen/verloor/verloren
+to fight/battle, vechten/vocht/gevochten
+to hide, verbergen/verborg/verborgen
+to excel, overtreffen/overtrof/overtroffen
+to hit/strike, treffen/trof/getroffen
+to pull, trekken/trok/getrokken
+to stink, stinken/stonk/gestonken
+to wrap up, omwinden/omwond/omwonden
+to wind, winden/wond/gewonden
+to conquer, overwinnen/overwon/overwonnen
+to win, winnen/won/gewonnen
+to tell a lie, liegen/loog/gelogen
+to shrink, krimpen/kromp/is gekrompen
+to creep, kruipen/kroop/is gekropen
+to climb, klimmen/klom/is geklommen
+to sound, klinken/klonk/is geklommen
+to weigh, wegen/woog/gewogen
+to choose, kiezen/koos/gekozen
+
+#IJ/EE/E-en
+to understand, begrijpen/begreep/begrepen
+to bite, bijten/beet/gebeten
+to appear, blijken/bleek/is gebleken
+to stay, blijven/bleef/is gebleven
+to float/drive/herd, drijven/dreef/is gedreven
+to exagerate, overdrijven/overdreef/overdreven
+to slide, glijden/gleed/is gegleden
+to ride, rijden/reed/is gereden
+to run, overrijden/overreed/overreden
+to evade fare, zwartrijden/reed zwart/zwartgereden
+to separate, scheiden/scheidde/gescheiden
+to distinguish, onderscheiden/onderscheidde/onderscheiden
+to shine, schijnen/scheen/geschenen
+to appear, bverschijnen/verscheen/verschenen
+to exceed, overschrijden/overschreed/overschreden
+to write, schrijven/schreef/geschreven
+to register, opschrijven/opschreef/opgeschreven
+to describe, omschrijven/omschreef/omschreven
+to endorse, onderschrijven/onderschrijven/onderschreven
+to hurl, smijten/smeet/gesmeten
+to cut, snijden/sneed/gesneden
+to be sorry, spijten/speet/gespeten
+to hush, zwijgen/zweeg/gezwegen
+to grab, grijpen/greep/gegrepen
+to miss hold, misgrijpen/greep mis/misgegrepen
+to suffer, lijden/leed/geleden
+to decease, overlijden/overleed/is overleden
+to appear, lijken/leek/geleken
+to compare, vergelijken/vergeleek/vergeleken
+to teach, onderwijzen/onderwees/onderwezen
+to refer, verwijzen/verwees/verwezen
+to show/point, wijzen/wees/gewezen
+to get, krijgen/kreeg/gekregen
+to rub, wrijven/wreef/gewreven
+to disappear, verdwijnen/verdween/is verdwenen
+to compare, vergelijken/vergeleek/vergeleken
+to avoid, vermijden/vermeed/vermeden
+to look, kijken/keek/gekeken
+to check, nakijken/keek na/nagekeken
+to squeze, knijpen/kneep/geknepen
+to rise, stijgen/steeg/is gestegen
+to fight, strijden/streed/gestreden
+
+#X/OE/X-en
+to wear, dragen/droeg/gedragen
+to strike, slaan/sloeg/geslagen
+to miss, misslaan/sloeg mis/misgeslagen
+to experience, ervaren/ervoer/ervaren 
+to dig, grave/groef/gegraven
+to wonder, zich afvragen/vroeg af/afgevraagd
+to interrogate, ondervragen/ondervroeg/ondervraagd
+to ask, vragen/vroeg/gevraagd
+to sail, varen/voer/is gevaren
+to swear (oath), zweren/zwoer/gezworen
+to roam, zwerven/zwoer/gezworven
+
+#X/IE/A-en
+to blow, blazen/blies/geblazen
+to sleep, slapen/sliep/geslapen
+to create, scheppen/schiep/geschapen 
+to sleep, slapen/sliep/geslapen
+to sleep in, uitslapen/sliep uit/uitgeslapen
+to let, laten/liet/gelaten
+to let go, loslaten/liet los/losgelaten
+to please/have a baby, bevallen/beviel/is bevallen
+to stand out, opvallen/viel op/is opgevallen
+to surprise, overvallen/overviel/overvallen
+to fall, vallen/viel/is gevallen
+
+#X/IE/O_OU_OE-en
+to spoil, bederven/bedierf/bedorven
+to help, helpen/hielp/geholpen
+to walk, lopen/liep/is gelopen
+to go wrong, mislopen/liep mis/misgelopen
+to get filled up, vollopen/liep vol/is volgelopen
+to submit, onderwerpen/onderwierp/onderworpen
+to fill in, volwerpen/wierp vol/volgeworpen
+to throw, werpen/wierp/geworpen
+to die, sterven/stierf/is gestorven
+to hold, houden/hield/gehouden
+to provide, onderhouden/onderhield/onderhouden
+to stop, ophouden/hield op/is opgehouden
+to persist, volhouden/hield vol/volgehouden
+to restrict, weerhouden/weerhield/weerhouden
+to shout/call, roepen/riep/geroepen
+
+#X/CHT/CHT
+to visit, bezoeken/bezocht/bezocht
+to buy, kopen/kocht/gekocht
+to search, zoeken/zocht/gezocht
+to research, onderzoeken/onderzocht/onderzocht
+
+#A/I/A
+to continue, doorgaan/ging door/is doorgegaan
+to go, gaan/ging/is gegaan
+to go wrong, misgaan/ging mis/is misgegaan
+to handle, omgaan/ging om/omgegaan
+to endure, ondergaan/onderging/ondergaan
+to go under, ondergaan/ging onder/is ondergegaan
+to exit, uitgaan/ging uit/is uitgegaan
+to hang, hangen/hing/gehangen
+to depend, afhangen/hing af/afgehangen
+to catch, vangen/ving/gevangen
+to receive, ontvangen/ontving/ontvangen
+to replace, vervangen/verving/vervangen
+to miss, misslaan/sloeg mis/misgeslagen
+
+#A/O/A
+to stand, staan/stond/gestaan
+to originate, ontstaan/ontstond/is ontstaan
+to endure, doorstaan/doorstond/doorstaan
+to rise, opstaan/stond op/opgestaan
+to resist, weerstaan/weerstond/weerstaan
+
+to echo, weerklinken/weerklonken/weerklonken
+
+to have to, moeten/moest/gemoeten
+to be allowed to, mogen/mocht/gemogen
+to become, worden/werd/is geworden 
+to know, weten/wist/geweten
+to see, zien/zag/gezien
+to see through, doorzien/doorzag/doorzien
+to oversee, overzien/overzag/overzien
+to foresee, voorzien/voorzag/voorzien
+
+to say, zeggen/zei/gezegd 
+to be able to, kunnen/kon/gekund
+to be, zijn/was/is geweest
+to do, doen/deed/gedaan
+
+will/shall, zullen/zou
