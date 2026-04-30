@@ -29,9 +29,9 @@ to oppress, onderdrukken/onderdrukte/onderdrukt
 to dare, durven/durfde/gedurfd
 to inherit, erven/erfde/geërfd
 to throw, gooien/gooide/gegooid
-to tie, vastmaken/maakte vast/vatgemaakt
+to tie, vastmaken/maakte vast/vastgemaakt
 to fill up, volmaken/maakte vol/volgemaakt
-to make up, opmaken/maakte op/opgemaakt
+to use up/make up, opmaken/maakte op/opgemaakt
 to overpower, overmannen/overmande/overmand
 to believe, menen/meende/gemeend
 to remark, opmerken/merkte op/opgemerkt
@@ -64,7 +64,7 @@ to suppose, onderstellen/onderstelde/ondersteld
 to set, stellen/stelde/gesteld
 to compose, samenstellen/stelde samen/samengesteld
 to disappoint, teleurstellen/stelde teleur/teleurgesteld
-to adjust, vestellen/verstelde/versteld
+to adjust, verstellen/verstelde/versteld
 to propose/imagine, voorstellen/stelde voor/voorgesteld
 to stem/stop, stelpen/stelpte/gestelpt
 to overwhelm, overstelpen/overstelpte/overstelpt
@@ -105,28 +105,28 @@ to cool, koelen/koelde/gekoeld
 to super cool, onderkoelen/onderkoelde/onderkoeld
 to coordinate/pool, overkoepelen/overkoepelde/overkoepeld
 to put, leggen/legde/gelegd
-to put down, neerleggen/ledge neer/neergelegd
+to put down, neerleggen/legde neer/neergelegd
 to discuss, overleggen/overlegde/overlegd
 to lead, leiden/leidde/geleid
-to live, level/leefde/geleefd
+to live, leven/leefde/geleefd
 to survive, overleven/overleefde/overleefd
 to outline, omlijnen/omlijnde/omlijnd
 to underline, onderlijnen/onderlijnde/onderlijnd
 to frame, omlijsten/omlijstte/omlijst
 to make, maken/maakte/gemaakt
-to participate, meemaken/maakte mee/meegemaakt
-to finish/decide, uitmaken/maakte uit/uitgemaakt
+to experience, meemaken/maakte mee/meegemaakt
+to matter/decide/break up, uitmaken/maakte uit/uitgemaakt
 to guide, voeren/voerde/gevoerd
 to supersaturate, oververzadigen/oververzadigde/oververzadigd
 to saturate, verzadigen/verzadigde/verzadigd
 to establish, vestigen/vestigde/gevestigd
 to surpass, overvleugelen/overvleugelde/overvleugeld
-to starve, ondervoeden/ondervoedde/ondervoed
+to starve (malnourish), ondervoeden/ondervoedde/ondervoed
 to overfeed, overvoeden/overvoedde/overvoed
 to feed, voeden/voedde/gevoed
 to sense, voorvoelen/voorvoelde/voorvoeld
 to feel, voelen/voelde/gevoeld
-to execure, uitvoeren/voerde uit/uitgevoerd
+to execute, uitvoeren/voerde uit/uitgevoerd
 to chase, achtervolgen/achtervolgde/achtervolgd
 to follow, volgen/volgde/gevolgd
 to ask too much, overvragen/overvroeg/overvraagd
@@ -162,8 +162,8 @@ to include/cover, omvatten/omvatte/omvat
 to overheat, oververhitten/oververhitte/oververhit
 to heat, verhitten/verhitte/verhit
 to tire, vermoeien/vermoeide/vermoeid
-to overlabour, zich oververmoeien/oververmoeide/oververmoeid
-to hurry, zich overijlen/overijlde/overijld
+to overexert, zich oververmoeien/oververmoeide/oververmoeid
+to hurry (old fashioned), zich overijlen/overijlde/overijld
 to care, verzorgen/verzorgde/verzorgd
 
 #E/A/A
@@ -194,7 +194,7 @@ to take, nemen/nam/genomen
 to decrease, afnemen/nam af/is afgenomen
 to increase, toenemen/toenam/is toegenomen
 to undertake, ondernemen/ondernam/ondernomen
-to speak, spreken/spraak/gesproken
+to speak, spreken/sprak/gesproken
 to stab, steken/stak/gestoken
 to steal, stelen/stal/gestolen
 
@@ -250,7 +250,7 @@ to progress, opschieten/schoot op/is opgeschoten
 to smell, ruiken/rook/geroken
 to curse/scold, schelden/schold/gescholden
 to donate, schenken/schonk/geschonken
-tos have, scheren/shoor/geschoren
+tos have, scheren/schoor/geschoren
 to shoot, schieten/schoot/geschoten
 to miss target, misschieten/schoot mis/misgeschoten
 to startle, schrikken/schrok/is geschrokken
@@ -287,7 +287,7 @@ to tell a lie, liegen/loog/gelogen
 to shrink, krimpen/kromp/is gekrompen
 to creep, kruipen/kroop/is gekropen
 to climb, klimmen/klom/is geklommen
-to sound, klinken/klonk/is geklommen
+to sound, klinken/klonk/geklonken
 to weigh, wegen/woog/gewogen
 to choose, kiezen/koos/gekozen
 
@@ -300,17 +300,17 @@ to float/drive/herd, drijven/dreef/is gedreven
 to exagerate, overdrijven/overdreef/overdreven
 to slide, glijden/gleed/is gegleden
 to ride, rijden/reed/is gereden
-to run, overrijden/overreed/overreden
+to run over, overrijden/overreed/overreden
 to evade fare, zwartrijden/reed zwart/zwartgereden
 to separate, scheiden/scheidde/gescheiden
 to distinguish, onderscheiden/onderscheidde/onderscheiden
 to shine, schijnen/scheen/geschenen
-to appear, bverschijnen/verscheen/verschenen
+to appear, verschijnen/verscheen/verschenen
 to exceed, overschrijden/overschreed/overschreden
 to write, schrijven/schreef/geschreven
 to register, opschrijven/opschreef/opgeschreven
 to describe, omschrijven/omschreef/omschreven
-to endorse, onderschrijven/onderschrijven/onderschreven
+to endorse, onderschrijven/onderschreef/onderschreven
 to hurl, smijten/smeet/gesmeten
 to cut, snijden/sneed/gesneden
 to be sorry, spijten/speet/gespeten
@@ -327,7 +327,6 @@ to show/point, wijzen/wees/gewezen
 to get, krijgen/kreeg/gekregen
 to rub, wrijven/wreef/gewreven
 to disappear, verdwijnen/verdween/is verdwenen
-to compare, vergelijken/vergeleek/vergeleken
 to avoid, vermijden/vermeed/vermeden
 to look, kijken/keek/gekeken
 to check, nakijken/keek na/nagekeken
@@ -340,19 +339,18 @@ to wear, dragen/droeg/gedragen
 to strike, slaan/sloeg/geslagen
 to miss, misslaan/sloeg mis/misgeslagen
 to experience, ervaren/ervoer/ervaren 
-to dig, grave/groef/gegraven
+to dig, graven/groef/gegraven
 to wonder, zich afvragen/vroeg af/afgevraagd
 to interrogate, ondervragen/ondervroeg/ondervraagd
 to ask, vragen/vroeg/gevraagd
 to sail, varen/voer/is gevaren
 to swear (oath), zweren/zwoer/gezworen
-to roam, zwerven/zwoer/gezworven
+to roam, zwerven/zwierf/gezworven
 
 #X/IE/A-en
 to blow, blazen/blies/geblazen
 to sleep, slapen/sliep/geslapen
 to create, scheppen/schiep/geschapen 
-to sleep, slapen/sliep/geslapen
 to sleep in, uitslapen/sliep uit/uitgeslapen
 to let, laten/liet/gelaten
 to let go, loslaten/liet los/losgelaten
@@ -397,7 +395,6 @@ to depend, afhangen/hing af/afgehangen
 to catch, vangen/ving/gevangen
 to receive, ontvangen/ontving/ontvangen
 to replace, vervangen/verving/vervangen
-to miss, misslaan/sloeg mis/misgeslagen
 
 #A/O/A
 to stand, staan/stond/gestaan
