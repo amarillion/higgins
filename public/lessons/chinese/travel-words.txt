@@ -1,0 +1,112 @@
+#left=en
+#right=zh
+#
+# āēōūī ǎ
+
+coffee, 咖啡, kāfēi
+tea, 茶, chá
+water, 水, shuǐ
+rice, 米饭, mǐfàn
+soup, 汤, tāng
+tofu, 豆腐, dòufu
+porridge, 粥, zhōu
+hot, 热, rè
+
+supermarket, 超市, chāoshì
+bookstore, 书店, shūdiàn
+restaurant, 饭馆, fànguǎn
+
+one cup, 一杯, yībēi
+milk tea, 奶茶, nǎichá
+thanks, 谢谢, xièxie
+milk, 牛奶, niúnǎi
+ice, 冰, bīng
+sugar, 糖, táng
+green tea, 绿茶, lǜchá
+You're welcome, 不客气, bùkèqi
+platform, 站台, zhàntái
+ticket, 车票, chēpiào
+luggage, 行李, xíngli
+train station, 火车站, huǒchēzhàn
+train, 火车, huǒchē
+
+park, 公园, gōngyuán
+Beijing, 北京, Běijīng
+Great Wall, 长城, Chángchéng
+Forbidden City, 故宫, Gùgōng
+Summer palace, Yíhéyuán, 颐和园
+Terracotta army, Bīngmǎyǒng, 兵马俑
+
+zoo, 动物园, dòngwùyuán
+admission, 门票, ménpiào
+far, 远, yuǎn
+expensive, 贵, guì
+roast duck, 烤鸭, kǎoyā
+hot pot, 火锅, huǒguō
+spicy, 辣, là
+delicious, 好吃, hǎochī
+
+museum, 博物馆, bówùguǎn
+bus, 公交车, gōngjiāochē
+subway, 地铁, dìtiě
+popcorn, 爆米花, bàomǐhuā
+fruit, 水果, shuǐguǒ
+cake, 蛋糕, dàngāo
+juice, 果汁, guǒzhī
+dumplings, 饺子, jiǎozi
+
+potato, 土豆, tǔdòu
+tomato, 西红柿, xīhóngshì
+plate, 盘子, pánzi
+salt, 盐, yán
+meat, 肉, ròu
+vegetable, 蔬菜, shūcài
+bowl, 碗, wǎn
+ice cream, 冰淇淋, bīngqílín
+cookie, 饼干, bǐnggān
+noodle, 面条, miàntiáo
+bread, 面包, miànbāo
+
+chocolate, 巧克力, qiǎokèlì
+dog, 狗, gǒu
+rabbit, 兔子, tùzi
+cat, 猫, māo
+mall, 商场, shāngchǎng
+cola, 可乐, kělè
+
+chicken, 鸡, jī
+cow, 牛, niú
+pig, 猪, zhū
+sheep, 羊, yáng
+fish, 鱼, yú
+shrimp, 虾, xiā
+
+ham, 火腿, huotui
+butter, 黄油, huangyou
+pepper, 胡椒, hujiao
+
+Shanghai, 上海, Shànghǎi
+Xi'an, 西安, Xī'ān
+Hong Kong, 香港, Xiānggǎng
+Lijiang, 丽江, Lìjiāng
+Guangzhou, 广州, Guǎngzhōu
+
+cheese, 奶酪, nǎilào
+aubergine, 茄子, qiézi
+beans, 豆角, dòujiǎo
+bean sprouts, 豆芽, dòuyá
+cabbage, 包菜, bāocài
+cauliflower, 菜花, càihuā
+mushroom, 蘑菇, mógu
+radish, 萝卜, luóbo
+egg, 鸡蛋, jīdàn
+sweet, 甜, tián
+sour, 酸, suān
+sweet and sour, 糖醋, tángcù
+crab, 蟹, xiè
+squid, 鱿鱼, yóuyú
+fried rice, 炒饭, chǎofàn
+lychee, 荔枝, lìzhī
+peanut, 花生, huāshēng
+watermelon, 西瓜, xīguā
+moon cake, 月饼, yuèbǐng

@@ -88,6 +88,8 @@
 	],
 	"Chinese 🇬🇧 → 🇨🇳": [
 		"public/lessons/chinese/owl-app1.txt",
-		"public/lessons/chinese/owl-app2.txt"
+		"public/lessons/chinese/owl-app2.txt",
+		"public/lessons/chinese/owl-app3.txt",
+		"public/lessons/chinese/travel-words.txt"
 	]
 }

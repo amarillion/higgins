@@ -1,0 +1,86 @@
+#left=en
+#right=zh
+# Words corresponding to units 2-4 to .... from the app with the owl.
+
+# Unit 2-4
+
+potato, 土豆, tǔdòu
+tomato, 西红柿, xīhóngshì
+to cook, 做菜, zuòcài
+first, 先, xiān
+some / several, 几个, jǐge
+plate, 盘子, pánzi
+salt, 盐, yán
+be careful, 小心, xiǎoxīn
+to put, 放, fàng
+to wash, 洗, xǐ
+grandfather, 爷爷, yéye
+meat, 肉, ròu
+vegetable, 蔬菜, shūcài
+hand, 手, shǒu
+more, 多, duō
+cup, 杯子, bēizi
+to eat, 吃, chī
+to use, 用, yòng
+don't, 别, bié
+to play with, 玩, wán
+ice cream, 冰淇淋, bīngqílín
+dish washer, 洗碗机, xǐwǎnjī
+bowl, 碗, wǎn
+now, 现在, xiànzài
+rub / wipe / clean, 擦, cā
+
+# Unit 2-5
+
+10, 十, shí
+club, 俱乐部, jùlèbù
+comedy, 喜剧, xǐjù
+interesting, 有趣, yǒuqù
+football, 足球, zúqiú
+to play football, 踢足球, tīzúqiú
+baseball, 棒球, bàngqiú
+together, 一起, yīqǐ
+can (be able to), 会, huì
+piano, 钢琴, gāngqín
+to play (piano / guitar), 弹, dàn
+guitar, 吉他, jítā
+pop music, 流行音乐, liúxíngyīnyuè
+to sing, 唱歌, chànggē
+spanish, 西班牙语, xībānyáyǔ
+french, 法语, fǎyǔ
+to practice, 练习, liànxí
+language, 语言, yǔyán
+type / kind, 种, zhǒng
+cookie, 饼干, bǐnggān
+noodle, 面条, miàntiáo
+bread, 面包, miànbāo
+Thailand, 泰国, tàiguó
+to bake, 烤, kǎo
+
+# Unit 2-6
+
+chocolate, 巧克力, qiǎokèlì
+no way, 不行, bùxíng
+healthy, 健康, jiànkāng
+to want, 想, xiǎng
+toy, 玩具, wánjù
+dog, 狗, gǒu
+a, 一只, yīzhī
+rabbit, 兔子, tùzi
+to raise, 养, yǎng
+adorable, 可爱, kěài
+mall, 商场, shāngchǎng
+sister, 姐姐, jiějie
+to go out, 出去, chūqù
+friend, 朋友, péngyou
+may (to be allowed), 可以, kěyǐ
+computer, 电脑, diànnǎo
+brother, 哥哥, gēge
+cola, 可乐, kělè
+game, 游戏, yóuxì
+to borrow, 借, jiè
+window, 窗户, chuānghu
+to rest, 休息, xiūxi
+tired, 累, lèi
+to sweep, 扫, sǎo
+floor, 地, dì

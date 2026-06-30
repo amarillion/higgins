@@ -1,6 +1,6 @@
 #left=en
 #right=zh
-# Words corresponding to units 1-9 to .... from the app with the owl.
+# Words corresponding to units 1-9 to 2-3 from the app with the owl.
 
 # Unit 1-9
 
@@ -84,3 +84,29 @@ roast duck, 烤鸭, kǎoyā
 hot pot, 火锅, huǒguō
 spicy, 辣, là
 delicious, 好吃, hǎochī
+
+# Unit 2-3
+
+museum, 博物馆, bówùguǎn
+ok, 好的, hǎode
+available, 有空儿, yǒukòngr
+weekend, 周末, zhōumò
+let's (suggestion marker), 吧, ba
+bus, 公交车, gōngjiāochē
+subway, 地铁, dìtiě
+to take (to ride), 坐, zuò
+fast, 快, kuài
+relatively, 比较, bǐjiào
+movie, 电影, diànyǐng
+romance, 爱情， àiqíng
+popcorn, 爆米花, bàomǐhuā
+some, 一些, yīxiē
+fruit, 水果, shuǐguǒ
+cake, 蛋糕, dàngāo
+home, 家, jiā
+to bring, 带, dài
+juice, 果汁, guǒzhī
+dinner, 晚饭, wǎnfàn
+dumplings, 饺子, jiǎozi
+to drink, 喝, hē
+to make, 做, zuò
