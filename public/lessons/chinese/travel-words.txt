@@ -34,8 +34,8 @@ park, 公园, gōngyuán
 Beijing, 北京, Běijīng
 Great Wall, 长城, Chángchéng
 Forbidden City, 故宫, Gùgōng
-Summer palace, Yíhéyuán, 颐和园
-Terracotta army, Bīngmǎyǒng, 兵马俑
+Summer palace, 颐和园, Yíhéyuán
+Terracotta army, 兵马俑, Bīngmǎyǒng
 
 zoo, 动物园, dòngwùyuán
 admission, 门票, ménpiào
